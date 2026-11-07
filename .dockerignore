@@ -1,0 +1,9 @@
+*
+!Dockerfile
+!requirements-serving.txt
+!src/
+!src/**
+src/**/__pycache__/
+src/**/*.pyc
+src/**/._*
+src/**/.DS_Store

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "tests": 92,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "postgres_enabled": true,
+  "seconds": 2.861
+}

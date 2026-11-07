@@ -48,7 +48,7 @@ python -m pip check
 
 In VS Code, select `.venv/bin/python` as the Python interpreter and notebook kernel. The package is installed in editable mode, so edits in `src/` take effect immediately.
 
-The environment has been checked on macOS Apple Silicon. A new environment in a clean source copy passed installation, all tests, training and notebook execution. Linux/container compatibility and verification from a published GitHub clone remain pending.
+The environment has been checked on macOS Apple Silicon. A new environment in a clean source copy passed installation, all tests, training and notebook execution. Linux container serving and batch compatibility are now verified in Stage 6; verification from a published GitHub clone remains pending.
 
 ## Configuration
 
@@ -153,13 +153,13 @@ hotel-train
 
 Select the new environment's Python interpreter before opening the notebook. No processed dataset or saved model from another environment is needed.
 
-The initial baseline is published in commit `92cb28fa518c262a2fd6f89bd9e1279f4e69dbc1`, verified against GitHub. The setup check used a clean source copy; verification from a GitHub clone remains pending. Kaggle download access and Linux/container support have not yet been verified.
+The initial baseline is published in commit `92cb28fa518c262a2fd6f89bd9e1279f4e69dbc1`, verified against GitHub. The setup check used a clean source copy; verification from a GitHub clone remains pending. Kaggle download access remains unverified. Linux container serving and batch support were subsequently verified in Stage 6.
 
 ## Counted data-quirk evidence
 
 Run `python -m hotel_cancel.audit` to regenerate [the quirk table](docs/evidence/data-quirks.md) and its JSON companion from the original CSV. It counts outcome leakage, duplicates, nationality patterns, non-refundable cancellations, ADR anomalies, country-code inconsistencies and invalid guest/stay combinations. The audit checks outcome separation, forbidden feature names and temporal train/test duplicate overlap; it does not clean the data or change the learner.
 
-Reports record the dataset hash, audit-source hash, base commit and whether the working tree had uncommitted changes. Commit the audit code, tests and generated evidence together before citing them in the diary. Guard coverage and remaining work are stated per quirk; the complete six-trap suite and raw-data contract remain pending.
+Reports record the dataset hash, audit-source hash, base commit and whether the working tree had uncommitted changes. Commit the audit code, tests and generated evidence together before citing them in the diary. That initial audit report is historical. The complete six-trap suite and raw-data contract were subsequently implemented and verified in Stage 4; see docs/stage4-validation.md for current guard coverage.
 
 ## Baseline data identity
 
@@ -187,7 +187,7 @@ This trains the given model and compares features and outputs with the original 
 
 ## Fresh-clone verification of Stage 3
 
-A fresh local Git clone of commit `39fb510d427809fa0737d9ba58970f8223f96990` passed dependency checks, all 16 tests, `make baseline`, all 20 comparisons and the thin notebook in a new environment with separately supplied raw data. No import repair was needed. See [fresh-clone verification](docs/fresh-clone-verification.md). This verifies committed local files; GitHub push/download and Linux remain unverified.
+A fresh local Git clone of commit `39fb510d427809fa0737d9ba58970f8223f96990` passed dependency checks, all 16 tests, `make baseline`, all 20 comparisons and the thin notebook in a new environment with separately supplied raw data. No import repair was needed. See [fresh-clone verification](docs/fresh-clone-verification.md). This verifies committed local files; GitHub push/download remains unverified. Stage 6 later verified Linux container serving and batch execution, independently of this historical fresh-clone run.
 
 ## Stage 4: data validation and leakage guards
 
@@ -203,3 +203,7 @@ The 64-test suite covers malformed data/cache identity, all six traps and histor
 ## Stage 5: overbooking sensitivity
 
 Run `make policy-sensitivity` to compare policies using October–December 2016 validation nights across the grid in `config/stage5.yaml`. This command excludes 2017 rows before modelling and does not score the holdout. Results and limitations are in [the Stage 5 report](docs/stage5-policy-evaluation.md); manager sign-off remains pending in [ADR 0005](docs/decisions/0005-policy-sensitivity.md). The original `make baseline` reproduction remains available.
+
+## Stage 6: booking API, nightly batch and PostgreSQL snapshot
+
+The booking API and nightly batch share the existing feature recipe. Export an explicit completed reference baseline with `python -m hotel_cancel.serving --run models/baseline/<run-id> --output models/serving`, then run `make serve`. See the [Stage 6 runbook and verification](docs/stage6-operational-service.md) for complete request examples, snapshot export, PostgreSQL and container commands. Nightly quantities are review-only; unsigned Stage 5 candidates are not promoted. HTTP, PostgreSQL, training/serving parity and Docker image build/runtime/size are verified on the course Ubuntu ARM64 VM. All 93 Linux tests passed; the image is 212.16 MB and stopped cleanly in 0.219 seconds.

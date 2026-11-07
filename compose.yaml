@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:18.1-bookworm
+    environment:
+      POSTGRES_DB: hotel
+      POSTGRES_USER: hotel
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in your shell or local .env}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - hotel-postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hotel -d hotel"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+  api:
+    image: hotel-cancel:stage6
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./models/serving:/models:ro
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  hotel-postgres:

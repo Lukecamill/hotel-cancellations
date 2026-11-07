@@ -1,5 +1,7 @@
 PYTHON ?= .venv/bin/python
 CONFIG ?= config/config.yaml
+SNAPSHOT ?= artifacts/stage6/snapshot.json
+OUTPUT ?= artifacts/stage6/batch.json
 
 .PHONY: baseline
 baseline:
@@ -12,3 +14,13 @@ data-check:
 .PHONY: policy-sensitivity
 policy-sensitivity:
 	$(PYTHON) -m hotel_cancel.sensitivity --config "$(CONFIG)"
+
+.PHONY: serve nightly-batch container
+serve:
+	$(PYTHON) -m hotel_cancel.service
+
+nightly-batch:
+	$(PYTHON) -m hotel_cancel.batch --snapshot-file "$(SNAPSHOT)" --output "$(OUTPUT)"
+
+container:
+	docker build -t hotel-cancel:stage6 .

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "dd83f2bf5690cd9d0c6fe93630e4b046356590bab2474e43050d65e6c7619cfe",
+  "decision_date": "2017-08-08",
+  "arrival": "2017-08-15",
+  "lead_days": 7,
+  "model_version": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+  "policy_version": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a",
+  "results": [
+    {
+      "hotel": "City Hotel",
+      "candidate_policy": "flat rate (Jul \u2013 Sep 2016)",
+      "on_books": 66,
+      "rooms_in_blocks": 16,
+      "expected_releases": 4.2696020321761345,
+      "empty_room_cost_eur": 105.05,
+      "candidate_oversell": 3,
+      "probability_walk_anyone": 0.1916095999633908,
+      "expected_cost_eur": 229.62272308325026,
+      "recalibration_weeks": null,
+      "recalibration_factor": 1.0,
+      "authorised_oversell": 0,
+      "requires_human_approval": true,
+      "status": "review_required",
+      "diagnostic_gate": "PASS"
+    },
+    {
+      "hotel": "Resort Hotel",
+      "candidate_policy": "model + blocks + re-level 8 wk",
+      "on_books": 15,
+      "rooms_in_blocks": 2,
+      "expected_releases": 0.4631064953314141,
+      "empty_room_cost_eur": 189.0,
+      "candidate_oversell": 0,
+      "probability_walk_anyone": 0.0,
+      "expected_cost_eur": 87.52712761763728,
+      "recalibration_weeks": 8,
+      "recalibration_factor": 1.3113659815889336,
+      "authorised_oversell": 0,
+      "requires_human_approval": true,
+      "status": "review_required",
+      "diagnostic_gate": "FAIL"
+    }
+  ]
+}

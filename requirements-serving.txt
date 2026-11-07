@@ -1,0 +1,16 @@
+# Minimal inference/batch dependencies; no notebooks, plotting or training utilities.
+numpy==2.5.4
+pandas==3.1.0
+# Required by pandas string metadata persisted in the trained model bundle.
+pyarrow==26.0.1
+python-dateutil==4.0.0
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+threadpoolctl==3.8.0
+lightgbm==4.7.0
+psycopg[binary]==3.3.8
+# Transitive runtime dependencies pinned to the project environment.
+cloudpickle==3.1.2
+narwhals==2.28.0
+tzdata==2026.6
