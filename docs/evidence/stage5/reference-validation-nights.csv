@@ -1,0 +1,1841 @@
+hotel,night,policy,q,walked,empty,cost,no_overbooking_cost
+City Hotel,2016-10-01,no overbooking,0,0,2,165.7,165.7
+City Hotel,2016-10-01,flat rate (Jul – Sep 2016),1,0,1,82.85,165.7
+City Hotel,2016-10-01,flat rate (trailing 4 wk),1,0,1,82.85,165.7
+City Hotel,2016-10-01,flat rate (trailing 8 wk),1,0,1,82.85,165.7
+City Hotel,2016-10-01,flat rate (trailing 12 wk),1,0,1,82.85,165.7
+City Hotel,2016-10-01,model,1,0,1,82.85,165.7
+City Hotel,2016-10-01,model + blocks,0,0,2,165.7,165.7
+City Hotel,2016-10-01,model + blocks + re-level 4 wk,0,0,2,165.7,165.7
+City Hotel,2016-10-01,model + blocks + re-level 8 wk,0,0,2,165.7,165.7
+City Hotel,2016-10-01,model + blocks + re-level 12 wk,0,0,2,165.7,165.7
+City Hotel,2016-10-02,no overbooking,0,0,5,437.04999999999995,437.04999999999995
+City Hotel,2016-10-02,flat rate (Jul – Sep 2016),3,0,2,174.82,437.04999999999995
+City Hotel,2016-10-02,flat rate (trailing 4 wk),3,0,2,174.82,437.04999999999995
+City Hotel,2016-10-02,flat rate (trailing 8 wk),3,0,2,174.82,437.04999999999995
+City Hotel,2016-10-02,flat rate (trailing 12 wk),3,0,2,174.82,437.04999999999995
+City Hotel,2016-10-02,model,2,0,3,262.23,437.04999999999995
+City Hotel,2016-10-02,model + blocks,2,0,3,262.23,437.04999999999995
+City Hotel,2016-10-02,model + blocks + re-level 4 wk,2,0,3,262.23,437.04999999999995
+City Hotel,2016-10-02,model + blocks + re-level 8 wk,2,0,3,262.23,437.04999999999995
+City Hotel,2016-10-02,model + blocks + re-level 12 wk,2,0,3,262.23,437.04999999999995
+City Hotel,2016-10-03,no overbooking,0,0,7,653.8000000000001,653.8000000000001
+City Hotel,2016-10-03,flat rate (Jul – Sep 2016),4,0,3,280.20000000000005,653.8000000000001
+City Hotel,2016-10-03,flat rate (trailing 4 wk),3,0,4,373.6,653.8000000000001
+City Hotel,2016-10-03,flat rate (trailing 8 wk),3,0,4,373.6,653.8000000000001
+City Hotel,2016-10-03,flat rate (trailing 12 wk),3,0,4,373.6,653.8000000000001
+City Hotel,2016-10-03,model,2,0,5,467.0,653.8000000000001
+City Hotel,2016-10-03,model + blocks,2,0,5,467.0,653.8000000000001
+City Hotel,2016-10-03,model + blocks + re-level 4 wk,3,0,4,373.6,653.8000000000001
+City Hotel,2016-10-03,model + blocks + re-level 8 wk,2,0,5,467.0,653.8000000000001
+City Hotel,2016-10-03,model + blocks + re-level 12 wk,2,0,5,467.0,653.8000000000001
+City Hotel,2016-10-04,no overbooking,0,0,4,395.2,395.2
+City Hotel,2016-10-04,flat rate (Jul – Sep 2016),3,0,1,98.8,395.2
+City Hotel,2016-10-04,flat rate (trailing 4 wk),2,0,2,197.6,395.2
+City Hotel,2016-10-04,flat rate (trailing 8 wk),2,0,2,197.6,395.2
+City Hotel,2016-10-04,flat rate (trailing 12 wk),2,0,2,197.6,395.2
+City Hotel,2016-10-04,model,2,0,2,197.6,395.2
+City Hotel,2016-10-04,model + blocks,2,0,2,197.6,395.2
+City Hotel,2016-10-04,model + blocks + re-level 4 wk,2,0,2,197.6,395.2
+City Hotel,2016-10-04,model + blocks + re-level 8 wk,2,0,2,197.6,395.2
+City Hotel,2016-10-04,model + blocks + re-level 12 wk,2,0,2,197.6,395.2
+City Hotel,2016-10-05,no overbooking,0,0,3,319.26,319.26
+City Hotel,2016-10-05,flat rate (Jul – Sep 2016),3,0,0,0.0,319.26
+City Hotel,2016-10-05,flat rate (trailing 4 wk),2,0,1,106.42,319.26
+City Hotel,2016-10-05,flat rate (trailing 8 wk),3,0,0,0.0,319.26
+City Hotel,2016-10-05,flat rate (trailing 12 wk),3,0,0,0.0,319.26
+City Hotel,2016-10-05,model,2,0,1,106.42,319.26
+City Hotel,2016-10-05,model + blocks,1,0,2,212.84,319.26
+City Hotel,2016-10-05,model + blocks + re-level 4 wk,1,0,2,212.84,319.26
+City Hotel,2016-10-05,model + blocks + re-level 8 wk,1,0,2,212.84,319.26
+City Hotel,2016-10-05,model + blocks + re-level 12 wk,1,0,2,212.84,319.26
+City Hotel,2016-10-06,no overbooking,0,0,7,616.0,616.0
+City Hotel,2016-10-06,flat rate (Jul – Sep 2016),3,0,4,352.0,616.0
+City Hotel,2016-10-06,flat rate (trailing 4 wk),3,0,4,352.0,616.0
+City Hotel,2016-10-06,flat rate (trailing 8 wk),3,0,4,352.0,616.0
+City Hotel,2016-10-06,flat rate (trailing 12 wk),3,0,4,352.0,616.0
+City Hotel,2016-10-06,model,2,0,5,440.0,616.0
+City Hotel,2016-10-06,model + blocks,1,0,6,528.0,616.0
+City Hotel,2016-10-06,model + blocks + re-level 4 wk,1,0,6,528.0,616.0
+City Hotel,2016-10-06,model + blocks + re-level 8 wk,1,0,6,528.0,616.0
+City Hotel,2016-10-06,model + blocks + re-level 12 wk,1,0,6,528.0,616.0
+City Hotel,2016-10-07,no overbooking,0,0,6,592.8,592.8
+City Hotel,2016-10-07,flat rate (Jul – Sep 2016),4,0,2,197.6,592.8
+City Hotel,2016-10-07,flat rate (trailing 4 wk),4,0,2,197.6,592.8
+City Hotel,2016-10-07,flat rate (trailing 8 wk),4,0,2,197.6,592.8
+City Hotel,2016-10-07,flat rate (trailing 12 wk),4,0,2,197.6,592.8
+City Hotel,2016-10-07,model,4,0,2,197.6,592.8
+City Hotel,2016-10-07,model + blocks,3,0,3,296.4,592.8
+City Hotel,2016-10-07,model + blocks + re-level 4 wk,3,0,3,296.4,592.8
+City Hotel,2016-10-07,model + blocks + re-level 8 wk,3,0,3,296.4,592.8
+City Hotel,2016-10-07,model + blocks + re-level 12 wk,3,0,3,296.4,592.8
+City Hotel,2016-10-08,no overbooking,0,0,2,197.6,197.6
+City Hotel,2016-10-08,flat rate (Jul – Sep 2016),1,0,1,98.8,197.6
+City Hotel,2016-10-08,flat rate (trailing 4 wk),1,0,1,98.8,197.6
+City Hotel,2016-10-08,flat rate (trailing 8 wk),1,0,1,98.8,197.6
+City Hotel,2016-10-08,flat rate (trailing 12 wk),1,0,1,98.8,197.6
+City Hotel,2016-10-08,model,1,0,1,98.8,197.6
+City Hotel,2016-10-08,model + blocks,1,0,1,98.8,197.6
+City Hotel,2016-10-08,model + blocks + re-level 4 wk,1,0,1,98.8,197.6
+City Hotel,2016-10-08,model + blocks + re-level 8 wk,1,0,1,98.8,197.6
+City Hotel,2016-10-08,model + blocks + re-level 12 wk,1,0,1,98.8,197.6
+City Hotel,2016-10-09,no overbooking,0,0,15,1320.0,1320.0
+City Hotel,2016-10-09,flat rate (Jul – Sep 2016),3,0,12,1056.0,1320.0
+City Hotel,2016-10-09,flat rate (trailing 4 wk),3,0,12,1056.0,1320.0
+City Hotel,2016-10-09,flat rate (trailing 8 wk),3,0,12,1056.0,1320.0
+City Hotel,2016-10-09,flat rate (trailing 12 wk),3,0,12,1056.0,1320.0
+City Hotel,2016-10-09,model,2,0,13,1144.0,1320.0
+City Hotel,2016-10-09,model + blocks,1,0,14,1232.0,1320.0
+City Hotel,2016-10-09,model + blocks + re-level 4 wk,1,0,14,1232.0,1320.0
+City Hotel,2016-10-09,model + blocks + re-level 8 wk,1,0,14,1232.0,1320.0
+City Hotel,2016-10-09,model + blocks + re-level 12 wk,1,0,14,1232.0,1320.0
+City Hotel,2016-10-10,no overbooking,0,0,26,2600.0,2600.0
+City Hotel,2016-10-10,flat rate (Jul – Sep 2016),6,0,20,2000.0,2600.0
+City Hotel,2016-10-10,flat rate (trailing 4 wk),5,0,21,2100.0,2600.0
+City Hotel,2016-10-10,flat rate (trailing 8 wk),6,0,20,2000.0,2600.0
+City Hotel,2016-10-10,flat rate (trailing 12 wk),6,0,20,2000.0,2600.0
+City Hotel,2016-10-10,model,3,0,23,2300.0,2600.0
+City Hotel,2016-10-10,model + blocks,2,0,24,2400.0,2600.0
+City Hotel,2016-10-10,model + blocks + re-level 4 wk,2,0,24,2400.0,2600.0
+City Hotel,2016-10-10,model + blocks + re-level 8 wk,2,0,24,2400.0,2600.0
+City Hotel,2016-10-10,model + blocks + re-level 12 wk,2,0,24,2400.0,2600.0
+City Hotel,2016-10-11,no overbooking,0,0,25,2500.0,2500.0
+City Hotel,2016-10-11,flat rate (Jul – Sep 2016),4,0,21,2100.0,2500.0
+City Hotel,2016-10-11,flat rate (trailing 4 wk),4,0,21,2100.0,2500.0
+City Hotel,2016-10-11,flat rate (trailing 8 wk),4,0,21,2100.0,2500.0
+City Hotel,2016-10-11,flat rate (trailing 12 wk),3,0,22,2200.0,2500.0
+City Hotel,2016-10-11,model,2,0,23,2300.0,2500.0
+City Hotel,2016-10-11,model + blocks,0,0,25,2500.0,2500.0
+City Hotel,2016-10-11,model + blocks + re-level 4 wk,1,0,24,2400.0,2500.0
+City Hotel,2016-10-11,model + blocks + re-level 8 wk,1,0,24,2400.0,2500.0
+City Hotel,2016-10-11,model + blocks + re-level 12 wk,0,0,25,2500.0,2500.0
+City Hotel,2016-10-12,no overbooking,0,0,20,1562.0,1562.0
+City Hotel,2016-10-12,flat rate (Jul – Sep 2016),3,0,17,1327.6999999999998,1562.0
+City Hotel,2016-10-12,flat rate (trailing 4 wk),3,0,17,1327.6999999999998,1562.0
+City Hotel,2016-10-12,flat rate (trailing 8 wk),3,0,17,1327.6999999999998,1562.0
+City Hotel,2016-10-12,flat rate (trailing 12 wk),3,0,17,1327.6999999999998,1562.0
+City Hotel,2016-10-12,model,2,0,18,1405.8,1562.0
+City Hotel,2016-10-12,model + blocks,1,0,19,1483.8999999999999,1562.0
+City Hotel,2016-10-12,model + blocks + re-level 4 wk,1,0,19,1483.8999999999999,1562.0
+City Hotel,2016-10-12,model + blocks + re-level 8 wk,1,0,19,1483.8999999999999,1562.0
+City Hotel,2016-10-12,model + blocks + re-level 12 wk,1,0,19,1483.8999999999999,1562.0
+City Hotel,2016-10-13,no overbooking,0,0,19,1569.3999999999999,1569.3999999999999
+City Hotel,2016-10-13,flat rate (Jul – Sep 2016),5,0,14,1156.3999999999999,1569.3999999999999
+City Hotel,2016-10-13,flat rate (trailing 4 wk),5,0,14,1156.3999999999999,1569.3999999999999
+City Hotel,2016-10-13,flat rate (trailing 8 wk),5,0,14,1156.3999999999999,1569.3999999999999
+City Hotel,2016-10-13,flat rate (trailing 12 wk),5,0,14,1156.3999999999999,1569.3999999999999
+City Hotel,2016-10-13,model,3,0,16,1321.6,1569.3999999999999
+City Hotel,2016-10-13,model + blocks,1,0,18,1486.8,1569.3999999999999
+City Hotel,2016-10-13,model + blocks + re-level 4 wk,2,0,17,1404.1999999999998,1569.3999999999999
+City Hotel,2016-10-13,model + blocks + re-level 8 wk,2,0,17,1404.1999999999998,1569.3999999999999
+City Hotel,2016-10-13,model + blocks + re-level 12 wk,2,0,17,1404.1999999999998,1569.3999999999999
+City Hotel,2016-10-14,no overbooking,0,0,2,190.0,190.0
+City Hotel,2016-10-14,flat rate (Jul – Sep 2016),6,4,0,1000.0,190.0
+City Hotel,2016-10-14,flat rate (trailing 4 wk),6,4,0,1000.0,190.0
+City Hotel,2016-10-14,flat rate (trailing 8 wk),6,4,0,1000.0,190.0
+City Hotel,2016-10-14,flat rate (trailing 12 wk),6,4,0,1000.0,190.0
+City Hotel,2016-10-14,model,3,1,0,250.0,190.0
+City Hotel,2016-10-14,model + blocks,0,0,2,190.0,190.0
+City Hotel,2016-10-14,model + blocks + re-level 4 wk,1,0,1,95.0,190.0
+City Hotel,2016-10-14,model + blocks + re-level 8 wk,0,0,2,190.0,190.0
+City Hotel,2016-10-14,model + blocks + re-level 12 wk,0,0,2,190.0,190.0
+City Hotel,2016-10-15,no overbooking,0,0,3,275.4,275.4
+City Hotel,2016-10-15,flat rate (Jul – Sep 2016),1,0,2,183.6,275.4
+City Hotel,2016-10-15,flat rate (trailing 4 wk),1,0,2,183.6,275.4
+City Hotel,2016-10-15,flat rate (trailing 8 wk),1,0,2,183.6,275.4
+City Hotel,2016-10-15,flat rate (trailing 12 wk),1,0,2,183.6,275.4
+City Hotel,2016-10-15,model,1,0,2,183.6,275.4
+City Hotel,2016-10-15,model + blocks,1,0,2,183.6,275.4
+City Hotel,2016-10-15,model + blocks + re-level 4 wk,1,0,2,183.6,275.4
+City Hotel,2016-10-15,model + blocks + re-level 8 wk,1,0,2,183.6,275.4
+City Hotel,2016-10-15,model + blocks + re-level 12 wk,1,0,2,183.6,275.4
+City Hotel,2016-10-16,no overbooking,0,0,12,947.3399999999999,947.3399999999999
+City Hotel,2016-10-16,flat rate (Jul – Sep 2016),4,0,8,631.56,947.3399999999999
+City Hotel,2016-10-16,flat rate (trailing 4 wk),4,0,8,631.56,947.3399999999999
+City Hotel,2016-10-16,flat rate (trailing 8 wk),4,0,8,631.56,947.3399999999999
+City Hotel,2016-10-16,flat rate (trailing 12 wk),4,0,8,631.56,947.3399999999999
+City Hotel,2016-10-16,model,2,0,10,789.4499999999999,947.3399999999999
+City Hotel,2016-10-16,model + blocks,2,0,10,789.4499999999999,947.3399999999999
+City Hotel,2016-10-16,model + blocks + re-level 4 wk,2,0,10,789.4499999999999,947.3399999999999
+City Hotel,2016-10-16,model + blocks + re-level 8 wk,2,0,10,789.4499999999999,947.3399999999999
+City Hotel,2016-10-16,model + blocks + re-level 12 wk,2,0,10,789.4499999999999,947.3399999999999
+City Hotel,2016-10-17,no overbooking,0,0,7,760.8999999999999,760.8999999999999
+City Hotel,2016-10-17,flat rate (Jul – Sep 2016),3,0,4,434.79999999999995,760.8999999999999
+City Hotel,2016-10-17,flat rate (trailing 4 wk),4,0,3,326.09999999999997,760.8999999999999
+City Hotel,2016-10-17,flat rate (trailing 8 wk),3,0,4,434.79999999999995,760.8999999999999
+City Hotel,2016-10-17,flat rate (trailing 12 wk),3,0,4,434.79999999999995,760.8999999999999
+City Hotel,2016-10-17,model,3,0,4,434.79999999999995,760.8999999999999
+City Hotel,2016-10-17,model + blocks,2,0,5,543.5,760.8999999999999
+City Hotel,2016-10-17,model + blocks + re-level 4 wk,4,0,3,326.09999999999997,760.8999999999999
+City Hotel,2016-10-17,model + blocks + re-level 8 wk,3,0,4,434.79999999999995,760.8999999999999
+City Hotel,2016-10-17,model + blocks + re-level 12 wk,3,0,4,434.79999999999995,760.8999999999999
+City Hotel,2016-10-18,no overbooking,0,0,10,772.0,772.0
+City Hotel,2016-10-18,flat rate (Jul – Sep 2016),2,0,8,617.6,772.0
+City Hotel,2016-10-18,flat rate (trailing 4 wk),2,0,8,617.6,772.0
+City Hotel,2016-10-18,flat rate (trailing 8 wk),2,0,8,617.6,772.0
+City Hotel,2016-10-18,flat rate (trailing 12 wk),2,0,8,617.6,772.0
+City Hotel,2016-10-18,model,1,0,9,694.8000000000001,772.0
+City Hotel,2016-10-18,model + blocks,1,0,9,694.8000000000001,772.0
+City Hotel,2016-10-18,model + blocks + re-level 4 wk,2,0,8,617.6,772.0
+City Hotel,2016-10-18,model + blocks + re-level 8 wk,1,0,9,694.8000000000001,772.0
+City Hotel,2016-10-18,model + blocks + re-level 12 wk,1,0,9,694.8000000000001,772.0
+City Hotel,2016-10-19,no overbooking,0,0,2,163.74,163.74
+City Hotel,2016-10-19,flat rate (Jul – Sep 2016),1,0,1,81.87,163.74
+City Hotel,2016-10-19,flat rate (trailing 4 wk),3,1,0,250.0,163.74
+City Hotel,2016-10-19,flat rate (trailing 8 wk),2,0,0,0.0,163.74
+City Hotel,2016-10-19,flat rate (trailing 12 wk),2,0,0,0.0,163.74
+City Hotel,2016-10-19,model,1,0,1,81.87,163.74
+City Hotel,2016-10-19,model + blocks,1,0,1,81.87,163.74
+City Hotel,2016-10-19,model + blocks + re-level 4 wk,2,0,0,0.0,163.74
+City Hotel,2016-10-19,model + blocks + re-level 8 wk,2,0,0,0.0,163.74
+City Hotel,2016-10-19,model + blocks + re-level 12 wk,1,0,1,81.87,163.74
+City Hotel,2016-10-20,no overbooking,0,0,1,76.3,76.3
+City Hotel,2016-10-20,flat rate (Jul – Sep 2016),2,1,0,250.0,76.3
+City Hotel,2016-10-20,flat rate (trailing 4 wk),4,3,0,750.0,76.3
+City Hotel,2016-10-20,flat rate (trailing 8 wk),3,2,0,500.0,76.3
+City Hotel,2016-10-20,flat rate (trailing 12 wk),3,2,0,500.0,76.3
+City Hotel,2016-10-20,model,1,0,0,0.0,76.3
+City Hotel,2016-10-20,model + blocks,1,0,0,0.0,76.3
+City Hotel,2016-10-20,model + blocks + re-level 4 wk,3,2,0,500.0,76.3
+City Hotel,2016-10-20,model + blocks + re-level 8 wk,2,1,0,250.0,76.3
+City Hotel,2016-10-20,model + blocks + re-level 12 wk,2,1,0,250.0,76.3
+City Hotel,2016-10-21,no overbooking,0,0,1,88.0,88.0
+City Hotel,2016-10-21,flat rate (Jul – Sep 2016),3,2,0,500.0,88.0
+City Hotel,2016-10-21,flat rate (trailing 4 wk),5,4,0,1000.0,88.0
+City Hotel,2016-10-21,flat rate (trailing 8 wk),4,3,0,750.0,88.0
+City Hotel,2016-10-21,flat rate (trailing 12 wk),4,3,0,750.0,88.0
+City Hotel,2016-10-21,model,2,1,0,250.0,88.0
+City Hotel,2016-10-21,model + blocks,1,0,0,0.0,88.0
+City Hotel,2016-10-21,model + blocks + re-level 4 wk,4,3,0,750.0,88.0
+City Hotel,2016-10-21,model + blocks + re-level 8 wk,3,2,0,500.0,88.0
+City Hotel,2016-10-21,model + blocks + re-level 12 wk,2,1,0,250.0,88.0
+City Hotel,2016-10-22,no overbooking,0,0,2,177.36,177.36
+City Hotel,2016-10-22,flat rate (Jul – Sep 2016),1,0,1,88.68,177.36
+City Hotel,2016-10-22,flat rate (trailing 4 wk),2,0,0,0.0,177.36
+City Hotel,2016-10-22,flat rate (trailing 8 wk),2,0,0,0.0,177.36
+City Hotel,2016-10-22,flat rate (trailing 12 wk),1,0,1,88.68,177.36
+City Hotel,2016-10-22,model,1,0,1,88.68,177.36
+City Hotel,2016-10-22,model + blocks,1,0,1,88.68,177.36
+City Hotel,2016-10-22,model + blocks + re-level 4 wk,2,0,0,0.0,177.36
+City Hotel,2016-10-22,model + blocks + re-level 8 wk,1,0,1,88.68,177.36
+City Hotel,2016-10-22,model + blocks + re-level 12 wk,1,0,1,88.68,177.36
+City Hotel,2016-10-23,no overbooking,0,0,6,570.0,570.0
+City Hotel,2016-10-23,flat rate (Jul – Sep 2016),6,0,0,0.0,570.0
+City Hotel,2016-10-23,flat rate (trailing 4 wk),10,4,0,1000.0,570.0
+City Hotel,2016-10-23,flat rate (trailing 8 wk),8,2,0,500.0,570.0
+City Hotel,2016-10-23,flat rate (trailing 12 wk),7,1,0,250.0,570.0
+City Hotel,2016-10-23,model,4,0,2,190.0,570.0
+City Hotel,2016-10-23,model + blocks,1,0,5,475.0,570.0
+City Hotel,2016-10-23,model + blocks + re-level 4 wk,4,0,2,190.0,570.0
+City Hotel,2016-10-23,model + blocks + re-level 8 wk,3,0,3,285.0,570.0
+City Hotel,2016-10-23,model + blocks + re-level 12 wk,2,0,4,380.0,570.0
+City Hotel,2016-10-24,no overbooking,0,0,0,0.0,0.0
+City Hotel,2016-10-24,flat rate (Jul – Sep 2016),2,2,0,500.0,0.0
+City Hotel,2016-10-24,flat rate (trailing 4 wk),3,3,0,750.0,0.0
+City Hotel,2016-10-24,flat rate (trailing 8 wk),2,2,0,500.0,0.0
+City Hotel,2016-10-24,flat rate (trailing 12 wk),2,2,0,500.0,0.0
+City Hotel,2016-10-24,model,1,1,0,250.0,0.0
+City Hotel,2016-10-24,model + blocks,1,1,0,250.0,0.0
+City Hotel,2016-10-24,model + blocks + re-level 4 wk,3,3,0,750.0,0.0
+City Hotel,2016-10-24,model + blocks + re-level 8 wk,2,2,0,500.0,0.0
+City Hotel,2016-10-24,model + blocks + re-level 12 wk,2,2,0,500.0,0.0
+City Hotel,2016-10-25,no overbooking,0,0,0,0.0,0.0
+City Hotel,2016-10-25,flat rate (Jul – Sep 2016),3,3,0,750.0,0.0
+City Hotel,2016-10-25,flat rate (trailing 4 wk),5,5,0,1250.0,0.0
+City Hotel,2016-10-25,flat rate (trailing 8 wk),4,4,0,1000.0,0.0
+City Hotel,2016-10-25,flat rate (trailing 12 wk),4,4,0,1000.0,0.0
+City Hotel,2016-10-25,model,2,2,0,500.0,0.0
+City Hotel,2016-10-25,model + blocks,1,1,0,250.0,0.0
+City Hotel,2016-10-25,model + blocks + re-level 4 wk,5,5,0,1250.0,0.0
+City Hotel,2016-10-25,model + blocks + re-level 8 wk,3,3,0,750.0,0.0
+City Hotel,2016-10-25,model + blocks + re-level 12 wk,2,2,0,500.0,0.0
+City Hotel,2016-10-26,no overbooking,0,0,4,338.8,338.8
+City Hotel,2016-10-26,flat rate (Jul – Sep 2016),2,0,2,169.4,338.8
+City Hotel,2016-10-26,flat rate (trailing 4 wk),4,0,0,0.0,338.8
+City Hotel,2016-10-26,flat rate (trailing 8 wk),3,0,1,84.7,338.8
+City Hotel,2016-10-26,flat rate (trailing 12 wk),3,0,1,84.7,338.8
+City Hotel,2016-10-26,model,1,0,3,254.10000000000002,338.8
+City Hotel,2016-10-26,model + blocks,1,0,3,254.10000000000002,338.8
+City Hotel,2016-10-26,model + blocks + re-level 4 wk,4,0,0,0.0,338.8
+City Hotel,2016-10-26,model + blocks + re-level 8 wk,2,0,2,169.4,338.8
+City Hotel,2016-10-26,model + blocks + re-level 12 wk,2,0,2,169.4,338.8
+City Hotel,2016-10-27,no overbooking,0,0,4,315.15999999999997,315.15999999999997
+City Hotel,2016-10-27,flat rate (Jul – Sep 2016),2,0,2,157.57999999999998,315.15999999999997
+City Hotel,2016-10-27,flat rate (trailing 4 wk),4,0,0,0.0,315.15999999999997
+City Hotel,2016-10-27,flat rate (trailing 8 wk),3,0,1,78.78999999999999,315.15999999999997
+City Hotel,2016-10-27,flat rate (trailing 12 wk),2,0,2,157.57999999999998,315.15999999999997
+City Hotel,2016-10-27,model,1,0,3,236.36999999999998,315.15999999999997
+City Hotel,2016-10-27,model + blocks,1,0,3,236.36999999999998,315.15999999999997
+City Hotel,2016-10-27,model + blocks + re-level 4 wk,3,0,1,78.78999999999999,315.15999999999997
+City Hotel,2016-10-27,model + blocks + re-level 8 wk,2,0,2,157.57999999999998,315.15999999999997
+City Hotel,2016-10-27,model + blocks + re-level 12 wk,1,0,3,236.36999999999998,315.15999999999997
+City Hotel,2016-10-28,no overbooking,0,0,29,2212.7,2212.7
+City Hotel,2016-10-28,flat rate (Jul – Sep 2016),6,0,23,1754.8999999999999,2212.7
+City Hotel,2016-10-28,flat rate (trailing 4 wk),11,0,18,1373.3999999999999,2212.7
+City Hotel,2016-10-28,flat rate (trailing 8 wk),8,0,21,1602.3,2212.7
+City Hotel,2016-10-28,flat rate (trailing 12 wk),7,0,22,1678.6,2212.7
+City Hotel,2016-10-28,model,3,0,26,1983.8,2212.7
+City Hotel,2016-10-28,model + blocks,2,0,27,2060.1,2212.7
+City Hotel,2016-10-28,model + blocks + re-level 4 wk,7,0,22,1678.6,2212.7
+City Hotel,2016-10-28,model + blocks + re-level 8 wk,5,0,24,1831.1999999999998,2212.7
+City Hotel,2016-10-28,model + blocks + re-level 12 wk,4,0,25,1907.5,2212.7
+City Hotel,2016-10-29,no overbooking,0,0,13,1101.1000000000001,1101.1000000000001
+City Hotel,2016-10-29,flat rate (Jul – Sep 2016),3,0,10,847.0,1101.1000000000001
+City Hotel,2016-10-29,flat rate (trailing 4 wk),6,0,7,592.9,1101.1000000000001
+City Hotel,2016-10-29,flat rate (trailing 8 wk),5,0,8,677.6,1101.1000000000001
+City Hotel,2016-10-29,flat rate (trailing 12 wk),4,0,9,762.3000000000001,1101.1000000000001
+City Hotel,2016-10-29,model,2,0,11,931.7,1101.1000000000001
+City Hotel,2016-10-29,model + blocks,2,0,11,931.7,1101.1000000000001
+City Hotel,2016-10-29,model + blocks + re-level 4 wk,6,0,7,592.9,1101.1000000000001
+City Hotel,2016-10-29,model + blocks + re-level 8 wk,4,0,9,762.3000000000001,1101.1000000000001
+City Hotel,2016-10-29,model + blocks + re-level 12 wk,3,0,10,847.0,1101.1000000000001
+City Hotel,2016-10-30,no overbooking,0,0,8,566.0,566.0
+City Hotel,2016-10-30,flat rate (Jul – Sep 2016),3,0,5,353.75,566.0
+City Hotel,2016-10-30,flat rate (trailing 4 wk),6,0,2,141.5,566.0
+City Hotel,2016-10-30,flat rate (trailing 8 wk),5,0,3,212.25,566.0
+City Hotel,2016-10-30,flat rate (trailing 12 wk),4,0,4,283.0,566.0
+City Hotel,2016-10-30,model,2,0,6,424.5,566.0
+City Hotel,2016-10-30,model + blocks,2,0,6,424.5,566.0
+City Hotel,2016-10-30,model + blocks + re-level 4 wk,6,0,2,141.5,566.0
+City Hotel,2016-10-30,model + blocks + re-level 8 wk,4,0,4,283.0,566.0
+City Hotel,2016-10-30,model + blocks + re-level 12 wk,3,0,5,353.75,566.0
+City Hotel,2016-10-31,no overbooking,0,0,3,240.24,240.24
+City Hotel,2016-10-31,flat rate (Jul – Sep 2016),2,0,1,80.08,240.24
+City Hotel,2016-10-31,flat rate (trailing 4 wk),5,2,0,500.0,240.24
+City Hotel,2016-10-31,flat rate (trailing 8 wk),4,1,0,250.0,240.24
+City Hotel,2016-10-31,flat rate (trailing 12 wk),3,0,0,0.0,240.24
+City Hotel,2016-10-31,model,2,0,1,80.08,240.24
+City Hotel,2016-10-31,model + blocks,2,0,1,80.08,240.24
+City Hotel,2016-10-31,model + blocks + re-level 4 wk,6,3,0,750.0,240.24
+City Hotel,2016-10-31,model + blocks + re-level 8 wk,4,1,0,250.0,240.24
+City Hotel,2016-10-31,model + blocks + re-level 12 wk,3,0,0,0.0,240.24
+City Hotel,2016-11-01,no overbooking,0,0,3,215.39999999999998,215.39999999999998
+City Hotel,2016-11-01,flat rate (Jul – Sep 2016),2,0,1,71.8,215.39999999999998
+City Hotel,2016-11-01,flat rate (trailing 4 wk),4,1,0,250.0,215.39999999999998
+City Hotel,2016-11-01,flat rate (trailing 8 wk),3,0,0,0.0,215.39999999999998
+City Hotel,2016-11-01,flat rate (trailing 12 wk),2,0,1,71.8,215.39999999999998
+City Hotel,2016-11-01,model,1,0,2,143.6,215.39999999999998
+City Hotel,2016-11-01,model + blocks,1,0,2,143.6,215.39999999999998
+City Hotel,2016-11-01,model + blocks + re-level 4 wk,4,1,0,250.0,215.39999999999998
+City Hotel,2016-11-01,model + blocks + re-level 8 wk,2,0,1,71.8,215.39999999999998
+City Hotel,2016-11-01,model + blocks + re-level 12 wk,2,0,1,71.8,215.39999999999998
+City Hotel,2016-11-02,no overbooking,0,0,6,420.0,420.0
+City Hotel,2016-11-02,flat rate (Jul – Sep 2016),3,0,3,210.0,420.0
+City Hotel,2016-11-02,flat rate (trailing 4 wk),6,0,0,0.0,420.0
+City Hotel,2016-11-02,flat rate (trailing 8 wk),4,0,2,140.0,420.0
+City Hotel,2016-11-02,flat rate (trailing 12 wk),4,0,2,140.0,420.0
+City Hotel,2016-11-02,model,2,0,4,280.0,420.0
+City Hotel,2016-11-02,model + blocks,2,0,4,280.0,420.0
+City Hotel,2016-11-02,model + blocks + re-level 4 wk,6,0,0,0.0,420.0
+City Hotel,2016-11-02,model + blocks + re-level 8 wk,4,0,2,140.0,420.0
+City Hotel,2016-11-02,model + blocks + re-level 12 wk,3,0,3,210.0,420.0
+City Hotel,2016-11-03,no overbooking,0,0,5,390.0,390.0
+City Hotel,2016-11-03,flat rate (Jul – Sep 2016),2,0,3,234.0,390.0
+City Hotel,2016-11-03,flat rate (trailing 4 wk),4,0,1,78.0,390.0
+City Hotel,2016-11-03,flat rate (trailing 8 wk),3,0,2,156.0,390.0
+City Hotel,2016-11-03,flat rate (trailing 12 wk),2,0,3,234.0,390.0
+City Hotel,2016-11-03,model,1,0,4,312.0,390.0
+City Hotel,2016-11-03,model + blocks,1,0,4,312.0,390.0
+City Hotel,2016-11-03,model + blocks + re-level 4 wk,4,0,1,78.0,390.0
+City Hotel,2016-11-03,model + blocks + re-level 8 wk,2,0,3,234.0,390.0
+City Hotel,2016-11-03,model + blocks + re-level 12 wk,2,0,3,234.0,390.0
+City Hotel,2016-11-04,no overbooking,0,0,7,540.4,540.4
+City Hotel,2016-11-04,flat rate (Jul – Sep 2016),3,0,4,308.8,540.4
+City Hotel,2016-11-04,flat rate (trailing 4 wk),5,0,2,154.4,540.4
+City Hotel,2016-11-04,flat rate (trailing 8 wk),4,0,3,231.60000000000002,540.4
+City Hotel,2016-11-04,flat rate (trailing 12 wk),3,0,4,308.8,540.4
+City Hotel,2016-11-04,model,2,0,5,386.0,540.4
+City Hotel,2016-11-04,model + blocks,1,0,6,463.20000000000005,540.4
+City Hotel,2016-11-04,model + blocks + re-level 4 wk,4,0,3,231.60000000000002,540.4
+City Hotel,2016-11-04,model + blocks + re-level 8 wk,3,0,4,308.8,540.4
+City Hotel,2016-11-04,model + blocks + re-level 12 wk,2,0,5,386.0,540.4
+City Hotel,2016-11-05,no overbooking,0,0,4,440.0,440.0
+City Hotel,2016-11-05,flat rate (Jul – Sep 2016),2,0,2,220.0,440.0
+City Hotel,2016-11-05,flat rate (trailing 4 wk),4,0,0,0.0,440.0
+City Hotel,2016-11-05,flat rate (trailing 8 wk),3,0,1,110.0,440.0
+City Hotel,2016-11-05,flat rate (trailing 12 wk),3,0,1,110.0,440.0
+City Hotel,2016-11-05,model,1,0,3,330.0,440.0
+City Hotel,2016-11-05,model + blocks,0,0,4,440.0,440.0
+City Hotel,2016-11-05,model + blocks + re-level 4 wk,2,0,2,220.0,440.0
+City Hotel,2016-11-05,model + blocks + re-level 8 wk,1,0,3,330.0,440.0
+City Hotel,2016-11-05,model + blocks + re-level 12 wk,1,0,3,330.0,440.0
+City Hotel,2016-11-06,no overbooking,0,0,10,1245.5,1245.5
+City Hotel,2016-11-06,flat rate (Jul – Sep 2016),3,0,7,871.8500000000001,1245.5
+City Hotel,2016-11-06,flat rate (trailing 4 wk),7,0,3,373.65000000000003,1245.5
+City Hotel,2016-11-06,flat rate (trailing 8 wk),5,0,5,622.75,1245.5
+City Hotel,2016-11-06,flat rate (trailing 12 wk),5,0,5,622.75,1245.5
+City Hotel,2016-11-06,model,2,0,8,996.4000000000001,1245.5
+City Hotel,2016-11-06,model + blocks,2,0,8,996.4000000000001,1245.5
+City Hotel,2016-11-06,model + blocks + re-level 4 wk,7,0,3,373.65000000000003,1245.5
+City Hotel,2016-11-06,model + blocks + re-level 8 wk,4,0,6,747.3000000000001,1245.5
+City Hotel,2016-11-06,model + blocks + re-level 12 wk,4,0,6,747.3000000000001,1245.5
+City Hotel,2016-11-07,no overbooking,0,0,4,596.8,596.8
+City Hotel,2016-11-07,flat rate (Jul – Sep 2016),5,1,0,250.0,596.8
+City Hotel,2016-11-07,flat rate (trailing 4 wk),9,5,0,1250.0,596.8
+City Hotel,2016-11-07,flat rate (trailing 8 wk),7,3,0,750.0,596.8
+City Hotel,2016-11-07,flat rate (trailing 12 wk),6,2,0,500.0,596.8
+City Hotel,2016-11-07,model,3,0,1,149.2,596.8
+City Hotel,2016-11-07,model + blocks,3,0,1,149.2,596.8
+City Hotel,2016-11-07,model + blocks + re-level 4 wk,9,5,0,1250.0,596.8
+City Hotel,2016-11-07,model + blocks + re-level 8 wk,6,2,0,500.0,596.8
+City Hotel,2016-11-07,model + blocks + re-level 12 wk,5,1,0,250.0,596.8
+City Hotel,2016-11-08,no overbooking,0,0,1,131.32,131.32
+City Hotel,2016-11-08,flat rate (Jul – Sep 2016),1,0,0,0.0,131.32
+City Hotel,2016-11-08,flat rate (trailing 4 wk),2,1,0,250.0,131.32
+City Hotel,2016-11-08,flat rate (trailing 8 wk),1,0,0,0.0,131.32
+City Hotel,2016-11-08,flat rate (trailing 12 wk),1,0,0,0.0,131.32
+City Hotel,2016-11-08,model,0,0,1,131.32,131.32
+City Hotel,2016-11-08,model + blocks,0,0,1,131.32,131.32
+City Hotel,2016-11-08,model + blocks + re-level 4 wk,1,0,0,0.0,131.32
+City Hotel,2016-11-08,model + blocks + re-level 8 wk,1,0,0,0.0,131.32
+City Hotel,2016-11-08,model + blocks + re-level 12 wk,1,0,0,0.0,131.32
+City Hotel,2016-11-09,no overbooking,0,0,1,113.03,113.03
+City Hotel,2016-11-09,flat rate (Jul – Sep 2016),1,0,0,0.0,113.03
+City Hotel,2016-11-09,flat rate (trailing 4 wk),2,1,0,250.0,113.03
+City Hotel,2016-11-09,flat rate (trailing 8 wk),1,0,0,0.0,113.03
+City Hotel,2016-11-09,flat rate (trailing 12 wk),1,0,0,0.0,113.03
+City Hotel,2016-11-09,model,0,0,1,113.03,113.03
+City Hotel,2016-11-09,model + blocks,0,0,1,113.03,113.03
+City Hotel,2016-11-09,model + blocks + re-level 4 wk,2,1,0,250.0,113.03
+City Hotel,2016-11-09,model + blocks + re-level 8 wk,1,0,0,0.0,113.03
+City Hotel,2016-11-09,model + blocks + re-level 12 wk,1,0,0,0.0,113.03
+City Hotel,2016-11-10,no overbooking,0,0,3,309.6,309.6
+City Hotel,2016-11-10,flat rate (Jul – Sep 2016),2,0,1,103.2,309.6
+City Hotel,2016-11-10,flat rate (trailing 4 wk),5,2,0,500.0,309.6
+City Hotel,2016-11-10,flat rate (trailing 8 wk),4,1,0,250.0,309.6
+City Hotel,2016-11-10,flat rate (trailing 12 wk),3,0,0,0.0,309.6
+City Hotel,2016-11-10,model,1,0,2,206.4,309.6
+City Hotel,2016-11-10,model + blocks,1,0,2,206.4,309.6
+City Hotel,2016-11-10,model + blocks + re-level 4 wk,5,2,0,500.0,309.6
+City Hotel,2016-11-10,model + blocks + re-level 8 wk,3,0,0,0.0,309.6
+City Hotel,2016-11-10,model + blocks + re-level 12 wk,2,0,1,103.2,309.6
+City Hotel,2016-11-11,no overbooking,0,0,1,70.0,70.0
+City Hotel,2016-11-11,flat rate (Jul – Sep 2016),5,4,0,1000.0,70.0
+City Hotel,2016-11-11,flat rate (trailing 4 wk),11,10,0,2500.0,70.0
+City Hotel,2016-11-11,flat rate (trailing 8 wk),8,7,0,1750.0,70.0
+City Hotel,2016-11-11,flat rate (trailing 12 wk),7,6,0,1500.0,70.0
+City Hotel,2016-11-11,model,3,2,0,500.0,70.0
+City Hotel,2016-11-11,model + blocks,2,1,0,250.0,70.0
+City Hotel,2016-11-11,model + blocks + re-level 4 wk,9,8,0,2000.0,70.0
+City Hotel,2016-11-11,model + blocks + re-level 8 wk,6,5,0,1250.0,70.0
+City Hotel,2016-11-11,model + blocks + re-level 12 wk,5,4,0,1000.0,70.0
+City Hotel,2016-11-12,no overbooking,0,0,5,328.75,328.75
+City Hotel,2016-11-12,flat rate (Jul – Sep 2016),2,0,3,197.25,328.75
+City Hotel,2016-11-12,flat rate (trailing 4 wk),5,0,0,0.0,328.75
+City Hotel,2016-11-12,flat rate (trailing 8 wk),3,0,2,131.5,328.75
+City Hotel,2016-11-12,flat rate (trailing 12 wk),3,0,2,131.5,328.75
+City Hotel,2016-11-12,model,1,0,4,263.0,328.75
+City Hotel,2016-11-12,model + blocks,1,0,4,263.0,328.75
+City Hotel,2016-11-12,model + blocks + re-level 4 wk,5,0,0,0.0,328.75
+City Hotel,2016-11-12,model + blocks + re-level 8 wk,3,0,2,131.5,328.75
+City Hotel,2016-11-12,model + blocks + re-level 12 wk,3,0,2,131.5,328.75
+City Hotel,2016-11-13,no overbooking,0,0,7,420.0,420.0
+City Hotel,2016-11-13,flat rate (Jul – Sep 2016),2,0,5,300.0,420.0
+City Hotel,2016-11-13,flat rate (trailing 4 wk),5,0,2,120.0,420.0
+City Hotel,2016-11-13,flat rate (trailing 8 wk),4,0,3,180.0,420.0
+City Hotel,2016-11-13,flat rate (trailing 12 wk),3,0,4,240.0,420.0
+City Hotel,2016-11-13,model,1,0,6,360.0,420.0
+City Hotel,2016-11-13,model + blocks,1,0,6,360.0,420.0
+City Hotel,2016-11-13,model + blocks + re-level 4 wk,4,0,3,180.0,420.0
+City Hotel,2016-11-13,model + blocks + re-level 8 wk,3,0,4,240.0,420.0
+City Hotel,2016-11-13,model + blocks + re-level 12 wk,2,0,5,300.0,420.0
+City Hotel,2016-11-14,no overbooking,0,0,3,185.97000000000003,185.97000000000003
+City Hotel,2016-11-14,flat rate (Jul – Sep 2016),2,0,1,61.99000000000001,185.97000000000003
+City Hotel,2016-11-14,flat rate (trailing 4 wk),5,2,0,500.0,185.97000000000003
+City Hotel,2016-11-14,flat rate (trailing 8 wk),4,1,0,250.0,185.97000000000003
+City Hotel,2016-11-14,flat rate (trailing 12 wk),3,0,0,0.0,185.97000000000003
+City Hotel,2016-11-14,model,1,0,2,123.98000000000002,185.97000000000003
+City Hotel,2016-11-14,model + blocks,1,0,2,123.98000000000002,185.97000000000003
+City Hotel,2016-11-14,model + blocks + re-level 4 wk,4,1,0,250.0,185.97000000000003
+City Hotel,2016-11-14,model + blocks + re-level 8 wk,3,0,0,0.0,185.97000000000003
+City Hotel,2016-11-14,model + blocks + re-level 12 wk,2,0,1,61.99000000000001,185.97000000000003
+City Hotel,2016-11-15,no overbooking,0,0,0,0.0,0.0
+City Hotel,2016-11-15,flat rate (Jul – Sep 2016),1,1,0,250.0,0.0
+City Hotel,2016-11-15,flat rate (trailing 4 wk),2,2,0,500.0,0.0
+City Hotel,2016-11-15,flat rate (trailing 8 wk),1,1,0,250.0,0.0
+City Hotel,2016-11-15,flat rate (trailing 12 wk),1,1,0,250.0,0.0
+City Hotel,2016-11-15,model,0,0,0,0.0,0.0
+City Hotel,2016-11-15,model + blocks,0,0,0,0.0,0.0
+City Hotel,2016-11-15,model + blocks + re-level 4 wk,1,1,0,250.0,0.0
+City Hotel,2016-11-15,model + blocks + re-level 8 wk,1,1,0,250.0,0.0
+City Hotel,2016-11-15,model + blocks + re-level 12 wk,1,1,0,250.0,0.0
+City Hotel,2016-11-16,no overbooking,0,0,6,342.0,342.0
+City Hotel,2016-11-16,flat rate (Jul – Sep 2016),2,0,4,228.0,342.0
+City Hotel,2016-11-16,flat rate (trailing 4 wk),4,0,2,114.0,342.0
+City Hotel,2016-11-16,flat rate (trailing 8 wk),3,0,3,171.0,342.0
+City Hotel,2016-11-16,flat rate (trailing 12 wk),3,0,3,171.0,342.0
+City Hotel,2016-11-16,model,1,0,5,285.0,342.0
+City Hotel,2016-11-16,model + blocks,1,0,5,285.0,342.0
+City Hotel,2016-11-16,model + blocks + re-level 4 wk,3,0,3,171.0,342.0
+City Hotel,2016-11-16,model + blocks + re-level 8 wk,3,0,3,171.0,342.0
+City Hotel,2016-11-16,model + blocks + re-level 12 wk,2,0,4,228.0,342.0
+City Hotel,2016-11-17,no overbooking,0,0,3,205.20000000000002,205.20000000000002
+City Hotel,2016-11-17,flat rate (Jul – Sep 2016),2,0,1,68.4,205.20000000000002
+City Hotel,2016-11-17,flat rate (trailing 4 wk),3,0,0,0.0,205.20000000000002
+City Hotel,2016-11-17,flat rate (trailing 8 wk),3,0,0,0.0,205.20000000000002
+City Hotel,2016-11-17,flat rate (trailing 12 wk),3,0,0,0.0,205.20000000000002
+City Hotel,2016-11-17,model,1,0,2,136.8,205.20000000000002
+City Hotel,2016-11-17,model + blocks,1,0,2,136.8,205.20000000000002
+City Hotel,2016-11-17,model + blocks + re-level 4 wk,3,0,0,0.0,205.20000000000002
+City Hotel,2016-11-17,model + blocks + re-level 8 wk,3,0,0,0.0,205.20000000000002
+City Hotel,2016-11-17,model + blocks + re-level 12 wk,2,0,1,68.4,205.20000000000002
+City Hotel,2016-11-18,no overbooking,0,0,7,464.205,464.205
+City Hotel,2016-11-18,flat rate (Jul – Sep 2016),3,0,4,265.26,464.205
+City Hotel,2016-11-18,flat rate (trailing 4 wk),4,0,3,198.945,464.205
+City Hotel,2016-11-18,flat rate (trailing 8 wk),5,0,2,132.63,464.205
+City Hotel,2016-11-18,flat rate (trailing 12 wk),4,0,3,198.945,464.205
+City Hotel,2016-11-18,model,2,0,5,331.575,464.205
+City Hotel,2016-11-18,model + blocks,2,0,5,331.575,464.205
+City Hotel,2016-11-18,model + blocks + re-level 4 wk,4,0,3,198.945,464.205
+City Hotel,2016-11-18,model + blocks + re-level 8 wk,5,0,2,132.63,464.205
+City Hotel,2016-11-18,model + blocks + re-level 12 wk,4,0,3,198.945,464.205
+City Hotel,2016-11-19,no overbooking,0,0,1,65.0,65.0
+City Hotel,2016-11-19,flat rate (Jul – Sep 2016),1,0,0,0.0,65.0
+City Hotel,2016-11-19,flat rate (trailing 4 wk),2,1,0,250.0,65.0
+City Hotel,2016-11-19,flat rate (trailing 8 wk),2,1,0,250.0,65.0
+City Hotel,2016-11-19,flat rate (trailing 12 wk),2,1,0,250.0,65.0
+City Hotel,2016-11-19,model,1,0,0,0.0,65.0
+City Hotel,2016-11-19,model + blocks,1,0,0,0.0,65.0
+City Hotel,2016-11-19,model + blocks + re-level 4 wk,2,1,0,250.0,65.0
+City Hotel,2016-11-19,model + blocks + re-level 8 wk,2,1,0,250.0,65.0
+City Hotel,2016-11-19,model + blocks + re-level 12 wk,2,1,0,250.0,65.0
+City Hotel,2016-11-20,no overbooking,0,0,3,165.0,165.0
+City Hotel,2016-11-20,flat rate (Jul – Sep 2016),1,0,2,110.0,165.0
+City Hotel,2016-11-20,flat rate (trailing 4 wk),1,0,2,110.0,165.0
+City Hotel,2016-11-20,flat rate (trailing 8 wk),2,0,1,55.0,165.0
+City Hotel,2016-11-20,flat rate (trailing 12 wk),1,0,2,110.0,165.0
+City Hotel,2016-11-20,model,0,0,3,165.0,165.0
+City Hotel,2016-11-20,model + blocks,0,0,3,165.0,165.0
+City Hotel,2016-11-20,model + blocks + re-level 4 wk,1,0,2,110.0,165.0
+City Hotel,2016-11-20,model + blocks + re-level 8 wk,1,0,2,110.0,165.0
+City Hotel,2016-11-20,model + blocks + re-level 12 wk,1,0,2,110.0,165.0
+City Hotel,2016-11-21,no overbooking,0,0,2,110.0,110.0
+City Hotel,2016-11-21,flat rate (Jul – Sep 2016),5,3,0,750.0,110.0
+City Hotel,2016-11-21,flat rate (trailing 4 wk),7,5,0,1250.0,110.0
+City Hotel,2016-11-21,flat rate (trailing 8 wk),8,6,0,1500.0,110.0
+City Hotel,2016-11-21,flat rate (trailing 12 wk),7,5,0,1250.0,110.0
+City Hotel,2016-11-21,model,4,2,0,500.0,110.0
+City Hotel,2016-11-21,model + blocks,1,0,1,55.0,110.0
+City Hotel,2016-11-21,model + blocks + re-level 4 wk,2,0,0,0.0,110.0
+City Hotel,2016-11-21,model + blocks + re-level 8 wk,2,0,0,0.0,110.0
+City Hotel,2016-11-21,model + blocks + re-level 12 wk,2,0,0,0.0,110.0
+City Hotel,2016-11-22,no overbooking,0,0,1,65.0,65.0
+City Hotel,2016-11-22,flat rate (Jul – Sep 2016),1,0,0,0.0,65.0
+City Hotel,2016-11-22,flat rate (trailing 4 wk),1,0,0,0.0,65.0
+City Hotel,2016-11-22,flat rate (trailing 8 wk),2,1,0,250.0,65.0
+City Hotel,2016-11-22,flat rate (trailing 12 wk),1,0,0,0.0,65.0
+City Hotel,2016-11-22,model,0,0,1,65.0,65.0
+City Hotel,2016-11-22,model + blocks,0,0,1,65.0,65.0
+City Hotel,2016-11-22,model + blocks + re-level 4 wk,1,0,0,0.0,65.0
+City Hotel,2016-11-22,model + blocks + re-level 8 wk,2,1,0,250.0,65.0
+City Hotel,2016-11-22,model + blocks + re-level 12 wk,1,0,0,0.0,65.0
+City Hotel,2016-11-23,no overbooking,0,0,2,116.6,116.6
+City Hotel,2016-11-23,flat rate (Jul – Sep 2016),1,0,1,58.3,116.6
+City Hotel,2016-11-23,flat rate (trailing 4 wk),2,0,0,0.0,116.6
+City Hotel,2016-11-23,flat rate (trailing 8 wk),3,1,0,250.0,116.6
+City Hotel,2016-11-23,flat rate (trailing 12 wk),2,0,0,0.0,116.6
+City Hotel,2016-11-23,model,1,0,1,58.3,116.6
+City Hotel,2016-11-23,model + blocks,0,0,2,116.6,116.6
+City Hotel,2016-11-23,model + blocks + re-level 4 wk,1,0,1,58.3,116.6
+City Hotel,2016-11-23,model + blocks + re-level 8 wk,2,0,0,0.0,116.6
+City Hotel,2016-11-23,model + blocks + re-level 12 wk,1,0,1,58.3,116.6
+City Hotel,2016-11-24,no overbooking,0,0,2,138.0,138.0
+City Hotel,2016-11-24,flat rate (Jul – Sep 2016),1,0,1,69.0,138.0
+City Hotel,2016-11-24,flat rate (trailing 4 wk),2,0,0,0.0,138.0
+City Hotel,2016-11-24,flat rate (trailing 8 wk),2,0,0,0.0,138.0
+City Hotel,2016-11-24,flat rate (trailing 12 wk),2,0,0,0.0,138.0
+City Hotel,2016-11-24,model,0,0,2,138.0,138.0
+City Hotel,2016-11-24,model + blocks,0,0,2,138.0,138.0
+City Hotel,2016-11-24,model + blocks + re-level 4 wk,1,0,1,69.0,138.0
+City Hotel,2016-11-24,model + blocks + re-level 8 wk,1,0,1,69.0,138.0
+City Hotel,2016-11-24,model + blocks + re-level 12 wk,1,0,1,69.0,138.0
+City Hotel,2016-11-25,no overbooking,0,0,6,390.0,390.0
+City Hotel,2016-11-25,flat rate (Jul – Sep 2016),3,0,3,195.0,390.0
+City Hotel,2016-11-25,flat rate (trailing 4 wk),4,0,2,130.0,390.0
+City Hotel,2016-11-25,flat rate (trailing 8 wk),5,0,1,65.0,390.0
+City Hotel,2016-11-25,flat rate (trailing 12 wk),4,0,2,130.0,390.0
+City Hotel,2016-11-25,model,2,0,4,260.0,390.0
+City Hotel,2016-11-25,model + blocks,2,0,4,260.0,390.0
+City Hotel,2016-11-25,model + blocks + re-level 4 wk,4,0,2,130.0,390.0
+City Hotel,2016-11-25,model + blocks + re-level 8 wk,5,0,1,65.0,390.0
+City Hotel,2016-11-25,model + blocks + re-level 12 wk,4,0,2,130.0,390.0
+City Hotel,2016-11-26,no overbooking,0,0,1,63.129999999999995,63.129999999999995
+City Hotel,2016-11-26,flat rate (Jul – Sep 2016),1,0,0,0.0,63.129999999999995
+City Hotel,2016-11-26,flat rate (trailing 4 wk),2,1,0,250.0,63.129999999999995
+City Hotel,2016-11-26,flat rate (trailing 8 wk),2,1,0,250.0,63.129999999999995
+City Hotel,2016-11-26,flat rate (trailing 12 wk),2,1,0,250.0,63.129999999999995
+City Hotel,2016-11-26,model,0,0,1,63.129999999999995,63.129999999999995
+City Hotel,2016-11-26,model + blocks,0,0,1,63.129999999999995,63.129999999999995
+City Hotel,2016-11-26,model + blocks + re-level 4 wk,1,0,0,0.0,63.129999999999995
+City Hotel,2016-11-26,model + blocks + re-level 8 wk,2,1,0,250.0,63.129999999999995
+City Hotel,2016-11-26,model + blocks + re-level 12 wk,1,0,0,0.0,63.129999999999995
+City Hotel,2016-11-27,no overbooking,0,0,16,880.0,880.0
+City Hotel,2016-11-27,flat rate (Jul – Sep 2016),1,0,15,825.0,880.0
+City Hotel,2016-11-27,flat rate (trailing 4 wk),2,0,14,770.0,880.0
+City Hotel,2016-11-27,flat rate (trailing 8 wk),2,0,14,770.0,880.0
+City Hotel,2016-11-27,flat rate (trailing 12 wk),2,0,14,770.0,880.0
+City Hotel,2016-11-27,model,0,0,16,880.0,880.0
+City Hotel,2016-11-27,model + blocks,0,0,16,880.0,880.0
+City Hotel,2016-11-27,model + blocks + re-level 4 wk,1,0,15,825.0,880.0
+City Hotel,2016-11-27,model + blocks + re-level 8 wk,1,0,15,825.0,880.0
+City Hotel,2016-11-27,model + blocks + re-level 12 wk,1,0,15,825.0,880.0
+City Hotel,2016-11-28,no overbooking,0,0,22,1210.0,1210.0
+City Hotel,2016-11-28,flat rate (Jul – Sep 2016),2,0,20,1100.0,1210.0
+City Hotel,2016-11-28,flat rate (trailing 4 wk),3,0,19,1045.0,1210.0
+City Hotel,2016-11-28,flat rate (trailing 8 wk),4,0,18,990.0,1210.0
+City Hotel,2016-11-28,flat rate (trailing 12 wk),3,0,19,1045.0,1210.0
+City Hotel,2016-11-28,model,1,0,21,1155.0,1210.0
+City Hotel,2016-11-28,model + blocks,0,0,22,1210.0,1210.0
+City Hotel,2016-11-28,model + blocks + re-level 4 wk,2,0,20,1100.0,1210.0
+City Hotel,2016-11-28,model + blocks + re-level 8 wk,2,0,20,1100.0,1210.0
+City Hotel,2016-11-28,model + blocks + re-level 12 wk,1,0,21,1155.0,1210.0
+City Hotel,2016-11-29,no overbooking,0,0,1,57.86,57.86
+City Hotel,2016-11-29,flat rate (Jul – Sep 2016),0,0,1,57.86,57.86
+City Hotel,2016-11-29,flat rate (trailing 4 wk),1,0,0,0.0,57.86
+City Hotel,2016-11-29,flat rate (trailing 8 wk),1,0,0,0.0,57.86
+City Hotel,2016-11-29,flat rate (trailing 12 wk),1,0,0,0.0,57.86
+City Hotel,2016-11-29,model,0,0,1,57.86,57.86
+City Hotel,2016-11-29,model + blocks,0,0,1,57.86,57.86
+City Hotel,2016-11-29,model + blocks + re-level 4 wk,1,0,0,0.0,57.86
+City Hotel,2016-11-29,model + blocks + re-level 8 wk,1,0,0,0.0,57.86
+City Hotel,2016-11-29,model + blocks + re-level 12 wk,1,0,0,0.0,57.86
+City Hotel,2016-11-30,no overbooking,0,0,2,122.0,122.0
+City Hotel,2016-11-30,flat rate (Jul – Sep 2016),1,0,1,61.0,122.0
+City Hotel,2016-11-30,flat rate (trailing 4 wk),1,0,1,61.0,122.0
+City Hotel,2016-11-30,flat rate (trailing 8 wk),1,0,1,61.0,122.0
+City Hotel,2016-11-30,flat rate (trailing 12 wk),1,0,1,61.0,122.0
+City Hotel,2016-11-30,model,0,0,2,122.0,122.0
+City Hotel,2016-11-30,model + blocks,0,0,2,122.0,122.0
+City Hotel,2016-11-30,model + blocks + re-level 4 wk,0,0,2,122.0,122.0
+City Hotel,2016-11-30,model + blocks + re-level 8 wk,1,0,1,61.0,122.0
+City Hotel,2016-11-30,model + blocks + re-level 12 wk,0,0,2,122.0,122.0
+City Hotel,2016-12-01,no overbooking,0,0,4,236.8,236.8
+City Hotel,2016-12-01,flat rate (Jul – Sep 2016),1,0,3,177.60000000000002,236.8
+City Hotel,2016-12-01,flat rate (trailing 4 wk),2,0,2,118.4,236.8
+City Hotel,2016-12-01,flat rate (trailing 8 wk),2,0,2,118.4,236.8
+City Hotel,2016-12-01,flat rate (trailing 12 wk),1,0,3,177.60000000000002,236.8
+City Hotel,2016-12-01,model,0,0,4,236.8,236.8
+City Hotel,2016-12-01,model + blocks,0,0,4,236.8,236.8
+City Hotel,2016-12-01,model + blocks + re-level 4 wk,1,0,3,177.60000000000002,236.8
+City Hotel,2016-12-01,model + blocks + re-level 8 wk,2,0,2,118.4,236.8
+City Hotel,2016-12-01,model + blocks + re-level 12 wk,1,0,3,177.60000000000002,236.8
+City Hotel,2016-12-02,no overbooking,0,0,11,715.0,715.0
+City Hotel,2016-12-02,flat rate (Jul – Sep 2016),3,0,8,520.0,715.0
+City Hotel,2016-12-02,flat rate (trailing 4 wk),4,0,7,455.0,715.0
+City Hotel,2016-12-02,flat rate (trailing 8 wk),5,0,6,390.0,715.0
+City Hotel,2016-12-02,flat rate (trailing 12 wk),4,0,7,455.0,715.0
+City Hotel,2016-12-02,model,2,0,9,585.0,715.0
+City Hotel,2016-12-02,model + blocks,1,0,10,650.0,715.0
+City Hotel,2016-12-02,model + blocks + re-level 4 wk,3,0,8,520.0,715.0
+City Hotel,2016-12-02,model + blocks + re-level 8 wk,3,0,8,520.0,715.0
+City Hotel,2016-12-02,model + blocks + re-level 12 wk,3,0,8,520.0,715.0
+City Hotel,2016-12-03,no overbooking,0,0,4,277.56,277.56
+City Hotel,2016-12-03,flat rate (Jul – Sep 2016),2,0,2,138.78,277.56
+City Hotel,2016-12-03,flat rate (trailing 4 wk),2,0,2,138.78,277.56
+City Hotel,2016-12-03,flat rate (trailing 8 wk),4,0,0,0.0,277.56
+City Hotel,2016-12-03,flat rate (trailing 12 wk),3,0,1,69.39,277.56
+City Hotel,2016-12-03,model,1,0,3,208.17000000000002,277.56
+City Hotel,2016-12-03,model + blocks,1,0,3,208.17000000000002,277.56
+City Hotel,2016-12-03,model + blocks + re-level 4 wk,2,0,2,138.78,277.56
+City Hotel,2016-12-03,model + blocks + re-level 8 wk,3,0,1,69.39,277.56
+City Hotel,2016-12-03,model + blocks + re-level 12 wk,2,0,2,138.78,277.56
+City Hotel,2016-12-04,no overbooking,0,0,5,340.0,340.0
+City Hotel,2016-12-04,flat rate (Jul – Sep 2016),1,0,4,272.0,340.0
+City Hotel,2016-12-04,flat rate (trailing 4 wk),1,0,4,272.0,340.0
+City Hotel,2016-12-04,flat rate (trailing 8 wk),2,0,3,204.0,340.0
+City Hotel,2016-12-04,flat rate (trailing 12 wk),2,0,3,204.0,340.0
+City Hotel,2016-12-04,model,1,0,4,272.0,340.0
+City Hotel,2016-12-04,model + blocks,0,0,5,340.0,340.0
+City Hotel,2016-12-04,model + blocks + re-level 4 wk,1,0,4,272.0,340.0
+City Hotel,2016-12-04,model + blocks + re-level 8 wk,2,0,3,204.0,340.0
+City Hotel,2016-12-04,model + blocks + re-level 12 wk,1,0,4,272.0,340.0
+City Hotel,2016-12-05,no overbooking,0,0,1,68.0,68.0
+City Hotel,2016-12-05,flat rate (Jul – Sep 2016),1,0,0,0.0,68.0
+City Hotel,2016-12-05,flat rate (trailing 4 wk),2,1,0,250.0,68.0
+City Hotel,2016-12-05,flat rate (trailing 8 wk),3,2,0,500.0,68.0
+City Hotel,2016-12-05,flat rate (trailing 12 wk),2,1,0,250.0,68.0
+City Hotel,2016-12-05,model,1,0,0,0.0,68.0
+City Hotel,2016-12-05,model + blocks,0,0,1,68.0,68.0
+City Hotel,2016-12-05,model + blocks + re-level 4 wk,1,0,0,0.0,68.0
+City Hotel,2016-12-05,model + blocks + re-level 8 wk,2,1,0,250.0,68.0
+City Hotel,2016-12-05,model + blocks + re-level 12 wk,1,0,0,0.0,68.0
+City Hotel,2016-12-06,no overbooking,0,0,8,560.4,560.4
+City Hotel,2016-12-06,flat rate (Jul – Sep 2016),1,0,7,490.34999999999997,560.4
+City Hotel,2016-12-06,flat rate (trailing 4 wk),1,0,7,490.34999999999997,560.4
+City Hotel,2016-12-06,flat rate (trailing 8 wk),1,0,7,490.34999999999997,560.4
+City Hotel,2016-12-06,flat rate (trailing 12 wk),1,0,7,490.34999999999997,560.4
+City Hotel,2016-12-06,model,0,0,8,560.4,560.4
+City Hotel,2016-12-06,model + blocks,0,0,8,560.4,560.4
+City Hotel,2016-12-06,model + blocks + re-level 4 wk,1,0,7,490.34999999999997,560.4
+City Hotel,2016-12-06,model + blocks + re-level 8 wk,2,0,6,420.29999999999995,560.4
+City Hotel,2016-12-06,model + blocks + re-level 12 wk,1,0,7,490.34999999999997,560.4
+City Hotel,2016-12-07,no overbooking,0,0,1,68.2,68.2
+City Hotel,2016-12-07,flat rate (Jul – Sep 2016),1,0,0,0.0,68.2
+City Hotel,2016-12-07,flat rate (trailing 4 wk),2,1,0,250.0,68.2
+City Hotel,2016-12-07,flat rate (trailing 8 wk),2,1,0,250.0,68.2
+City Hotel,2016-12-07,flat rate (trailing 12 wk),2,1,0,250.0,68.2
+City Hotel,2016-12-07,model,1,0,0,0.0,68.2
+City Hotel,2016-12-07,model + blocks,1,0,0,0.0,68.2
+City Hotel,2016-12-07,model + blocks + re-level 4 wk,2,1,0,250.0,68.2
+City Hotel,2016-12-07,model + blocks + re-level 8 wk,3,2,0,500.0,68.2
+City Hotel,2016-12-07,model + blocks + re-level 12 wk,2,1,0,250.0,68.2
+City Hotel,2016-12-08,no overbooking,0,0,6,410.40000000000003,410.40000000000003
+City Hotel,2016-12-08,flat rate (Jul – Sep 2016),4,0,2,136.8,410.40000000000003
+City Hotel,2016-12-08,flat rate (trailing 4 wk),6,0,0,0.0,410.40000000000003
+City Hotel,2016-12-08,flat rate (trailing 8 wk),7,1,0,250.0,410.40000000000003
+City Hotel,2016-12-08,flat rate (trailing 12 wk),6,0,0,0.0,410.40000000000003
+City Hotel,2016-12-08,model,2,0,4,273.6,410.40000000000003
+City Hotel,2016-12-08,model + blocks,2,0,4,273.6,410.40000000000003
+City Hotel,2016-12-08,model + blocks + re-level 4 wk,5,0,1,68.4,410.40000000000003
+City Hotel,2016-12-08,model + blocks + re-level 8 wk,6,0,0,0.0,410.40000000000003
+City Hotel,2016-12-08,model + blocks + re-level 12 wk,5,0,1,68.4,410.40000000000003
+City Hotel,2016-12-09,no overbooking,0,0,5,296.0,296.0
+City Hotel,2016-12-09,flat rate (Jul – Sep 2016),1,0,4,236.8,296.0
+City Hotel,2016-12-09,flat rate (trailing 4 wk),2,0,3,177.60000000000002,296.0
+City Hotel,2016-12-09,flat rate (trailing 8 wk),3,0,2,118.4,296.0
+City Hotel,2016-12-09,flat rate (trailing 12 wk),2,0,3,177.60000000000002,296.0
+City Hotel,2016-12-09,model,1,0,4,236.8,296.0
+City Hotel,2016-12-09,model + blocks,0,0,5,296.0,296.0
+City Hotel,2016-12-09,model + blocks + re-level 4 wk,2,0,3,177.60000000000002,296.0
+City Hotel,2016-12-09,model + blocks + re-level 8 wk,2,0,3,177.60000000000002,296.0
+City Hotel,2016-12-09,model + blocks + re-level 12 wk,2,0,3,177.60000000000002,296.0
+City Hotel,2016-12-10,no overbooking,0,0,1,70.16499999999999,70.16499999999999
+City Hotel,2016-12-10,flat rate (Jul – Sep 2016),1,0,0,0.0,70.16499999999999
+City Hotel,2016-12-10,flat rate (trailing 4 wk),1,0,0,0.0,70.16499999999999
+City Hotel,2016-12-10,flat rate (trailing 8 wk),2,1,0,250.0,70.16499999999999
+City Hotel,2016-12-10,flat rate (trailing 12 wk),1,0,0,0.0,70.16499999999999
+City Hotel,2016-12-10,model,0,0,1,70.16499999999999,70.16499999999999
+City Hotel,2016-12-10,model + blocks,0,0,1,70.16499999999999,70.16499999999999
+City Hotel,2016-12-10,model + blocks + re-level 4 wk,1,0,0,0.0,70.16499999999999
+City Hotel,2016-12-10,model + blocks + re-level 8 wk,1,0,0,0.0,70.16499999999999
+City Hotel,2016-12-10,model + blocks + re-level 12 wk,1,0,0,0.0,70.16499999999999
+City Hotel,2016-12-11,no overbooking,0,0,0,0.0,0.0
+City Hotel,2016-12-11,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+City Hotel,2016-12-11,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+City Hotel,2016-12-11,flat rate (trailing 8 wk),1,1,0,250.0,0.0
+City Hotel,2016-12-11,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+City Hotel,2016-12-11,model,0,0,0,0.0,0.0
+City Hotel,2016-12-11,model + blocks,0,0,0,0.0,0.0
+City Hotel,2016-12-11,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+City Hotel,2016-12-11,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+City Hotel,2016-12-11,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+City Hotel,2016-12-12,no overbooking,0,0,0,0.0,0.0
+City Hotel,2016-12-12,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+City Hotel,2016-12-12,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+City Hotel,2016-12-12,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+City Hotel,2016-12-12,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+City Hotel,2016-12-12,model,0,0,0,0.0,0.0
+City Hotel,2016-12-12,model + blocks,0,0,0,0.0,0.0
+City Hotel,2016-12-12,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+City Hotel,2016-12-12,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+City Hotel,2016-12-12,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+City Hotel,2016-12-13,no overbooking,0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,flat rate (Jul – Sep 2016),0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,flat rate (trailing 4 wk),0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,flat rate (trailing 8 wk),0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,flat rate (trailing 12 wk),0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,model,0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,model + blocks,0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,model + blocks + re-level 4 wk,0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,model + blocks + re-level 8 wk,0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-13,model + blocks + re-level 12 wk,0,0,1,61.599999999999994,61.599999999999994
+City Hotel,2016-12-14,no overbooking,0,0,1,68.39,68.39
+City Hotel,2016-12-14,flat rate (Jul – Sep 2016),0,0,1,68.39,68.39
+City Hotel,2016-12-14,flat rate (trailing 4 wk),0,0,1,68.39,68.39
+City Hotel,2016-12-14,flat rate (trailing 8 wk),1,0,0,0.0,68.39
+City Hotel,2016-12-14,flat rate (trailing 12 wk),0,0,1,68.39,68.39
+City Hotel,2016-12-14,model,0,0,1,68.39,68.39
+City Hotel,2016-12-14,model + blocks,0,0,1,68.39,68.39
+City Hotel,2016-12-14,model + blocks + re-level 4 wk,0,0,1,68.39,68.39
+City Hotel,2016-12-14,model + blocks + re-level 8 wk,0,0,1,68.39,68.39
+City Hotel,2016-12-14,model + blocks + re-level 12 wk,0,0,1,68.39,68.39
+City Hotel,2016-12-15,no overbooking,0,0,1,68.0,68.0
+City Hotel,2016-12-15,flat rate (Jul – Sep 2016),0,0,1,68.0,68.0
+City Hotel,2016-12-15,flat rate (trailing 4 wk),0,0,1,68.0,68.0
+City Hotel,2016-12-15,flat rate (trailing 8 wk),0,0,1,68.0,68.0
+City Hotel,2016-12-15,flat rate (trailing 12 wk),0,0,1,68.0,68.0
+City Hotel,2016-12-15,model,0,0,1,68.0,68.0
+City Hotel,2016-12-15,model + blocks,0,0,1,68.0,68.0
+City Hotel,2016-12-15,model + blocks + re-level 4 wk,0,0,1,68.0,68.0
+City Hotel,2016-12-15,model + blocks + re-level 8 wk,0,0,1,68.0,68.0
+City Hotel,2016-12-15,model + blocks + re-level 12 wk,0,0,1,68.0,68.0
+City Hotel,2016-12-16,no overbooking,0,0,2,118.4,118.4
+City Hotel,2016-12-16,flat rate (Jul – Sep 2016),1,0,1,59.2,118.4
+City Hotel,2016-12-16,flat rate (trailing 4 wk),1,0,1,59.2,118.4
+City Hotel,2016-12-16,flat rate (trailing 8 wk),1,0,1,59.2,118.4
+City Hotel,2016-12-16,flat rate (trailing 12 wk),1,0,1,59.2,118.4
+City Hotel,2016-12-16,model,0,0,2,118.4,118.4
+City Hotel,2016-12-16,model + blocks,0,0,2,118.4,118.4
+City Hotel,2016-12-16,model + blocks + re-level 4 wk,1,0,1,59.2,118.4
+City Hotel,2016-12-16,model + blocks + re-level 8 wk,1,0,1,59.2,118.4
+City Hotel,2016-12-16,model + blocks + re-level 12 wk,1,0,1,59.2,118.4
+City Hotel,2016-12-17,no overbooking,0,0,2,118.4,118.4
+City Hotel,2016-12-17,flat rate (Jul – Sep 2016),1,0,1,59.2,118.4
+City Hotel,2016-12-17,flat rate (trailing 4 wk),2,0,0,0.0,118.4
+City Hotel,2016-12-17,flat rate (trailing 8 wk),1,0,1,59.2,118.4
+City Hotel,2016-12-17,flat rate (trailing 12 wk),2,0,0,0.0,118.4
+City Hotel,2016-12-17,model,1,0,1,59.2,118.4
+City Hotel,2016-12-17,model + blocks,0,0,2,118.4,118.4
+City Hotel,2016-12-17,model + blocks + re-level 4 wk,2,0,0,0.0,118.4
+City Hotel,2016-12-17,model + blocks + re-level 8 wk,2,0,0,0.0,118.4
+City Hotel,2016-12-17,model + blocks + re-level 12 wk,2,0,0,0.0,118.4
+City Hotel,2016-12-18,no overbooking,0,0,1,67.0,67.0
+City Hotel,2016-12-18,flat rate (Jul – Sep 2016),1,0,0,0.0,67.0
+City Hotel,2016-12-18,flat rate (trailing 4 wk),2,1,0,250.0,67.0
+City Hotel,2016-12-18,flat rate (trailing 8 wk),1,0,0,0.0,67.0
+City Hotel,2016-12-18,flat rate (trailing 12 wk),1,0,0,0.0,67.0
+City Hotel,2016-12-18,model,0,0,1,67.0,67.0
+City Hotel,2016-12-18,model + blocks,0,0,1,67.0,67.0
+City Hotel,2016-12-18,model + blocks + re-level 4 wk,1,0,0,0.0,67.0
+City Hotel,2016-12-18,model + blocks + re-level 8 wk,1,0,0,0.0,67.0
+City Hotel,2016-12-18,model + blocks + re-level 12 wk,1,0,0,0.0,67.0
+City Hotel,2016-12-19,no overbooking,0,0,3,201.60000000000002,201.60000000000002
+City Hotel,2016-12-19,flat rate (Jul – Sep 2016),0,0,3,201.60000000000002,201.60000000000002
+City Hotel,2016-12-19,flat rate (trailing 4 wk),1,0,2,134.4,201.60000000000002
+City Hotel,2016-12-19,flat rate (trailing 8 wk),1,0,2,134.4,201.60000000000002
+City Hotel,2016-12-19,flat rate (trailing 12 wk),1,0,2,134.4,201.60000000000002
+City Hotel,2016-12-19,model,0,0,3,201.60000000000002,201.60000000000002
+City Hotel,2016-12-19,model + blocks,0,0,3,201.60000000000002,201.60000000000002
+City Hotel,2016-12-19,model + blocks + re-level 4 wk,0,0,3,201.60000000000002,201.60000000000002
+City Hotel,2016-12-19,model + blocks + re-level 8 wk,0,0,3,201.60000000000002,201.60000000000002
+City Hotel,2016-12-19,model + blocks + re-level 12 wk,0,0,3,201.60000000000002,201.60000000000002
+City Hotel,2016-12-20,no overbooking,0,0,1,68.29,68.29
+City Hotel,2016-12-20,flat rate (Jul – Sep 2016),0,0,1,68.29,68.29
+City Hotel,2016-12-20,flat rate (trailing 4 wk),1,0,0,0.0,68.29
+City Hotel,2016-12-20,flat rate (trailing 8 wk),1,0,0,0.0,68.29
+City Hotel,2016-12-20,flat rate (trailing 12 wk),1,0,0,0.0,68.29
+City Hotel,2016-12-20,model,0,0,1,68.29,68.29
+City Hotel,2016-12-20,model + blocks,0,0,1,68.29,68.29
+City Hotel,2016-12-20,model + blocks + re-level 4 wk,1,0,0,0.0,68.29
+City Hotel,2016-12-20,model + blocks + re-level 8 wk,1,0,0,0.0,68.29
+City Hotel,2016-12-20,model + blocks + re-level 12 wk,1,0,0,0.0,68.29
+City Hotel,2016-12-21,no overbooking,0,0,1,84.55000000000001,84.55000000000001
+City Hotel,2016-12-21,flat rate (Jul – Sep 2016),1,0,0,0.0,84.55000000000001
+City Hotel,2016-12-21,flat rate (trailing 4 wk),2,1,0,250.0,84.55000000000001
+City Hotel,2016-12-21,flat rate (trailing 8 wk),1,0,0,0.0,84.55000000000001
+City Hotel,2016-12-21,flat rate (trailing 12 wk),2,1,0,250.0,84.55000000000001
+City Hotel,2016-12-21,model,1,0,0,0.0,84.55000000000001
+City Hotel,2016-12-21,model + blocks,0,0,1,84.55000000000001,84.55000000000001
+City Hotel,2016-12-21,model + blocks + re-level 4 wk,2,1,0,250.0,84.55000000000001
+City Hotel,2016-12-21,model + blocks + re-level 8 wk,1,0,0,0.0,84.55000000000001
+City Hotel,2016-12-21,model + blocks + re-level 12 wk,2,1,0,250.0,84.55000000000001
+City Hotel,2016-12-22,no overbooking,0,0,2,145.3,145.3
+City Hotel,2016-12-22,flat rate (Jul – Sep 2016),1,0,1,72.65,145.3
+City Hotel,2016-12-22,flat rate (trailing 4 wk),2,0,0,0.0,145.3
+City Hotel,2016-12-22,flat rate (trailing 8 wk),1,0,1,72.65,145.3
+City Hotel,2016-12-22,flat rate (trailing 12 wk),2,0,0,0.0,145.3
+City Hotel,2016-12-22,model,1,0,1,72.65,145.3
+City Hotel,2016-12-22,model + blocks,1,0,1,72.65,145.3
+City Hotel,2016-12-22,model + blocks + re-level 4 wk,2,0,0,0.0,145.3
+City Hotel,2016-12-22,model + blocks + re-level 8 wk,2,0,0,0.0,145.3
+City Hotel,2016-12-22,model + blocks + re-level 12 wk,2,0,0,0.0,145.3
+City Hotel,2016-12-23,no overbooking,0,0,2,164.8,164.8
+City Hotel,2016-12-23,flat rate (Jul – Sep 2016),1,0,1,82.4,164.8
+City Hotel,2016-12-23,flat rate (trailing 4 wk),2,0,0,0.0,164.8
+City Hotel,2016-12-23,flat rate (trailing 8 wk),1,0,1,82.4,164.8
+City Hotel,2016-12-23,flat rate (trailing 12 wk),2,0,0,0.0,164.8
+City Hotel,2016-12-23,model,1,0,1,82.4,164.8
+City Hotel,2016-12-23,model + blocks,1,0,1,82.4,164.8
+City Hotel,2016-12-23,model + blocks + re-level 4 wk,3,1,0,250.0,164.8
+City Hotel,2016-12-23,model + blocks + re-level 8 wk,2,0,0,0.0,164.8
+City Hotel,2016-12-23,model + blocks + re-level 12 wk,2,0,0,0.0,164.8
+City Hotel,2016-12-24,no overbooking,0,0,2,192.0,192.0
+City Hotel,2016-12-24,flat rate (Jul – Sep 2016),1,0,1,96.0,192.0
+City Hotel,2016-12-24,flat rate (trailing 4 wk),2,0,0,0.0,192.0
+City Hotel,2016-12-24,flat rate (trailing 8 wk),2,0,0,0.0,192.0
+City Hotel,2016-12-24,flat rate (trailing 12 wk),2,0,0,0.0,192.0
+City Hotel,2016-12-24,model,1,0,1,96.0,192.0
+City Hotel,2016-12-24,model + blocks,1,0,1,96.0,192.0
+City Hotel,2016-12-24,model + blocks + re-level 4 wk,3,1,0,250.0,192.0
+City Hotel,2016-12-24,model + blocks + re-level 8 wk,3,1,0,250.0,192.0
+City Hotel,2016-12-24,model + blocks + re-level 12 wk,3,1,0,250.0,192.0
+City Hotel,2016-12-25,no overbooking,0,0,0,0.0,0.0
+City Hotel,2016-12-25,flat rate (Jul – Sep 2016),1,1,0,250.0,0.0
+City Hotel,2016-12-25,flat rate (trailing 4 wk),2,2,0,500.0,0.0
+City Hotel,2016-12-25,flat rate (trailing 8 wk),2,2,0,500.0,0.0
+City Hotel,2016-12-25,flat rate (trailing 12 wk),2,2,0,500.0,0.0
+City Hotel,2016-12-25,model,1,1,0,250.0,0.0
+City Hotel,2016-12-25,model + blocks,0,0,0,0.0,0.0
+City Hotel,2016-12-25,model + blocks + re-level 4 wk,2,2,0,500.0,0.0
+City Hotel,2016-12-25,model + blocks + re-level 8 wk,2,2,0,500.0,0.0
+City Hotel,2016-12-25,model + blocks + re-level 12 wk,2,2,0,500.0,0.0
+City Hotel,2016-12-26,no overbooking,0,0,3,264.67499999999995,264.67499999999995
+City Hotel,2016-12-26,flat rate (Jul – Sep 2016),1,0,2,176.45,264.67499999999995
+City Hotel,2016-12-26,flat rate (trailing 4 wk),2,0,1,88.225,264.67499999999995
+City Hotel,2016-12-26,flat rate (trailing 8 wk),2,0,1,88.225,264.67499999999995
+City Hotel,2016-12-26,flat rate (trailing 12 wk),2,0,1,88.225,264.67499999999995
+City Hotel,2016-12-26,model,1,0,2,176.45,264.67499999999995
+City Hotel,2016-12-26,model + blocks,1,0,2,176.45,264.67499999999995
+City Hotel,2016-12-26,model + blocks + re-level 4 wk,4,1,0,250.0,264.67499999999995
+City Hotel,2016-12-26,model + blocks + re-level 8 wk,3,0,0,0.0,264.67499999999995
+City Hotel,2016-12-26,model + blocks + re-level 12 wk,4,1,0,250.0,264.67499999999995
+City Hotel,2016-12-27,no overbooking,0,0,7,345.03000000000003,345.03000000000003
+City Hotel,2016-12-27,flat rate (Jul – Sep 2016),5,0,2,98.58000000000001,345.03000000000003
+City Hotel,2016-12-27,flat rate (trailing 4 wk),9,2,0,500.0,345.03000000000003
+City Hotel,2016-12-27,flat rate (trailing 8 wk),8,1,0,250.0,345.03000000000003
+City Hotel,2016-12-27,flat rate (trailing 12 wk),8,1,0,250.0,345.03000000000003
+City Hotel,2016-12-27,model,2,0,5,246.45000000000005,345.03000000000003
+City Hotel,2016-12-27,model + blocks,1,0,6,295.74,345.03000000000003
+City Hotel,2016-12-27,model + blocks + re-level 4 wk,6,0,1,49.290000000000006,345.03000000000003
+City Hotel,2016-12-27,model + blocks + re-level 8 wk,5,0,2,98.58000000000001,345.03000000000003
+City Hotel,2016-12-27,model + blocks + re-level 12 wk,5,0,2,98.58000000000001,345.03000000000003
+City Hotel,2016-12-28,no overbooking,0,0,10,1056.6,1056.6
+City Hotel,2016-12-28,flat rate (Jul – Sep 2016),2,0,8,845.28,1056.6
+City Hotel,2016-12-28,flat rate (trailing 4 wk),4,0,6,633.96,1056.6
+City Hotel,2016-12-28,flat rate (trailing 8 wk),4,0,6,633.96,1056.6
+City Hotel,2016-12-28,flat rate (trailing 12 wk),4,0,6,633.96,1056.6
+City Hotel,2016-12-28,model,2,0,8,845.28,1056.6
+City Hotel,2016-12-28,model + blocks,2,0,8,845.28,1056.6
+City Hotel,2016-12-28,model + blocks + re-level 4 wk,5,0,5,528.3,1056.6
+City Hotel,2016-12-28,model + blocks + re-level 8 wk,4,0,6,633.96,1056.6
+City Hotel,2016-12-28,model + blocks + re-level 12 wk,5,0,5,528.3,1056.6
+City Hotel,2016-12-29,no overbooking,0,0,9,738.0,738.0
+City Hotel,2016-12-29,flat rate (Jul – Sep 2016),3,0,6,492.0,738.0
+City Hotel,2016-12-29,flat rate (trailing 4 wk),5,0,4,328.0,738.0
+City Hotel,2016-12-29,flat rate (trailing 8 wk),4,0,5,410.0,738.0
+City Hotel,2016-12-29,flat rate (trailing 12 wk),5,0,4,328.0,738.0
+City Hotel,2016-12-29,model,2,0,7,574.0,738.0
+City Hotel,2016-12-29,model + blocks,1,0,8,656.0,738.0
+City Hotel,2016-12-29,model + blocks + re-level 4 wk,5,0,4,328.0,738.0
+City Hotel,2016-12-29,model + blocks + re-level 8 wk,4,0,5,410.0,738.0
+City Hotel,2016-12-29,model + blocks + re-level 12 wk,4,0,5,410.0,738.0
+City Hotel,2016-12-30,no overbooking,0,0,5,625.5,625.5
+City Hotel,2016-12-30,flat rate (Jul – Sep 2016),2,0,3,375.29999999999995,625.5
+City Hotel,2016-12-30,flat rate (trailing 4 wk),5,0,0,0.0,625.5
+City Hotel,2016-12-30,flat rate (trailing 8 wk),4,0,1,125.1,625.5
+City Hotel,2016-12-30,flat rate (trailing 12 wk),4,0,1,125.1,625.5
+City Hotel,2016-12-30,model,2,0,3,375.29999999999995,625.5
+City Hotel,2016-12-30,model + blocks,1,0,4,500.4,625.5
+City Hotel,2016-12-30,model + blocks + re-level 4 wk,4,0,1,125.1,625.5
+City Hotel,2016-12-30,model + blocks + re-level 8 wk,3,0,2,250.2,625.5
+City Hotel,2016-12-30,model + blocks + re-level 12 wk,4,0,1,125.1,625.5
+City Hotel,2016-12-31,no overbooking,0,0,0,0.0,0.0
+City Hotel,2016-12-31,flat rate (Jul – Sep 2016),1,1,0,250.0,0.0
+City Hotel,2016-12-31,flat rate (trailing 4 wk),2,2,0,500.0,0.0
+City Hotel,2016-12-31,flat rate (trailing 8 wk),1,1,0,250.0,0.0
+City Hotel,2016-12-31,flat rate (trailing 12 wk),2,2,0,500.0,0.0
+City Hotel,2016-12-31,model,0,0,0,0.0,0.0
+City Hotel,2016-12-31,model + blocks,0,0,0,0.0,0.0
+City Hotel,2016-12-31,model + blocks + re-level 4 wk,1,1,0,250.0,0.0
+City Hotel,2016-12-31,model + blocks + re-level 8 wk,1,1,0,250.0,0.0
+City Hotel,2016-12-31,model + blocks + re-level 12 wk,1,1,0,250.0,0.0
+Resort Hotel,2016-10-01,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-01,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-02,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-03,no overbooking,0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,flat rate (Jul – Sep 2016),0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,flat rate (trailing 4 wk),0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,flat rate (trailing 8 wk),0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,flat rate (trailing 12 wk),0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,model,0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,model + blocks,0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,model + blocks + re-level 4 wk,0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,model + blocks + re-level 8 wk,0,0,1,50.0,50.0
+Resort Hotel,2016-10-03,model + blocks + re-level 12 wk,0,0,1,50.0,50.0
+Resort Hotel,2016-10-04,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-04,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-05,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-06,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-06,flat rate (Jul – Sep 2016),1,1,0,250.0,0.0
+Resort Hotel,2016-10-06,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-06,flat rate (trailing 8 wk),1,1,0,250.0,0.0
+Resort Hotel,2016-10-06,flat rate (trailing 12 wk),1,1,0,250.0,0.0
+Resort Hotel,2016-10-06,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-06,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-06,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-06,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-06,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-07,no overbooking,0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,flat rate (Jul – Sep 2016),0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,flat rate (trailing 4 wk),0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,flat rate (trailing 8 wk),0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,flat rate (trailing 12 wk),0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,model,0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,model + blocks,0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,model + blocks + re-level 4 wk,0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,model + blocks + re-level 8 wk,0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-07,model + blocks + re-level 12 wk,0,0,1,60.400000000000006,60.400000000000006
+Resort Hotel,2016-10-08,no overbooking,0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,flat rate (Jul – Sep 2016),0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,flat rate (trailing 4 wk),0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,flat rate (trailing 8 wk),0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,flat rate (trailing 12 wk),0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,model,0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,model + blocks,0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,model + blocks + re-level 4 wk,0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,model + blocks + re-level 8 wk,0,0,2,102.72,102.72
+Resort Hotel,2016-10-08,model + blocks + re-level 12 wk,0,0,2,102.72,102.72
+Resort Hotel,2016-10-09,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-09,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-10,no overbooking,0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,flat rate (Jul – Sep 2016),0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,flat rate (trailing 4 wk),0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,flat rate (trailing 8 wk),0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,flat rate (trailing 12 wk),0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,model,0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,model + blocks,0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,model + blocks + re-level 4 wk,0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,model + blocks + re-level 8 wk,0,0,2,76.0,76.0
+Resort Hotel,2016-10-10,model + blocks + re-level 12 wk,0,0,2,76.0,76.0
+Resort Hotel,2016-10-11,no overbooking,0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,flat rate (Jul – Sep 2016),0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,flat rate (trailing 4 wk),0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,flat rate (trailing 8 wk),0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,flat rate (trailing 12 wk),0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,model,0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,model + blocks,0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,model + blocks + re-level 4 wk,0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,model + blocks + re-level 8 wk,0,0,3,130.5,130.5
+Resort Hotel,2016-10-11,model + blocks + re-level 12 wk,0,0,3,130.5,130.5
+Resort Hotel,2016-10-12,no overbooking,0,0,1,46.0,46.0
+Resort Hotel,2016-10-12,flat rate (Jul – Sep 2016),1,0,0,0.0,46.0
+Resort Hotel,2016-10-12,flat rate (trailing 4 wk),0,0,1,46.0,46.0
+Resort Hotel,2016-10-12,flat rate (trailing 8 wk),1,0,0,0.0,46.0
+Resort Hotel,2016-10-12,flat rate (trailing 12 wk),1,0,0,0.0,46.0
+Resort Hotel,2016-10-12,model,0,0,1,46.0,46.0
+Resort Hotel,2016-10-12,model + blocks,0,0,1,46.0,46.0
+Resort Hotel,2016-10-12,model + blocks + re-level 4 wk,0,0,1,46.0,46.0
+Resort Hotel,2016-10-12,model + blocks + re-level 8 wk,0,0,1,46.0,46.0
+Resort Hotel,2016-10-12,model + blocks + re-level 12 wk,0,0,1,46.0,46.0
+Resort Hotel,2016-10-13,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-13,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-14,no overbooking,0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,flat rate (Jul – Sep 2016),0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,flat rate (trailing 4 wk),0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,flat rate (trailing 8 wk),0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,flat rate (trailing 12 wk),0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,model,0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,model + blocks,0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,model + blocks + re-level 4 wk,0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,model + blocks + re-level 8 wk,0,0,1,51.56,51.56
+Resort Hotel,2016-10-14,model + blocks + re-level 12 wk,0,0,1,51.56,51.56
+Resort Hotel,2016-10-15,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-15,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-16,no overbooking,0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,flat rate (Jul – Sep 2016),0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,flat rate (trailing 4 wk),0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,flat rate (trailing 8 wk),0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,flat rate (trailing 12 wk),0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,model,0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,model + blocks,0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,model + blocks + re-level 4 wk,0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,model + blocks + re-level 8 wk,0,0,2,76.0,76.0
+Resort Hotel,2016-10-16,model + blocks + re-level 12 wk,0,0,2,76.0,76.0
+Resort Hotel,2016-10-17,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-17,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-18,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-19,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-20,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-21,no overbooking,0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,flat rate (Jul – Sep 2016),0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,flat rate (trailing 4 wk),0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,flat rate (trailing 8 wk),0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,flat rate (trailing 12 wk),0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,model,0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,model + blocks,0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,model + blocks + re-level 4 wk,0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,model + blocks + re-level 8 wk,0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-21,model + blocks + re-level 12 wk,0,0,2,116.80000000000001,116.80000000000001
+Resort Hotel,2016-10-22,no overbooking,0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,flat rate (Jul – Sep 2016),0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,flat rate (trailing 4 wk),0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,flat rate (trailing 8 wk),0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,flat rate (trailing 12 wk),0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,model,0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,model + blocks,0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,model + blocks + re-level 4 wk,0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,model + blocks + re-level 8 wk,0,0,1,55.0,55.0
+Resort Hotel,2016-10-22,model + blocks + re-level 12 wk,0,0,1,55.0,55.0
+Resort Hotel,2016-10-23,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-23,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-24,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-25,no overbooking,0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,flat rate (Jul – Sep 2016),0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,flat rate (trailing 4 wk),0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,flat rate (trailing 8 wk),0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,flat rate (trailing 12 wk),0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,model,0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,model + blocks,0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,model + blocks + re-level 4 wk,0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,model + blocks + re-level 8 wk,0,0,3,120.0,120.0
+Resort Hotel,2016-10-25,model + blocks + re-level 12 wk,0,0,3,120.0,120.0
+Resort Hotel,2016-10-26,no overbooking,0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,flat rate (Jul – Sep 2016),0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,flat rate (trailing 4 wk),0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,flat rate (trailing 8 wk),0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,flat rate (trailing 12 wk),0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,model,0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,model + blocks,0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,model + blocks + re-level 4 wk,0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,model + blocks + re-level 8 wk,0,0,1,48.0,48.0
+Resort Hotel,2016-10-26,model + blocks + re-level 12 wk,0,0,1,48.0,48.0
+Resort Hotel,2016-10-27,no overbooking,0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,flat rate (Jul – Sep 2016),0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,flat rate (trailing 4 wk),0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,flat rate (trailing 8 wk),0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,flat rate (trailing 12 wk),0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,model,0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,model + blocks,0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,model + blocks + re-level 4 wk,0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,model + blocks + re-level 8 wk,0,0,1,34.5,34.5
+Resort Hotel,2016-10-27,model + blocks + re-level 12 wk,0,0,1,34.5,34.5
+Resort Hotel,2016-10-28,no overbooking,0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,flat rate (Jul – Sep 2016),0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,flat rate (trailing 4 wk),0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,flat rate (trailing 8 wk),0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,flat rate (trailing 12 wk),0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,model,0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,model + blocks,0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,model + blocks + re-level 4 wk,0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,model + blocks + re-level 8 wk,0,0,4,153.6,153.6
+Resort Hotel,2016-10-28,model + blocks + re-level 12 wk,0,0,4,153.6,153.6
+Resort Hotel,2016-10-29,no overbooking,0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,flat rate (Jul – Sep 2016),0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,flat rate (trailing 4 wk),0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,flat rate (trailing 8 wk),0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,flat rate (trailing 12 wk),0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,model,0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,model + blocks,0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,model + blocks + re-level 4 wk,0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,model + blocks + re-level 8 wk,0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-29,model + blocks + re-level 12 wk,0,0,4,106.39999999999998,106.39999999999998
+Resort Hotel,2016-10-30,no overbooking,0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,flat rate (Jul – Sep 2016),0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,flat rate (trailing 4 wk),0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,flat rate (trailing 8 wk),0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,flat rate (trailing 12 wk),0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,model,0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,model + blocks,0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,model + blocks + re-level 4 wk,0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,model + blocks + re-level 8 wk,0,0,4,171.76,171.76
+Resort Hotel,2016-10-30,model + blocks + re-level 12 wk,0,0,4,171.76,171.76
+Resort Hotel,2016-10-31,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,model,0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-10-31,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-01,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-02,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-03,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-04,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-05,no overbooking,0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,flat rate (Jul – Sep 2016),0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,flat rate (trailing 4 wk),0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,flat rate (trailing 8 wk),0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,flat rate (trailing 12 wk),0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,model,0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,model + blocks,0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,model + blocks + re-level 4 wk,0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,model + blocks + re-level 8 wk,0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-05,model + blocks + re-level 12 wk,0,0,1,27.700000000000003,27.700000000000003
+Resort Hotel,2016-11-06,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-06,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-07,no overbooking,0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,flat rate (Jul – Sep 2016),0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,flat rate (trailing 4 wk),0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,flat rate (trailing 8 wk),0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,flat rate (trailing 12 wk),0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,model,0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,model + blocks,0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,model + blocks + re-level 4 wk,0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,model + blocks + re-level 8 wk,0,0,2,81.65,81.65
+Resort Hotel,2016-11-07,model + blocks + re-level 12 wk,0,0,2,81.65,81.65
+Resort Hotel,2016-11-08,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-08,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-09,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-10,no overbooking,0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,flat rate (Jul – Sep 2016),0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,flat rate (trailing 4 wk),0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,flat rate (trailing 8 wk),0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,flat rate (trailing 12 wk),0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,model,0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,model + blocks,0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,model + blocks + re-level 4 wk,0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,model + blocks + re-level 8 wk,0,0,1,26.9,26.9
+Resort Hotel,2016-11-10,model + blocks + re-level 12 wk,0,0,1,26.9,26.9
+Resort Hotel,2016-11-11,no overbooking,0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,flat rate (Jul – Sep 2016),0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,flat rate (trailing 4 wk),0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,flat rate (trailing 8 wk),0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,flat rate (trailing 12 wk),0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,model,0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,model + blocks,0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,model + blocks + re-level 4 wk,0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,model + blocks + re-level 8 wk,0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-11,model + blocks + re-level 12 wk,0,0,1,21.825000000000003,21.825000000000003
+Resort Hotel,2016-11-12,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-12,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-13,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-14,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-15,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-16,no overbooking,0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,flat rate (Jul – Sep 2016),0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,flat rate (trailing 4 wk),0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,flat rate (trailing 8 wk),0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,flat rate (trailing 12 wk),0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,model,0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,model + blocks,0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,model + blocks + re-level 4 wk,0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,model + blocks + re-level 8 wk,0,0,1,20.9,20.9
+Resort Hotel,2016-11-16,model + blocks + re-level 12 wk,0,0,1,20.9,20.9
+Resort Hotel,2016-11-17,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-17,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-18,no overbooking,0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,flat rate (Jul – Sep 2016),0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,flat rate (trailing 4 wk),0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,flat rate (trailing 8 wk),0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,flat rate (trailing 12 wk),0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,model,0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,model + blocks,0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,model + blocks + re-level 4 wk,0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,model + blocks + re-level 8 wk,0,0,1,30.0,30.0
+Resort Hotel,2016-11-18,model + blocks + re-level 12 wk,0,0,1,30.0,30.0
+Resort Hotel,2016-11-19,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-19,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-20,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-21,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-22,no overbooking,0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,flat rate (Jul – Sep 2016),0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,flat rate (trailing 4 wk),0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,flat rate (trailing 8 wk),0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,flat rate (trailing 12 wk),0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,model,0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,model + blocks,0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,model + blocks + re-level 4 wk,0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,model + blocks + re-level 8 wk,0,0,1,16.4,16.4
+Resort Hotel,2016-11-22,model + blocks + re-level 12 wk,0,0,1,16.4,16.4
+Resort Hotel,2016-11-23,no overbooking,0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,flat rate (Jul – Sep 2016),0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,flat rate (trailing 4 wk),0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,flat rate (trailing 8 wk),0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,flat rate (trailing 12 wk),0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,model,0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,model + blocks,0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,model + blocks + re-level 4 wk,0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,model + blocks + re-level 8 wk,0,0,1,23.0,23.0
+Resort Hotel,2016-11-23,model + blocks + re-level 12 wk,0,0,1,23.0,23.0
+Resort Hotel,2016-11-24,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-24,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-25,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-26,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-27,no overbooking,0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,flat rate (Jul – Sep 2016),0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,flat rate (trailing 4 wk),0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,flat rate (trailing 8 wk),0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,flat rate (trailing 12 wk),0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,model,0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,model + blocks,0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,model + blocks + re-level 4 wk,0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,model + blocks + re-level 8 wk,0,0,1,35.8,35.8
+Resort Hotel,2016-11-27,model + blocks + re-level 12 wk,0,0,1,35.8,35.8
+Resort Hotel,2016-11-28,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-28,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-29,no overbooking,0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,flat rate (Jul – Sep 2016),0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,flat rate (trailing 4 wk),0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,flat rate (trailing 8 wk),0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,flat rate (trailing 12 wk),0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,model,0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,model + blocks,0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,model + blocks + re-level 4 wk,0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,model + blocks + re-level 8 wk,0,0,2,58.0,58.0
+Resort Hotel,2016-11-29,model + blocks + re-level 12 wk,0,0,2,58.0,58.0
+Resort Hotel,2016-11-30,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,model,0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-11-30,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-01,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-02,no overbooking,0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,flat rate (Jul – Sep 2016),0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,flat rate (trailing 4 wk),0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,flat rate (trailing 8 wk),0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,flat rate (trailing 12 wk),0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,model,0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,model + blocks,0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,model + blocks + re-level 4 wk,0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,model + blocks + re-level 8 wk,0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-02,model + blocks + re-level 12 wk,0,0,1,31.799999999999997,31.799999999999997
+Resort Hotel,2016-12-03,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-03,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-04,no overbooking,0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,flat rate (Jul – Sep 2016),0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,flat rate (trailing 4 wk),0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,flat rate (trailing 8 wk),0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,flat rate (trailing 12 wk),0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,model,0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,model + blocks,0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,model + blocks + re-level 4 wk,0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,model + blocks + re-level 8 wk,0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-04,model + blocks + re-level 12 wk,0,0,1,37.114999999999995,37.114999999999995
+Resort Hotel,2016-12-05,no overbooking,0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,flat rate (Jul – Sep 2016),0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,flat rate (trailing 4 wk),0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,flat rate (trailing 8 wk),0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,flat rate (trailing 12 wk),0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,model,0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,model + blocks,0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,model + blocks + re-level 4 wk,0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,model + blocks + re-level 8 wk,0,0,6,384.0,384.0
+Resort Hotel,2016-12-05,model + blocks + re-level 12 wk,0,0,6,384.0,384.0
+Resort Hotel,2016-12-06,no overbooking,0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,flat rate (Jul – Sep 2016),0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,flat rate (trailing 4 wk),0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,flat rate (trailing 8 wk),0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,flat rate (trailing 12 wk),0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,model,0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,model + blocks,0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,model + blocks + re-level 4 wk,0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,model + blocks + re-level 8 wk,0,0,2,37.8,37.8
+Resort Hotel,2016-12-06,model + blocks + re-level 12 wk,0,0,2,37.8,37.8
+Resort Hotel,2016-12-07,no overbooking,0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,flat rate (Jul – Sep 2016),0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,flat rate (trailing 4 wk),0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,flat rate (trailing 8 wk),0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,flat rate (trailing 12 wk),0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,model,0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,model + blocks,0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,model + blocks + re-level 4 wk,0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,model + blocks + re-level 8 wk,0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-07,model + blocks + re-level 12 wk,0,0,3,71.12999999999998,71.12999999999998
+Resort Hotel,2016-12-08,no overbooking,0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,flat rate (Jul – Sep 2016),0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,flat rate (trailing 4 wk),0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,flat rate (trailing 8 wk),0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,flat rate (trailing 12 wk),0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,model,0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,model + blocks,0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,model + blocks + re-level 4 wk,0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,model + blocks + re-level 8 wk,0,0,12,720.0,720.0
+Resort Hotel,2016-12-08,model + blocks + re-level 12 wk,0,0,12,720.0,720.0
+Resort Hotel,2016-12-09,no overbooking,0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,flat rate (Jul – Sep 2016),0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,flat rate (trailing 4 wk),0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,flat rate (trailing 8 wk),0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,flat rate (trailing 12 wk),0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,model,0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,model + blocks,0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,model + blocks + re-level 4 wk,0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,model + blocks + re-level 8 wk,0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-09,model + blocks + re-level 12 wk,0,0,1,26.799999999999997,26.799999999999997
+Resort Hotel,2016-12-10,no overbooking,0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,flat rate (Jul – Sep 2016),0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,flat rate (trailing 4 wk),0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,flat rate (trailing 8 wk),0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,flat rate (trailing 12 wk),0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,model,0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,model + blocks,0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,model + blocks + re-level 4 wk,0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,model + blocks + re-level 8 wk,0,0,1,28.64,28.64
+Resort Hotel,2016-12-10,model + blocks + re-level 12 wk,0,0,1,28.64,28.64
+Resort Hotel,2016-12-11,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-11,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-12,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-13,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-14,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-15,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-16,no overbooking,0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,flat rate (Jul – Sep 2016),0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,flat rate (trailing 4 wk),0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,flat rate (trailing 8 wk),0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,flat rate (trailing 12 wk),0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,model,0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,model + blocks,0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,model + blocks + re-level 4 wk,0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,model + blocks + re-level 8 wk,0,0,1,25.9,25.9
+Resort Hotel,2016-12-16,model + blocks + re-level 12 wk,0,0,1,25.9,25.9
+Resort Hotel,2016-12-17,no overbooking,0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,flat rate (Jul – Sep 2016),0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,flat rate (trailing 4 wk),0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,flat rate (trailing 8 wk),0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,flat rate (trailing 12 wk),0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,model,0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,model + blocks,0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,model + blocks + re-level 4 wk,0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,model + blocks + re-level 8 wk,0,0,3,129.0,129.0
+Resort Hotel,2016-12-17,model + blocks + re-level 12 wk,0,0,3,129.0,129.0
+Resort Hotel,2016-12-18,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-18,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-19,no overbooking,0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,flat rate (Jul – Sep 2016),0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,flat rate (trailing 4 wk),0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,flat rate (trailing 8 wk),0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,flat rate (trailing 12 wk),0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,model,0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,model + blocks,0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,model + blocks + re-level 4 wk,0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,model + blocks + re-level 8 wk,0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-19,model + blocks + re-level 12 wk,0,0,1,29.075000000000003,29.075000000000003
+Resort Hotel,2016-12-20,no overbooking,0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,flat rate (Jul – Sep 2016),0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,flat rate (trailing 4 wk),0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,flat rate (trailing 8 wk),0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,flat rate (trailing 12 wk),0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,model,0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,model + blocks,0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,model + blocks + re-level 4 wk,0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,model + blocks + re-level 8 wk,0,0,1,26.015,26.015
+Resort Hotel,2016-12-20,model + blocks + re-level 12 wk,0,0,1,26.015,26.015
+Resort Hotel,2016-12-21,no overbooking,0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,flat rate (Jul – Sep 2016),0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,flat rate (trailing 4 wk),0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,flat rate (trailing 8 wk),0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,flat rate (trailing 12 wk),0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,model,0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,model + blocks,0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,model + blocks + re-level 4 wk,0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,model + blocks + re-level 8 wk,0,0,1,36.63,36.63
+Resort Hotel,2016-12-21,model + blocks + re-level 12 wk,0,0,1,36.63,36.63
+Resort Hotel,2016-12-22,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-22,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-23,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-23,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-23,flat rate (trailing 4 wk),1,1,0,250.0,0.0
+Resort Hotel,2016-12-23,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-23,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-23,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-23,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-23,model + blocks + re-level 4 wk,1,1,0,250.0,0.0
+Resort Hotel,2016-12-23,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-23,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-24,no overbooking,0,0,1,40.82,40.82
+Resort Hotel,2016-12-24,flat rate (Jul – Sep 2016),0,0,1,40.82,40.82
+Resort Hotel,2016-12-24,flat rate (trailing 4 wk),1,0,0,0.0,40.82
+Resort Hotel,2016-12-24,flat rate (trailing 8 wk),0,0,1,40.82,40.82
+Resort Hotel,2016-12-24,flat rate (trailing 12 wk),0,0,1,40.82,40.82
+Resort Hotel,2016-12-24,model,0,0,1,40.82,40.82
+Resort Hotel,2016-12-24,model + blocks,0,0,1,40.82,40.82
+Resort Hotel,2016-12-24,model + blocks + re-level 4 wk,1,0,0,0.0,40.82
+Resort Hotel,2016-12-24,model + blocks + re-level 8 wk,0,0,1,40.82,40.82
+Resort Hotel,2016-12-24,model + blocks + re-level 12 wk,0,0,1,40.82,40.82
+Resort Hotel,2016-12-25,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,model + blocks + re-level 4 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-25,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,no overbooking,0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,flat rate (Jul – Sep 2016),0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,flat rate (trailing 4 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,flat rate (trailing 8 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,flat rate (trailing 12 wk),0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,model,0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,model + blocks,0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,model + blocks + re-level 4 wk,1,1,0,250.0,0.0
+Resort Hotel,2016-12-26,model + blocks + re-level 8 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-26,model + blocks + re-level 12 wk,0,0,0,0.0,0.0
+Resort Hotel,2016-12-27,no overbooking,0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,flat rate (Jul – Sep 2016),0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,flat rate (trailing 4 wk),0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,flat rate (trailing 8 wk),0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,flat rate (trailing 12 wk),0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,model,0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,model + blocks,0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,model + blocks + re-level 4 wk,0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,model + blocks + re-level 8 wk,0,0,2,71.6,71.6
+Resort Hotel,2016-12-27,model + blocks + re-level 12 wk,0,0,2,71.6,71.6
+Resort Hotel,2016-12-28,no overbooking,0,0,1,82.39,82.39
+Resort Hotel,2016-12-28,flat rate (Jul – Sep 2016),0,0,1,82.39,82.39
+Resort Hotel,2016-12-28,flat rate (trailing 4 wk),1,0,0,0.0,82.39
+Resort Hotel,2016-12-28,flat rate (trailing 8 wk),0,0,1,82.39,82.39
+Resort Hotel,2016-12-28,flat rate (trailing 12 wk),0,0,1,82.39,82.39
+Resort Hotel,2016-12-28,model,0,0,1,82.39,82.39
+Resort Hotel,2016-12-28,model + blocks,0,0,1,82.39,82.39
+Resort Hotel,2016-12-28,model + blocks + re-level 4 wk,0,0,1,82.39,82.39
+Resort Hotel,2016-12-28,model + blocks + re-level 8 wk,0,0,1,82.39,82.39
+Resort Hotel,2016-12-28,model + blocks + re-level 12 wk,0,0,1,82.39,82.39
+Resort Hotel,2016-12-29,no overbooking,0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,flat rate (Jul – Sep 2016),0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,flat rate (trailing 4 wk),0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,flat rate (trailing 8 wk),0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,flat rate (trailing 12 wk),0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,model,0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,model + blocks,0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,model + blocks + re-level 4 wk,0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,model + blocks + re-level 8 wk,0,0,1,60.14,60.14
+Resort Hotel,2016-12-29,model + blocks + re-level 12 wk,0,0,1,60.14,60.14
+Resort Hotel,2016-12-30,no overbooking,0,0,1,155.0,155.0
+Resort Hotel,2016-12-30,flat rate (Jul – Sep 2016),2,1,0,250.0,155.0
+Resort Hotel,2016-12-30,flat rate (trailing 4 wk),5,4,0,1000.0,155.0
+Resort Hotel,2016-12-30,flat rate (trailing 8 wk),3,2,0,500.0,155.0
+Resort Hotel,2016-12-30,flat rate (trailing 12 wk),2,1,0,250.0,155.0
+Resort Hotel,2016-12-30,model,1,0,0,0.0,155.0
+Resort Hotel,2016-12-30,model + blocks,1,0,0,0.0,155.0
+Resort Hotel,2016-12-30,model + blocks + re-level 4 wk,3,2,0,500.0,155.0
+Resort Hotel,2016-12-30,model + blocks + re-level 8 wk,1,0,0,0.0,155.0
+Resort Hotel,2016-12-30,model + blocks + re-level 12 wk,1,0,0,0.0,155.0
+Resort Hotel,2016-12-31,no overbooking,0,0,1,148.0,148.0
+Resort Hotel,2016-12-31,flat rate (Jul – Sep 2016),0,0,1,148.0,148.0
+Resort Hotel,2016-12-31,flat rate (trailing 4 wk),1,0,0,0.0,148.0
+Resort Hotel,2016-12-31,flat rate (trailing 8 wk),0,0,1,148.0,148.0
+Resort Hotel,2016-12-31,flat rate (trailing 12 wk),0,0,1,148.0,148.0
+Resort Hotel,2016-12-31,model,0,0,1,148.0,148.0
+Resort Hotel,2016-12-31,model + blocks,0,0,1,148.0,148.0
+Resort Hotel,2016-12-31,model + blocks + re-level 4 wk,1,0,0,0.0,148.0
+Resort Hotel,2016-12-31,model + blocks + re-level 8 wk,1,0,0,0.0,148.0
+Resort Hotel,2016-12-31,model + blocks + re-level 12 wk,1,0,0,0.0,148.0

@@ -1,0 +1,77 @@
+{
+  "status": "complete",
+  "grid": {
+    "lead_days": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "walk_costs_eur": [
+      100,
+      200,
+      250,
+      300,
+      500
+    ],
+    "variable_costs_eur": [
+      0,
+      20,
+      40
+    ],
+    "resale_rates": [
+      0.0,
+      0.25,
+      0.5
+    ],
+    "recal_weeks": [
+      4,
+      8,
+      12
+    ]
+  },
+  "python": "3.13.13",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1"
+  },
+  "config_sha256": "4e726adab29b0c4ff437e54369fc5fa9be1e4c4f3a018167ff9943d0301c90e3",
+  "training_end_exclusive": "2016-07-01",
+  "validation_start": "2016-10-01",
+  "validation_end_exclusive": "2017-01-01",
+  "test_evaluated": false,
+  "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+  "source_sha256": {
+    "config.py": "916a22739395562fbfdaf0db581c20a59ebdcd80417314a212379a2c6394139c",
+    "audit.py": "5df925e0d700ff3b1a19d83e2f476a82c6cb414311458c6ba21c33f1d48947e8",
+    "baseline.py": "95e64978922fc2119cfcb492739910b0d4acca5959d5dc63aea0e2d5e0b5a9fa",
+    "policy.py": "8c81b113673b09c062786b1ab40d1ce033a920ffa7dab4b8bbf093c96d9e06da",
+    "__init__.py": "f6c4fa215f6a58cd6084213580e42b1f98d5d7f69f976d6e77499dbeba70feb4",
+    "features.py": "48bc2ad4becdfa5c445a692d908bcdb5d9611f60345f5e27b0f36f256fcc6a62",
+    "sensitivity.py": "f95eaddec05448a1cde8cb611876e31d7a03a15b48342739c78be0f9b6fb638e",
+    "model.py": "8115a1a4da21ac1b64b896ab3285cdb58c362c4021653825685cf3c75ed38e53",
+    "validate.py": "cce21f36834c8a4089401b41644c0852d80e844f6f2d1d856d515692d195ad7c",
+    "train.py": "0c93556b075ad70b698e9374b08546dadb05bf20df87de45661c9f09fe6b37d6",
+    "contracts.py": "7d70e8341b0b46d2d04b18dbcc686fe19d06f544fc46d0d7b2f3257543f21f25",
+    "evaluate.py": "80341ec172c8ea7f0e8559019c6657a07c5f7e5462c39e307561e1f4e02d25bb",
+    "data.py": "de4b4a636748bc1d1b76cf68a3c83545ec3db3eee196ccfee9c68545e3d59688",
+    "logging_setup.py": "33bdf438c9d280c0cc3e4f361b1ce74bb8197a0d0c091e9f3921aabbb02007ce",
+    "history.py": "f5281f51d73c7057f22ab5e03add8bba02fb62035e29e499a6db709eaa6ac8c0"
+  },
+  "runtime_seconds": 9.845688667002833,
+  "scenario_hotel_count": 1350,
+  "selection_warning": "In-sample validation selection; savings are not unbiased test estimates. No deployment approval."
+}

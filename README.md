@@ -199,3 +199,7 @@ make data-check
 ```
 
 The 64-test suite covers malformed data/cache identity, all six traps and historical reconstruction boundaries. `make data-check` produces counted evidence using the local CSV. The CSV cannot establish historical feature values or intraday ordering; the documented reconstruction remains a tested convention.
+
+## Stage 5: overbooking sensitivity
+
+Run `make policy-sensitivity` to compare policies using October–December 2016 validation nights across the grid in `config/stage5.yaml`. This command excludes 2017 rows before modelling and does not score the holdout. Results and limitations are in [the Stage 5 report](docs/stage5-policy-evaluation.md); manager sign-off remains pending in [ADR 0005](docs/decisions/0005-policy-sensitivity.md). The original `make baseline` reproduction remains available.

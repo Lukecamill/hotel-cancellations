@@ -104,51 +104,11 @@ def summarise(pol):
 def run_policy_baseline(baseline, config):
     """Calibrate Jul–Sep, choose Oct–Dec, report frozen 2017 policies."""
     started = time.perf_counter()
-    DECISION_LEAD_DAYS = config["decision_lead_days"]
-    TRAIN_END = config["train_end"]
-    CALIB_END = config["calib_end"]
-    VALID_END = config["valid_end"]
-    TEST_END = config["test_end"]
-    WINDOW_START = config["window_start"]
-    WINDOW_END = config["window_end"]
-    RECAL_WEEKS_GRID = config["recal_weeks_grid"]
-    HOTELS = config["hotels"]
-    WALK_COST_EUR = config["walk_cost_eur"]
-    VARIABLE_COST_EUR = config["variable_cost_eur"]
-    TONIGHT = config["tonight"]
-    bk, outcome, p_all = baseline.bookings, baseline.outcome, baseline.probabilities
-    y = outcome.is_canceled
-    h = DECISION_LEAD_DAYS
-    decision, on_books, late = reconstruct_as_of(bk, outcome, h)
-    GROUP_KEY = ['hotel', 'arrival', 'booked', 'market_segment', 'distribution_channel', 'deposit_type', 'agent', 'company', 'reserved_room_type', 'customer_type', 'meal', 'adults', 'children', 'adr', 'stays_in_weekend_nights', 'stays_in_week_nights']
-    snap = bk.loc[on_books, ['hotel', 'arrival', 'adr', 'market_segment', 'deposit_type', 'agent']].copy()
-    snap['hotel'] = snap.hotel.astype(str)
-    snap['y'], snap['p_booking'] = (late[on_books], p_all[on_books.values])
-    snap['block'] = bk.loc[on_books].groupby(GROUP_KEY, observed=True, dropna=False).ngroup()
-    snap['p_cal'] = np.nan
-    PLATT, FLAT_RATE = ({}, {})
-    for hh in HOTELS:
-        s = snap.hotel == hh
-        v = s & (snap.arrival >= TRAIN_END) & (snap.arrival < CALIB_END)
-        PLATT[hh] = HorizonCalibrator(h, LogisticRegression().fit(logit(snap.loc[v, 'p_booking']).to_frame('z'), snap.loc[v, 'y']))
-        snap.loc[s, 'p_cal'] = PLATT[hh].predict(snap.loc[s, 'p_booking'], lead_days=h)
-        FLAT_RATE[hh] = snap.loc[v, 'y'].mean()
-    nightly = snap.groupby(['hotel', 'arrival']).agg(y=('y', 'sum'), p=('p_cal', 'sum'), n=('y', 'size'))
-    keys = pd.MultiIndex.from_arrays([snap.hotel, snap.arrival])
-    for w in RECAL_WEEKS_GRID:
-        trail = {}
-        for hh in HOTELS:
-            d = nightly.loc[hh].reindex(pd.date_range(WINDOW_START, WINDOW_END - pd.Timedelta(days=1)), fill_value=0)
-            r = d.rolling(7 * w, min_periods=7).sum().shift(h + 1)
-            trail[hh] = pd.DataFrame({'factor': r.y / r.p, 'rate': r.y / r.n})
-        trail = pd.concat(trail, names=['hotel', 'arrival']).replace([np.inf, -np.inf], np.nan)
-        snap[f'relevel_{w}'] = trail.factor.reindex(keys).fillna(1.0).values
-        snap[f'rate_{w}'] = trail.rate.reindex(keys).values
-    POLICIES = {'no overbooking': None, 'flat rate (Jul – Sep 2016)': lambda g, b: (np.full(len(g), FLAT_RATE[g.hotel.iat[0]]), None), **{f'flat rate (trailing {w} wk)': lambda g, b, w=w: (np.full(len(g), g[f'rate_{w}'].iat[0]), None) for w in RECAL_WEEKS_GRID}, 'model': lambda g, b: (g.p_cal.values, None), 'model + blocks': lambda g, b: (b.p.values, b.n.values), **{f'model + blocks + re-level {w} wk': lambda g, b, w=w: (np.clip(b.p.values * b[f'f_{w}'].values, 0, 1), b.n.values) for w in RECAL_WEEKS_GRID}}
-    # Explicit metadata keeps booking-time probabilities out of the decision API.
-    POLICIES = {name: (None if fn is None else (lambda g, b, fn=fn: PolicyForecast(*fn(g, b), h))) for name, fn in POLICIES.items()}
-    BLOCK_AGG = {'p': ('p_cal', 'mean'), 'n': ('p_cal', 'size'), **{f'f_{w}': (f'relevel_{w}', 'first') for w in RECAL_WEEKS_GRID}}
-    night_cost = lambda g: night_room_value(g, VARIABLE_COST_EUR)
+    snap, POLICIES, BLOCK_AGG, PLATT, FLAT_RATE = prepare_policy(baseline, config)
+    CALIB_END, VALID_END, TEST_END = (config[k] for k in ('calib_end', 'valid_end', 'test_end'))
+    HOTELS, WALK_COST_EUR = config['hotels'], config['walk_cost_eur']
+    RECAL_WEEKS_GRID, TONIGHT, h = config['recal_weeks_grid'], config['tonight'], config['decision_lead_days']
+    night_cost = lambda g: night_room_value(g, config['variable_cost_eur'])
 
     select_nights = snap[(snap.arrival >= CALIB_END) & (snap.arrival < VALID_END)]
     sel = summarise(run_policies(select_nights, POLICIES, night_cost, block_agg=BLOCK_AGG, walk_cost=WALK_COST_EUR, decision_lead_days=h))
@@ -172,3 +132,54 @@ def run_policy_baseline(baseline, config):
         tonight_rows[hh] = {'policy': CHOSEN[hh], 'on the books': len(g), 'rooms in blocks': int(g.groupby('block').size().pipe(lambda s_: s_[s_ > 1].sum())), 'expected releases': float(dist @ k), 'P(no release)': dist[0], 'empty-room cost €': R, 'oversell q*': q_star, 'P(walk anyone)': float(dist[:q_star].sum()), 'cost of q*±1 vs q*': max(exp_cost[max(q_star - 1, 0)], exp_cost[q_star + 1]) - exp_cost[q_star], 'released (hindsight)': int(g.y.sum())}
 
     return PolicyResult(snap, PLATT, FLAT_RATE, CHOSEN, sel, pol, summarise(pol), tonight_rows, time.perf_counter() - started)
+
+
+def prepare_policy(baseline, config, *, fit_end=None):
+    """Build horizon-specific forecasts; optional earlier calibration cutoff for causal selection."""
+    DECISION_LEAD_DAYS = config["decision_lead_days"]
+    TRAIN_END = config["train_end"]
+    CALIB_END = config["calib_end"]
+    VALID_END = config["valid_end"]
+    TEST_END = config["test_end"]
+    WINDOW_START = config["window_start"]
+    WINDOW_END = config["window_end"]
+    RECAL_WEEKS_GRID = config["recal_weeks_grid"]
+    HOTELS = config["hotels"]
+    WALK_COST_EUR = config["walk_cost_eur"]
+    VARIABLE_COST_EUR = config["variable_cost_eur"]
+    TONIGHT = config["tonight"]
+    bk, outcome, p_all = baseline.bookings, baseline.outcome, baseline.probabilities
+    fit_end = config["calib_end"] if fit_end is None else pd.Timestamp(fit_end)
+    h = DECISION_LEAD_DAYS
+    decision, on_books, late = reconstruct_as_of(bk, outcome, h)
+    GROUP_KEY = ['hotel', 'arrival', 'booked', 'market_segment', 'distribution_channel', 'deposit_type', 'agent', 'company', 'reserved_room_type', 'customer_type', 'meal', 'adults', 'children', 'adr', 'stays_in_weekend_nights', 'stays_in_week_nights']
+    snap = bk.loc[on_books, ['hotel', 'arrival', 'adr', 'market_segment', 'deposit_type', 'agent']].copy()
+    snap['hotel'] = snap.hotel.astype(str)
+    snap['y'], snap['p_booking'] = (late[on_books], p_all[on_books.values])
+    snap['block'] = bk.loc[on_books].groupby(GROUP_KEY, observed=True, dropna=False).ngroup()
+    snap['p_cal'] = np.nan
+    PLATT, FLAT_RATE = ({}, {})
+    for hh in HOTELS:
+        s = snap.hotel == hh
+        v = s & (snap.arrival >= TRAIN_END) & (snap.arrival < fit_end)
+        PLATT[hh] = HorizonCalibrator(h, LogisticRegression().fit(logit(snap.loc[v, 'p_booking']).to_frame('z'), snap.loc[v, 'y']))
+        snap.loc[s, 'p_cal'] = PLATT[hh].predict(snap.loc[s, 'p_booking'], lead_days=h)
+        FLAT_RATE[hh] = snap.loc[v, 'y'].mean()
+    nightly = snap.groupby(['hotel', 'arrival']).agg(y=('y', 'sum'), p=('p_cal', 'sum'), n=('y', 'size'))
+    keys = pd.MultiIndex.from_arrays([snap.hotel, snap.arrival])
+    for w in RECAL_WEEKS_GRID:
+        trail = {}
+        for hh in HOTELS:
+            d = nightly.loc[hh].reindex(pd.date_range(WINDOW_START, WINDOW_END - pd.Timedelta(days=1)), fill_value=0)
+            r = d.rolling(7 * w, min_periods=7).sum().shift(h + 1)
+            trail[hh] = pd.DataFrame({'factor': r.y / r.p, 'rate': r.y / r.n})
+        trail = pd.concat(trail, names=['hotel', 'arrival']).replace([np.inf, -np.inf], np.nan)
+        snap[f'relevel_{w}'] = trail.factor.reindex(keys).fillna(1.0).values
+        snap[f'rate_{w}'] = trail.rate.reindex(keys).values
+    POLICIES = {'no overbooking': None, 'flat rate (Jul – Sep 2016)': lambda g, b: (np.full(len(g), FLAT_RATE[g.hotel.iat[0]]), None), **{f'flat rate (trailing {w} wk)': lambda g, b, w=w: (np.full(len(g), g[f'rate_{w}'].iat[0]), None) for w in RECAL_WEEKS_GRID}, 'model': lambda g, b: (g.p_cal.values, None), 'model + blocks': lambda g, b: (b.p.values, b.n.values), **{f'model + blocks + re-level {w} wk': lambda g, b, w=w: (np.clip(b.p.values * b[f'f_{w}'].values, 0, 1), b.n.values) for w in RECAL_WEEKS_GRID}}
+    # Explicit metadata keeps booking-time probabilities out of the decision API.
+    POLICIES = {name: (None if fn is None else (lambda g, b, fn=fn: PolicyForecast(*fn(g, b), h))) for name, fn in POLICIES.items()}
+    BLOCK_AGG = {'p': ('p_cal', 'mean'), 'n': ('p_cal', 'size'), **{f'f_{w}': (f'relevel_{w}', 'first') for w in RECAL_WEEKS_GRID}}
+    night_cost = lambda g: night_room_value(g, VARIABLE_COST_EUR)
+
+    return snap, POLICIES, BLOCK_AGG, PLATT, FLAT_RATE
