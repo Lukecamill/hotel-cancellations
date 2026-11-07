@@ -1,0 +1,35 @@
+{
+  "base_commit": "92cb28fa518c262a2fd6f89bd9e1279f4e69dbc1",
+  "working_tree_dirty": true,
+  "audit_source_sha256": "5df925e0d700ff3b1a19d83e2f476a82c6cb414311458c6ba21c33f1d48947e8",
+  "dataset_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+  "seed": 3217,
+  "counts": {
+    "rows": 119390,
+    "columns": 32,
+    "outcome_status_label_matches": 119390,
+    "no_shows": 1207,
+    "exact_duplicate_extra_rows": 31994,
+    "offline_cancelled": 8311,
+    "offline_cancelled_prt": 8121,
+    "offline_arrived": 15908,
+    "offline_arrived_prt": 3864,
+    "city_non_refund": 12868,
+    "city_non_refund_cancelled": 12844,
+    "adr_negative": 1,
+    "adr_zero": 1959,
+    "adr_max": 5400.0,
+    "country_blank": 488,
+    "country_CN": 1279,
+    "country_CHN": 999,
+    "no_guests": 180,
+    "no_nights": 715,
+    "random_split_shared_row_signatures": 4743,
+    "temporal_train_test_shared_row_signatures": 0
+  },
+  "checks": {
+    "forbidden_feature_names_absent": true,
+    "outcome_frame_separated": true,
+    "temporal_duplicate_overlap_zero": true
+  }
+}

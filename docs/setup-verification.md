@@ -33,6 +33,6 @@ The preserved reference notebook is byte-identical to the supplied original. Git
 
 ## Limits
 
-This verifies a clean **source copy** of the current local work, not a GitHub clone: the implementation is not committed or pushed yet. After publication, repeat setup from an actual clone to confirm all required files were included. The test uses an existing local CSV; it does not exercise Kaggle download or account access. It reuses the Mac's installed Python and OpenMP runtime; Linux/container portability remains pending. Policy reproduction, six-trap coverage and deployment CI gates are later stages.
+This verifies a clean **source copy** of the current local work, not a GitHub clone: the check was performed before publication. The baseline was subsequently verified on GitHub at commit `92cb28fa518c262a2fd6f89bd9e1279f4e69dbc1`. Repeat setup from an actual clone to confirm all required files were included. The test uses an existing local CSV; it does not exercise Kaggle download or account access. It reuses the Mac's installed Python and OpenMP runtime; Linux/container portability remains pending. Policy reproduction, six-trap coverage and deployment CI gates are later stages.
 
 The fresh environment needed no hidden-file repair. The original local environment's macOS hidden `.pth` issue remains documented in the README as troubleshooting.

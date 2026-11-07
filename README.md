@@ -26,9 +26,9 @@ Arrival window: July 2015–August 2017. Training: July 2015–June 2016. Valida
 
 The supplied model must be reproduced without tuning or replacing it. The local packaged booking-time baseline matches the notebook's reported split counts and rounded per-hotel metrics. Clean-source-copy setup is verified; full policy reproduction and verification from a published GitHub clone remain pending.
 
-## Pending course materials
+## Course materials
 
-The task rubric and LLM access rules are not yet available. Allocation is complete.
+Allocation is complete. The LLM access policy and Reflective Diary Entry 1 rubric have now been supplied. The rubric is specifically for Diary Entry 1; its heading says ARI3218 whereas the task notebook says ARI3217, so confirm the unit label against the VLE. The final-project rubric and full milestone brief remain unconfirmed.
 
 ## Python environment
 
@@ -115,4 +115,10 @@ hotel-train
 
 Select the new environment's Python interpreter before opening the notebook. No processed dataset or saved model from another environment is needed.
 
-The current implementation is local and has not been committed or pushed. This check therefore uses a clean source copy; repeat it from GitHub after the source is published. Kaggle download access and Linux/container support have not yet been verified.
+The initial baseline is published in commit `92cb28fa518c262a2fd6f89bd9e1279f4e69dbc1`, verified against GitHub. The setup check used a clean source copy; verification from a GitHub clone remains pending. Kaggle download access and Linux/container support have not yet been verified.
+
+## Counted data-quirk evidence
+
+Run `python -m hotel_cancel.audit` to regenerate [the quirk table](docs/evidence/data-quirks.md) and its JSON companion from the original CSV. It counts outcome leakage, duplicates, nationality patterns, non-refundable cancellations, ADR anomalies, country-code inconsistencies and invalid guest/stay combinations. The audit checks outcome separation, forbidden feature names and temporal train/test duplicate overlap; it does not clean the data or change the learner.
+
+Reports record the dataset hash, audit-source hash, base commit and whether the working tree had uncommitted changes. Commit the audit code, tests and generated evidence together before citing them in the diary. Guard coverage and remaining work are stated per quirk; the complete six-trap suite and raw-data contract remain pending.
