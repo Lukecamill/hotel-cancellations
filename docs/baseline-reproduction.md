@@ -113,3 +113,7 @@ Stage 3’s six local reproduction steps are complete. This does not complete al
 The input remains a final-state snapshot with booking-time assumptions, proxy group blocks and unknown hotel capacity. The given policy assumes sold-out nights and no resale. Those assumptions were preserved for reproduction and require later testing/sensitivity/governance work.
 
 This run records base commit `9f8659f691088eae7b1c314ceedfac5d5dce6d68` plus a dirty working tree. New code and evidence have not been committed during this work; do not cite that base commit alone as containing the reproduced pipeline. Per-file source hashes identify the code used. Commit the reviewed implementation and evidence together before citing it in assessment materials.
+
+## Follow-up: committed fresh-clone verification
+
+After this report, commit `39fb510d427809fa0737d9ba58970f8223f96990` was verified from a fresh local Git clone and new environment. All 16 tests, the complete baseline command, 20 comparisons and the thin notebook passed without import repair. See [verification record](fresh-clone-verification.md). This supersedes the earlier local-clone and uncommitted-code limitations; GitHub publication/download and remaining C2 work are still unverified.

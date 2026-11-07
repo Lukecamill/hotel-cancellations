@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "tested_commit": "39fb510d427809fa0737d9ba58970f8223f96990",
+  "clone_method": "git clone --no-local of committed local repository",
+  "clone_path": "/private/tmp/hotel-cancellations-fresh-39fb510",
+  "automated_tests_passed": 16,
+  "comparison_checks_passed": 20,
+  "pip_check": "No broken requirements found",
+  "thin_notebook": "all cells passed",
+  "repair_required": false,
+  "pythonpath_override": false,
+  "data_supplied_separately": true,
+  "reused_system_dependencies": [
+    "Python 3.13.13 installation",
+    "macOS OpenMP runtime",
+    "pip download cache"
+  ],
+  "github_clone_verified": false
+}

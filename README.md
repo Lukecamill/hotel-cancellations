@@ -184,3 +184,7 @@ This trains the given model and compares features and outputs with the original 
 ## Stage 3 reproduction report
 
 [Baseline reproduction report](docs/baseline-reproduction.md): all 20 saved-run comparison checks passed for the student’s terminal run. It includes booking and policy comparisons, timing scope, tolerances and outstanding assessment requirements.
+
+## Fresh-clone verification of Stage 3
+
+A fresh local Git clone of commit `39fb510d427809fa0737d9ba58970f8223f96990` passed dependency checks, all 16 tests, `make baseline`, all 20 comparisons and the thin notebook in a new environment with separately supplied raw data. No import repair was needed. See [fresh-clone verification](docs/fresh-clone-verification.md). This verifies committed local files; GitHub push/download and Linux remain unverified.

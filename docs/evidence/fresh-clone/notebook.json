@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "package_source": "/private/tmp/hotel-cancellations-fresh-39fb510/src/hotel_cancel/__init__.py",
+  "python_prefix": "/private/tmp/hotel-cancellations-fresh-39fb510/.venv",
+  "thin_notebook": "all cells executed without source-path override or local repair"
+}
