@@ -7,6 +7,34 @@ import time
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
+from hotel_cancel.history import reconstruct_as_of
+
+@dataclass
+class PolicyForecast:
+    probabilities: object
+    block_sizes: object
+    lead_days: int
+
+    def __iter__(self):
+        yield self.probabilities
+        yield self.block_sizes
+
+
+@dataclass
+class HorizonCalibrator:
+    lead_days: int
+    model: object
+
+    def predict(self, booking_probabilities, *, lead_days):
+        if lead_days != self.lead_days:
+            raise ValueError('Calibration horizon does not match decision horizon; refit on validation data')
+        return self.model.predict_proba(logit(booking_probabilities).to_frame('z'))[:, 1]
+
+
+def night_room_value(bookings, variable_cost):
+    """Given median ADR rule, floored at zero; never use a global average."""
+    return max(bookings.adr.median() - variable_cost, 0.0)
+
 
 @dataclass
 class PolicyResult:
@@ -38,7 +66,7 @@ def oversell(dist, empty_cost, walk_cost=250.0):
     """Newsvendor: the smallest q with P(released ≤ q) ≥ empty / (empty + walk)."""
     return int(np.searchsorted(np.cumsum(dist), empty_cost / (empty_cost + walk_cost) - 1e-12))
 
-def run_policies(nights, policies, empty_cost_fn, eval_cost_fn=None, *, block_agg, walk_cost):
+def run_policies(nights, policies, empty_cost_fn, eval_cost_fn=None, *, block_agg, walk_cost, decision_lead_days):
     """Decide q per night with empty_cost_fn; cost the night with eval_cost_fn (the night's true room value)."""
     eval_cost_fn = eval_cost_fn or empty_cost_fn
     rows = []
@@ -48,7 +76,20 @@ def run_policies(nights, policies, empty_cost_fn, eval_cost_fn=None, *, block_ag
         for name, fn in policies.items():
             q, expected = (0, 0.0)
             if fn is not None:
-                p, n = fn(g, b)
+                forecast = fn(g, b)
+                if not isinstance(forecast, PolicyForecast) or forecast.lead_days != decision_lead_days:
+                    raise ValueError("Policy requires probabilities calibrated/estimated for its decision horizon")
+                p, n = forecast
+                p = np.asarray(p, dtype=float)
+                if p.ndim != 1 or not np.isfinite(p).all() or ((p < 0) | (p > 1)).any():
+                    raise ValueError('Decision probabilities must be finite values in [0, 1]')
+                if n is None:
+                    if len(p) != len(g):
+                        raise ValueError('One probability is required per live booking')
+                else:
+                    sizes = np.asarray(n)
+                    if sizes.shape != p.shape or (sizes <= 0).any() or (sizes % 1 != 0).any() or sizes.sum() != len(g):
+                        raise ValueError('Block sizes must account for every live booking exactly once')
                 dist = released_distribution(p, np.ones(len(p), int) if n is None else n)
                 q, expected = (oversell(dist, Rd, walk_cost), float(dist @ np.arange(len(dist))))
             rows.append({'hotel': hh, 'night': night, 'policy': name, 'q': q, 'expected': expected, 'released': X_, 'walked': max(q - X_, 0), 'empty': max(X_ - q, 0), 'cost': walk_cost * max(q - X_, 0) + R * max(X_ - q, 0)})
@@ -78,9 +119,7 @@ def run_policy_baseline(baseline, config):
     bk, outcome, p_all = baseline.bookings, baseline.outcome, baseline.probabilities
     y = outcome.is_canceled
     h = DECISION_LEAD_DAYS
-    decision = bk.arrival - pd.Timedelta(days=h)
-    on_books = (bk.booked < decision) & ((y == 0) | (outcome.status_date >= decision))
-    late = ((y == 1) & (outcome.status_date >= decision)).astype(int)
+    decision, on_books, late = reconstruct_as_of(bk, outcome, h)
     GROUP_KEY = ['hotel', 'arrival', 'booked', 'market_segment', 'distribution_channel', 'deposit_type', 'agent', 'company', 'reserved_room_type', 'customer_type', 'meal', 'adults', 'children', 'adr', 'stays_in_weekend_nights', 'stays_in_week_nights']
     snap = bk.loc[on_books, ['hotel', 'arrival', 'adr', 'market_segment', 'deposit_type', 'agent']].copy()
     snap['hotel'] = snap.hotel.astype(str)
@@ -91,8 +130,8 @@ def run_policy_baseline(baseline, config):
     for hh in HOTELS:
         s = snap.hotel == hh
         v = s & (snap.arrival >= TRAIN_END) & (snap.arrival < CALIB_END)
-        PLATT[hh] = LogisticRegression().fit(logit(snap.loc[v, 'p_booking']).to_frame('z'), snap.loc[v, 'y'])
-        snap.loc[s, 'p_cal'] = PLATT[hh].predict_proba(logit(snap.loc[s, 'p_booking']).to_frame('z'))[:, 1]
+        PLATT[hh] = HorizonCalibrator(h, LogisticRegression().fit(logit(snap.loc[v, 'p_booking']).to_frame('z'), snap.loc[v, 'y']))
+        snap.loc[s, 'p_cal'] = PLATT[hh].predict(snap.loc[s, 'p_booking'], lead_days=h)
         FLAT_RATE[hh] = snap.loc[v, 'y'].mean()
     nightly = snap.groupby(['hotel', 'arrival']).agg(y=('y', 'sum'), p=('p_cal', 'sum'), n=('y', 'size'))
     keys = pd.MultiIndex.from_arrays([snap.hotel, snap.arrival])
@@ -106,15 +145,17 @@ def run_policy_baseline(baseline, config):
         snap[f'relevel_{w}'] = trail.factor.reindex(keys).fillna(1.0).values
         snap[f'rate_{w}'] = trail.rate.reindex(keys).values
     POLICIES = {'no overbooking': None, 'flat rate (Jul – Sep 2016)': lambda g, b: (np.full(len(g), FLAT_RATE[g.hotel.iat[0]]), None), **{f'flat rate (trailing {w} wk)': lambda g, b, w=w: (np.full(len(g), g[f'rate_{w}'].iat[0]), None) for w in RECAL_WEEKS_GRID}, 'model': lambda g, b: (g.p_cal.values, None), 'model + blocks': lambda g, b: (b.p.values, b.n.values), **{f'model + blocks + re-level {w} wk': lambda g, b, w=w: (np.clip(b.p.values * b[f'f_{w}'].values, 0, 1), b.n.values) for w in RECAL_WEEKS_GRID}}
+    # Explicit metadata keeps booking-time probabilities out of the decision API.
+    POLICIES = {name: (None if fn is None else (lambda g, b, fn=fn: PolicyForecast(*fn(g, b), h))) for name, fn in POLICIES.items()}
     BLOCK_AGG = {'p': ('p_cal', 'mean'), 'n': ('p_cal', 'size'), **{f'f_{w}': (f'relevel_{w}', 'first') for w in RECAL_WEEKS_GRID}}
-    night_cost = lambda g: max(g.adr.median() - VARIABLE_COST_EUR, 0.0)
+    night_cost = lambda g: night_room_value(g, VARIABLE_COST_EUR)
 
     select_nights = snap[(snap.arrival >= CALIB_END) & (snap.arrival < VALID_END)]
-    sel = summarise(run_policies(select_nights, POLICIES, night_cost, block_agg=BLOCK_AGG, walk_cost=WALK_COST_EUR))
+    sel = summarise(run_policies(select_nights, POLICIES, night_cost, block_agg=BLOCK_AGG, walk_cost=WALK_COST_EUR, decision_lead_days=h))
     CHOSEN = {hh: sel.loc[hh].cost_per_night.idxmin() for hh in HOTELS}
     sel['chosen'] = ['◀' if CHOSEN[hh] == p_ else '' for hh, p_ in sel.index]
     test_nights = snap[(snap.arrival >= VALID_END) & (snap.arrival < TEST_END)]
-    pol = pd.concat([run_policies(test_nights[test_nights.hotel == hh], {'no overbooking': None, CHOSEN[hh]: POLICIES[CHOSEN[hh]]}, night_cost, block_agg=BLOCK_AGG, walk_cost=WALK_COST_EUR) for hh in HOTELS])
+    pol = pd.concat([run_policies(test_nights[test_nights.hotel == hh], {'no overbooking': None, CHOSEN[hh]: POLICIES[CHOSEN[hh]]}, night_cost, block_agg=BLOCK_AGG, walk_cost=WALK_COST_EUR, decision_lead_days=h) for hh in HOTELS])
     night = TONIGHT + pd.Timedelta(days=h)
     tonight_rows = {}
     for hh in HOTELS:

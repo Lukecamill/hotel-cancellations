@@ -112,7 +112,7 @@ hotel-train
 python -m hotel_cancel.train
 ```
 
-The local CSV belongs at `data/raw/hotel_bookings/hotel_bookings.csv`. If absent, the loader uses the notebook's KaggleHub download method. Training rebuilds processed data from the raw CSV by default and writes a model/preprocessing bundle, per-hotel metrics, diagnostic gate and runtime report under ignored `models/`. The cached loader remains available with `use_cache=True`; its inherited notebook cache is not source-fingerprinted, so avoid it after changing data or date windows.
+The local CSV belongs at `data/raw/hotel_bookings/hotel_bookings.csv`. If absent, the loader uses the notebook's KaggleHub download method. Training rebuilds processed data from the raw CSV by default and writes a model/preprocessing bundle, per-hotel metrics, diagnostic gate and runtime report under ignored `models/`. The cached loader remains available with `use_cache=True`; cache reuse now requires validated raw data plus matching source/window/loader metadata and Parquet byte identity; stale caches are rebuilt.
 
 Open `notebooks/hotel_cancellations.ipynb` for a thin presentation client. It calls the same pipeline, displays results and plots feature importance. The full supplied notebook remains unchanged in `notebooks/reference/`.
 
@@ -188,3 +188,14 @@ This trains the given model and compares features and outputs with the original 
 ## Fresh-clone verification of Stage 3
 
 A fresh local Git clone of commit `39fb510d427809fa0737d9ba58970f8223f96990` passed dependency checks, all 16 tests, `make baseline`, all 20 comparisons and the thin notebook in a new environment with separately supplied raw data. No import repair was needed. See [fresh-clone verification](docs/fresh-clone-verification.md). This verifies committed local files; GitHub push/download and Linux remain unverified.
+
+## Stage 4: data validation and leakage guards
+
+See [Stage 4 validation](docs/stage4-validation.md), [raw-data contract](docs/data-contract.md) and [ADR 0004](docs/decisions/0004-data-and-history-guards.md). Training now enforces the raw contract, booking-feature boundaries and temporal split guards; policies require matching decision-horizon forecasts. Known baseline anomalies are counted and retained. No model or baseline output changed.
+
+```bash
+.venv/bin/python -m pytest -q
+make data-check
+```
+
+The 64-test suite covers malformed data/cache identity, all six traps and historical reconstruction boundaries. `make data-check` produces counted evidence using the local CSV. The CSV cannot establish historical feature values or intraday ordering; the documented reconstruction remains a tested convention.

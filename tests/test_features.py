@@ -42,3 +42,32 @@ def test_features_do_not_modify_input_and_ignore_forbidden_columns():
                 "total_of_special_requests", "days_in_waiting_list"]:
         bk[col] = ["forbidden-a", "forbidden-b"]
     pd.testing.assert_frame_equal(build_features(bk, ["1"]), original)
+
+
+def test_outcome_separation_and_only_allowed_inputs_available():
+    from hotel_cancel.data import separate_outcome, OUTCOME
+    from hotel_cancel.features import BOOKING_INPUTS, FEATURE_COLUMNS
+    bk=bookings()
+    bk['is_canceled']=[0,1];bk['reservation_status']=['Check-Out','Canceled']
+    bk['status_date']=pd.to_datetime(['2016-06-02','2016-12-15'])
+    raw=bk.copy(deep=True);inputs,outcomes=separate_outcome(raw)
+    assert set(outcomes)==set(OUTCOME)
+    assert not set(OUTCOME)&set(inputs)
+    assert list(build_features(inputs,["1"]).columns)==FEATURE_COLUMNS
+    # A frame containing only approved raw inputs is sufficient: no nationality,
+    # assigned room, changes, parking, requests, waiting time or outcome needed.
+    pd.testing.assert_frame_equal(build_features(inputs[BOOKING_INPUTS],["1"]),build_features(inputs,["1"]))
+    pd.testing.assert_frame_equal(raw,bk)
+
+
+import pytest
+
+
+@pytest.mark.parametrize('forbidden',['is_canceled','reservation_status','status_date','country',
+    'assigned_room_type','booking_changes','required_car_parking_spaces','total_of_special_requests','days_in_waiting_list'])
+def test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias(forbidden):
+    bk=bookings();expected=build_features(bk,['1'])
+    bk[forbidden]=['first','second']
+    pd.testing.assert_frame_equal(build_features(bk,['1']),expected,check_exact=True)
+    bk[forbidden]=['second','first']
+    pd.testing.assert_frame_equal(build_features(bk,['1']),expected,check_exact=True)

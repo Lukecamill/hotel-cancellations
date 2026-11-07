@@ -1,8 +1,11 @@
 """Notebook data transformations, with explicit configuration."""
+import hashlib
+import json
 import logging
 import time
 from pathlib import Path
 import pandas as pd
+from hotel_cancel.contracts import validate_raw
 
 logger = logging.getLogger(__name__)
 MONTHS = {m: i for i, m in enumerate([
@@ -22,10 +25,23 @@ def load_bookings(config, *, use_cache=True) -> pd.DataFrame:
     config["raw_dir"].mkdir(parents=True, exist_ok=True)
     config["processed_dir"].mkdir(parents=True, exist_ok=True)
     cache = config["processed_dir"] / "19_hotel_bookings.parquet"
-    if use_cache and cache.exists():
-        return pd.read_parquet(cache)
     t = time.time()
-    df = pd.read_csv(get_raw("hotel_bookings.csv", config), na_values=["NULL"])
+    source = get_raw("hotel_bookings.csv", config)
+    df = pd.read_csv(source, na_values=["NULL"])
+    contract = validate_raw(df)
+    logger.info("Raw contract %s accepted %s rows; anomalies: %s", contract["contract_version"], contract["rows"], contract["anomalies"])
+    identity = {"raw_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                "window_start": str(config["window_start"]), "window_end": str(config["window_end"]),
+                "pandas": pd.__version__, "contract_version": contract["contract_version"],
+                "loader_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+    metadata = cache.with_suffix(".json")
+    if use_cache and cache.exists() and metadata.exists():
+        try:
+            saved = json.loads(metadata.read_text())
+            if isinstance(saved, dict) and saved.get("identity") == identity and saved.get("parquet_sha256") == hashlib.sha256(cache.read_bytes()).hexdigest():
+                return pd.read_parquet(cache)
+        except (ValueError, OSError):
+            logger.warning("Ignoring invalid cache metadata; rebuilding from validated raw input")
     df["arrival"] = pd.to_datetime(pd.DataFrame({"year": df.arrival_date_year, "day": df.arrival_date_day_of_month,
                                                  "month": df.arrival_date_month.map(MONTHS)}))
     df["booked"] = df.arrival - pd.to_timedelta(df.lead_time, unit="D")     # the day the booking entered the PMS
@@ -42,6 +58,7 @@ def load_bookings(config, *, use_cache=True) -> pd.DataFrame:
         df[c] = df[c].astype("category")
     df = df.sort_values(["arrival", "hotel"], kind="stable").reset_index(drop=True)
     df.to_parquet(cache)
+    metadata.write_text(json.dumps({"identity": identity, "parquet_sha256": hashlib.sha256(cache.read_bytes()).hexdigest()}, indent=2) + "\n")
     logger.info("Loaded and cached bookings in %.1fs", time.time() - t)
     return df
 

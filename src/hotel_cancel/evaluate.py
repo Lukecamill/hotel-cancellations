@@ -36,3 +36,25 @@ def diagnostic_gate(metrics, config):
     gate["calibration ok"] = gate["expected ÷ realised"].between(*config["calibration_band"])
     gate["gate"] = np.where(gate["AUPRC ok"] & gate["calibration ok"], "PASS", "FAIL")
     return gate
+
+
+def guard_temporal_splits(raw, masks):
+    """Reject overlapping, out-of-order, incomplete or duplicated partitions."""
+    if not raw.index.is_unique:
+        raise ValueError('Raw rows need unique indexes')
+    for name, mask in masks.items():
+        if not mask.index.equals(raw.index) or mask.dtype != bool:
+            raise ValueError(f'{name}: invalid split mask')
+    membership = sum(mask.astype(int) for mask in masks.values())
+    if not membership.eq(1).all():
+        raise ValueError('Partitions must cover each row exactly once')
+    signatures = pd.util.hash_pandas_object(raw.drop(columns=['booked'], errors='ignore'), index=False)
+    names = ['train','valid','test']
+    for i, left in enumerate(names):
+        for right in names[i+1:]:
+            a, b = masks[left], masks[right]
+            if a.any() and b.any() and raw.loc[a, 'arrival'].max() >= raw.loc[b, 'arrival'].min():
+                raise ValueError(f'{left}/{right}: split is not strictly forward in time')
+            if set(signatures[a]) & set(signatures[b]):
+                raise ValueError(f'{left}/{right}: duplicate rows straddle partitions')
+    return True

@@ -11,7 +11,7 @@ from hotel_cancel.config import load_config
 from hotel_cancel.data import load_bookings, separate_outcome
 from hotel_cancel.features import build_features, select_top_agents
 from hotel_cancel.model import fit, save_model
-from hotel_cancel.evaluate import split_masks, per_hotel, holdout_fingerprint, diagnostic_gate
+from hotel_cancel.evaluate import split_masks, per_hotel, holdout_fingerprint, diagnostic_gate, guard_temporal_splits
 from hotel_cancel.logging_setup import setup_logging
 
 logger = logging.getLogger(__name__)
@@ -43,6 +43,7 @@ def run_baseline(config, *, use_cache=False, save=True):
     bk, outcome = separate_outcome(raw)
     y = outcome.is_canceled
     masks = split_masks(bk, config)
+    guard_temporal_splits(raw, masks)
     top_agents = select_top_agents(bk, masks["train"])
     X = build_features(bk, top_agents)
     columns = list(X.columns)
