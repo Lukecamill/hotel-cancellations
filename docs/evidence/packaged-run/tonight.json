@@ -1,0 +1,26 @@
+{
+  "City Hotel": {
+    "policy": "flat rate (Jul \u2013 Sep 2016)",
+    "on the books": 66,
+    "rooms in blocks": 16,
+    "expected releases": 4.2696020321761345,
+    "P(no release)": 0.012107077546290123,
+    "empty-room cost \u20ac": 105.05,
+    "oversell q*": 3,
+    "P(walk anyone)": 0.1916095999633908,
+    "cost of q*\u00b11 vs q*": 37.01901153299838,
+    "released (hindsight)": 5
+  },
+  "Resort Hotel": {
+    "policy": "model + blocks + re-level 8 wk",
+    "on the books": 15,
+    "rooms in blocks": 2,
+    "expected releases": 0.4631064953314141,
+    "P(no release)": 0.6473782960072323,
+    "empty-room cost \u20ac": 189.0,
+    "oversell q*": 0,
+    "P(walk anyone)": 0.0,
+    "cost of q*\u00b11 vs q*": 95.19907194717497,
+    "released (hindsight)": 0
+  }
+}

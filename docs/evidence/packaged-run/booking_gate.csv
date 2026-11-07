@@ -1,0 +1,3 @@
+,AUPRC,expected ÷ realised,AUPRC ≥,AUPRC ok,calibration ok,gate
+City Hotel,0.785721886317962,0.9112810321058089,0.7,True,True,PASS
+Resort Hotel,0.627907608840626,0.6817233437376264,0.55,True,False,FAIL

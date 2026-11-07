@@ -1,0 +1,338 @@
+Cell 2 [stdout]
+pandas 3.1.0 · lightgbm 4.7.0 · scikit-learn 1.9.1 · numpy 2.5.4 · rdflib 7.6.0 · pyshacl 0.40.1
+
+Cell 4 [stdout]
+loaded + cached in 0s
+119,390 bookings · City Hotel 79,330 · Resort Hotel 40,060 · arrivals 01 Jul 2015 – 31 Aug 2017 · cancelled 37.0% · 19 MB in memory
+
+Cell 4
+        hotel  lead_time  stays_in_weekend_nights  stays_in_week_nights  adults  children  babies meal country market_segment  ...  \
+0  City Hotel          6                        0                     2       1         0       0   HB     PRT  Offline TA/TO  ...   
+1  City Hotel         88                        0                     4       2         0       0   BB     PRT      Online TA  ...   
+2  City Hotel         65                        0                     4       1         0       0   BB     PRT      Online TA  ...   
+
+  deposit_type  agent  company  days_in_waiting_list customer_type   adr  required_car_parking_spaces total_of_special_requests  \
+0   No Deposit      6     none                     0     Transient   0.0                            0                         0   
+1   No Deposit      9     none                     0     Transient  76.5                            0                         1   
+2   No Deposit      9     none                     0     Transient  68.0                            0                         1   
+
+     arrival     booked  
+0 2015-07-01 2015-06-25  
+1 2015-07-01 2015-04-04  
+2 2015-07-01 2015-04-27  
+
+[3 rows x 27 columns]
+Cell 5 [stdout]
+cancelled: City Hotel 41.7% · Resort Hotel 27.8% · no-shows 1,207 · bookings entered from Jun 2013
+exact duplicate rows 31,994 (26.8%) · country blank 488 · 'CN' 1,279 beside 'CHN' 999 · no guests 180 · no nights 715
+median ADR of completed stays (€), January / August: City Hotel 80 / 114 · Resort Hotel 47 / 180
+
+Cell 7 [stdout]
+median cancellation: 54 days before arrival · cancellations in the last 7 days: City Hotel 13.0% · Resort Hotel 13.1%
+
+Cell 7
+<Figure size 1210x374 with 2 Axes>
+Cell 8 [stdout]
+cancellation rate by deposit type
+
+Cell 8
+              City n City rate Resort n Resort rate
+deposit_type                                       
+No Deposit    66,442     30.5%   38,199       24.7%
+Non Refund    12,868     99.8%    1,719       96.0%
+Refundable        20     70.0%      142       15.5%
+Cell 8 [stdout]
+cancellation rate by market segment
+
+Cell 8
+                City n City rate Resort n Resort rate
+market_segment                                       
+Online TA       38,748     37.4%   17,729       35.2%
+Offline TA/TO   16,747     42.8%    7,472       15.2%
+Groups          13,975     68.9%    5,836       42.4%
+Direct           6,093     17.3%    6,513       13.5%
+Corporate        2,986     21.5%    2,309       15.2%
+Complementary      542     11.8%      201       16.4%
+Aviation           237     21.9%                     
+Undefined            2    100.0%                     
+Cell 10 [stdout]
+train 49,157 bookings · City Hotel 31,623 (41.7% cancelled) · Resort Hotel 17,534 (25.2% cancelled)
+valid 29,546 bookings · City Hotel 20,199 (40.8% cancelled) · Resort Hotel 9,347 (28.4% cancelled)
+test  40,687 bookings · City Hotel 27,508 (42.5% cancelled) · Resort Hotel 13,179 (30.8% cancelled)
+
+Cell 10 [stdout]
+fitted in 2s · test season Jan – Aug 2017
+
+Cell 10
+                                   AUPRC ROC-AUC base rate expected ÷ realised
+pooled model        City Hotel     0.786   0.799     42.5%                0.91
+                    Resort Hotel   0.628   0.780     30.8%                0.68
+                    both (pooled)  0.749   0.794     38.7%                0.85
+one model per hotel City Hotel     0.768   0.773     42.5%                0.90
+                    Resort Hotel   0.612   0.771     30.8%                0.67
+Cell 11 [stdout]
+holdout: 40,687 bookings, arrivals Jan – Aug 2017 · SHA-256 ac37475750f8f24a…
+
+Cell 11
+              AUPRC expected ÷ realised AUPRC ≥  AUPRC ok  calibration ok  gate
+City Hotel    0.786                0.91    0.70      True            True  PASS
+Resort Hotel  0.628                0.68    0.55      True           False  FAIL
+Cell 12
+<Figure size 1210x396 with 2 Axes>
+Cell 14 [stdout]
+on the books 7 days before arrival: 61,761 bookings · late-cancellation rate City Hotel 8.6% · Resort Hotel 4.5%
+multi-room blocks: 5,402 holding 35% of bookings and 43% of late cancellations · blocks whose rooms all share one outcome: 94%
+
+Cell 15 [stdout]
+selection months Oct – Dec 2016: 184 hotel-nights, 10 candidates, 0s · chosen: City Hotel → flat rate (Jul – Sep 2016) · Resort Hotel → model + blocks + re-level 8 wk
+
+Cell 15
+                                             oversold expected came_back walked empty cost_per_night saving vs none (€) chosen
+hotel        policy                                                                                                           
+City Hotel   no overbooking                      0.00     0.00      5.24   0.00  5.24           €423                 +0       
+             flat rate (Jul – Sep 2016)          2.14     3.41      5.24   0.25  3.35           €329             +8,662      ◀
+             flat rate (trailing 4 wk)           3.33     4.82      5.24   0.73  2.64           €393             +2,766       
+             flat rate (trailing 8 wk)           3.02     4.51      5.24   0.55  2.77           €362             +5,632       
+             flat rate (trailing 12 wk)          2.74     4.21      5.24   0.43  2.93           €344             +7,330       
+             model                               1.35     2.48      5.24   0.11  4.00           €345             +7,212       
+             model + blocks                      0.92     2.48      5.24   0.07  4.38           €366             +5,260       
+             model + blocks + re-level 4 wk      2.60     4.73      5.24   0.47  3.11           €366             +5,255       
+             model + blocks + re-level 8 wk      2.17     4.20      5.24   0.29  3.36           €346             +7,089       
+             model + blocks + re-level 12 wk     1.86     3.71      5.24   0.22  3.60           €344             +7,343       
+Resort Hotel no overbooking                      0.00     0.00      0.93   0.00  0.93            €42                 +0       
+             flat rate (Jul – Sep 2016)          0.04     0.73      0.93   0.02  0.91            €45               -299       
+             flat rate (trailing 4 wk)           0.10     0.83      0.93   0.05  0.89            €51               -824       
+             flat rate (trailing 8 wk)           0.05     0.76      0.93   0.03  0.91            €48               -549       
+             flat rate (trailing 12 wk)          0.04     0.72      0.93   0.02  0.91            €45               -299       
+             model                               0.01     0.68      0.93   0.00  0.92            €41               +155       
+             model + blocks                      0.01     0.68      0.93   0.00  0.92            €41               +155       
+             model + blocks + re-level 4 wk      0.08     0.85      0.93   0.04  0.90            €49               -656       
+             model + blocks + re-level 8 wk      0.02     0.77      0.93   0.00  0.91            €39               +303      ◀
+             model + blocks + re-level 12 wk     0.02     0.72      0.93   0.00  0.91            €39               +303       
+Cell 16 [stdout]
+2017, per night, a week out: City Hotel 58 on the books, 5.6% released late · Resort Hotel 28 on the books, 4.5% released late · walk cost €250
+typical empty-room cost and critical ratio R/(R+W): City Hotel €96 → 0.28 · Resort Hotel €59 → 0.19
+
+Cell 16
+                                            oversold expected came_back walked empty cost_per_night saving vs none (€)
+hotel        policy                                                                                                   
+City Hotel   no overbooking                     0.00     0.00      3.22   0.00  3.22           €279                 +0
+             flat rate (Jul – Sep 2016)         2.48     3.73      3.22   0.63  1.37           €264             +3,457
+Resort Hotel no overbooking                     0.00     0.00      1.26   0.00  1.26            €98                 +0
+             model + blocks + re-level 8 wk     0.31     1.29      1.26   0.10  1.05            €96               +458
+Cell 17
+                                      policy on the books rooms in blocks expected releases P(no release) empty-room cost € oversell q*  \
+City Hotel        flat rate (Jul – Sep 2016)           66              16              4.27            1%              €105           3   
+Resort Hotel  model + blocks + re-level 8 wk           15               2              0.46           65%              €189           0   
+
+             P(walk anyone) cost of q*±1 vs q* released (hindsight)  
+City Hotel              19%               +€37                    5  
+Resort Hotel             0%               +€95                    0  
+Cell 17
+<Figure size 1210x396 with 2 Axes>
+Cell 18 [stdout]
+City Hotel: 66 bookings on the books for 15 Aug; about 4.3 rooms expected back; oversell 3 (chance of walking anyone 19%).
+Resort Hotel: 15 bookings on the books for 15 Aug; about 0.5 rooms expected back; oversell 0 (chance of walking anyone 0%).
+
+Cell 18
+        hotel  rooms    segment     deposit agent     p expected_rooms
+0  City Hotel      4  Online TA  No Deposit     9  0.11           0.42
+1  City Hotel      2  Online TA  No Deposit     9  0.11           0.22
+2  City Hotel      2  Online TA  No Deposit     9  0.10           0.21
+3  City Hotel      2  Online TA  No Deposit     9  0.09           0.17
+4  City Hotel      2     Direct  No Deposit  none  0.06           0.13
+Cell 18 [stdout]
+context pack: 1,344 characters of JSON for the briefing prompt
+
+Cell 20 [stdout]
+is_canceled             0      1
+reservation_status              
+Canceled                0  43017
+Check-Out           75166      0
+No-Show                 0   1207
+
+Cell 20
+                                      AUPRC expected ÷ realised
+honest                 City Hotel     0.786                0.91
+                       Resort Hotel   0.628                0.68
+                       both (pooled)  0.749                0.85
+with the status date ⚠ City Hotel     1.000                1.00
+                       Resort Hotel   1.000                1.00
+                       both (pooled)  1.000                1.00
+Cell 22 [stdout]
+test rows with an identical row in training: random split 30.7% · forward split 0.0%
+
+Cell 22
+                                        AUPRC ROC-AUC expected ÷ realised
+forward in time (honest) City Hotel     0.786   0.799                0.91
+                         Resort Hotel   0.628   0.780                0.68
+                         both (pooled)  0.749   0.794                0.85
+random 70/30 ⚠           City Hotel     0.879   0.889                1.00
+                         Resort Hotel   0.749   0.856                1.00
+                         both (pooled)  0.850   0.882                1.00
+Cell 24
+                            bookings with value > 0 cancel rate if > 0 cancel rate if 0 City AUPRC Resort AUPRC
+column                                                                                                         
+assigned ≠ reserved room                     14,917               5.4%            41.6%      0.790        0.658
+booking_changes                              18,076              15.7%            40.9%      0.793        0.652
+required_car_parking_spaces                   7,416               0.0%            39.5%      0.786        0.680
+total_of_special_requests                    49,072              21.7%            47.7%      0.818        0.679
+days_in_waiting_list                          3,698              63.8%            36.2%      0.783        0.635
+all five ⚠                                                                                   0.831        0.748
+honest baseline                                                                              0.786        0.628
+Cell 26
+                    PRT share · arrived PRT share · cancelled
+Direct                              44%                   62%
+Groups                              29%                   97%
+Offline TA/TO                       24%                   98%
+Online TA                           18%                   26%
+all segments · 2015                 41%                   93%
+all segments · 2016                 27%                   61%
+all segments · 2017                 22%                   48%
+Cell 26 [stdout]
+country's share of total gain: 11% (rank 3 of 23)
+
+Cell 26
+                                   AUPRC expected ÷ realised
+honest (no country) City Hotel     0.786                0.91
+                    Resort Hotel   0.628                0.68
+                    both (pooled)  0.749                0.85
+with country ⚠      City Hotel     0.809                0.80
+                    Resort Hotel   0.628                0.49
+                    both (pooled)  0.770                0.72
+Cell 28 [stdout]
+ADR max €5,400 · min €-6.38 (1 negative) · zero-rate bookings 1,959 · dataset mean €101.83 (without the max €101.79)
+the €5,400 booking: 1 night, 2 adults, Offline TA/TO, cancelled 0 days after it was made
+its night (City Hotel, 25 Mar 2016): mean ADR €141 with it, €112 without, median €105
+
+Cell 28 [stdout]
+critical ratio R/(R+W): one mean ADR gives 0.25 every night; the night's median gives City Hotel 0.19–0.32 · Resort Hotel 0.08–0.43 (5th–95th percentile of 2017 nights)
+2017 nights on which the oversell changes: City Hotel 25% · Resort Hotel 25% · each hotel's chosen policy, costed at the night's own ADR
+
+Cell 28
+                                                                        oversold walked empty cost_per_night saving vs none (€)
+                            hotel        policy                                                                                
+night's median ADR (honest) City Hotel   flat rate (Jul – Sep 2016)         2.48   0.63  1.37           €264             +3,457
+                            Resort Hotel model + blocks + re-level 8 wk     0.31   0.10  1.05            €96               +458
+one dataset-wide mean ADR ⚠ City Hotel   flat rate (Jul – Sep 2016)         2.41   0.59  1.40           €259             +4,888
+                            Resort Hotel model + blocks + re-level 8 wk     0.25   0.07  1.07           €101               -789
+Cell 30
+                                        oversold expected came_back walked empty cost_per_night saving vs none (€)
+hotel        policy                                                                                               
+City Hotel   no overbooking                 0.00     0.00      3.22   0.00  3.22           €279                 +0
+             booking-time probability ⚠    14.28    16.24      3.22  11.20  0.14         €2,808           -614,718
+Resort Hotel no overbooking                 0.00     0.00      1.26   0.00  1.26            €98                 +0
+             booking-time probability ⚠     3.73     5.16      1.26   2.64  0.17           €669           -138,623
+Cell 32 [stdout]
+late-cancellation rate (on the books a week out), by quarter
+
+Cell 32
+q            2015Q3 2015Q4 2016Q1 2016Q2 2016Q3 2016Q4 2017Q1 2017Q2 2017Q3
+hotel                                                                      
+City Hotel    14.4%   8.8%  14.5%  10.6%   6.5%   9.9%   8.1%   5.2%   3.5%
+Resort Hotel   3.4%   8.1%   8.1%   3.7%   2.6%   3.3%   5.6%   4.3%   3.8%
+Cell 32 [stdout]
+PSI by quarter, against Jul 2015 – Jun 2016
+
+Cell 32
+                     lead_time market_segment distribution_channel country deposit_type
+hotel        quarter                                                                   
+City Hotel   2016Q3       0.21           0.26                 0.01    0.29         0.06
+             2016Q4       0.11           0.16                 0.01    0.18         0.01
+             2017Q1       0.18           0.27                 0.01    0.22         0.03
+             2017Q2       0.27           0.18                 0.01    0.27         0.00
+             2017Q3       0.44           0.56                 0.04    0.66         0.34
+Resort Hotel 2016Q3       0.31           0.22                 0.08    0.12         0.05
+             2016Q4       0.04           0.09                 0.03    0.13         0.03
+             2017Q1       0.15           0.14                 0.04    0.08         0.05
+             2017Q2       0.22           0.07                 0.06    0.27         0.04
+             2017Q3       0.31           1.05                 0.12    0.34         0.20
+Cell 32 [stdout]
+PSI of Jul – Aug 2017 against Jul – Sep 2015 (same season)
+
+Cell 32
+             lead_time market_segment country
+City Hotel        0.52           1.45    1.55
+Resort Hotel      0.30           0.51    0.28
+Cell 32 [stdout]
+2017 by arrival month (frozen model, retrained model, and the frozen 7-day forecast's expected ÷ realised)
+
+Cell 32
+         AUPRC frozen · City  AUPRC frozen · Resort  AUPRC retrained · City  AUPRC retrained · Resort  late exp/real (frozen) · City  \
+month                                                                                                                                  
+2017-01                 0.86                   0.51                    0.87                      0.50                           0.89   
+2017-02                 0.76                   0.62                    0.76                      0.64                           0.72   
+2017-03                 0.80                   0.66                    0.80                      0.65                           1.11   
+2017-04                 0.84                   0.67                    0.86                      0.69                           1.65   
+2017-05                 0.84                   0.70                    0.85                      0.72                           1.40   
+2017-06                 0.84                   0.66                    0.85                      0.67                           1.75   
+2017-07                 0.62                   0.56                    0.68                      0.62                           1.88   
+2017-08                 0.55                   0.60                    0.60                      0.71                           2.10   
+
+         late exp/real (frozen) · Resort  
+month                                     
+2017-01                             0.48  
+2017-02                             0.38  
+2017-03                             0.70  
+2017-04                             0.66  
+2017-05                             0.58  
+2017-06                             0.69  
+2017-07                             0.76  
+2017-08                             0.60  
+Cell 32 [stdout]
+label delay of the booking-time score = lead time; median in the test season: City Hotel 87 days · Resort Hotel 66 days
+
+Cell 32
+                                  AUPRC expected ÷ realised
+frozen Jun 2016    City Hotel     0.786                0.91
+                   Resort Hotel   0.628                0.68
+                   both (pooled)  0.749                0.85
+retrained Dec 2016 City Hotel     0.806                0.98
+                   Resort Hotel   0.668                0.79
+                   both (pooled)  0.774                0.93
+Cell 32
+<Figure size 1210x726 with 4 Axes>
+Cell 34 [stdout]
+KB: 607 triples · conforms: False · 5 violations
+
+Cell 34
+                                          codes  bookings
+message                                                  
+channel not classified                Undefined         5
+country code is not ISO 3166 alpha-3         CN      1279
+country has no region                  ATA, ATF         3
+segment not classified                Undefined         2
+Cell 35
+                                                            AUPRC expected ÷ realised
+honest baseline (codes only)                 City Hotel     0.786                0.91
+                                             Resort Hotel   0.628                0.68
+                                             both (pooled)  0.749                0.85
++ KB policy and channel context              City Hotel     0.783                0.91
+                                             Resort Hotel   0.632                0.69
+                                             both (pooled)  0.748                0.85
++ raw country ⚠                              City Hotel     0.809                0.80
+                                             Resort Hotel   0.628                0.49
+                                             both (pooled)  0.770                0.72
+KB classes instead of the three codes        City Hotel     0.783                0.92
+                                             Resort Hotel   0.634                0.69
+                                             both (pooled)  0.747                0.86
++ KB region (country through the ontology) ⚠ City Hotel     0.806                0.81
+                                             Resort Hotel   0.639                0.50
+                                             both (pooled)  0.770                0.73
+Cell 35 [stdout]
+cold start: 4,126 non-refundable bookings in the test season arrive under the new code 'Non Refund (new plan)'
+
+Cell 35
+                                         AUPRC · today's codes AUPRC · after the new code exp ÷ real · after
+codes only                  City Hotel                   0.786                      0.595               0.70
+                            Resort Hotel                 0.628                      0.561               0.63
+codes + KB context          City Hotel                   0.783                      0.684               0.75
+                            Resort Hotel                 0.632                      0.597               0.65
+KB classes instead of codes City Hotel                   0.783                      0.783               0.92
+                            Resort Hotel                 0.634                      0.634               0.69
+Cell 37 [stdout]
+pandas 3.1.0 · numpy 2.5.4 · lightgbm 4.7.0 · scikit-learn 1.9.1 · rdflib 7.6.0 · pyshacl 0.40.1
+notebook finished · total wall time 19s
+
+Cell 38
+3623

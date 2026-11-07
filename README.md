@@ -4,11 +4,11 @@ ARI3217 Task 19: package, reproduce, evaluate and operationalise the supplied ho
 
 ## Setup status
 
-Repository structure and Python 3.13.13 environment prepared following Session 02. Dependencies are pinned in `requirements.txt`; configuration loading and the booking-time baseline training command are implemented. Overbooking policy, monitoring and knowledge-base packaging remain for later stages.
+Repository structure and Python 3.13.13 environment prepared following Session 02. Dependencies are pinned in `requirements.txt`; configuration loading and the booking-time baseline training command are implemented. The given overbooking policy is now packaged; monitoring and knowledge-base packaging remain for later stages.
 
 ## Structure
 
-- `src/hotel_cancel/`: reusable loading, features, model persistence, training and evaluation; policy and batch modules will follow.
+- `src/hotel_cancel/`: reusable loading, features, model persistence, training and evaluation; the given policy is packaged; the operational batch module will follow.
 - `config/`: shared non-secret configuration.
 - `notebooks/reference/`: unchanged supplied notebook.
 - `tests/`: automated checks.
@@ -24,7 +24,7 @@ Citation: Antonio, N., de Almeida, A., Nunes, L. (2019). Hotel booking demand da
 
 Arrival window: July 2015–August 2017. Training: July 2015–June 2016. Validation: July–December 2016; July–September calibrates and October–December selects policies. Frozen test holdout: January–August 2017. Default nightly decision horizon: seven days before arrival.
 
-The supplied model must be reproduced without tuning or replacing it. The local packaged booking-time baseline matches the notebook's reported split counts and rounded per-hotel metrics. Clean-source-copy setup is verified; full policy reproduction and verification from a published GitHub clone remain pending.
+The supplied model must be reproduced without tuning or replacing it. The local packaged booking-time baseline matches the notebook's reported split counts and rounded per-hotel metrics. Clean-source-copy setup is verified; the policy extraction now exactly matches captured reference outputs; verification from a published GitHub clone remains pending.
 
 ## Course materials
 
@@ -66,6 +66,42 @@ Relative paths resolve from the project root rather than the current working dir
 
 Run the configuration checks with `python -m pytest`.
 
+## Run the complete baseline
+
+From the repository root, after environment setup and providing the verified raw CSV:
+
+```bash
+make baseline
+```
+
+This runs the given pooled booking model, horizon calibration, validation-only policy selection and frozen test reporting. It rebuilds processed data from raw input, uses settings in `config/config.yaml`, and creates a unique ignored `models/baseline/<UTC timestamp>-<id>/` folder. Previous runs are retained.
+
+Equivalent command and optional overrides:
+
+```bash
+.venv/bin/python -m hotel_cancel.baseline
+make baseline CONFIG=config/config.yaml
+# With another prepared interpreter:
+make baseline PYTHON=/absolute/path/to/python
+```
+
+Each successful run saves:
+
+| File | Contents |
+|---|---|
+| `booking_model.joblib` | Model, learned agent vocabulary and feature order |
+| `policy_state.joblib` | Per-hotel calibrators, flat rates, chosen policies and effective settings |
+| `booking_metrics.csv`, `booking_gate.csv` | Validation/test metrics and diagnostic hotel gates |
+| `policy_validation.csv` | All validation candidates and selected policies |
+| `policy_test_nights.csv`, `policy_test_summary.csv` | Frozen-policy nightly and aggregate test results |
+| `tonight.json`, `chosen_policies.json` | Example-night quantities and selected policies |
+| `config.json` | Effective non-secret settings; environment variables are not captured |
+| `run.json` | Status, raw/holdout fingerprints, split counts, stage/total timings, package versions and source/Git provenance |
+
+A successful baseline run exits zero even when the Resort diagnostic gate says FAIL, matching the supplied reference. Execution failures exit nonzero and retain a failed run report; incomplete run folders must not be treated as successful results. This is not the later deployment/CI quality gate. Generated files remain ignored under the default model directory; keep any custom output directory out of version control too. Joblib files should only be loaded from trusted runs.
+
+The command was checked against the reference results, including reloading the saved model and policy state. See [command verification](docs/evidence/baseline-command-verification.json). The six local reproduction steps are complete; see [baseline reproduction report](docs/baseline-reproduction.md) for results, tolerances, differences and remaining fresh-clone/C2 requirements.
+
 ## Run the booking-time baseline
 
 With the environment active, run from the project root:
@@ -92,13 +128,15 @@ Select the project `.venv/bin/python` in VS Code. A named kernel can also be ins
 python -m ipykernel install --sys-prefix --name hotel-cancellations --display-name "Python 3 (hotel-cancellations)"
 ```
 
-On this Mac, the editable install's `.pth` file acquired the macOS hidden flag; Python 3.13 skips hidden `.pth` files. If importing `hotel_cancel` fails despite installation, clear that flag before starting Python:
+On this Mac, editable-install `.pth` files repeatedly acquire the hidden flag, which Python 3.13 skips. Clearing the flag did not persist during investigation. The local environment now uses a relative source-package link inside `.venv` so imports do not depend on `.pth` discovery. Source edits still take effect immediately.
+
+If this recurs after recreating the environment, run from the repository root:
 
 ```bash
-chflags nohidden .venv/lib/python3.13/site-packages/__editable__.hotel_cancellations-0.1.0.pth
+.venv/bin/python scripts/repair_local_import.py
 ```
 
-This is a local environment repair, not a change to the model. The independent clean environment did not require it.
+The script requires this checkout’s environment and refuses to overwrite an existing package or a link to another source. It changes only the ignored local environment; normal package installation remains the fresh-checkout workflow. No PYTHONPATH setting is needed after repair. Restart an already-open notebook kernel.
 
 ## Setup verification and remaining work
 
@@ -122,3 +160,27 @@ The initial baseline is published in commit `92cb28fa518c262a2fd6f89bd9e1279f4e6
 Run `python -m hotel_cancel.audit` to regenerate [the quirk table](docs/evidence/data-quirks.md) and its JSON companion from the original CSV. It counts outcome leakage, duplicates, nationality patterns, non-refundable cancellations, ADR anomalies, country-code inconsistencies and invalid guest/stay combinations. The audit checks outcome separation, forbidden feature names and temporal train/test duplicate overlap; it does not clean the data or change the learner.
 
 Reports record the dataset hash, audit-source hash, base commit and whether the working tree had uncommitted changes. Commit the audit code, tests and generated evidence together before citing them in the diary. Guard coverage and remaining work are stated per quirk; the complete six-trap suite and raw-data contract remain pending.
+
+## Baseline data identity
+
+See [dataset source and setup](docs/dataset.md) and the [verified dataset manifest](docs/evidence/dataset-manifest.json) for the exact supplied CSV fingerprint, attribution, fresh-checkout instructions and version-control checks.
+
+## Original notebook reference run
+
+Stage 3 Step 3 completed: see [reference-run results and instructions](docs/reference-run.md). All original notebook cells executed successfully; booking metrics and policy outputs match the supplied rounded results.
+
+## Packaged policy and extraction verification
+
+The thin notebook now calls `hotel_cancel.policy.run_policy_baseline(result, config)` after `run_baseline(config)`. It returns snapshot/calibration state, validation selection, frozen-policy test results and example-night quantities. See [ADR 0003](docs/decisions/0003-policy-extraction.md).
+
+Run the full-data extraction comparison from the repository root:
+
+```bash
+.venv/bin/python scripts/verify_extraction.py
+```
+
+This trains the given model and compares features and outputs with the original notebook evidence; it does not tune anything. Results are written to ignored `artifacts/extraction-verification.json`. The recorded [verification result](docs/evidence/extraction-verification.json) reports exact matches. The local import repair above removes the need for a source-path override.
+
+## Stage 3 reproduction report
+
+[Baseline reproduction report](docs/baseline-reproduction.md): all 20 saved-run comparison checks passed for the student’s terminal run. It includes booking and policy comparisons, timing scope, tolerances and outstanding assessment requirements.

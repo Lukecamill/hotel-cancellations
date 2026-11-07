@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "comparison": "exact equality to full-precision original notebook evidence",
+  "checks": [
+    "split counts",
+    "holdout fingerprint",
+    "booking metrics",
+    "policy choices",
+    "all policy summary values",
+    "all tonight values",
+    "all-row feature values/dtypes/order"
+  ],
+  "booking_runtime_seconds": 1.459619291999843,
+  "policy_runtime_seconds": 0.9823724169982597
+}

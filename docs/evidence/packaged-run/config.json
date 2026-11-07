@@ -1,0 +1,34 @@
+{
+  "seed": 3217,
+  "kaggle_handle": "jessemostipak/hotel-booking-demand",
+  "window_start": "2015-07-01 00:00:00",
+  "window_end": "2017-09-01 00:00:00",
+  "train_end": "2016-07-01 00:00:00",
+  "calib_end": "2016-10-01 00:00:00",
+  "valid_end": "2017-01-01 00:00:00",
+  "test_end": "2017-09-01 00:00:00",
+  "decision_lead_days": 7,
+  "tonight": "2017-08-08 00:00:00",
+  "walk_cost_eur": 250.0,
+  "variable_cost_eur": 20.0,
+  "recal_weeks_grid": [
+    4,
+    8,
+    12
+  ],
+  "hotels": [
+    "City Hotel",
+    "Resort Hotel"
+  ],
+  "gate_min_auprc": {
+    "City Hotel": 0.7,
+    "Resort Hotel": 0.55
+  },
+  "calibration_band": [
+    0.85,
+    1.15
+  ],
+  "data_dir": "/Users/lukecamilleri/Desktop/hotel-cancellations/data",
+  "model_dir": "/Users/lukecamilleri/Desktop/hotel-cancellations/models",
+  "log_level": "INFO"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "run_directory": "models/baseline/20261107T121116Z-3a48b7e5",
+  "checks": [
+    "successful command",
+    "split counts",
+    "holdout identity",
+    "reference policy summaries after CSV roundtrip",
+    "chosen policies",
+    "tonight results",
+    "reloaded model prediction consistency",
+    "reloaded model test metrics",
+    "policy state reload"
+  ],
+  "runtime_seconds": 2.573702250010683
+}
