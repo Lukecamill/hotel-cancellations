@@ -1,0 +1,25 @@
+# Baseline values copied from the supplied Task 19 notebook.
+# Dates are arrival boundaries: start inclusive, end exclusive.
+seed: 3217
+kaggle_handle: jessemostipak/hotel-booking-demand
+window_start: "2015-07-01"
+window_end: "2017-09-01"
+train_end: "2016-07-01"
+calib_end: "2016-10-01"
+valid_end: "2017-01-01"
+test_end: "2017-09-01"
+decision_lead_days: 7
+tonight: "2017-08-08"
+walk_cost_eur: 250.0
+variable_cost_eur: 20.0
+recal_weeks_grid: [4, 8, 12]
+hotels: ["City Hotel", "Resort Hotel"]
+# Given placeholder business thresholds; subject to the later decision record.
+gate_min_auprc:
+  City Hotel: 0.70
+  Resort Hotel: 0.55
+calibration_band: [0.85, 1.15]
+# Relative paths resolve from the project root, including environment overrides.
+data_dir: data
+model_dir: models
+log_level: INFO

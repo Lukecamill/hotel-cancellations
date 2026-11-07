@@ -1,0 +1,28 @@
+# Local data, models and generated artifacts
+/data/
+/models/
+/artifacts/
+/mlruns/
+/mlartifacts/
+*.log
+
+# Secrets and machine settings
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
