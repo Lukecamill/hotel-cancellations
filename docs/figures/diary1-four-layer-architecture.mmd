@@ -1,0 +1,43 @@
+flowchart TB
+  subgraph B["BUSINESS · Why and who?"]
+    GOAL["Balance empty-room cost and relocation risk, per hotel"]
+    MANAGER["Revenue manager — simulated nightly reviewer"]
+    OWNER["Model/service owner — investigates alerts; proposes reviewed changes"]
+  end
+  subgraph D["DATA · What information?"]
+    CSV["Historical PMS-extract CSV; final state, no event history"]
+    ARTIFACTS["Versioned feature recipe, model, calibration and reference policy"]
+    RECORDS["Snapshots, prediction/batch logs and simulated decision records"]
+    EVIDENCE["Frozen 2017 holdout; mature labels, calibration, PSI and cost evidence"]
+  end
+  subgraph A["APPLICATION · Which systems?"]
+    PMS["External PMS / channel manager — connectors not implemented"]
+    PACKAGE["hotel_cancel package: training, shared features, POST /predict and nightly policy"]
+    REVIEW["Manager review screen / approval API"]
+    PROM["Prometheus: metrics and alert rules"]
+    GRAFANA["Grafana dashboard: live service/input metrics; historical quality replay"]
+  end
+  subgraph T["TECHNOLOGY · Running on what?"]
+    MAC["Mac/browser + localhost SSH tunnels"]
+    VM["VirtualBox Ubuntu ARM64 VM, 2 vCPU / 4GB"]
+    COMPOSE["Docker Compose: separate API, PostgreSQL, Prometheus and Grafana containers"]
+    STORAGE["Persistent DB/metrics volumes; read-only model mount"]
+  end
+  CSV -->|"retrospective snapshot / training data"| PACKAGE
+  ARTIFACTS --> PACKAGE
+  PACKAGE -->|"candidate nightly quantity"| REVIEW
+  MANAGER -->|"approve, reduce or reject with a reason"| REVIEW
+  PACKAGE -->|"versioned prediction / batch logs"| RECORDS
+  REVIEW -->|"final simulated audit record"| RECORDS
+  PACKAGE -->|"request, latency and input metrics"| PROM
+  EVIDENCE -->|"historical report gauges"| PROM
+  PROM --> GRAFANA
+  GRAFANA -->|"informs investigation"| OWNER
+  GOAL --> MANAGER
+  PMS -.->|"future booking events / snapshot connector"| PACKAGE
+  REVIEW -.->|"future inventory action; not implemented"| PMS
+  MAC -->|"SSH / local browser"| VM
+  VM --> COMPOSE
+  COMPOSE --> STORAGE
+  classDef planned stroke:#9a6f2b,stroke-width:2px,stroke-dasharray:6 4,fill:#fff8e8;
+  class PMS planned;

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1660" viewBox="0 0 2400 1660">
+<rect width="2400" height="1660" fill="#f7f8f4"/>
+<text x="80" y="60" font-family="Arial,sans-serif" font-size="54" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Task 19 | Four-layer enterprise architecture</text>
+<text x="80" y="132" font-family="Arial,sans-serif" font-size="29" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">Hotel cancellations and overbooking — implemented coursework system, with its integration boundary</text>
+<rect x="80" y="191" width="22" height="22" rx="4" fill="#2b705b"/>
+<text x="116" y="189" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">Built component / recorded information</text>
+<rect x="755" y="191" width="52" height="22" rx="4" fill="#fff" stroke="#9a6f2b" stroke-width="3" stroke-dasharray="12 10"/>
+<text x="825" y="189" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">Dashed: future external connection</text>
+<text x="1550" y="189" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#8d561e" dominant-baseline="text-before-edge">Manager role and approvals are simulated</text>
+<rect x="80" y="260" width="2240" height="250" rx="20" fill="#e6efe8"/>
+<text x="110" y="335" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">BUSINESS</text>
+<text x="110" y="383" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">Why / who?</text>
+<rect x="360" y="286" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="378" y="306" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Goal</text>
+<text x="378" y="360" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Balance empty-room cost</text>
+<text x="378" y="395" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">and guest-relocation risk.</text>
+<text x="378" y="430" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Make decisions per hotel.</text>
+<rect x="845" y="286" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="863" y="306" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Revenue manager (sim.)</text>
+<text x="863" y="360" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Reviews policy assumptions.</text>
+<text x="863" y="395" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Approves, reduces or rejects</text>
+<text x="863" y="430" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">a nightly recommendation.</text>
+<rect x="1330" y="286" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="1348" y="306" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Model / service owner</text>
+<text x="1348" y="360" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Investigates alerts and data.</text>
+<text x="1348" y="395" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Proposes reviewed changes;</text>
+<text x="1348" y="430" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">no automatic promotion.</text>
+<rect x="1815" y="286" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="1833" y="306" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Use boundary</text>
+<text x="1833" y="360" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Coursework demonstration.</text>
+<text x="1833" y="395" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Operational authorisation</text>
+<text x="1833" y="430" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">remains zero.</text>
+<rect x="80" y="535" width="2240" height="250" rx="20" fill="#e7eef5"/>
+<text x="110" y="610" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">DATA</text>
+<text x="110" y="658" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">What information?</text>
+<rect x="360" y="561" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="378" y="581" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Source data</text>
+<text x="378" y="635" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Historical hotel-booking CSV.</text>
+<text x="378" y="670" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Final-state PMS extract;</text>
+<text x="378" y="705" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">no event-time history.</text>
+<rect x="845" y="561" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="863" y="581" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Versioned artifacts</text>
+<text x="863" y="635" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Feature recipe and model.</text>
+<text x="863" y="670" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Horizon calibration + policy.</text>
+<text x="863" y="705" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Fingerprints preserve identity.</text>
+<rect x="1330" y="561" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="1348" y="581" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Operational records</text>
+<text x="1348" y="635" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">PostgreSQL-held snapshots,</text>
+<text x="1348" y="670" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">predictions, batch forecasts</text>
+<text x="1348" y="705" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">and manager decision records.</text>
+<rect x="1815" y="561" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="1833" y="581" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Evaluation records</text>
+<text x="1833" y="635" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Frozen Jan–Aug 2017 holdout.</text>
+<text x="1833" y="670" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Mature outcomes, PSI and</text>
+<text x="1833" y="705" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">historical policy-cost evidence.</text>
+<rect x="80" y="810" width="2240" height="250" rx="20" fill="#edebf6"/>
+<text x="110" y="885" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">APPLICATION</text>
+<text x="110" y="933" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">Which systems?</text>
+<rect x="360" y="836" width="465" height="198" rx="12" fill="#fff" stroke="#9a6f2b" stroke-width="3" stroke-dasharray="12 10"/>
+<text x="378" y="856" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">PMS / channel manager</text>
+<text x="378" y="910" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Future external systems.</text>
+<text x="378" y="945" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Connectors are not built.</text>
+<text x="378" y="980" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">No inventory updates.</text>
+<rect x="845" y="836" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="863" y="856" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">hotel_cancel package</text>
+<text x="863" y="910" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Training + shared features.</text>
+<text x="863" y="945" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">POST /predict at booking.</text>
+<text x="863" y="980" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Nightly policy, 7 days out.</text>
+<rect x="1330" y="836" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="1348" y="856" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Manager review screen</text>
+<text x="1348" y="910" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Shows recommendation/risk.</text>
+<text x="1348" y="945" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Records simulated decisions</text>
+<text x="1348" y="980" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">with versions and reasons.</text>
+<rect x="1815" y="836" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="1833" y="856" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Monitoring applications</text>
+<text x="1833" y="910" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Prometheus + Grafana.</text>
+<text x="1833" y="945" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Live service / input metrics.</text>
+<text x="1833" y="980" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Historical quality replay.</text>
+<rect x="80" y="1085" width="2240" height="250" rx="20" fill="#f0eae0"/>
+<text x="110" y="1160" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">TECHNOLOGY</text>
+<text x="110" y="1208" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">Running on what?</text>
+<rect x="360" y="1111" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="378" y="1131" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Mac + local browser</text>
+<text x="378" y="1185" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Development and review.</text>
+<text x="378" y="1220" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">SSH connection to the VM.</text>
+<text x="378" y="1255" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Local browser interfaces.</text>
+<rect x="845" y="1111" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="863" y="1131" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Ubuntu ARM64 VM</text>
+<text x="863" y="1185" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">VirtualBox on Apple Silicon.</text>
+<text x="863" y="1220" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">2 virtual CPUs; 4GB allocated.</text>
+<text x="863" y="1255" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Linux host for Docker Engine.</text>
+<rect x="1330" y="1111" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="1348" y="1131" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Docker Compose</text>
+<text x="1348" y="1185" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Separate API, PostgreSQL,</text>
+<text x="1348" y="1220" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Prometheus and Grafana</text>
+<text x="1348" y="1255" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">containers; pinned images.</text>
+<rect x="1815" y="1111" width="465" height="198" rx="12" fill="#fff" stroke="#c6d5cb" stroke-width="2"/>
+<text x="1833" y="1131" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Storage + network</text>
+<text x="1833" y="1185" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Persistent DB/metric volumes.</text>
+<text x="1833" y="1220" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Read-only model mount.</text>
+<text x="1833" y="1255" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#3e514b" dominant-baseline="text-before-edge">Localhost ports + SSH tunnels.</text>
+<text x="80" y="1380" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#213c36" dominant-baseline="text-before-edge">Implemented information path</text>
+<text x="80" y="1428" font-family="Arial,sans-serif" font-size="27" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">CSV snapshot → shared model/policy package → nightly recommendation → manager review → stored decision</text>
+<text x="80" y="1480" font-family="Arial,sans-serif" font-size="27" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">Cross-layer dependency: delayed outcomes (Data) limit quality alerts (Application) and decisions (Business).</text>
+<text x="80" y="1532" font-family="Arial,sans-serif" font-size="27" font-weight="400" fill="#213c36" dominant-baseline="text-before-edge">Technology hosts these capabilities; a healthy, fast API does not establish good model calibration.</text>
+<text x="80" y="1594" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#5d6e66" dominant-baseline="text-before-edge">Based on Session 1 §3.1; implementation state after Stage 7. Future PMS integration is not claimed.</text>
+</svg>

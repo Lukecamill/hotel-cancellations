@@ -219,3 +219,7 @@ The Compose stack now includes Prometheus and Grafana. Versioned prediction and 
 ## Diary 1: additional data-quirk investigation
 
 The [additional stay/status-date investigation](docs/diary1-additional-quirk.md) finds 27 Check-Out rows whose status date differs from arrival plus recorded nights. Run `python -m hotel_cancel.stay_audit` to reproduce the counts. This is an offline diagnostic with explicit uncertainty; rows and cancellation labels are preserved, and no model/policy changes are made.
+
+## Diary 1: enterprise architecture map
+
+The [four-layer architecture map](docs/diary1-architecture.md) places the implemented package, data records, manager-review screen, database engine, containers and dashboard in the course's Business, Data, Application and Technology domains. PNG, SVG and Mermaid versions are under `docs/figures/`. Future PMS/channel-manager integrations and simulated approvals are clearly marked.

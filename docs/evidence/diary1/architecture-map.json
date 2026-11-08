@@ -1,0 +1,31 @@
+{
+  "prepared_date": "2026-11-08",
+  "layers": [
+    "Business",
+    "Data",
+    "Application",
+    "Technology"
+  ],
+  "course_source": {
+    "filename": "ARI3217 - Main Document - Session 1_ The AI Readiness Crisis.pdf",
+    "section": "3.1",
+    "page": 5,
+    "sha256": "cc09bc50192d3e3a5a57cb4b1273f2efd5bb483ee4f7147c3d83512be1842d16"
+  },
+  "base_commit": "e57de9af1a9b47d698c95b53c2239aa0188ccee1",
+  "working_tree_dirty": true,
+  "figure_sha256": {
+    "docs/figures/diary1-four-layer-architecture.png": "32df43a9c50557fe1ca49fbb9689ea999ace2a857a2ba5ce423b55ff8b148532",
+    "docs/figures/diary1-four-layer-architecture.svg": "e66f9d4be7ada3c683fecfdf3486caeb1b7850b08447a8bd11ccb0acf5c87db4",
+    "docs/figures/diary1-four-layer-architecture.mmd": "c51febe5481a048e1c73d1aa5ea36a5c1abcc82e1719fb0080e8c98f6b968c79"
+  },
+  "verified": [
+    "All four course domains present",
+    "Package, containers, database records/engine and dashboard mapped",
+    "Human decision roles identified",
+    "Future PMS/channel-manager connectors distinguished",
+    "Historical quality replay distinguished from live service metrics",
+    "PNG visually inspected for clipping and legibility"
+  ],
+  "real_operational_authorisation": false
+}
