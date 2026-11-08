@@ -17,6 +17,11 @@ services:
   api:
     image: hotel-cancel:stage6
     build: .
+    environment:
+      DATABASE_URL: postgresql://hotel:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/hotel
+    depends_on:
+      postgres:
+        condition: service_healthy
     ports:
       - "127.0.0.1:8080:8080"
     volumes:

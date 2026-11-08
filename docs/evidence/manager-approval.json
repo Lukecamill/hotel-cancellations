@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "verification_date": "2026-11-08",
+  "simulation": true,
+  "review_url": "http://127.0.0.1:8080/review",
+  "tests": 112,
+  "failures": 0,
+  "skipped": 0,
+  "postgres_enabled": true,
+  "browser_checks": [
+    "two hotel recommendations prepared",
+    "City reduction capped below candidate",
+    "both example decisions remain pending"
+  ],
+  "checks": [
+    "required reviewer and reason",
+    "simulation acknowledgement",
+    "quantity constraints",
+    "immutable final decision",
+    "concurrent reviewer conflict",
+    "PostgreSQL persistence",
+    "CSRF token and origin enforcement",
+    "idempotent snapshot publishing"
+  ],
+  "source_sha256": {
+    "src/hotel_cancel/approvals.py": "af4b25b4c66acc5538cc4bcde2f8daa6c491c804730cd045c40be1340fee7a97",
+    "src/hotel_cancel/service.py": "78e921b45f4b049d014abd7eeb0ef5bda2444f74be4537b073479f680117fed1",
+    "src/hotel_cancel/web/review.html": "b25d88300c38c347c4a9b9bdcaf10496c652f3663b7d2861c1ed6b70623c64ed",
+    "tests/test_approvals.py": "e2b5de8db717810fe6e6be4868362b122bff07c15800749ac56cfc134ca2c17c"
+  },
+  "operational_authorised_oversell": 0,
+  "policy_wide_signoff": false
+}

@@ -207,3 +207,7 @@ Run `make policy-sensitivity` to compare policies using October–December 2016 
 ## Stage 6: booking API, nightly batch and PostgreSQL snapshot
 
 The booking API and nightly batch share the existing feature recipe. Export an explicit completed reference baseline with `python -m hotel_cancel.serving --run models/baseline/<run-id> --output models/serving`, then run `make serve`. See the [Stage 6 runbook and verification](docs/stage6-operational-service.md) for complete request examples, snapshot export, PostgreSQL and container commands. Nightly quantities are review-only; unsigned Stage 5 candidates are not promoted. HTTP, PostgreSQL, training/serving parity and Docker image build/runtime/size are verified on the course Ubuntu ARM64 VM. All 93 Linux tests passed; the image is 212.16 MB and stopped cleanly in 0.219 seconds.
+
+## Simulated nightly manager approval
+
+Open `http://127.0.0.1:8080/review` through the Ubuntu SSH tunnel to review the prepared hotel recommendations. Approve, reduce or reject each one with your name and reason; PostgreSQL saves the immutable simulated decision and its snapshot/model versions. Real operational authorisation remains zero. See [manager approval instructions](docs/manager-approval.md) and [ADR 0007](docs/decisions/0007-simulated-manager-approval.md). The expanded Linux/PostgreSQL suite has 112 passing tests.

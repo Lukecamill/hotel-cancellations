@@ -7,3 +7,15 @@ CREATE TABLE IF NOT EXISTS hotel_snapshots (
     payload JSONB NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Coursework-only nightly manager review and immutable final decision.
+CREATE TABLE IF NOT EXISTS hotel_policy_reviews (
+    review_id TEXT PRIMARY KEY,
+    payload JSONB NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS hotel_policy_decisions (
+    review_id TEXT PRIMARY KEY REFERENCES hotel_policy_reviews(review_id),
+    payload JSONB NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

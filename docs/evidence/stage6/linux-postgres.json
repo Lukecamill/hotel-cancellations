@@ -11,13 +11,14 @@
   "file_postgres_batch_identical": true,
   "source_sha256": {
     "history.py": "f5281f51d73c7057f22ab5e03add8bba02fb62035e29e499a6db709eaa6ac8c0",
-    "service.py": "c72fc917fd9001999c263d9197ab57ce1e2f9ba046b61e688d3f794aba3101bf",
+    "service.py": "78e921b45f4b049d014abd7eeb0ef5bda2444f74be4537b073479f680117fed1",
     "logging_setup.py": "33bdf438c9d280c0cc3e4f361b1ce74bb8197a0d0c091e9f3921aabbb02007ce",
     "train.py": "0c93556b075ad70b698e9374b08546dadb05bf20df87de45661c9f09fe6b37d6",
     "evaluate.py": "80341ec172c8ea7f0e8559019c6657a07c5f7e5462c39e307561e1f4e02d25bb",
     "serving.py": "f20431200fff7a215d8d229eae01b7d3ab77609aabe0cae76ddb08ca4334f324",
     "features.py": "48bc2ad4becdfa5c445a692d908bcdb5d9611f60345f5e27b0f36f256fcc6a62",
     "policy.py": "8c81b113673b09c062786b1ab40d1ce033a920ffa7dab4b8bbf093c96d9e06da",
+    "approvals.py": "af4b25b4c66acc5538cc4bcde2f8daa6c491c804730cd045c40be1340fee7a97",
     "baseline.py": "95e64978922fc2119cfcb492739910b0d4acca5959d5dc63aea0e2d5e0b5a9fa",
     "snapshot.py": "c2cb34622279807b15687fd6fc154dc35f6d0941b065a265e0d12a1ffe6a5671",
     "validate.py": "cce21f36834c8a4089401b41644c0852d80e844f6f2d1d856d515692d195ad7c",
@@ -32,8 +33,8 @@
   },
   "docker_version": "29.1.3",
   "compose_version": "2.40.3+ds1-0ubuntu1",
-  "image_id": "sha256:126607e7e8bbd33c61b956f3622c117f6dca85212f551c65d5205fea4a031bcd",
+  "image_id": "sha256:e8bbc58fc98ec5509067e21c25f1d3140618974b17fe952af5018a69112408a3",
   "architecture": "arm64",
-  "image_size_bytes": 212158181,
+  "image_size_bytes": 212164030,
   "production_approval": false
 }

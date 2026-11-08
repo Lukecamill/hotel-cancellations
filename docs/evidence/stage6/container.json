@@ -1,8 +1,8 @@
 {
   "status": "passed",
   "image": "hotel-cancel:stage6",
-  "image_size_bytes": 212158181,
-  "stop_seconds": 0.21854635100004316,
+  "image_size_bytes": 212164030,
+  "stop_seconds": 0.18045218999941426,
   "exit_code": 0,
   "health": {
     "status": "ready",
