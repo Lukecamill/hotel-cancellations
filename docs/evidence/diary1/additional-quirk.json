@@ -1,0 +1,76 @@
+{
+  "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+  "notebook_sha256": "a623a0eb83a295b3e9feadde454157e442f62ab6b3b717ff4ef8db3c028d4377",
+  "source_sha256": "3fa890571dac6f5be28aee589de8c888f9367dd9ba50a803850ff23bfff581ed",
+  "base_commit": "6ccc11eb90d307a6c895a81cb705edef4718ea60",
+  "working_tree_dirty": true,
+  "counts": {
+    "rows": 119390,
+    "check_out_rows": 75166,
+    "mismatches": 27,
+    "distinct_flagged_rows": 24,
+    "same_day_positive_nights": 26,
+    "zero_nights_among_flagged": 0,
+    "zero_guests_among_flagged": 1,
+    "minimum_recorded_nights": 1,
+    "maximum_recorded_nights": 14
+  },
+  "by_hotel_and_split": [
+    {
+      "hotel": "City Hotel",
+      "split": "train",
+      "rows": 31623,
+      "check_out_rows": 18448,
+      "mismatches": 2,
+      "same_day_positive_nights": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "split": "train",
+      "rows": 17534,
+      "check_out_rows": 13124,
+      "mismatches": 11,
+      "same_day_positive_nights": 11
+    },
+    {
+      "hotel": "City Hotel",
+      "split": "validation",
+      "rows": 20199,
+      "check_out_rows": 11963,
+      "mismatches": 0,
+      "same_day_positive_nights": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "split": "validation",
+      "rows": 9347,
+      "check_out_rows": 6689,
+      "mismatches": 10,
+      "same_day_positive_nights": 10
+    },
+    {
+      "hotel": "City Hotel",
+      "split": "test",
+      "rows": 27508,
+      "check_out_rows": 15817,
+      "mismatches": 4,
+      "same_day_positive_nights": 4
+    },
+    {
+      "hotel": "Resort Hotel",
+      "split": "test",
+      "rows": 13179,
+      "check_out_rows": 9125,
+      "mismatches": 0,
+      "same_day_positive_nights": 0
+    }
+  ],
+  "exploratory_negative_checks": {
+    "cancel_status_before_inferred_booking": 0,
+    "cancel_status_after_arrival": 0
+  },
+  "source_definition": "ReservationStatusDate is the date the last status was set; stay fields describe stayed or booked-to-stay nights.",
+  "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6297060/",
+  "interpretation": "Cross-field discrepancy for review, not proof of corruption or cancellation. Causes are not identifiable from this CSV.",
+  "safeguard": "Count and flag offline; preserve rows and labels; never use outcome dates in booking-time features or infer realised occupancy/revenue from this relation alone."
+}

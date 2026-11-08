@@ -215,3 +215,7 @@ Open `http://127.0.0.1:8080/review` through the Ubuntu SSH tunnel to review the 
 ## Stage 7: monitoring and performance
 
 The Compose stack now includes Prometheus and Grafana. Versioned prediction and batch logs persist in PostgreSQL; `/metrics` exposes request/error/latency and input metrics. The provisioned dashboard separates live service/input measurements from historical calibration, PSI and policy-cost replay. See [Stage 7 report](docs/stage7-monitoring.md) and [ADR 0008](docs/decisions/0008-monitoring-and-performance.md). The final burst experiment verified 600/600 measured predictions in PostgreSQL with no HTTP errors and p95 under 35ms; 118 Linux tests and all 20 baseline reproduction checks passed. Alerts and the retraining response are documented; external notifications and the Stage 8 CI gate are not configured here.
+
+## Diary 1: additional data-quirk investigation
+
+The [additional stay/status-date investigation](docs/diary1-additional-quirk.md) finds 27 Check-Out rows whose status date differs from arrival plus recorded nights. Run `python -m hotel_cancel.stay_audit` to reproduce the counts. This is an offline diagnostic with explicit uncertainty; rows and cancellation labels are preserved, and no model/policy changes are made.

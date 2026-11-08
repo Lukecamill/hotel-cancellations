@@ -1,0 +1,7 @@
+hotel,split,rows,check_out_rows,mismatches,same_day_positive_nights
+City Hotel,train,31623,18448,2,1
+Resort Hotel,train,17534,13124,11,11
+City Hotel,validation,20199,11963,0,0
+Resort Hotel,validation,9347,6689,10,10
+City Hotel,test,27508,15817,4,4
+Resort Hotel,test,13179,9125,0,0
