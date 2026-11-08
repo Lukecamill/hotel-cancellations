@@ -1,0 +1,12 @@
+{
+  "scope": "illustrative_assumptions_not_measured_hotel_costs",
+  "review_minutes_per_hotel_per_day": 5.0,
+  "reviewer_cost_eur_per_hour": 15.0,
+  "review_minutes_sensitivity": [2.0, 5.0, 10.0],
+  "walking_cost_sensitivity_eur": [100.0, 250.0, 500.0],
+  "platform_cost_eur_per_day": null,
+  "extra_automation_connector_and_oversight_cost_eur_per_day": null,
+  "review_turnaround_measured": false,
+  "real_inventory_connector_implemented": false,
+  "human_vs_automatic_outcome_benefit_measured": false
+}

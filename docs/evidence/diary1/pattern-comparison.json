@@ -1,0 +1,140 @@
+{
+  "scope": "architecture_comparison_not_a_new_policy_experiment",
+  "base_commit": "1b5cbc9f47bdabf7444157cada33e2d3b9ac5a99",
+  "working_tree_dirty": true,
+  "assumptions": {
+    "scope": "illustrative_assumptions_not_measured_hotel_costs",
+    "review_minutes_per_hotel_per_day": 5.0,
+    "reviewer_cost_eur_per_hour": 15.0,
+    "review_minutes_sensitivity": [
+      2.0,
+      5.0,
+      10.0
+    ],
+    "walking_cost_sensitivity_eur": [
+      100.0,
+      250.0,
+      500.0
+    ],
+    "platform_cost_eur_per_day": null,
+    "extra_automation_connector_and_oversight_cost_eur_per_day": null,
+    "review_turnaround_measured": false,
+    "real_inventory_connector_implemented": false,
+    "human_vs_automatic_outcome_benefit_measured": false
+  },
+  "measured": {
+    "booking_burst_p95_seconds": 0.034250394498667444,
+    "shifted_burst_p95_seconds": 0.0336161895495934,
+    "measured_requests": 600,
+    "errors": 0,
+    "nightly_batch_seconds": 0.044716067000990734,
+    "nightly_example_bookings": 81
+  },
+  "derived": {
+    "hotels": 2,
+    "assumed_review_cost_eur_per_day": 2.5,
+    "configured_walk_cost_eur": 250.0,
+    "break_even_extra_walks_per_day": 0.01,
+    "break_even_days_per_extra_walk": 100.0,
+    "baseline_2017_policy_cost_per_hotel_night": {
+      "City Hotel": 264.42465020576134,
+      "Resort Hotel": 96.18312757201646
+    },
+    "baseline_2017_no_overbooking_cost_per_hotel_night": {
+      "City Hotel": 278.64946502057614,
+      "Resort Hotel": 98.0685390946502
+    },
+    "baseline_2017_pair_policy_cost_per_night": 360.6077777777778,
+    "baseline_2017_pair_no_overbooking_cost_per_night": 376.71800411522634
+  },
+  "sensitivity": [
+    {
+      "review_minutes_per_hotel": 2.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 1.0,
+      "walking_cost_eur": 100.0,
+      "break_even_extra_walks_per_day": 0.01,
+      "break_even_days_per_extra_walk": 100.0
+    },
+    {
+      "review_minutes_per_hotel": 2.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 1.0,
+      "walking_cost_eur": 250.0,
+      "break_even_extra_walks_per_day": 0.004,
+      "break_even_days_per_extra_walk": 250.0
+    },
+    {
+      "review_minutes_per_hotel": 2.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 1.0,
+      "walking_cost_eur": 500.0,
+      "break_even_extra_walks_per_day": 0.002,
+      "break_even_days_per_extra_walk": 500.0
+    },
+    {
+      "review_minutes_per_hotel": 5.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 2.5,
+      "walking_cost_eur": 100.0,
+      "break_even_extra_walks_per_day": 0.025,
+      "break_even_days_per_extra_walk": 40.0
+    },
+    {
+      "review_minutes_per_hotel": 5.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 2.5,
+      "walking_cost_eur": 250.0,
+      "break_even_extra_walks_per_day": 0.01,
+      "break_even_days_per_extra_walk": 100.0
+    },
+    {
+      "review_minutes_per_hotel": 5.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 2.5,
+      "walking_cost_eur": 500.0,
+      "break_even_extra_walks_per_day": 0.005,
+      "break_even_days_per_extra_walk": 200.0
+    },
+    {
+      "review_minutes_per_hotel": 10.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 5.0,
+      "walking_cost_eur": 100.0,
+      "break_even_extra_walks_per_day": 0.05,
+      "break_even_days_per_extra_walk": 20.0
+    },
+    {
+      "review_minutes_per_hotel": 10.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 5.0,
+      "walking_cost_eur": 250.0,
+      "break_even_extra_walks_per_day": 0.02,
+      "break_even_days_per_extra_walk": 50.0
+    },
+    {
+      "review_minutes_per_hotel": 10.0,
+      "assumed_hourly_cost_eur": 15.0,
+      "assumed_daily_review_cost_eur": 5.0,
+      "walking_cost_eur": 500.0,
+      "break_even_extra_walks_per_day": 0.01,
+      "break_even_days_per_extra_walk": 100.0
+    }
+  ],
+  "limitations": [
+    "No measured manager review time or labour rate",
+    "No measured platform electricity/hardware cost",
+    "Automatic inventory connector and extra control costs are unimplemented/unpriced",
+    "No measured reduction in walking from human approval",
+    "If both options accept identical quantities, the simulated policy losses are identical",
+    "Policy costs are Jan-Aug 2017 reference-policy replay, not Stage 5 validation or real hotel revenue"
+  ],
+  "input_sha256": {
+    "config/diary1-comparison.json": "ebfa63fa562e78fdd303fc405533b27cb4701114f6fd21de55dd63e5e94f2e4a",
+    "config/config.yaml": "020926a1caf95189f4261af79997e7b627c97478a4f547dc80933d7f6e53d3d1",
+    "docs/evidence/stage7/performance.json": "1d9139d1a00dc47b13bf7c098fa7063f1dd78bee5f8976a95ca43669c53028b1",
+    "docs/evidence/stage7/batch.json": "f71a08368b2eb81633ea9181ba983e91d469f58b7ebb716f367e01b5f7b45bd7",
+    "docs/evidence/stage7/replay/policy-summary.csv": "00ee01bdb603d703efd4f731f1482891d802c6fd5c7ceddd7093bbda46d0ea7e"
+  },
+  "calculation_source_sha256": "ee8dc9c1621dd0edacf6b523bbd9aaa058e987b45f72b424a9bc184b1a06fec7"
+}

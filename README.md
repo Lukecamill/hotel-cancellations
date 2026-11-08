@@ -223,3 +223,7 @@ The [additional stay/status-date investigation](docs/diary1-additional-quirk.md)
 ## Diary 1: enterprise architecture map
 
 The [four-layer architecture map](docs/diary1-architecture.md) places the implemented package, data records, manager-review screen, database engine, containers and dashboard in the course's Business, Data, Application and Technology domains. PNG, SVG and Mermaid versions are under `docs/figures/`. Future PMS/channel-manager integrations and simulated approvals are clearly marked.
+
+## Diary 1: capability-pattern comparison
+
+The [pattern comparison](docs/diary1-pattern-comparison.md) assesses current nightly human approval against hypothetical automatic acceptance on latency, daily running cost, decision ownership and failure behaviour. It separates measured performance from illustrative labour assumptions and records a conditional break-even calculation. It does not implement automatic overselling or claim a measured human performance advantage.

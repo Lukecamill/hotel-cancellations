@@ -1,0 +1,5 @@
+criterion,human_in_the_loop_current,automatic_acceptance_hypothetical
+Latency budget,Measured API p95 34.25ms; example batch 44.72ms; human turnaround unmeasured,Common calculation reused in proposal; human wait removed; connector/end-to-end latency unmeasured
+Running cost/day,Shared platform unmeasured + assumed EUR2.50/day review labour + oversight and policy losses,Shared platform unmeasured; potentially saves assumed EUR2.50/day review labour; added control/integration/incident costs unknown
+Decision owner,Simulated manager records approve/reduce/reject; project owner maintains model/service,System would execute an authorised policy; business owner remains accountable; not implemented
+Failure behaviour,No approval means no approved quantity; database/review failure blocks a new decision; operational fallback zero/manual,Would require fail-closed capacity/quality/version/connector checks; these automatic controls are not built
