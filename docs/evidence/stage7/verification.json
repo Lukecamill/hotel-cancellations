@@ -1,0 +1,318 @@
+{
+  "status": "passed",
+  "input_shift_demonstrated": true,
+  "baseline_mean_lead_days": 73.25170068027211,
+  "shifted_mean_lead_days": 168.04710144927537,
+  "database": {
+    "load_predictions": 600,
+    "persisted": 600,
+    "model_versions": [
+      "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5"
+    ]
+  },
+  "prometheus_targets_up": true,
+  "grafana_healthy": true,
+  "provisioned_panels": 8,
+  "metric_families_checked": [
+    "hotel_http_requests_total",
+    "hotel_http_request_seconds_bucket",
+    "hotel_input_lead_days_bucket",
+    "hotel_prediction_logs_total",
+    "hotel_replay_calibration_ratio",
+    "hotel_replay_psi",
+    "hotel_replay_policy_cost_eur",
+    "hotel_last_batch_seconds"
+  ],
+  "alert_rules": [
+    {
+      "name": "HotelApiUnavailable",
+      "state": "inactive"
+    },
+    {
+      "name": "PredictionPersistenceFailure",
+      "state": "inactive"
+    },
+    {
+      "name": "PredictionServerErrors",
+      "state": "inactive"
+    },
+    {
+      "name": "PredictionLatencyBudget",
+      "state": "inactive"
+    },
+    {
+      "name": "HistoricalCalibrationOutsideBand",
+      "state": "firing"
+    },
+    {
+      "name": "HistoricalInputDrift",
+      "state": "firing"
+    }
+  ],
+  "model_calibration": [
+    {
+      "metric": {
+        "__name__": "hotel_replay_calibration_ratio",
+        "horizon": "booking_to_arrival",
+        "hotel": "Resort Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.5804853805"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_calibration_ratio",
+        "horizon": "booking_to_arrival",
+        "hotel": "City Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.7436737843"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_calibration_ratio",
+        "horizon": "active_7_day",
+        "hotel": "City Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "2.0091009199"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_calibration_ratio",
+        "horizon": "active_7_day",
+        "hotel": "Resort Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "1.0422772643"
+      ]
+    }
+  ],
+  "input_drift": [
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "lead_time",
+        "hotel": "City Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.4361225975"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "market_segment",
+        "hotel": "City Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.5635615631"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "distribution_channel",
+        "hotel": "City Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.0396294209"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "country",
+        "hotel": "City Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.6559519051"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "deposit_type",
+        "hotel": "City Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.3350643639"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "lead_time",
+        "hotel": "Resort Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.3099446391"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "market_segment",
+        "hotel": "Resort Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "1.052331635"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "distribution_channel",
+        "hotel": "Resort Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.1192246585"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "country",
+        "hotel": "Resort Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.340858567"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hotel_replay_psi",
+        "feature": "deposit_type",
+        "hotel": "Resort Hotel",
+        "instance": "api:8080",
+        "job": "hotel-api"
+      },
+      "value": [
+        1794075129.783,
+        "0.1981844601"
+      ]
+    }
+  ],
+  "metric_samples": {
+    "hotel_prediction_logs_total": [
+      {
+        "metric": {
+          "__name__": "hotel_prediction_logs_total",
+          "instance": "api:8080",
+          "job": "hotel-api"
+        },
+        "value": [
+          1794075129.783,
+          "1240"
+        ]
+      }
+    ],
+    "hotel_prediction_log_failures_total": [
+      {
+        "metric": {
+          "__name__": "hotel_prediction_log_failures_total",
+          "instance": "api:8080",
+          "job": "hotel-api"
+        },
+        "value": [
+          1794075129.784,
+          "0"
+        ]
+      }
+    ],
+    "hotel_last_batch_seconds": [
+      {
+        "metric": {
+          "__name__": "hotel_last_batch_seconds",
+          "instance": "api:8080",
+          "job": "hotel-api"
+        },
+        "value": [
+          1794075129.784,
+          "0.044716067000990734"
+        ]
+      }
+    ]
+  },
+  "generated_at_epoch": 1794075129.7845478,
+  "api_image_id": "sha256:5df58351e662d3c84bc6d3401bfae4a42005f1bb94c56e6f3ccf90049cdaf321",
+  "build_input_sha256": {
+    "compose.yaml": "382c206e54857c9ac0695e87911914ac143aa7e381484276ef8ec63b9697788b",
+    "Dockerfile": "83c49a0c8f51fd239b3e6acd921a771fe2f6f121245a8b5e7e2c5d50695696b9",
+    "requirements-serving.txt": "5bebafb8f9c19c394ac28040d127406a976c6a05df877295bd321c33e5e27880",
+    "scripts/load_stage7.py": "2109aa5664124758134e32ab3f6df1c92b7c8981be5fccfbea545dec856a181a",
+    "scripts/verify_stage7.py": "588a83457f80ee4bb6ae91169ce275e0ca82f9ca476a7fc515c56d844df654d9"
+  },
+  "source_sha256": {
+    "src/hotel_cancel/history.py": "f5281f51d73c7057f22ab5e03add8bba02fb62035e29e499a6db709eaa6ac8c0",
+    "src/hotel_cancel/service.py": "34421f49c8f5fc4ef1c8203b7bac67bf95b4e9a4244e9d312262687226b95016",
+    "src/hotel_cancel/logging_setup.py": "33bdf438c9d280c0cc3e4f361b1ce74bb8197a0d0c091e9f3921aabbb02007ce",
+    "src/hotel_cancel/train.py": "0c93556b075ad70b698e9374b08546dadb05bf20df87de45661c9f09fe6b37d6",
+    "src/hotel_cancel/evaluate.py": "80341ec172c8ea7f0e8559019c6657a07c5f7e5462c39e307561e1f4e02d25bb",
+    "src/hotel_cancel/serving.py": "f20431200fff7a215d8d229eae01b7d3ab77609aabe0cae76ddb08ca4334f324",
+    "src/hotel_cancel/features.py": "48bc2ad4becdfa5c445a692d908bcdb5d9611f60345f5e27b0f36f256fcc6a62",
+    "src/hotel_cancel/policy.py": "a83e67909d88837e7aebf4d614f62282b3b135865a33fe2dc123fc307cf0783f",
+    "src/hotel_cancel/approvals.py": "af4b25b4c66acc5538cc4bcde2f8daa6c491c804730cd045c40be1340fee7a97",
+    "src/hotel_cancel/baseline.py": "95e64978922fc2119cfcb492739910b0d4acca5959d5dc63aea0e2d5e0b5a9fa",
+    "src/hotel_cancel/snapshot.py": "c2cb34622279807b15687fd6fc154dc35f6d0941b065a265e0d12a1ffe6a5671",
+    "src/hotel_cancel/monitor_replay.py": "d656960ea469a99a51b80cdb12e9c807d423a13c02a09c6b105c79754a49352a",
+    "src/hotel_cancel/validate.py": "cce21f36834c8a4089401b41644c0852d80e844f6f2d1d856d515692d195ad7c",
+    "src/hotel_cancel/batch.py": "33c67f2091c5c152d79eb8d5d9d87d959c44e4001e88fbc879e41ea6c5b85b14",
+    "src/hotel_cancel/model.py": "8115a1a4da21ac1b64b896ab3285cdb58c362c4021653825685cf3c75ed38e53",
+    "src/hotel_cancel/config.py": "916a22739395562fbfdaf0db581c20a59ebdcd80417314a212379a2c6394139c",
+    "src/hotel_cancel/audit.py": "5df925e0d700ff3b1a19d83e2f476a82c6cb414311458c6ba21c33f1d48947e8",
+    "src/hotel_cancel/contracts.py": "7d70e8341b0b46d2d04b18dbcc686fe19d06f544fc46d0d7b2f3257543f21f25",
+    "src/hotel_cancel/data.py": "de4b4a636748bc1d1b76cf68a3c83545ec3db3eee196ccfee9c68545e3d59688",
+    "src/hotel_cancel/sensitivity.py": "f95eaddec05448a1cde8cb611876e31d7a03a15b48342739c78be0f9b6fb638e",
+    "src/hotel_cancel/__init__.py": "f6c4fa215f6a58cd6084213580e42b1f98d5d7f69f976d6e77499dbeba70feb4",
+    "src/hotel_cancel/monitoring.py": "6d3b6a969c5bac532d4058031ba9009072750147c8e0874e019de4907ff4926d",
+    "src/hotel_cancel/web/review.html": "b25d88300c38c347c4a9b9bdcaf10496c652f3663b7d2861c1ed6b70623c64ed",
+    "monitoring/alerts.yml": "4a868d6b2d4bac0711835edf5ab3fb8a9b3dc8f42b21c454bc9a21275ef35efb",
+    "monitoring/prometheus.yml": "b3eb0c76737ade7b00a2f3b9bc4595b4a9746a77f0ab68fe32af3ed30b0597b0",
+    "monitoring/grafana/dashboards/hotel-monitoring.json": "ddb2d25f9c31a681c8776b03f982c9bcd8a7e44c45c331a74bcb3022c94c842b",
+    "monitoring/grafana/provisioning/dashboards/dashboards.yaml": "28935c681bc9f8658fdbb435ec924c0d60c83eab0c05337cbdb3ba1b6e829e3b",
+    "monitoring/grafana/provisioning/datasources/prometheus.yaml": "84f4414fe1c6f254f407163bcff385ceccabb4087cd037d9a74d41bc0f6a049d"
+  }
+}

@@ -10,6 +10,7 @@ import urllib.request
 from uuid import uuid4
 
 p=argparse.ArgumentParser(description=__doc__)
+p.add_argument('--image',default='hotel-cancel:stage6')
 p.add_argument('--bundle',default='models/serving')
 p.add_argument('--snapshot',default='artifacts/stage6/snapshot.json')
 p.add_argument('--output',default='docs/evidence/stage6/container.json')
@@ -20,7 +21,7 @@ root=Path(__file__).resolve().parents[1]
 bundle=(root/args.bundle).resolve()
 snapshot=json.loads((root/args.snapshot).read_text())
 name='hotel-stage6-'+uuid4().hex[:8]
-image='hotel-cancel:stage6'
+image=args.image
 subprocess.run(['docker','build','-t',image,'.'],cwd=root,check=True)
 subprocess.run(['docker','run','-d','--name',name,'--read-only','--tmpfs','/tmp',
                 '--cap-drop','ALL','--security-opt','no-new-privileges:true',

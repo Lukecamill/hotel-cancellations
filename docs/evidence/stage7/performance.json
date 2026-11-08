@@ -1,0 +1,64 @@
+{
+  "scope": "historical_booking_payloads_for_service_burst_test_not_live_quality",
+  "started_at_epoch": 1794074863.7711399,
+  "ended_at_epoch": 1794074983.4313056,
+  "rate_per_second": 5,
+  "workers": 8,
+  "client_timeout_seconds": 5,
+  "warmup_requests": 20,
+  "phases": [
+    {
+      "phase": "booking_block_burst",
+      "started_at_epoch": 1794074863.7711406,
+      "ended_at_epoch": 1794074923.601865,
+      "sent": 300,
+      "successful": 300,
+      "errors": 0,
+      "database_persisted": 300,
+      "duration_seconds": 59.830617817999155,
+      "throughput_per_second": 5.014155142314935,
+      "p50_seconds": 0.02958941099950607,
+      "p95_seconds": 0.034250394498667444,
+      "p99_seconds": 0.0361294440603524,
+      "by_hotel": {
+        "City Hotel": {
+          "requests": 160,
+          "p95_seconds": 0.03373994500070694
+        },
+        "Resort Hotel": {
+          "requests": 140,
+          "p95_seconds": 0.03457145324828161
+        }
+      }
+    },
+    {
+      "phase": "lead_time_shift",
+      "started_at_epoch": 1794074923.6022334,
+      "ended_at_epoch": 1794074983.4309366,
+      "sent": 300,
+      "successful": 300,
+      "errors": 0,
+      "database_persisted": 300,
+      "duration_seconds": 59.82857011700071,
+      "throughput_per_second": 5.014326757489277,
+      "p50_seconds": 0.02935701550086378,
+      "p95_seconds": 0.0336161895495934,
+      "p99_seconds": 0.03679650360118102,
+      "by_hotel": {
+        "City Hotel": {
+          "requests": 160,
+          "p95_seconds": 0.034133380601633685
+        },
+        "Resort Hotel": {
+          "requests": 140,
+          "p95_seconds": 0.03327134114924774
+        }
+      }
+    }
+  ],
+  "budget_p95_seconds": 0.25,
+  "budget_pass": true,
+  "source_fixture_sha256": "56194fac90f59d005482302909b3a4146740773462c621059d99d13a8c450427",
+  "load_rationale": "Five booking entries/second is a short tour-operator/group-block burst, not the hotels daily average. Replay retains observed fields and hotel mix. Phase two deliberately changes lead times.",
+  "measurement": "Open-loop offered rate; eight client workers; queueing and HTTP/database time included; warmups excluded from percentiles"
+}

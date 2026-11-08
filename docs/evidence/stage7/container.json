@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "image": "hotel-cancel:stage7",
+  "image_size_bytes": 212353366,
+  "stop_seconds": 0.1873403760000656,
+  "exit_code": 0,
+  "health": {
+    "status": "ready",
+    "model_version": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+    "diagnostic_gate": {
+      "City Hotel": "PASS",
+      "Resort Hotel": "FAIL"
+    }
+  },
+  "http_prediction": {
+    "cancellation_probability": 0.39744154489334266,
+    "horizon": "booking_to_arrival",
+    "model_version": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+    "decision_authorised": false,
+    "prediction_id": "b2567ab0977942d2b9b2352089b9c9b9",
+    "prediction_logged": false
+  },
+  "batch_matches_host": true,
+  "batch_float_absolute_tolerance": 1e-12,
+  "batch_float_relative_tolerance": 1e-12
+}

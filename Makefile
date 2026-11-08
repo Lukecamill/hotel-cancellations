@@ -1,4 +1,5 @@
 PYTHON ?= .venv/bin/python
+IMAGE ?= hotel-cancel:stage7
 CONFIG ?= config/config.yaml
 SNAPSHOT ?= artifacts/stage6/snapshot.json
 OUTPUT ?= artifacts/stage6/batch.json
@@ -23,4 +24,8 @@ nightly-batch:
 	$(PYTHON) -m hotel_cancel.batch --snapshot-file "$(SNAPSHOT)" --output "$(OUTPUT)"
 
 container:
-	docker build -t hotel-cancel:stage6 .
+	docker build -t "$(IMAGE)" .
+
+.PHONY: monitoring-replay
+monitoring-replay:
+	$(PYTHON) -m hotel_cancel.monitor_replay

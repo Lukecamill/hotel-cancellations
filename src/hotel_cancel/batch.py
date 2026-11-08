@@ -2,6 +2,8 @@
 import argparse
 import json
 import os
+import time
+from uuid import uuid4
 from pathlib import Path
 
 import numpy as np
@@ -104,9 +106,18 @@ def main():
     source.add_argument('--snapshot-file')
     source.add_argument('--snapshot-id', help='Read PostgreSQL using DATABASE_URL')
     p.add_argument('--output', required=True)
+    p.add_argument('--monitor',action='store_true',help='Persist versioned batch output using DATABASE_URL')
     args = p.parse_args()
     snapshot = json.loads(Path(args.snapshot_file).read_text()) if args.snapshot_file else read_postgres(args.snapshot_id, os.environ['DATABASE_URL'])
+    started=time.perf_counter()
     result = nightly_batch(snapshot, Predictor(args.bundle))
+    runtime=time.perf_counter()-started
+    if args.monitor:
+        from hotel_cancel.monitoring import Telemetry
+        from psycopg.types.json import Jsonb
+        telemetry=Telemetry(os.environ['DATABASE_URL'])
+        with telemetry.connect() as c:
+            c.execute('INSERT INTO hotel_batch_logs (run_id,payload) VALUES (%s,%s)',(uuid4().hex,Jsonb(dict(result,runtime_seconds=runtime))))
     path = Path(args.output)
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_name(path.name+'.tmp')

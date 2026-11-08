@@ -86,7 +86,7 @@ The student authorised a project-owned snapshot because no supplied PostgreSQL d
   --output artifacts/stage6/batch.json
 ```
 
-The baseline artifact supplies the seven-day horizon, making target arrival 15 August 2017. The snapshot contains 85 live booking records, inferred blocks and 84 mature daily history entries per hotel. Row-based synthetic IDs preserve exact duplicates. Arrival/booked cutoffs follow Stage 4. History excludes status outcomes dated on/after the decision day; target records contain booking inputs only, with no target outcome labels. The final-state CSV still cannot prove that every feature had its recorded value at the historical decision date.
+The baseline artifact supplies the seven-day horizon, making target arrival 15 August 2017. The snapshot contains 81 live booking records, inferred blocks and 84 mature daily history entries per hotel. Row-based synthetic IDs preserve exact duplicates. Arrival/booked cutoffs follow Stage 4. History excludes status outcomes dated on/after the decision day; target records contain booking inputs only, with no target outcome labels. The final-state CSV still cannot prove that every feature had its recorded value at the historical decision date.
 
 The batch checks snapshot contents, artifact fingerprints and horizon, then applies the saved hotel calibrator and policy. Rolling re-levels use mature historical observed/predicted sums, ending the day before the decision. Re-running an identical snapshot and artifact pair produces identical output. Empty hotel populations produce a zero-quantity status instead of an inference error. Results are written through a temporary file and atomic replacement.
 

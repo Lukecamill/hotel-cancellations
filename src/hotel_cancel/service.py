@@ -7,6 +7,7 @@ import os
 import signal
 import threading
 import secrets
+import time
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -16,9 +17,26 @@ MAX_BODY = 65536
 logger = logging.getLogger(__name__)
 
 
-def make_server(predictor, host='127.0.0.1', port=8080, *, approvals=None):
+def make_server(predictor, host='127.0.0.1', port=8080, *, approvals=None, telemetry=None):
+    if telemetry is None:
+        from hotel_cancel.monitoring import Telemetry
+        telemetry = Telemetry()
     review_token = secrets.token_urlsafe(32)
     class Handler(BaseHTTPRequestHandler):
+        def handle_one_request(self):
+            started=time.perf_counter()
+            self._status=None
+            self._hotel='unknown'
+            try:
+                return super().handle_one_request()
+            finally:
+                if self._status is not None:
+                    telemetry.observe_request(getattr(self,'path','other'),getattr(self,'command','other'),self._status,self._hotel,time.perf_counter()-started)
+
+        def send_response(self, code, message=None):
+            self._status=code
+            return super().send_response(code,message)
+
         def setup(self):
             super().setup()
             self.connection.settimeout(10)
@@ -39,6 +57,14 @@ def make_server(predictor, host='127.0.0.1', port=8080, *, approvals=None):
             pass  # Do not log booking payloads or arbitrary request paths.
 
         def do_GET(self):
+            if self.path == '/metrics':
+                from prometheus_client import CONTENT_TYPE_LATEST
+                data=telemetry.render()
+                self.send_response(200)
+                self.send_header('Content-Type',CONTENT_TYPE_LATEST)
+                self.send_header('Content-Length',str(len(data)))
+                self.end_headers();self.wfile.write(data)
+                return
             if self.path in ('/', '/review'):
                 data = (Path(__file__).parent / 'web/review.html').read_bytes()
                 self.send_response(200)
@@ -82,13 +108,16 @@ def make_server(predictor, host='127.0.0.1', port=8080, *, approvals=None):
                 if not isinstance(request, dict) or set(request) != {'booking'}:
                     raise ValueError('Expected one booking object')
                 prob = float(predictor.predict([request['booking']])[0])
+                self._hotel=request['booking']['hotel']
+                prediction_id,persisted=telemetry.prediction(request['booking'],prob,predictor.version)
             except (ValueError, TypeError, OverflowError, TimeoutError):
                 return self.respond(422, {'error': 'invalid_booking_request'})
             except Exception:
                 logger.exception('Prediction failed')
                 return self.respond(500, {'error': 'prediction_failed'})
             self.respond(200, {'cancellation_probability': prob, 'horizon': 'booking_to_arrival',
-                              'model_version': predictor.version, 'decision_authorised': False})
+                              'model_version': predictor.version, 'decision_authorised': False,
+                              'prediction_id': prediction_id, 'prediction_logged': persisted})
         def review_post(self):
             if approvals is None:
                 return self.respond(503, {'error': 'Manager review database is not configured'})
@@ -143,7 +172,10 @@ def main():
     if os.environ.get('DATABASE_URL'):
         from hotel_cancel.approvals import ApprovalStore
         approvals = ApprovalStore(os.environ['DATABASE_URL'])
-    server = make_server(predictor, args.host, args.port, approvals=approvals)
+    from hotel_cancel.monitoring import Telemetry
+    logging.basicConfig(level=logging.INFO,format='%(message)s')
+    telemetry=Telemetry(os.environ.get('DATABASE_URL'))
+    server = make_server(predictor, args.host, args.port, approvals=approvals,telemetry=telemetry)
     run_server(server)
 
 

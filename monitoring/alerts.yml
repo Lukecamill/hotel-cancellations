@@ -1,0 +1,30 @@
+groups:
+  - name: hotel-service
+    rules:
+      - alert: HotelApiUnavailable
+        expr: up{job="hotel-api"} == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "Hotel API metrics unavailable; inspect API/container before accepting recommendations"}
+      - alert: PredictionPersistenceFailure
+        expr: increase(hotel_prediction_log_failures_total[5m]) > 0
+        labels: {severity: warning}
+        annotations: {summary: "Prediction not persisted; inspect PostgreSQL and reconcile structured logs"}
+      - alert: PredictionServerErrors
+        expr: sum(rate(hotel_http_requests_total{route="/predict",status=~"5.."}[5m])) > 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "Prediction server errors; inspect API logs and use manual fallback"}
+      - alert: PredictionLatencyBudget
+        expr: histogram_quantile(0.95,sum by (le) (rate(hotel_http_request_seconds_bucket{route="/predict"}[5m]))) > 0.25
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: "Prediction p95 exceeds 250ms; inspect database and model contention"}
+      - alert: HistoricalCalibrationOutsideBand
+        expr: ((hotel_replay_calibration_ratio < 0.85) or (hotel_replay_calibration_ratio > 1.15)) and on (hotel,horizon) (hotel_replay_observed_cancellations >= 20) and on (hotel,horizon) (hotel_replay_bookings >= 30)
+        labels: {severity: warning, scope: historical_replay}
+        annotations: {summary: "Historical mature-week cancellation ratio outside band; investigate before policy approval"}
+      - alert: HistoricalInputDrift
+        expr: hotel_replay_psi >= 0.25
+        labels: {severity: warning, scope: historical_replay}
+        annotations: {summary: "Historical PSI at least 0.25; inspect data/seasonality; do not retrain automatically"}

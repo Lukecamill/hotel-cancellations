@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: hotel-monitoring
+    type: file
+    disableDeletion: true
+    updateIntervalSeconds: 10
+    options: {path: /var/lib/grafana/dashboards}

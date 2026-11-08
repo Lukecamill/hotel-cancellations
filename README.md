@@ -211,3 +211,7 @@ The booking API and nightly batch share the existing feature recipe. Export an e
 ## Simulated nightly manager approval
 
 Open `http://127.0.0.1:8080/review` through the Ubuntu SSH tunnel to review the prepared hotel recommendations. Approve, reduce or reject each one with your name and reason; PostgreSQL saves the immutable simulated decision and its snapshot/model versions. Real operational authorisation remains zero. See [manager approval instructions](docs/manager-approval.md) and [ADR 0007](docs/decisions/0007-simulated-manager-approval.md). The expanded Linux/PostgreSQL suite has 112 passing tests.
+
+## Stage 7: monitoring and performance
+
+The Compose stack now includes Prometheus and Grafana. Versioned prediction and batch logs persist in PostgreSQL; `/metrics` exposes request/error/latency and input metrics. The provisioned dashboard separates live service/input measurements from historical calibration, PSI and policy-cost replay. See [Stage 7 report](docs/stage7-monitoring.md) and [ADR 0008](docs/decisions/0008-monitoring-and-performance.md). The final burst experiment verified 600/600 measured predictions in PostgreSQL with no HTTP errors and p95 under 35ms; 118 Linux tests and all 20 baseline reproduction checks passed. Alerts and the retraining response are documented; external notifications and the Stage 8 CI gate are not configured here.

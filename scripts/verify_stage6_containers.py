@@ -15,6 +15,9 @@ from uuid import uuid4
 
 root=Path(__file__).resolve().parents[1]
 os.chdir(root)
+image_name=os.environ.get('HOTEL_IMAGE','hotel-cancel:stage6')
+evidence=root/os.environ.get('HOTEL_EVIDENCE_DIR','docs/evidence/stage6')
+evidence.mkdir(parents=True,exist_ok=True)
 settings=dict(line.split('=',1) for line in (root/'.env').read_text().splitlines() if line and not line.startswith('#') and '=' in line)
 env=dict(os.environ)
 env['DATABASE_URL']='postgresql://hotel:'+settings['POSTGRES_PASSWORD']+'@127.0.0.1:5432/hotel'
@@ -46,17 +49,17 @@ print(json.dumps(dict(status='passed',postgres_version=version,model_version=p.v
 '''
 command=['docker','run','--rm','-i','--network','host','--read-only','--tmpfs','/tmp',
          '-v',f'{root}/models/serving:/models:ro','-v',f'{root}/artifacts/stage6:/evidence:ro',
-         '-e','DATABASE_URL','hotel-cancel:stage6','python','-']
+         '-e','DATABASE_URL',image_name,'python','-']
 result=subprocess.run(command,input=code,text=True,capture_output=True,env=env,check=True)
 report=json.loads(result.stdout)
 report['source_sha256']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (root/'src/hotel_cancel').glob('*.py') if not p.name.startswith('.')}
 report['docker_version']=subprocess.check_output(['docker','version','--format','{{.Server.Version}}'],text=True).strip()
 report['compose_version']=subprocess.check_output(['docker','compose','version','--short'],text=True).strip()
-image=json.loads(subprocess.check_output(['docker','image','inspect','hotel-cancel:stage6']))[0]
+image=json.loads(subprocess.check_output(['docker','image','inspect',image_name]))[0]
 report['image_id']=image['Id'];report['architecture']=image['Architecture']
 report['image_size_bytes']=image['Size']
 report['production_approval']=False
-path=root/'docs/evidence/stage6/linux-postgres.json';path.parent.mkdir(parents=True,exist_ok=True)
+path=evidence/'linux-postgres.json';path.parent.mkdir(parents=True,exist_ok=True)
 path.write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))
 
@@ -65,7 +68,7 @@ if '--tests' in sys.argv:
     env['TEST_DATABASE_URL']=env['DATABASE_URL']
     command=['docker','run','--name',name,'--network','host','--read-only','--tmpfs','/tmp',
              '-v',f'{root}:/project:ro','-w','/project','-e','TEST_DATABASE_URL',
-             '-e','PYTHONPATH=/app/src:/tmp/test-deps','hotel-cancel:stage6','sh','-c',
+             '-e','PYTHONPATH=/app/src:/tmp/test-deps',image_name,'sh','-c',
              'python -m pip install --no-cache-dir --disable-pip-version-check -q --target /tmp/test-deps -r requirements-test-container.txt && python -m pytest -q -o cache_dir=/tmp/pytest-cache --junitxml=/tmp/tests.xml && python -c \"import base64; print(\'JUNIT_BASE64=\'+base64.b64encode(open(\'/tmp/tests.xml\',\'rb\').read()).decode())\"']
     try:
         completed=subprocess.run(command,env=env,text=True,capture_output=True)
@@ -78,7 +81,7 @@ if '--tests' in sys.argv:
         counts={k:int(suite.attrib[k]) for k in ['tests','failures','errors','skipped']}
         assert counts['failures']==counts['errors']==counts['skipped']==0
         counts.update(status='passed',postgres_enabled=True,environment='Linux arm64 container on Ubuntu VM',seconds=float(suite.attrib['time']))
-        (root/'docs/evidence/stage6/tests-linux.json').write_text(json.dumps(counts,indent=2)+'\n')
+        (evidence/'tests-linux.json').write_text(json.dumps(counts,indent=2)+'\n')
         print(json.dumps(counts,indent=2))
     finally:
         subprocess.run(['docker','rm','-f',name],capture_output=True)

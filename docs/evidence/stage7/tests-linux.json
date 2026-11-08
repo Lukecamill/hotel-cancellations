@@ -1,0 +1,10 @@
+{
+  "tests": 118,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "postgres_enabled": true,
+  "environment": "Linux arm64 container on Ubuntu VM",
+  "seconds": 3.911
+}

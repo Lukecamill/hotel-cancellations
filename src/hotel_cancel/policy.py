@@ -134,7 +134,7 @@ def run_policy_baseline(baseline, config):
     return PolicyResult(snap, PLATT, FLAT_RATE, CHOSEN, sel, pol, summarise(pol), tonight_rows, time.perf_counter() - started)
 
 
-def prepare_policy(baseline, config, *, fit_end=None):
+def prepare_policy(baseline, config, *, fit_end=None, calibrators=None, flat_rates=None):
     """Build horizon-specific forecasts; optional earlier calibration cutoff for causal selection."""
     DECISION_LEAD_DAYS = config["decision_lead_days"]
     TRAIN_END = config["train_end"]
@@ -162,9 +162,9 @@ def prepare_policy(baseline, config, *, fit_end=None):
     for hh in HOTELS:
         s = snap.hotel == hh
         v = s & (snap.arrival >= TRAIN_END) & (snap.arrival < fit_end)
-        PLATT[hh] = HorizonCalibrator(h, LogisticRegression().fit(logit(snap.loc[v, 'p_booking']).to_frame('z'), snap.loc[v, 'y']))
+        PLATT[hh] = calibrators[hh] if calibrators is not None else HorizonCalibrator(h, LogisticRegression().fit(logit(snap.loc[v, 'p_booking']).to_frame('z'), snap.loc[v, 'y']))
         snap.loc[s, 'p_cal'] = PLATT[hh].predict(snap.loc[s, 'p_booking'], lead_days=h)
-        FLAT_RATE[hh] = snap.loc[v, 'y'].mean()
+        FLAT_RATE[hh] = flat_rates[hh] if flat_rates is not None else snap.loc[v, 'y'].mean()
     nightly = snap.groupby(['hotel', 'arrival']).agg(y=('y', 'sum'), p=('p_cal', 'sum'), n=('y', 'size'))
     keys = pd.MultiIndex.from_arrays([snap.hotel, snap.arrival])
     for w in RECAL_WEEKS_GRID:
