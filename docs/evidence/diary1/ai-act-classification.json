@@ -1,0 +1,85 @@
+{
+  "checked_date": "2026-11-08",
+  "jurisdiction": "European Union",
+  "assessment_type": "working_coursework_legal_research_not_regulatory_determination",
+  "law_version": "Regulation (EU) 2024/1689, as amended by Regulation (EU) 2026/1744; consolidation 2026-07-27",
+  "current_activity": "local historical-data coursework demonstration; conditional Article 2(8) analysis",
+  "prospective_use": "ordinary commercial cancellation prediction and aggregate overbooking advice",
+  "prospective_classification": "other/non-high-risk on specified intended use; no Article 6 route identified",
+  "provider": "entity developing/having developed and supplying/putting into service under its own name; not automatically the programmer",
+  "deployer": "hotel operating under its authority in the hypothetical deployment; no real hotel deployer claimed for the simulation",
+  "future_reassessment": [
+    "individual guest treatment",
+    "public-assistance eligibility",
+    "biometrics or other listed use",
+    "generative/customer-facing interaction",
+    "real operational deployment"
+  ],
+  "sources": [
+    {
+      "id": "ai_act_consolidated",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng",
+      "checked_for": "Current consolidation; scope, definitions and adopted classification framework"
+    },
+    {
+      "id": "amending_regulation",
+      "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+      "checked_for": "July 2026 amendment and entry into force"
+    },
+    {
+      "id": "article_2",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-2",
+      "checked_for": "Paragraphs 6,7,8,9,10: scope exclusions and other laws"
+    },
+    {
+      "id": "article_3",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-3",
+      "checked_for": "Points 1,3,4,11,12: system, provider, deployer and intended purpose"
+    },
+    {
+      "id": "article_4",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4",
+      "checked_for": "Amended support for AI literacy"
+    },
+    {
+      "id": "article_5",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5",
+      "checked_for": "Prohibitions and conditional social-scoring analysis"
+    },
+    {
+      "id": "article_6",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6",
+      "checked_for": "Product and listed-use classification; limits of paragraph 3"
+    },
+    {
+      "id": "annex_iii",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3",
+      "checked_for": "Listed uses, especially point 5 and public-assistance eligibility"
+    },
+    {
+      "id": "article_50",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+      "checked_for": "Direct interaction and future generative-feature transparency review"
+    },
+    {
+      "id": "article_113",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113",
+      "checked_for": "Current general and high-risk application dates"
+    },
+    {
+      "id": "explorer_version_notice",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act-explorer",
+      "checked_for": "Official explanatory text based on 27 July 2026 consolidation; OJ acts authoritative"
+    }
+  ],
+  "base_commit": "dec35103e87164b2cbb479b6e043ecce9742ff80",
+  "working_tree_dirty": true,
+  "technical_premise_sha256": {
+    "src/hotel_cancel/serving.py": "f20431200fff7a215d8d229eae01b7d3ab77609aabe0cae76ddb08ca4334f324",
+    "src/hotel_cancel/batch.py": "33c67f2091c5c152d79eb8d5d9d87d959c44e4001e88fbc879e41ea6c5b85b14",
+    "src/hotel_cancel/approvals.py": "af4b25b4c66acc5538cc4bcde2f8daa6c491c804730cd045c40be1340fee7a97",
+    "docs/manager-approval.md": "9299753437aa76b53e342320def0e6d5535a99ebbf55ff8176c500fa6eb511ca"
+  },
+  "research_note_sha256": "c21744bdabf3939c1e32c8e290d2498489b8e23d47181b9f36d3c2a6a355e8b6",
+  "source_policy": "Official EU legislative and European Commission sources only; no third-party legal commentary relied upon"
+}

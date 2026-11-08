@@ -227,3 +227,7 @@ The [four-layer architecture map](docs/diary1-architecture.md) places the implem
 ## Diary 1: capability-pattern comparison
 
 The [pattern comparison](docs/diary1-pattern-comparison.md) assesses current nightly human approval against hypothetical automatic acceptance on latency, daily running cost, decision ownership and failure behaviour. It separates measured performance from illustrative labour assumptions and records a conditional break-even calculation. It does not implement automatic overselling or claim a measured human performance advantage.
+
+## Diary 1: AI Act classification
+
+The [AI Act research note](docs/diary1-ai-act-classification.md) records a scoped other/non-high-risk assessment for prospective ordinary hotel cancellation/overbooking advice, a separate conditional analysis of current pre-deployment testing, provider/deployer roles and reassessment triggers. It uses official EU sources and the July 2026 amended text; this is not production regulatory clearance. See [ADR 0009](docs/decisions/0009-intended-use-ai-act.md).
