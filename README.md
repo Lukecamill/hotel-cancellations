@@ -231,3 +231,16 @@ The [pattern comparison](docs/diary1-pattern-comparison.md) assesses current nig
 ## Diary 1: AI Act classification
 
 The [AI Act research note](docs/diary1-ai-act-classification.md) records a scoped other/non-high-risk assessment for prospective ordinary hotel cancellation/overbooking advice, a separate conditional analysis of current pre-deployment testing, provider/deployer roles and reassessment triggers. It uses official EU sources and the July 2026 amended text; this is not production regulatory clearance. See [ADR 0009](docs/decisions/0009-intended-use-ai-act.md).
+
+## Stage 8: frozen evaluation and strict CI
+
+Run `make ci` to execute the software tests and the per-hotel gate on the
+fingerprinted Jan–Aug 2017 holdout. The supplied Resort model **fails** the
+aggregate calibration check, so CI must currently return nonzero. City passes.
+`make test` runs correctness tests separately. `make quality-gate` regenerates
+Stage 8 metrics, reliability diagrams and the machine-readable report without
+replacing the serving artifacts. ECE uses ten equal-width bins with a fixed
+0.10 ceiling, alongside the notebook's AUPRC and aggregate calibration gates.
+See [Stage 8 evidence and commands](docs/stage8-evaluation.md) and
+[ADR 0010](docs/decisions/0010-frozen-evaluation-gate.md). MLflow integration
+of the calibration metric follows in Stage 9.

@@ -34,7 +34,7 @@ I used Codex to assist with implementation, tests, data investigation, diagrams 
 | Fresh clone | Separate pinned environment; 16 tests, 20 baseline comparisons and thin notebook passed. Code tested: 39fb510. | E1 |
 | Load: booking phase | 300 measured requests; 8 workers; offered 5 requests/s for 60 s. p50 29.59 ms; p95 34.25 ms; p99 36.13 ms; 0 errors. | E2 |
 | Load: shifted phase | 300 measured requests; same load; synthetic lead-time shift. p50 29.36 ms; p95 33.62 ms; p99 36.80 ms; 0 errors. | E2 |
-| Load interpretation | 20 warmups excluded in each phase. Client timing includes scheduled-arrival queueing. All 600 measured prediction IDs persisted. Target p95 <250 ms; not a maximum-capacity test. | E2 |
+| Load interpretation | 20 warmups excluded in total. Client timing includes scheduled-arrival queueing. All 600 measured prediction IDs persisted. Target p95 <250 ms; not a maximum-capacity test. | E2 |
 | Batch example | 81 bookings, 44.72 ms including model loading/inference; excludes full database, PMS and human workflow. | E2 |
 | Container and parity | 212,353,366 bytes (212.35 MB); stop 0.187 s, exit 0. Host/container batch match: absolute and relative tolerances 1e-12. | E2 |
 | Linux verification | 118 tests, no failures/errors/skips; dashboard 8 panels; 6 healthy alert-rule evaluations. External alert delivery is not configured. | E2 |

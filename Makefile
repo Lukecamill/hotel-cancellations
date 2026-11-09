@@ -29,3 +29,14 @@ container:
 .PHONY: monitoring-replay
 monitoring-replay:
 	$(PYTHON) -m hotel_cancel.monitor_replay
+
+# Strict gate: the supplied Resort model currently fails calibration.
+.PHONY: test quality-gate ci
+test:
+	$(PYTHON) -m pytest -q
+
+quality-gate:
+	$(PYTHON) -m hotel_cancel.quality_gate
+
+ci: test
+	$(MAKE) quality-gate PYTHON="$(PYTHON)"

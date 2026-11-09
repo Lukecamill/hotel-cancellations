@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "thresholds": {
+    "City Hotel": {
+      "min_auprc": 0.7,
+      "ratio_band": [
+        0.85,
+        1.15
+      ],
+      "max_ece": 0.1,
+      "bins": 10
+    },
+    "Resort Hotel": {
+      "min_auprc": 0.55,
+      "ratio_band": [
+        0.85,
+        1.15
+      ],
+      "max_ece": 0.1,
+      "bins": 10
+    }
+  }
+}

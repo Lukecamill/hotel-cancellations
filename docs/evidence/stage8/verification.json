@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-09",
+  "tests_passed": 129,
+  "tests_skipped": 6,
+  "skip_reason": "TEST_DATABASE_URL not configured; database integration tests skipped",
+  "make_ci_exit_code": 2,
+  "gate_status": "FAIL",
+  "identity_verified": true,
+  "quality_failure_expected": true,
+  "stage8_implementation_verified": true,
+  "diary_and_serving_files_unchanged": true,
+  "mlflow_logging": "deferred to Stage 9"
+}
