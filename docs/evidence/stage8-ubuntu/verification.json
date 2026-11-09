@@ -1,0 +1,15 @@
+{
+  "status": "VERIFIED",
+  "environment": "Linux container on Ubuntu VM",
+  "tests_passed": 125,
+  "tests_skipped": 6,
+  "database_tests": "not connected; reported as skipped",
+  "make_ci_exit_code": 2,
+  "gate_status": "FAIL",
+  "identity_verified": true,
+  "city": "PASS",
+  "resort": "FAIL: expected/observed cancellation ratio",
+  "demo_runtime_files_unchanged": true,
+  "image_id": "sha256:5072d7439ac6d1eeeaaeeab9e8eb5f17c97fdf0a4789edd2b75a64cda5ac76af",
+  "architecture": "arm64"
+}
