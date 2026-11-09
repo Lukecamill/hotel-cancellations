@@ -1,0 +1,58 @@
+@prefix hb: <https://ari3217.example/hotel#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+hb:ProvenanceShape a sh:NodeShape ;
+ sh:targetClass hb:Region, hb:UnknownCode, hb:Country, hb:CountryAlias, hb:MarketSegment, hb:Channel, hb:DepositPolicy, hb:Field, hb:SemanticProperty, hb:MembershipAssertion ;
+ sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+ sh:property [ sh:path hb:assertionStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+ sh:property [ sh:path prov:generatedAtTime ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+ sh:property [ sh:path hb:validFrom ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ; sh:lessThan hb:validUntil ] ;
+ sh:property [ sh:path hb:validUntil ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] .
+
+hb:CountryShape a sh:NodeShape ; sh:targetClass hb:Country ;
+ sh:property [ sh:path hb:code ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[A-Z]{3}$" ; sh:datatype xsd:string ] ;
+ sh:property [ sh:path hb:inRegion ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hb:Region ] .
+hb:AliasShape a sh:NodeShape ; sh:targetClass hb:CountryAlias ;
+ sh:property [ sh:path hb:code ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+ sh:property [ sh:path hb:aliasOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hb:Country ] .
+
+hb:DepositShape a sh:NodeShape ; sh:targetClass hb:DepositPolicy ;
+ sh:property [ sh:path hb:code ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+ sh:property [ sh:path hb:prepaid ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+ sh:property [ sh:path hb:refundable ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] .
+hb:SegmentShape a sh:NodeShape ; sh:targetClass hb:MarketSegment ;
+ sh:or ( [ sh:property [ sh:path hb:isGroup ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+           sh:property [ sh:path hb:viaIntermediary ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ]
+         [ sh:property [ sh:path hb:unresolved ; sh:hasValue true ] ;
+           sh:property [ sh:path hb:isGroup ; sh:maxCount 0 ] ; sh:property [ sh:path hb:viaIntermediary ; sh:maxCount 0 ] ;
+           sh:property [ sh:path hb:resolutionNote ; sh:minCount 1 ; sh:datatype xsd:string ] ] ) .
+hb:ChannelShape a sh:NodeShape ; sh:targetClass hb:Channel ;
+ sh:or ( [ sh:property [ sh:path hb:intermediated ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ]
+         [ sh:property [ sh:path hb:unresolved ; sh:hasValue true ] ; sh:property [ sh:path hb:intermediated ; sh:maxCount 0 ] ;
+           sh:property [ sh:path hb:resolutionNote ; sh:minCount 1 ; sh:datatype xsd:string ] ] ) .
+hb:MembershipShape a sh:NodeShape ; sh:targetClass hb:MembershipAssertion ;
+ sh:property [ sh:path hb:subject ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hb:Country ] ;
+ sh:property [ sh:path hb:isEU ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+ sh:sparql [ sh:message "Membership validity intervals overlap" ; sh:select """
+  PREFIX hb: <https://ari3217.example/hotel#>
+  SELECT $this WHERE {
+    $this hb:subject ?country ; hb:validFrom ?start ; hb:validUntil ?end .
+    ?other a hb:MembershipAssertion ; hb:subject ?country ; hb:validFrom ?s ; hb:validUntil ?e .
+    FILTER(?other != $this && ?start < ?e && ?s < ?end)
+  }""" ] .
+hb:FieldShape a sh:NodeShape ; sh:targetClass hb:Field ;
+ sh:property [ sh:path hb:writtenAtPhase ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+ sh:property [ sh:path hb:availabilityStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+               sh:in ("not_booking_time" "unverified" "assumed_not_proven") ] ;
+ sh:property [ sh:path hb:observedWriteTimestamp ; sh:minCount 1 ; sh:maxCount 1 ; sh:hasValue false ] .
+
+
+hb:CodeShape a sh:NodeShape ; sh:targetClass hb:Country, hb:CountryAlias, hb:UnknownCode, hb:MarketSegment, hb:Channel, hb:DepositPolicy ;
+ sh:property [ sh:path hb:code ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+hb:CoverageShape a sh:NodeShape ; sh:targetNode hb:Vocabulary ;
+ sh:property [ sh:path hb:requiresCode ; sh:minCount 1 ; sh:or (
+   [ sh:class hb:Country ] [ sh:class hb:CountryAlias ] [ sh:class hb:UnknownCode ]
+   [ sh:class hb:MarketSegment ] [ sh:class hb:Channel ] [ sh:class hb:DepositPolicy ] ) ] ;
+ sh:property [ sh:path hb:requiresField ; sh:minCount 1 ; sh:class hb:Field ] .

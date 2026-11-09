@@ -1,0 +1,810 @@
+@prefix hb: <https://ari3217.example/hotel#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ari3217.example/hotel#channel/Corporate> a hb:Channel ;
+    hb:code "Corporate" ;
+    hb:intermediated false .
+
+<https://ari3217.example/hotel#channel/Direct> a hb:Channel ;
+    hb:code "Direct" ;
+    hb:intermediated false .
+
+<https://ari3217.example/hotel#channel/GDS> a hb:Channel ;
+    hb:code "GDS" ;
+    hb:intermediated true .
+
+<https://ari3217.example/hotel#channel/TA%2FTO> a hb:Channel ;
+    hb:code "TA/TO" ;
+    hb:intermediated true .
+
+<https://ari3217.example/hotel#channel/Undefined> a hb:Channel ;
+    hb:code "Undefined" .
+
+<https://ari3217.example/hotel#country/ABW> a hb:Country ;
+    hb:code "ABW" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/AGO> a hb:Country ;
+    hb:code "AGO" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/AIA> a hb:Country ;
+    hb:code "AIA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/ALB> a hb:Country ;
+    hb:code "ALB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/AND> a hb:Country ;
+    hb:code "AND" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/ARE> a hb:Country ;
+    hb:code "ARE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/ARG> a hb:Country ;
+    hb:code "ARG" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/ARM> a hb:Country ;
+    hb:code "ARM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/ASM> a hb:Country ;
+    hb:code "ASM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/ATA> a hb:Country ;
+    hb:code "ATA" .
+
+<https://ari3217.example/hotel#country/ATF> a hb:Country ;
+    hb:code "ATF" .
+
+<https://ari3217.example/hotel#country/AUS> a hb:Country ;
+    hb:code "AUS" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/AUT> a hb:Country ;
+    hb:code "AUT" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/AZE> a hb:Country ;
+    hb:code "AZE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/BDI> a hb:Country ;
+    hb:code "BDI" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/BEL> a hb:Country ;
+    hb:code "BEL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/BEN> a hb:Country ;
+    hb:code "BEN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/BFA> a hb:Country ;
+    hb:code "BFA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/BGD> a hb:Country ;
+    hb:code "BGD" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/BGR> a hb:Country ;
+    hb:code "BGR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/BHR> a hb:Country ;
+    hb:code "BHR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/BHS> a hb:Country ;
+    hb:code "BHS" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/BIH> a hb:Country ;
+    hb:code "BIH" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/BLR> a hb:Country ;
+    hb:code "BLR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/BOL> a hb:Country ;
+    hb:code "BOL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/BRA> a hb:Country ;
+    hb:code "BRA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/BRB> a hb:Country ;
+    hb:code "BRB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/BWA> a hb:Country ;
+    hb:code "BWA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/CAF> a hb:Country ;
+    hb:code "CAF" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/CHE> a hb:Country ;
+    hb:code "CHE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/CHL> a hb:Country ;
+    hb:code "CHL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/CHN> a hb:Country ;
+    hb:code "CHN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/CIV> a hb:Country ;
+    hb:code "CIV" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/CMR> a hb:Country ;
+    hb:code "CMR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/CN> a hb:Country ;
+    hb:code "CN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/COL> a hb:Country ;
+    hb:code "COL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/COM> a hb:Country ;
+    hb:code "COM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/CPV> a hb:Country ;
+    hb:code "CPV" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/CRI> a hb:Country ;
+    hb:code "CRI" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/CUB> a hb:Country ;
+    hb:code "CUB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/CYM> a hb:Country ;
+    hb:code "CYM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/CYP> a hb:Country ;
+    hb:code "CYP" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/CZE> a hb:Country ;
+    hb:code "CZE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/DEU> a hb:Country ;
+    hb:code "DEU" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/DJI> a hb:Country ;
+    hb:code "DJI" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/DMA> a hb:Country ;
+    hb:code "DMA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/DNK> a hb:Country ;
+    hb:code "DNK" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/DOM> a hb:Country ;
+    hb:code "DOM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/DZA> a hb:Country ;
+    hb:code "DZA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/ECU> a hb:Country ;
+    hb:code "ECU" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/EGY> a hb:Country ;
+    hb:code "EGY" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/ESP> a hb:Country ;
+    hb:code "ESP" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/EST> a hb:Country ;
+    hb:code "EST" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/ETH> a hb:Country ;
+    hb:code "ETH" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/FIN> a hb:Country ;
+    hb:code "FIN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/FJI> a hb:Country ;
+    hb:code "FJI" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/FRA> a hb:Country ;
+    hb:code "FRA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/FRO> a hb:Country ;
+    hb:code "FRO" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/GAB> a hb:Country ;
+    hb:code "GAB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/GBR> a hb:Country ;
+    hb:code "GBR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/GEO> a hb:Country ;
+    hb:code "GEO" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/GGY> a hb:Country ;
+    hb:code "GGY" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/GHA> a hb:Country ;
+    hb:code "GHA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/GIB> a hb:Country ;
+    hb:code "GIB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/GLP> a hb:Country ;
+    hb:code "GLP" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/GNB> a hb:Country ;
+    hb:code "GNB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/GRC> a hb:Country ;
+    hb:code "GRC" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/GTM> a hb:Country ;
+    hb:code "GTM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/GUY> a hb:Country ;
+    hb:code "GUY" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/HKG> a hb:Country ;
+    hb:code "HKG" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/HND> a hb:Country ;
+    hb:code "HND" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/HRV> a hb:Country ;
+    hb:code "HRV" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/HUN> a hb:Country ;
+    hb:code "HUN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/IDN> a hb:Country ;
+    hb:code "IDN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/IMN> a hb:Country ;
+    hb:code "IMN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/IND> a hb:Country ;
+    hb:code "IND" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/IRL> a hb:Country ;
+    hb:code "IRL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/IRN> a hb:Country ;
+    hb:code "IRN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/IRQ> a hb:Country ;
+    hb:code "IRQ" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/ISL> a hb:Country ;
+    hb:code "ISL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/ISR> a hb:Country ;
+    hb:code "ISR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/ITA> a hb:Country ;
+    hb:code "ITA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/JAM> a hb:Country ;
+    hb:code "JAM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/JEY> a hb:Country ;
+    hb:code "JEY" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/JOR> a hb:Country ;
+    hb:code "JOR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/JPN> a hb:Country ;
+    hb:code "JPN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/KAZ> a hb:Country ;
+    hb:code "KAZ" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/KEN> a hb:Country ;
+    hb:code "KEN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/KHM> a hb:Country ;
+    hb:code "KHM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/KIR> a hb:Country ;
+    hb:code "KIR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/KNA> a hb:Country ;
+    hb:code "KNA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/KOR> a hb:Country ;
+    hb:code "KOR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/KWT> a hb:Country ;
+    hb:code "KWT" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/LAO> a hb:Country ;
+    hb:code "LAO" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/LBN> a hb:Country ;
+    hb:code "LBN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/LBY> a hb:Country ;
+    hb:code "LBY" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/LCA> a hb:Country ;
+    hb:code "LCA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/LIE> a hb:Country ;
+    hb:code "LIE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/LKA> a hb:Country ;
+    hb:code "LKA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/LTU> a hb:Country ;
+    hb:code "LTU" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/LUX> a hb:Country ;
+    hb:code "LUX" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/LVA> a hb:Country ;
+    hb:code "LVA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/MAC> a hb:Country ;
+    hb:code "MAC" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/MAR> a hb:Country ;
+    hb:code "MAR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/MCO> a hb:Country ;
+    hb:code "MCO" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/MDG> a hb:Country ;
+    hb:code "MDG" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/MDV> a hb:Country ;
+    hb:code "MDV" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/MEX> a hb:Country ;
+    hb:code "MEX" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/MKD> a hb:Country ;
+    hb:code "MKD" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/MLI> a hb:Country ;
+    hb:code "MLI" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/MLT> a hb:Country ;
+    hb:code "MLT" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/MMR> a hb:Country ;
+    hb:code "MMR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/MNE> a hb:Country ;
+    hb:code "MNE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/MOZ> a hb:Country ;
+    hb:code "MOZ" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/MRT> a hb:Country ;
+    hb:code "MRT" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/MUS> a hb:Country ;
+    hb:code "MUS" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/MWI> a hb:Country ;
+    hb:code "MWI" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/MYS> a hb:Country ;
+    hb:code "MYS" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/MYT> a hb:Country ;
+    hb:code "MYT" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/NAM> a hb:Country ;
+    hb:code "NAM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/NCL> a hb:Country ;
+    hb:code "NCL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/NGA> a hb:Country ;
+    hb:code "NGA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/NIC> a hb:Country ;
+    hb:code "NIC" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/NLD> a hb:Country ;
+    hb:code "NLD" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/NOR> a hb:Country ;
+    hb:code "NOR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/NPL> a hb:Country ;
+    hb:code "NPL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/NZL> a hb:Country ;
+    hb:code "NZL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/OMN> a hb:Country ;
+    hb:code "OMN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/PAK> a hb:Country ;
+    hb:code "PAK" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/PAN> a hb:Country ;
+    hb:code "PAN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/PER> a hb:Country ;
+    hb:code "PER" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/PHL> a hb:Country ;
+    hb:code "PHL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/PLW> a hb:Country ;
+    hb:code "PLW" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/POL> a hb:Country ;
+    hb:code "POL" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/PRI> a hb:Country ;
+    hb:code "PRI" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/PRT> a hb:Country ;
+    hb:code "PRT" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Domestic> .
+
+<https://ari3217.example/hotel#country/PRY> a hb:Country ;
+    hb:code "PRY" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/PYF> a hb:Country ;
+    hb:code "PYF" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/QAT> a hb:Country ;
+    hb:code "QAT" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/ROU> a hb:Country ;
+    hb:code "ROU" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/RUS> a hb:Country ;
+    hb:code "RUS" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/RWA> a hb:Country ;
+    hb:code "RWA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/SAU> a hb:Country ;
+    hb:code "SAU" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/SDN> a hb:Country ;
+    hb:code "SDN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/SEN> a hb:Country ;
+    hb:code "SEN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/SGP> a hb:Country ;
+    hb:code "SGP" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/SLE> a hb:Country ;
+    hb:code "SLE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/SLV> a hb:Country ;
+    hb:code "SLV" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/SMR> a hb:Country ;
+    hb:code "SMR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/SRB> a hb:Country ;
+    hb:code "SRB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/STP> a hb:Country ;
+    hb:code "STP" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/SUR> a hb:Country ;
+    hb:code "SUR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/SVK> a hb:Country ;
+    hb:code "SVK" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/SVN> a hb:Country ;
+    hb:code "SVN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/SWE> a hb:Country ;
+    hb:code "SWE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/EU> .
+
+<https://ari3217.example/hotel#country/SYC> a hb:Country ;
+    hb:code "SYC" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/SYR> a hb:Country ;
+    hb:code "SYR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Middle%20East> .
+
+<https://ari3217.example/hotel#country/TGO> a hb:Country ;
+    hb:code "TGO" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/THA> a hb:Country ;
+    hb:code "THA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/TJK> a hb:Country ;
+    hb:code "TJK" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/TMP> a hb:Country ;
+    hb:code "TMP" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/TUN> a hb:Country ;
+    hb:code "TUN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/TUR> a hb:Country ;
+    hb:code "TUR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/TWN> a hb:Country ;
+    hb:code "TWN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/TZA> a hb:Country ;
+    hb:code "TZA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/UGA> a hb:Country ;
+    hb:code "UGA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/UKR> a hb:Country ;
+    hb:code "UKR" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Europe%20%28non-EU%29> .
+
+<https://ari3217.example/hotel#country/UMI> a hb:Country ;
+    hb:code "UMI" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/URY> a hb:Country ;
+    hb:code "URY" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/USA> a hb:Country ;
+    hb:code "USA" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/UZB> a hb:Country ;
+    hb:code "UZB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/VEN> a hb:Country ;
+    hb:code "VEN" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/VGB> a hb:Country ;
+    hb:code "VGB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Americas> .
+
+<https://ari3217.example/hotel#country/VNM> a hb:Country ;
+    hb:code "VNM" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Asia-Pacific> .
+
+<https://ari3217.example/hotel#country/ZAF> a hb:Country ;
+    hb:code "ZAF" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/ZMB> a hb:Country ;
+    hb:code "ZMB" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#country/ZWE> a hb:Country ;
+    hb:code "ZWE" ;
+    hb:inRegion <https://ari3217.example/hotel#region/Africa> .
+
+<https://ari3217.example/hotel#deposit/No%20Deposit> a hb:DepositPolicy ;
+    hb:code "No Deposit" ;
+    hb:prepaid false ;
+    hb:refundable true .
+
+<https://ari3217.example/hotel#deposit/Non%20Refund> a hb:DepositPolicy ;
+    hb:code "Non Refund" ;
+    hb:observedNote "99.8 % of City non-refundable bookings cancelled: tour-operator blocks" ;
+    hb:prepaid true ;
+    hb:refundable false .
+
+<https://ari3217.example/hotel#deposit/Refundable> a hb:DepositPolicy ;
+    hb:code "Refundable" ;
+    hb:prepaid true ;
+    hb:refundable true .
+
+<https://ari3217.example/hotel#segment/Aviation> a hb:MarketSegment ;
+    hb:code "Aviation" ;
+    hb:isGroup false ;
+    hb:viaIntermediary false .
+
+<https://ari3217.example/hotel#segment/Complementary> a hb:MarketSegment ;
+    hb:code "Complementary" ;
+    hb:isGroup false ;
+    hb:viaIntermediary false .
+
+<https://ari3217.example/hotel#segment/Corporate> a hb:MarketSegment ;
+    hb:code "Corporate" ;
+    hb:isGroup false ;
+    hb:viaIntermediary false .
+
+<https://ari3217.example/hotel#segment/Direct> a hb:MarketSegment ;
+    hb:code "Direct" ;
+    hb:isGroup false ;
+    hb:viaIntermediary false .
+
+<https://ari3217.example/hotel#segment/Groups> a hb:MarketSegment ;
+    hb:code "Groups" ;
+    hb:isGroup true ;
+    hb:viaIntermediary true .
+
+<https://ari3217.example/hotel#segment/Offline%20TA%2FTO> a hb:MarketSegment ;
+    hb:code "Offline TA/TO" ;
+    hb:isGroup false ;
+    hb:viaIntermediary true .
+
+<https://ari3217.example/hotel#segment/Online%20TA> a hb:MarketSegment ;
+    hb:code "Online TA" ;
+    hb:isGroup false ;
+    hb:viaIntermediary true .
+
+<https://ari3217.example/hotel#segment/Undefined> a hb:MarketSegment ;
+    hb:code "Undefined" .
+
+<https://ari3217.example/hotel#region/Domestic> a hb:Region ;
+    hb:isEU true ;
+    hb:label "Domestic" .
+
+<https://ari3217.example/hotel#region/Middle%20East> a hb:Region ;
+    hb:isEU false ;
+    hb:label "Middle East" .
+
+<https://ari3217.example/hotel#region/Europe%20%28non-EU%29> a hb:Region ;
+    hb:isEU false ;
+    hb:label "Europe (non-EU)" .
+
+<https://ari3217.example/hotel#region/EU> a hb:Region ;
+    hb:isEU true ;
+    hb:label "EU" .
+
+<https://ari3217.example/hotel#region/Americas> a hb:Region ;
+    hb:isEU false ;
+    hb:label "Americas" .
+
+<https://ari3217.example/hotel#region/Asia-Pacific> a hb:Region ;
+    hb:isEU false ;
+    hb:label "Asia-Pacific" .
+
+<https://ari3217.example/hotel#region/Africa> a hb:Region ;
+    hb:isEU false ;
+    hb:label "Africa" .
+

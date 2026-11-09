@@ -3,6 +3,8 @@ IMAGE ?= hotel-cancel:stage7
 CONFIG ?= config/config.yaml
 SNAPSHOT ?= artifacts/stage6/snapshot.json
 OUTPUT ?= artifacts/stage6/batch.json
+QUALITY_OUTPUT ?= docs/evidence/stage8
+KB_OUTPUT ?= docs/evidence/stage10/shacl
 
 .PHONY: baseline
 baseline:
@@ -36,12 +38,23 @@ test:
 	$(PYTHON) -m pytest -q
 
 quality-gate:
-	$(PYTHON) -m hotel_cancel.quality_gate
+	$(PYTHON) -m hotel_cancel.quality_gate --output "$(QUALITY_OUTPUT)"
 
-ci: test
+ci: test kb-check
 	$(MAKE) quality-gate PYTHON="$(PYTHON)"
 
 TRACKING_PYTHON ?= .venv-tracking/bin/python
 .PHONY: track-models
 track-models:
 	$(TRACKING_PYTHON) -m hotel_cancel.tracking
+
+
+.PHONY: kb-check kb-ablation kb-briefing-check
+kb-check:
+	$(PYTHON) -m hotel_cancel.knowledge --output "$(KB_OUTPUT)"
+
+kb-ablation:
+	$(PYTHON) -m hotel_cancel.kb_ablation
+
+kb-briefing-check:
+	$(PYTHON) -m hotel_cancel.kb_briefing_eval

@@ -1,0 +1,624 @@
+[
+  {
+    "mode": "codes only (abstain)",
+    "id": "deposit-nonref",
+    "expected": {
+      "prepaid": true,
+      "refundable": false
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "deposit-refundable",
+    "expected": {
+      "prepaid": true,
+      "refundable": true
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "deposit-none",
+    "expected": {
+      "prepaid": false,
+      "refundable": true
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "segment-group",
+    "expected": {
+      "isGroup": true,
+      "viaIntermediary": true
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "segment-direct",
+    "expected": {
+      "isGroup": false,
+      "viaIntermediary": false
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "channel-agency",
+    "expected": {
+      "intermediated": true
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "channel-direct",
+    "expected": {
+      "intermediated": false
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "undefined-segment",
+    "expected": null,
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "undefined-channel",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "unknown-plan",
+    "expected": null,
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "new-plan-before",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "new-plan-launch",
+    "expected": {
+      "prepaid": true,
+      "refundable": false
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "expired-policy",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "uk-historical",
+    "expected": {
+      "isEU": true
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "uk-before-exit",
+    "expected": {
+      "isEU": true
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "uk-at-exit",
+    "expected": {
+      "isEU": false
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "territory-unknown",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "source-alias",
+    "expected": {
+      "isEU": false
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes only (abstain)",
+    "id": "injection-as-code",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "deposit-nonref",
+    "expected": {
+      "prepaid": true,
+      "refundable": false
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": {
+        "prepaid": true,
+        "refundable": false
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "deposit-refundable",
+    "expected": {
+      "prepaid": true,
+      "refundable": true
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": {
+        "prepaid": true,
+        "refundable": true
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "deposit-none",
+    "expected": {
+      "prepaid": false,
+      "refundable": true
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": {
+        "prepaid": false,
+        "refundable": true
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "segment-group",
+    "expected": {
+      "isGroup": true,
+      "viaIntermediary": true
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": {
+        "isGroup": true,
+        "viaIntermediary": true
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "segment-direct",
+    "expected": {
+      "isGroup": false,
+      "viaIntermediary": false
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": {
+        "isGroup": false,
+        "viaIntermediary": false
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "channel-agency",
+    "expected": {
+      "intermediated": true
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": {
+        "intermediated": true
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "channel-direct",
+    "expected": {
+      "intermediated": false
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": {
+        "intermediated": false
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "undefined-segment",
+    "expected": null,
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "undefined-channel",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "unknown-plan",
+    "expected": null,
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "new-plan-before",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "new-plan-launch",
+    "expected": {
+      "prepaid": true,
+      "refundable": false
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": {
+        "prepaid": true,
+        "refundable": false
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "expired-policy",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "uk-historical",
+    "expected": {
+      "isEU": true
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": {
+        "isEU": true
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "uk-before-exit",
+    "expected": {
+      "isEU": true
+    },
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": {
+        "isEU": true
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "uk-at-exit",
+    "expected": {
+      "isEU": false
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": {
+        "isEU": false
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "territory-unknown",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "source-alias",
+    "expected": {
+      "isEU": false
+    },
+    "output": {
+      "hotel": "Resort Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 0,
+      "expected_releases": 0.463106,
+      "semantic_facts": {
+        "isEU": false
+      },
+      "semantic_status": "supported",
+      "message_to_guest": null
+    }
+  },
+  {
+    "mode": "codes + temporal KB",
+    "id": "injection-as-code",
+    "expected": null,
+    "output": {
+      "hotel": "City Hotel",
+      "arrival": "2017-08-15",
+      "oversell_rooms": 3,
+      "expected_releases": 4.269602,
+      "semantic_facts": null,
+      "semantic_status": "unknown: human review",
+      "message_to_guest": null
+    }
+  }
+]

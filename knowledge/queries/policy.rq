@@ -1,0 +1,6 @@
+PREFIX hb: <https://ari3217.example/hotel#>
+SELECT ?code ?prepaid ?refundable ?source WHERE {
+ ?policy a hb:DepositPolicy ; hb:code ?code ; hb:prepaid ?prepaid ; hb:refundable ?refundable ;
+   hb:validFrom ?start ; hb:validUntil ?end ; <http://www.w3.org/ns/prov#wasDerivedFrom> ?source .
+ FILTER(?start <= ?asOf && ?asOf < ?end)
+}

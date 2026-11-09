@@ -255,3 +255,16 @@ City can bootstrap an offline champion; Resort stays challenger-only because
 its quality gate fails. See [tracking setup and verification](docs/stage9-tracking.md),
 [model card](docs/model-card.md) and
 [ADR 0011](docs/decisions/0011-model-tracking-and-registry.md).
+
+## Stage 10: knowledge base, SHACL and ablation
+
+`make kb-check` validates the extended, versioned RDF graph. `make ci` now
+includes that SHACL gate. `make kb-ablation` reproduces the notebook's unchanged
+learner with/without knowledge context and an actual renamed-code lookup test.
+`make kb-briefing-check` measures supported facts and abstention on 19 curated
+cases; it is not an LLM run. The 607-triple reference graph and its known issues
+are retained separately. The extension records provenance, effective dates,
+explicit unknowns and historical UK membership. Country remains offline-only.
+See [Stage 10 results](docs/stage10-knowledge-base.md),
+[competency questions](knowledge/competency-questions.md), and
+[ADR 0012](docs/decisions/0012-knowledge-base.md).

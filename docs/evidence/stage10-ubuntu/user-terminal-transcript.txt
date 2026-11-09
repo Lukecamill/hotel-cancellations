@@ -1,0 +1,468 @@
+luke@MacbookM5:~/hotel-stage6$ cd ~/hotel-stage6 &&
+tar -czf "$HOME/hotel-before-stage10-$(date +%Y%m%d-%H%M%S).tar.gz" \
+  --exclude='./data' --exclude='./models' --exclude='./artifacts' \
+  --exclude='./.venv' --exclude='./.venv-tracking' --exclude='./.git' . &&
+tar -xzf ~/stage10-update.tar.gz &&
+python3 scripts/verify_stage10_ubuntu.py
+tests/test_approvals.py::test_valid_decisions[approve-3]
+tests/test_approvals.py::test_valid_decisions[reduce-1]
+tests/test_approvals.py::test_valid_decisions[reduce-0]
+tests/test_approvals.py::test_valid_decisions[reject-0]
+tests/test_approvals.py::test_invalid_decisions[changes0]
+tests/test_approvals.py::test_invalid_decisions[changes1]
+tests/test_approvals.py::test_invalid_decisions[changes2]
+tests/test_approvals.py::test_invalid_decisions[changes3]
+tests/test_approvals.py::test_invalid_decisions[changes4]
+tests/test_approvals.py::test_invalid_decisions[changes5]
+tests/test_approvals.py::test_invalid_decisions[changes6]
+tests/test_approvals.py::test_invalid_decisions[changes7]
+tests/test_approvals.py::test_invalid_decisions[changes8]
+tests/test_approvals.py::test_invalid_decisions[changes9]
+tests/test_approvals.py::test_zero_recommendation_can_be_rejected
+tests/test_approvals.py::test_database_decision_survives_new_store_and_cannot_be_overwritten
+tests/test_approvals.py::test_concurrent_reviewers_cannot_both_approve
+tests/test_approvals.py::test_http_review_requires_token_and_same_origin
+tests/test_approvals.py::test_publish_from_snapshot_is_idempotent_and_preserves_versions
+tests/test_audit.py::test_duplicate_overlap_detects_copies_but_not_similar_rows
+tests/test_audit.py::test_quirk_counts_preserve_anomalies_and_use_correct_denominators
+tests/test_config.py::test_paths_are_independent_of_working_directory
+tests/test_config.py::test_shell_beats_dotenv_beats_yaml
+tests/test_config.py::test_explicit_config_beats_environment
+tests/test_config.py::test_invalid_settings_fail_early[decision_lead_days-15]
+tests/test_config.py::test_invalid_settings_fail_early[train_end-2018-01-01]
+tests/test_config.py::test_invalid_settings_fail_early[walk_cost_eur--1]
+tests/test_config.py::test_invalid_settings_fail_early[recal_weeks_grid-value3]
+tests/test_config.py::test_invalid_settings_fail_early[gate_min_auprc-value4]
+tests/test_config.py::test_invalid_settings_fail_early[calibration_band-value5]
+tests/test_contracts.py::test_contract_accepts_valid_input_without_mutating_it
+tests/test_contracts.py::test_contract_rejects_invalid_rows[is_canceled-2]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[is_canceled-1]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[lead_time--1]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[adults-1.5]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[adr-inf]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[adr-nan]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[hotel-Other Hotel]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[arrival_date_month-Bad]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[arrival_date_day_of_month-30]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[arrival_date_year-2018]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[arrival_date_week_number-54]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[reservation_status_date-bad]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[meal-]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[lead_time-7]
+tests/test_contracts.py::test_contract_rejects_missing_extra_duplicate_columns_and_empty_input
+tests/test_contracts.py::test_known_anomalies_are_counted_not_silently_removed
+tests/test_data.py::test_cache_is_rebuilt_after_raw_change_and_tampering
+tests/test_data.py::test_cache_never_bypasses_raw_contract
+tests/test_features.py::test_agent_vocabulary_uses_only_training_rows
+tests/test_features.py::test_features_do_not_modify_input_and_ignore_forbidden_columns
+tests/test_features.py::test_outcome_separation_and_only_allowed_inputs_available
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[is_canceled]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[reservation_status]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[status_date]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[country]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[assigned_room_type]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[booking_changes]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[required_car_parking_spaces]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[total_of_special_requests]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[days_in_waiting_list]
+tests/test_history.py::test_asof_excludes_later_entries_and_earlier_cancellations_includes_same_day_cancellation
+tests/test_history.py::test_asof_lead_time_uses_requested_horizon[0]
+tests/test_history.py::test_asof_lead_time_uses_requested_horizon[7]
+tests/test_history.py::test_asof_lead_time_uses_requested_horizon[14]
+tests/test_history.py::test_asof_rejects_misaligned_rows_and_invalid_horizon
+tests/test_knowledge.py::test_versioned_extension_passes_but_original_issues_remain_auditable
+tests/test_knowledge.py::test_uk_membership_uses_effective_instant_not_current_region[2017-08-08-True]
+tests/test_knowledge.py::test_uk_membership_uses_effective_instant_not_current_region[2020-01-31T22:59:59Z-True]
+tests/test_knowledge.py::test_uk_membership_uses_effective_instant_not_current_region[2020-01-31T23:00:00Z-False]
+tests/test_knowledge.py::test_uk_membership_uses_effective_instant_not_current_region[2020-02-01-False]
+tests/test_knowledge.py::test_uk_membership_uses_effective_instant_not_current_region[2014-01-01-None]
+tests/test_knowledge.py::test_uk_membership_uses_effective_instant_not_current_region[2026-11-10T00:00:00Z-None]
+tests/test_knowledge.py::test_new_code_has_no_semantics_before_launch_and_unknowns_abstain
+tests/test_knowledge.py::test_source_alias_is_explicit_and_unresolved_territory_is_not_guessed
+tests/test_knowledge.py::test_shacl_rejects_broken_semantics_and_provenance[missing_source]
+tests/test_knowledge.py::test_shacl_rejects_broken_semantics_and_provenance[invalid_boolean]
+tests/test_knowledge.py::test_shacl_rejects_broken_semantics_and_provenance[reversed_interval]
+tests/test_knowledge.py::test_shacl_rejects_broken_semantics_and_provenance[missing_required_type]
+tests/test_knowledge.py::test_overlapping_membership_is_rejected_by_shacl_and_lookup
+tests/test_knowledge.py::test_field_provenance_does_not_invent_event_timestamps
+tests/test_knowledge.py::test_grounded_fact_evaluation_separates_abstention_precision_and_coverage
+tests/test_monitoring.py::test_psi_identical_shift_and_constant_reference
+tests/test_monitoring.py::test_weekly_excludes_unmatured_week_and_handles_zero_events
+tests/test_monitoring.py::test_database_failure_does_not_disguise_loss
+tests/test_monitoring.py::test_bounded_label_cardinality
+tests/test_monitoring.py::test_online_request_persisted_and_metrics_exposed
+tests/test_monitoring.py::test_monitoring_can_reuse_saved_calibrators_without_fitting
+tests/test_policy.py::test_two_room_block_cannot_release_only_one_room
+tests/test_policy.py::test_independent_rooms_have_partial_release_probability
+tests/test_policy.py::test_walk_cost_changes_optimal_quantity_and_ties_choose_smallest
+tests/test_policy.py::test_nightly_median_is_not_global_mean_and_negative_value_is_floored
+tests/test_policy.py::test_calibration_must_match_decision_horizon
+tests/test_policy.py::test_policy_rejects_untagged_booking_probabilities_or_wrong_horizon
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities0-None]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities1-None]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities2-None]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities3-None]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities4-sizes4]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities5-sizes5]
+tests/test_postgres.py::test_postgres_snapshot_roundtrip
+tests/test_quality_gate.py::test_reliability_edges_weighting_and_empty_bins
+tests/test_quality_gate.py::test_invalid_probabilities_fail[p0]
+tests/test_quality_gate.py::test_invalid_probabilities_fail[p1]
+tests/test_quality_gate.py::test_invalid_probabilities_fail[p2]
+tests/test_quality_gate.py::test_invalid_probabilities_fail[p3]
+tests/test_quality_gate.py::test_perfect_ranking_cannot_hide_bad_calibration
+tests/test_quality_gate.py::test_gate_pass_and_exact_inclusive_thresholds
+tests/test_quality_gate.py::test_one_class_is_not_a_passing_gate[labels0]
+tests/test_quality_gate.py::test_one_class_is_not_a_passing_gate[labels1]
+tests/test_quality_gate.py::test_any_frozen_identity_change_is_rejected
+tests/test_quality_gate.py::test_identity_error_prevents_fit_and_removes_stale_success
+tests/test_quality_gate.py::test_exit_status_requires_every_hotel_to_pass[resort_p0-0]
+tests/test_quality_gate.py::test_exit_status_requires_every_hotel_to_pass[resort_p1-1]
+tests/test_sensitivity.py::test_quantile_minimises_expected_cost
+tests/test_sensitivity.py::test_resale_and_cost_monotonicity
+tests/test_sensitivity.py::test_blocks_preserve_mean_increase_variance
+tests/test_sensitivity.py::test_selection_tie_prefers_no_overbooking
+tests/test_sensitivity.py::test_test_period_rejected
+tests/test_sensitivity.py::test_invalid_grid[lead_days-value0]
+tests/test_sensitivity.py::test_invalid_grid[walk_costs_eur-value1]
+tests/test_sensitivity.py::test_invalid_grid[resale_rates-value2]
+tests/test_sensitivity.py::test_invalid_grid[recal_weeks-value3]
+tests/test_sensitivity.py::test_invalid_grid[variable_costs_eur-value4]
+tests/test_sensitivity.py::test_calibration_and_rolling_features_ignore_unmatured_labels
+tests/test_serving.py::test_training_serving_parity
+tests/test_serving.py::test_invalid_or_leaking_input[country-PRT]
+tests/test_serving.py::test_invalid_or_leaking_input[reservation_status-Canceled]
+tests/test_serving.py::test_invalid_or_leaking_input[booked-2017-07-01]
+tests/test_serving.py::test_invalid_or_leaking_input[lead_time--1]
+tests/test_serving.py::test_invalid_or_leaking_input[adults-True]
+tests/test_serving.py::test_invalid_or_leaking_input[adr-nan]
+tests/test_serving.py::test_invalid_or_leaking_input[arrival-2017-08-15T12:00:00]
+tests/test_serving.py::test_null_semantics
+tests/test_serving.py::test_artifact_tampering
+tests/test_serving.py::test_http_real_prediction_and_errors
+tests/test_serving.py::test_batch_uses_mature_history_and_requires_approval
+tests/test_serving.py::test_batch_rejects_mismatches[lead_days-14]
+tests/test_serving.py::test_batch_rejects_mismatches[model_version-wrong]
+tests/test_serving.py::test_batch_rejects_mismatches[arrival-2017-08-16]
+tests/test_serving.py::test_snapshot_tampering
+tests/test_serving.py::test_service_sigterm_exits_cleanly
+tests/test_splits.py::test_forward_partitions_pass
+tests/test_splits.py::test_bad_partitions_fail[overlap]
+tests/test_splits.py::test_bad_partitions_fail[omitted]
+tests/test_splits.py::test_bad_partitions_fail[random]
+tests/test_splits.py::test_bad_partitions_fail[duplicate]
+tests/test_stay_audit.py::test_expected_checkout_matches_stay_including_weekends
+tests/test_stay_audit.py::test_same_day_checkout_positive_stay_is_flagged_without_changing_label
+tests/test_stay_audit.py::test_shorter_checkout_is_flagged_and_cancelled_booking_is_not_checkout
+tests/test_stay_audit.py::test_valid_zero_night_checkout_is_not_this_additional_quirk
+tests/test_tracking.py::test_failing_resort_is_reviewable_but_never_bootstrapped_as_champion
+tests/test_tracking.py::test_passing_candidate_bootstraps_champion_without_claiming_a_new_learner
+tests/test_tracking.py::test_new_candidate_does_not_replace_existing_passing_champion
+tests/test_tracking.py::test_pass_label_cannot_override_failed_numeric_evidence[changes0]
+tests/test_tracking.py::test_pass_label_cannot_override_failed_numeric_evidence[changes1]
+tests/test_tracking.py::test_pass_label_cannot_override_failed_numeric_evidence[changes2]
+tests/test_tracking.py::test_pass_label_cannot_override_failed_numeric_evidence[changes3]
+tests/test_tracking.py::test_pass_label_cannot_override_failed_numeric_evidence[changes4]
+tests/test_tracking.py::test_pass_label_cannot_override_failed_numeric_evidence[changes5]
+tests/test_tracking.py::test_thresholds_are_inclusive
+tests/test_tracking.py::test_existing_failing_champion_requires_explicit_registry_review
+
+162 tests collected in 0.81s
+python -m pytest -q
+...............ssss..................................................... [ 44%]
+..............s.............s........................................... [ 88%]
+..................                                                       [100%]
+156 passed, 6 skipped in 15.95s
+python -m hotel_cancel.knowledge --output "docs/evidence/stage10-ubuntu/shacl"
+{
+  "conforms": true,
+  "triples": 3734,
+  "violations": []
+}
+make quality-gate PYTHON="python"
+make[1]: Entering directory '/project'
+python -m hotel_cancel.quality_gate --output "docs/evidence/stage10-ubuntu/quality-gate"
+{
+  "City Hotel": {
+    "n": 27508,
+    "cancellations": 11691,
+    "auprc": 0.785721886317962,
+    "expected_observed_ratio": 0.9112810321058089,
+    "ece": 0.04227523749271264,
+    "brier": 0.17239734512884491,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": true,
+      "ece": true
+    },
+    "gate": "PASS"
+  },
+  "Resort Hotel": {
+    "n": 13179,
+    "cancellations": 4054,
+    "auprc": 0.627907608840626,
+    "expected_observed_ratio": 0.6817233437376264,
+    "ece": 0.0989614606930023,
+    "brier": 0.17757610639149055,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": false,
+      "ece": true
+    },
+    "gate": "FAIL"
+  }
+}
+Quality gate: FAIL; evidence: docs/evidence/stage10-ubuntu/quality-gate
+make[1]: *** [Makefile:41: quality-gate] Error 1
+make[1]: Leaving directory '/project'
+make: *** [Makefile:44: ci] Error 2
+{
+  "status": "VERIFIED",
+  "scope": "offline notebook E1 reproduction; no serving promotion",
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "reference_triples": 607,
+  "extended_triples": 3734,
+  "reference_shacl_conforms": false,
+  "reference_distinct_violations": [
+    {
+      "focus": "https://ari3217.example/hotel#channel/Undefined",
+      "message": "channel not classified",
+      "bookings": 5
+    },
+    {
+      "focus": "https://ari3217.example/hotel#country/ATA",
+      "message": "country has no region",
+      "bookings": 2
+    },
+    {
+      "focus": "https://ari3217.example/hotel#country/ATF",
+      "message": "country has no region",
+      "bookings": 1
+    },
+    {
+      "focus": "https://ari3217.example/hotel#country/CN",
+      "message": "country code is not ISO 3166 alpha-3",
+      "bookings": 1279
+    },
+    {
+      "focus": "https://ari3217.example/hotel#segment/Undefined",
+      "message": "segment not classified",
+      "bookings": 2
+    }
+  ],
+  "extended_shacl_conforms": true,
+  "reference_metrics_checks": [
+    {
+      "variant": "codes only",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "codes only",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "codes + KB policy",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "codes + KB policy",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "KB classes instead of codes",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "KB classes instead of codes",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "raw country (diagnostic only)",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "raw country (diagnostic only)",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "KB region (diagnostic only)",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "KB region (diagnostic only)",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    }
+  ],
+  "cold_reference_metrics_match": true,
+  "cold_renamed_bookings": 4126,
+  "cold_knowledge_date": "2017-01-01",
+  "classes_cold_features_identical": true,
+  "model_parameters": {
+    "n_estimators": 300,
+    "learning_rate": 0.06,
+    "num_leaves": 31,
+    "min_child_samples": 50,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "random_state": 3217,
+    "verbose": -1,
+    "n_jobs": 1
+  },
+  "fitted_on": "train arrivals Jul 2015-Jun 2016 only",
+  "selected_on_holdout": false,
+  "tolerances": {
+    "printed_auprc_absolute": 0.0005,
+    "printed_ratio_absolute": 0.005
+  },
+  "knowledge_sha256": {
+    "briefing-golden.json": "a418c0341c5a0dd49d682e689c23d4a9d5214ddba59116a4f50466a99f44cb78",
+    "competency-questions.md": "1d1fc78c831cc2314939e47b393742a291ca824789b2680150cdcbd6392be0dd",
+    "hotel.ttl": "ae239bf2c937ffc4b431daa4d8a55c75f5bb11e1fe2b420243edd584d241934c",
+    "notebook-vocabulary.json": "97da7ed2cbd749c6f986c59dde0009045b5d56aaf2f91c38249dc95f379fbdf4",
+    "reference-shapes.ttl": "1ade1df3ba886bc11895c30b7069c48ce0b7c1e5dc9c2eb489104b1dbacdcb32",
+    "reference.ttl": "cefd8f01cb6f6767d428f71d04c4536812448d410f53db9c2734e822ed9068c6",
+    "shapes.ttl": "ba5edf087d882186fe3830537071ae054e6f82bb72e84288280059baf9f22a93"
+  },
+  "source_sha256": {
+    "knowledge.py": "9d0e612811a4d0f48ef82516e02bc0bab0aa2a40a7d50d5bab41526f4ead52c7",
+    "kb_ablation.py": "aa93ca5928561e0c9c2b2c57e15960667693c652e7abe46f76c7a920dd8c5a09",
+    "model.py": "8115a1a4da21ac1b64b896ab3285cdb58c362c4021653825685cf3c75ed38e53",
+    "features.py": "48bc2ad4becdfa5c445a692d908bcdb5d9611f60345f5e27b0f36f256fcc6a62"
+  },
+  "packages": {
+    "pandas": "3.1.0",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1",
+    "rdflib": "7.6.0",
+    "pyshacl": "0.40.1"
+  },
+  "runtime_seconds": 16.237347732000217,
+  "limitations": [
+    "Region and raw-country models are diagnostic only; excluded from serving",
+    "Cold start renames existing held-out codes at evaluation time; not a natural launch cohort",
+    "Synthetic launch semantics are declared assumptions, not learned from outcomes",
+    "Repeated holdout comparisons are assignment diagnostics, not independent model selection"
+  ]
+}
+{
+  "status": "VERIFIED",
+  "scope": "deterministic grounding contract; no language model run",
+  "reports": {
+    "codes only (abstain)": {
+      "cases": 19,
+      "supported_cases": 12,
+      "semantic_cases_answered": 0,
+      "semantic_coverage": 0.0,
+      "asserted_semantic_claims": 0,
+      "correct_semantic_claims": 0,
+      "unsupported_semantic_claims": 0,
+      "semantic_claim_precision": null,
+      "exact_case_answers": 7,
+      "numeric_context_exact_cases": 19
+    },
+    "codes + temporal KB": {
+      "cases": 19,
+      "supported_cases": 12,
+      "semantic_cases_answered": 12,
+      "semantic_coverage": 1.0,
+      "asserted_semantic_claims": 18,
+      "correct_semantic_claims": 18,
+      "unsupported_semantic_claims": 0,
+      "semantic_claim_precision": 1.0,
+      "exact_case_answers": 19,
+      "numeric_context_exact_cases": 19
+    }
+  },
+  "golden_sha256": "a418c0341c5a0dd49d682e689c23d4a9d5214ddba59116a4f50466a99f44cb78",
+  "knowledge_sha256": "ae239bf2c937ffc4b431daa4d8a55c75f5bb11e1fe2b420243edd584d241934c",
+  "limitations": [
+    "Synthetic context numbers and curated semantic cases, not real guest messages",
+    "No-KB baseline abstains rather than inventing semantic meanings",
+    "Does not establish LLM factuality or complete the Stage 13 30-night evaluation",
+    "Unknown and expired mappings produce explicit abstention, not guessed facts"
+  ]
+}
+
+STAGE10_UBUNTU_VERIFIED
+{
+  "status": "VERIFIED",
+  "environment": "Linux container on Ubuntu VM",
+  "source_test_knowledge_files_identical": true,
+  "collected_tests": 162,
+  "tests_passed": 156,
+  "tests_skipped": 6,
+  "extended_shacl_conforms": true,
+  "reference_triples": 607,
+  "extended_triples": 3734,
+  "notebook_ablation_reproduced": true,
+  "cold_reference_metrics_match": true,
+  "cold_renamed_bookings": 4126,
+  "briefing_golden_cases": 19,
+  "briefing_unsupported_claims": 0,
+  "briefing_scope": "deterministic grounding contract, no LLM execution",
+  "serving_and_compose_unchanged": true,
+  "registry_unchanged": true,
+  "make_ci_expected_resort_calibration_failure": true,
+  "image_id": "sha256:ffabab678b7c123cadcb40f2abaa6b43f2008960e7c28eac3f303f746deb1373",
+  "architecture": "arm64"
+}

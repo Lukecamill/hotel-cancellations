@@ -1,0 +1,61 @@
+{
+  "REGIONS": {
+    "EU": "AUT BEL BGR HRV CYP CZE DNK EST FIN FRA DEU GRC HUN IRL ITA LVA LTU LUX MLT NLD POL ROU SVK SVN ESP SWE GBR",
+    "Domestic": "PRT",
+    "Europe (non-EU)": "ALB AND ARM AZE BIH BLR CHE FRO GEO GGY GIB IMN ISL JEY LIE MCO MKD MNE NOR RUS SMR SRB TUR UKR",
+    "Americas": "ABW AIA ARG BHS BOL BRA BRB CHL COL CRI CUB CYM DMA DOM ECU GLP GTM GUY HND JAM KNA LCA MEX NIC PAN PER PRI PRY SLV SUR URY USA VEN VGB",
+    "Asia-Pacific": "ASM AUS BGD CHN CN FJI HKG IDN IND JPN KAZ KHM KIR KOR LAO LKA MAC MDV MMR MYS NCL NPL NZL PAK PHL PLW PYF SGP THA TJK TMP TWN UMI UZB VNM",
+    "Africa": "AGO BDI BEN BFA BWA CAF CIV CMR COM CPV DJI DZA EGY ETH GAB GHA GNB KEN LBY MAR MDG MLI MOZ MRT MUS MWI MYT NAM NGA RWA SDN SEN SLE STP SYC TGO TUN TZA UGA ZAF ZMB ZWE",
+    "Middle East": "ARE BHR IRN IRQ ISR JOR KWT LBN OMN QAT SAU SYR"
+  },
+  "SEGMENTS": {
+    "Online TA": [
+      false,
+      true
+    ],
+    "Offline TA/TO": [
+      false,
+      true
+    ],
+    "Groups": [
+      true,
+      true
+    ],
+    "Direct": [
+      false,
+      false
+    ],
+    "Corporate": [
+      false,
+      false
+    ],
+    "Complementary": [
+      false,
+      false
+    ],
+    "Aviation": [
+      false,
+      false
+    ]
+  },
+  "CHANNELS": {
+    "TA/TO": true,
+    "GDS": true,
+    "Direct": false,
+    "Corporate": false
+  },
+  "DEPOSITS": {
+    "No Deposit": [
+      false,
+      true
+    ],
+    "Refundable": [
+      true,
+      true
+    ],
+    "Non Refund": [
+      true,
+      false
+    ]
+  }
+}

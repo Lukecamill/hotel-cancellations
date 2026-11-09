@@ -1,0 +1,40 @@
+Validation Report
+Conforms: False
+Results (6):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class hb:Region ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("country has no region") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path hb:inRegion ]
+	Focus Node: <https://ari3217.example/hotel#country/ATA>
+	Result Path: hb:inRegion
+	Message: country has no region
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class hb:Region ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("country has no region") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path hb:inRegion ]
+	Focus Node: <https://ari3217.example/hotel#country/ATF>
+	Result Path: hb:inRegion
+	Message: country has no region
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:boolean ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("channel not classified") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path hb:intermediated ]
+	Focus Node: <https://ari3217.example/hotel#channel/Undefined>
+	Result Path: hb:intermediated
+	Message: channel not classified
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:boolean ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("segment not classified") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path hb:isGroup ]
+	Focus Node: <https://ari3217.example/hotel#segment/Undefined>
+	Result Path: hb:isGroup
+	Message: segment not classified
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:boolean ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("segment not classified") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path hb:viaIntermediary ]
+	Focus Node: <https://ari3217.example/hotel#segment/Undefined>
+	Result Path: hb:viaIntermediary
+	Message: segment not classified
+Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#PatternConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:message Literal("country code is not ISO 3166 alpha-3") ; sh:path hb:code ; sh:pattern Literal("^[A-Z]{3}$") ]
+	Focus Node: <https://ari3217.example/hotel#country/CN>
+	Value Node: Literal("CN")
+	Result Path: hb:code
+	Message: country code is not ISO 3166 alpha-3

@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED",
+  "environment": "Linux container on Ubuntu VM",
+  "source_test_knowledge_files_identical": true,
+  "collected_tests": 162,
+  "tests_passed": 156,
+  "tests_skipped": 6,
+  "extended_shacl_conforms": true,
+  "reference_triples": 607,
+  "extended_triples": 3734,
+  "notebook_ablation_reproduced": true,
+  "cold_reference_metrics_match": true,
+  "cold_renamed_bookings": 4126,
+  "briefing_golden_cases": 19,
+  "briefing_unsupported_claims": 0,
+  "briefing_scope": "deterministic grounding contract, no LLM execution",
+  "serving_and_compose_unchanged": true,
+  "registry_unchanged": true,
+  "make_ci_expected_resort_calibration_failure": true,
+  "image_id": "sha256:ffabab678b7c123cadcb40f2abaa6b43f2008960e7c28eac3f303f746deb1373",
+  "architecture": "arm64"
+}

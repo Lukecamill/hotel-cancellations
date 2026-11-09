@@ -1,0 +1,5 @@
+PREFIX hb: <https://ari3217.example/hotel#>
+SELECT ?field ?phase ?status ?observedWriteTimestamp WHERE {
+ ?attribute a hb:Field ; hb:code ?field ; hb:writtenAtPhase ?phase ;
+ hb:availabilityStatus ?status ; hb:observedWriteTimestamp ?observedWriteTimestamp .
+}

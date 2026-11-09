@@ -1,0 +1,6 @@
+PREFIX hb: <https://ari3217.example/hotel#>
+SELECT ?code ?eu ?start ?end ?source WHERE {
+ ?assertion a hb:MembershipAssertion ; hb:subject ?country ; hb:isEU ?eu ;
+   hb:validFrom ?start ; hb:validUntil ?end ; <http://www.w3.org/ns/prov#wasDerivedFrom> ?source .
+ ?country hb:code ?code . FILTER(?start <= ?asOf && ?asOf < ?end)
+}

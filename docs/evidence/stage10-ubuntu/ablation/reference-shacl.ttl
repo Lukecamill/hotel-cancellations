@@ -1,0 +1,70 @@
+@prefix hb: <https://ari3217.example/hotel#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <https://ari3217.example/hotel#country/ATF> ;
+            sh:resultMessage "country has no region" ;
+            sh:resultPath hb:inRegion ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n8492a23ab63740a28456465a28c2d3afb2 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://ari3217.example/hotel#segment/Undefined> ;
+            sh:resultMessage "segment not classified" ;
+            sh:resultPath hb:isGroup ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:datatype xsd:boolean ;
+                    sh:maxCount 1 ;
+                    sh:message "segment not classified" ;
+                    sh:minCount 1 ;
+                    sh:path hb:isGroup ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://ari3217.example/hotel#country/ATA> ;
+            sh:resultMessage "country has no region" ;
+            sh:resultPath hb:inRegion ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n8492a23ab63740a28456465a28c2d3afb2 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://ari3217.example/hotel#channel/Undefined> ;
+            sh:resultMessage "channel not classified" ;
+            sh:resultPath hb:intermediated ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:datatype xsd:boolean ;
+                    sh:maxCount 1 ;
+                    sh:message "channel not classified" ;
+                    sh:minCount 1 ;
+                    sh:path hb:intermediated ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://ari3217.example/hotel#segment/Undefined> ;
+            sh:resultMessage "segment not classified" ;
+            sh:resultPath hb:viaIntermediary ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:datatype xsd:boolean ;
+                    sh:maxCount 1 ;
+                    sh:message "segment not classified" ;
+                    sh:minCount 1 ;
+                    sh:path hb:viaIntermediary ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://ari3217.example/hotel#country/CN> ;
+            sh:resultMessage "country code is not ISO 3166 alpha-3" ;
+            sh:resultPath hb:code ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:PatternConstraintComponent ;
+            sh:sourceShape [ sh:message "country code is not ISO 3166 alpha-3" ;
+                    sh:path hb:code ;
+                    sh:pattern "^[A-Z]{3}$" ] ;
+            sh:value "CN" ] .
+
+_:n8492a23ab63740a28456465a28c2d3afb2 sh:class hb:Region ;
+    sh:maxCount 1 ;
+    sh:message "country has no region" ;
+    sh:minCount 1 ;
+    sh:path hb:inRegion .
+

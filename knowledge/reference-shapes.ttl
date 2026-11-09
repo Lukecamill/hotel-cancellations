@@ -1,0 +1,12 @@
+
+@prefix sh: <http://www.w3.org/ns/shacl#> . @prefix hb: <https://ari3217.example/hotel#> . @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+hb:CountryShape a sh:NodeShape ; sh:targetClass hb:Country ;
+  sh:property [ sh:path hb:code ; sh:pattern "^[A-Z]{3}$" ; sh:message "country code is not ISO 3166 alpha-3" ] ;
+  sh:property [ sh:path hb:inRegion ; sh:class hb:Region ; sh:minCount 1 ; sh:maxCount 1 ; sh:message "country has no region" ] .
+hb:SegmentShape a sh:NodeShape ; sh:targetClass hb:MarketSegment ;
+  sh:property [ sh:path hb:isGroup ; sh:datatype xsd:boolean ; sh:minCount 1 ; sh:maxCount 1 ; sh:message "segment not classified" ] ;
+  sh:property [ sh:path hb:viaIntermediary ; sh:datatype xsd:boolean ; sh:minCount 1 ; sh:maxCount 1 ; sh:message "segment not classified" ] .
+hb:ChannelShape a sh:NodeShape ; sh:targetClass hb:Channel ;
+  sh:property [ sh:path hb:intermediated ; sh:datatype xsd:boolean ; sh:minCount 1 ; sh:maxCount 1 ; sh:message "channel not classified" ] .
+hb:DepositShape a sh:NodeShape ; sh:targetClass hb:DepositPolicy ;
+  sh:property [ sh:path hb:refundable ; sh:datatype xsd:boolean ; sh:minCount 1 ; sh:maxCount 1 ; sh:message "deposit policy not classified" ] .

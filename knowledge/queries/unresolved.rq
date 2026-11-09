@@ -1,0 +1,2 @@
+PREFIX hb: <https://ari3217.example/hotel#>
+SELECT ?entity ?code WHERE { ?entity hb:unresolved true ; hb:code ?code . }

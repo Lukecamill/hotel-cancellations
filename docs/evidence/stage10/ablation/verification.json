@@ -1,0 +1,186 @@
+{
+  "status": "VERIFIED",
+  "scope": "offline notebook E1 reproduction; no serving promotion",
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "reference_triples": 607,
+  "extended_triples": 3734,
+  "reference_shacl_conforms": false,
+  "reference_distinct_violations": [
+    {
+      "focus": "https://ari3217.example/hotel#channel/Undefined",
+      "message": "channel not classified",
+      "bookings": 5
+    },
+    {
+      "focus": "https://ari3217.example/hotel#country/ATA",
+      "message": "country has no region",
+      "bookings": 2
+    },
+    {
+      "focus": "https://ari3217.example/hotel#country/ATF",
+      "message": "country has no region",
+      "bookings": 1
+    },
+    {
+      "focus": "https://ari3217.example/hotel#country/CN",
+      "message": "country code is not ISO 3166 alpha-3",
+      "bookings": 1279
+    },
+    {
+      "focus": "https://ari3217.example/hotel#segment/Undefined",
+      "message": "segment not classified",
+      "bookings": 2
+    }
+  ],
+  "extended_shacl_conforms": true,
+  "reference_metrics_checks": [
+    {
+      "variant": "codes only",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "codes only",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "codes + KB policy",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "codes + KB policy",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "KB classes instead of codes",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "KB classes instead of codes",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "raw country (diagnostic only)",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "raw country (diagnostic only)",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "KB region (diagnostic only)",
+      "hotel": "City Hotel",
+      "reference_printed_metrics_match": true
+    },
+    {
+      "variant": "KB region (diagnostic only)",
+      "hotel": "Resort Hotel",
+      "reference_printed_metrics_match": true
+    }
+  ],
+  "cold_reference_metrics_match": true,
+  "cold_renamed_bookings": 4126,
+  "cold_knowledge_date": "2017-01-01",
+  "classes_cold_features_identical": true,
+  "model_parameters": {
+    "n_estimators": 300,
+    "learning_rate": 0.06,
+    "num_leaves": 31,
+    "min_child_samples": 50,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "random_state": 3217,
+    "verbose": -1,
+    "n_jobs": 1
+  },
+  "fitted_on": "train arrivals Jul 2015-Jun 2016 only",
+  "selected_on_holdout": false,
+  "tolerances": {
+    "printed_auprc_absolute": 0.0005,
+    "printed_ratio_absolute": 0.005
+  },
+  "knowledge_sha256": {
+    "briefing-golden.json": "a418c0341c5a0dd49d682e689c23d4a9d5214ddba59116a4f50466a99f44cb78",
+    "competency-questions.md": "1d1fc78c831cc2314939e47b393742a291ca824789b2680150cdcbd6392be0dd",
+    "hotel.ttl": "ae239bf2c937ffc4b431daa4d8a55c75f5bb11e1fe2b420243edd584d241934c",
+    "notebook-vocabulary.json": "97da7ed2cbd749c6f986c59dde0009045b5d56aaf2f91c38249dc95f379fbdf4",
+    "reference-shapes.ttl": "1ade1df3ba886bc11895c30b7069c48ce0b7c1e5dc9c2eb489104b1dbacdcb32",
+    "reference.ttl": "cefd8f01cb6f6767d428f71d04c4536812448d410f53db9c2734e822ed9068c6",
+    "shapes.ttl": "ba5edf087d882186fe3830537071ae054e6f82bb72e84288280059baf9f22a93"
+  },
+  "source_sha256": {
+    "knowledge.py": "9d0e612811a4d0f48ef82516e02bc0bab0aa2a40a7d50d5bab41526f4ead52c7",
+    "kb_ablation.py": "aa93ca5928561e0c9c2b2c57e15960667693c652e7abe46f76c7a920dd8c5a09",
+    "model.py": "8115a1a4da21ac1b64b896ab3285cdb58c362c4021653825685cf3c75ed38e53",
+    "features.py": "48bc2ad4becdfa5c445a692d908bcdb5d9611f60345f5e27b0f36f256fcc6a62"
+  },
+  "packages": {
+    "pandas": "3.1.0",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1",
+    "rdflib": "7.6.0",
+    "pyshacl": "0.40.1"
+  },
+  "runtime_seconds": 10.162229874986224,
+  "limitations": [
+    "Region and raw-country models are diagnostic only; excluded from serving",
+    "Cold start renames existing held-out codes at evaluation time; not a natural launch cohort",
+    "Synthetic launch semantics are declared assumptions, not learned from outcomes",
+    "Repeated holdout comparisons are assignment diagnostics, not independent model selection"
+  ]
+}
