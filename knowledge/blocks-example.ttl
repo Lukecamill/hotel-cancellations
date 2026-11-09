@@ -1,0 +1,70 @@
+@prefix hb: <https://ari3217.example/hotel#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ari3217.example/hotel#block-outcome/synthetic-full> a hb:BlockOutcome ;
+    hb:availableNotBefore "2017-08-18T00:00:00+00:00"^^xsd:dateTime ;
+    hb:releasedUnits 3 ;
+    hb:remainingUnits 0 ;
+    hb:snapshot <https://ari3217.example/hotel#block-snapshot/synthetic-full> ;
+    hb:status hb:FullyReleased .
+
+<https://ari3217.example/hotel#block-outcome/synthetic-none> a hb:BlockOutcome ;
+    hb:availableNotBefore "2017-08-18T00:00:00+00:00"^^xsd:dateTime ;
+    hb:releasedUnits 0 ;
+    hb:remainingUnits 2 ;
+    hb:snapshot <https://ari3217.example/hotel#block-snapshot/synthetic-none> ;
+    hb:status hb:NoRecordedRelease .
+
+<https://ari3217.example/hotel#block-outcome/synthetic-partial> a hb:BlockOutcome ;
+    hb:availableNotBefore "2017-08-18T00:00:00+00:00"^^xsd:dateTime ;
+    hb:releasedUnits 2 ;
+    hb:remainingUnits 3 ;
+    hb:snapshot <https://ari3217.example/hotel#block-snapshot/synthetic-partial> ;
+    hb:status hb:PartiallyReleased .
+
+<https://ari3217.example/hotel#block-snapshot/synthetic-full> a hb:BlockSnapshot ;
+    hb:arrival "2017-08-15T00:00:00+00:00"^^xsd:dateTime ;
+    hb:asOf "2017-08-08T00:00:00+00:00"^^xsd:dateTime ;
+    hb:block <https://ari3217.example/hotel#inferred-block/synthetic-full> ;
+    hb:hotel "City Hotel" ;
+    hb:liveSize 3 ;
+    hb:reviewPriority "verify-party" ;
+    hb:sourceMatchedSize 3 ;
+    hb:status hb:OnBooks .
+
+<https://ari3217.example/hotel#block-snapshot/synthetic-none> a hb:BlockSnapshot ;
+    hb:arrival "2017-08-15T00:00:00+00:00"^^xsd:dateTime ;
+    hb:asOf "2017-08-08T00:00:00+00:00"^^xsd:dateTime ;
+    hb:block <https://ari3217.example/hotel#inferred-block/synthetic-none> ;
+    hb:hotel "City Hotel" ;
+    hb:liveSize 2 ;
+    hb:reviewPriority "verify-party" ;
+    hb:sourceMatchedSize 2 ;
+    hb:status hb:OnBooks .
+
+<https://ari3217.example/hotel#block-snapshot/synthetic-partial> a hb:BlockSnapshot ;
+    hb:arrival "2017-08-15T00:00:00+00:00"^^xsd:dateTime ;
+    hb:asOf "2017-08-08T00:00:00+00:00"^^xsd:dateTime ;
+    hb:block <https://ari3217.example/hotel#inferred-block/synthetic-partial> ;
+    hb:hotel "City Hotel" ;
+    hb:liveSize 5 ;
+    hb:reviewPriority "desk-priority" ;
+    hb:sourceMatchedSize 5 ;
+    hb:status hb:OnBooks .
+
+<https://ari3217.example/hotel#inferred-block/synthetic-full> a hb:InferredBookingBlock ;
+    prov:wasDerivedFrom <https://ari3217.example/fixtures/synthetic-block-cases> ;
+    hb:inferenceMethod "Exact notebook 16-field grouping; inferred, not verified party identity" ;
+    hb:verifiedParty false .
+
+<https://ari3217.example/hotel#inferred-block/synthetic-none> a hb:InferredBookingBlock ;
+    prov:wasDerivedFrom <https://ari3217.example/fixtures/synthetic-block-cases> ;
+    hb:inferenceMethod "Exact notebook 16-field grouping; inferred, not verified party identity" ;
+    hb:verifiedParty false .
+
+<https://ari3217.example/hotel#inferred-block/synthetic-partial> a hb:InferredBookingBlock ;
+    prov:wasDerivedFrom <https://ari3217.example/fixtures/synthetic-block-cases> ;
+    hb:inferenceMethod "Exact notebook 16-field grouping; inferred, not verified party identity" ;
+    hb:verifiedParty false .
+

@@ -1,0 +1,7 @@
+PREFIX hb: <https://ari3217.example/hotel#>
+SELECT ?snapshot ?released ?remaining ?status ?available WHERE {
+ ?outcome a hb:BlockOutcome ; hb:snapshot ?snapshot ; hb:releasedUnits ?released ;
+  hb:remainingUnits ?remaining ; hb:status ?status ; hb:availableNotBefore ?available .
+ FILTER(?available <= ?knownAt)
+}
+# The bound is retrospective/date-resolution, not a proven PMS observation timestamp.

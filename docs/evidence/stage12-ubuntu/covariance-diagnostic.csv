@@ -1,0 +1,5 @@
+hotel,assumption,nights,q_total,realised_walks,realised_walk_cost,mean_forecast_walk_probability,realised_total_cost
+City Hotel,independent (means held fixed),243,603,154,38500.0,0.16855951281711776,64255.19
+City Hotel,perfect block correlation,243,455,84,21000.0,0.16250893311081643,53346.86
+Resort Hotel,independent (means held fixed),243,105,34,8500.0,0.07971586636649611,24400.205
+Resort Hotel,perfect block correlation,243,75,25,6250.0,0.07041583382324122,23372.5

@@ -1,0 +1,42 @@
+{
+  "block-overview.csv": {
+    "status": "PASS",
+    "rows": 2,
+    "all_counts_costs_and_labels_exact": true,
+    "changed_diagnostic_ratio_cells": 0,
+    "maximum_diagnostic_ratio_difference": 0.0,
+    "absolute_tolerance": 1e-12
+  },
+  "block-size-bands.csv": {
+    "status": "PASS",
+    "rows": 8,
+    "all_counts_costs_and_labels_exact": true,
+    "changed_diagnostic_ratio_cells": 0,
+    "maximum_diagnostic_ratio_difference": 0.0,
+    "absolute_tolerance": 1e-12
+  },
+  "block-status-summary.csv": {
+    "status": "PASS",
+    "rows": 20,
+    "all_counts_costs_and_labels_exact": true,
+    "changed_diagnostic_ratio_cells": 0,
+    "maximum_diagnostic_ratio_difference": 0.0,
+    "absolute_tolerance": 1e-12
+  },
+  "block-walking-cost.csv": {
+    "status": "PASS",
+    "rows": 4,
+    "all_counts_costs_and_labels_exact": true,
+    "changed_diagnostic_ratio_cells": 0,
+    "maximum_diagnostic_ratio_difference": 0.0,
+    "absolute_tolerance": 1e-12
+  },
+  "covariance-diagnostic.csv": {
+    "status": "PASS",
+    "rows": 4,
+    "all_counts_costs_and_labels_exact": true,
+    "changed_diagnostic_ratio_cells": 0,
+    "maximum_diagnostic_ratio_difference": 0.0,
+    "absolute_tolerance": 1e-12
+  }
+}

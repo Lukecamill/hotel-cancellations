@@ -1,0 +1,5 @@
+hotel,rule,total_walked,walked_in_inferred_multirow_blocks,walked_in_singletons,multirow_share,affected_multirow_blocks,partially_relocated_inferred_blocks,multirow_hotel_walk_cost_eur,singleton_hotel_walk_cost_eur
+City Hotel,latest_booking_first,154,24,130,0.15584415584415584,15,9,6000.0,32500.0
+City Hotel,seeded_lottery,154,60,94,0.38961038961038963,49,49,15000.0,23500.0
+Resort Hotel,latest_booking_first,25,0,25,0.0,0,0,0.0,6250.0
+Resort Hotel,seeded_lottery,25,5,20,0.2,5,5,1250.0,5000.0

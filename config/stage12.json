@@ -1,0 +1,9 @@
+{
+ "manual_review_size": 5,
+ "horizon_days": 7,
+ "inference_method": "Exact notebook 16-field grouping; not a verified group or party identifier",
+ "booking_unit": "One retained CSV row is one room proxy; duplicates remain; no count of unique people",
+ "reference_policy_frozen": true,
+ "review_threshold_status": "Prespecified coursework prioritisation assumption, not approved hotel policy",
+ "production_authorized": false
+}

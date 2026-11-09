@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED",
+  "environment": "Linux container on Ubuntu VM",
+  "source_test_knowledge_config_identical": true,
+  "collected_tests": 202,
+  "tests_passed": 196,
+  "tests_skipped": 6,
+  "inferred_live_blocks": 16334,
+  "multirow_blocks": 1748,
+  "multirow_live_units": 6133,
+  "complete_generated_block_shacl_conforms": true,
+  "reference_and_covariance_quantities_exact": true,
+  "stage11_allocation_preserved": true,
+  "block_identities_and_states_exact": true,
+  "aggregate_values_match_mac": true,
+  "all_counts_costs_labels_exact": true,
+  "diagnostic_ratio_tolerance": 1e-12,
+  "serving_registry_core_kb_unchanged": true,
+  "production_authorized": false,
+  "make_ci_expected_resort_calibration_failure": true
+}

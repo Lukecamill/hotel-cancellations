@@ -1,0 +1,35 @@
+@prefix hb: <https://ari3217.example/hotel#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+hb:InferredBlockShape a sh:NodeShape ; sh:targetClass hb:InferredBookingBlock ;
+ sh:property [ sh:path hb:verifiedParty ; sh:minCount 1 ; sh:maxCount 1 ; sh:hasValue false ] ;
+ sh:property [ sh:path hb:inferenceMethod ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+ sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+hb:BlockSnapshotShape a sh:NodeShape ; sh:targetClass hb:BlockSnapshot ;
+ sh:property [ sh:path hb:block ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hb:InferredBookingBlock ] ;
+ sh:property [ sh:path hb:hotel ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("City Hotel" "Resort Hotel") ] ;
+ sh:property [ sh:path hb:asOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ; sh:lessThanOrEquals hb:arrival ] ;
+ sh:property [ sh:path hb:arrival ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+ sh:property [ sh:path hb:liveSize ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ; sh:lessThanOrEquals hb:sourceMatchedSize ] ;
+ sh:property [ sh:path hb:sourceMatchedSize ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+ sh:property [ sh:path hb:status ; sh:minCount 1 ; sh:maxCount 1 ; sh:hasValue hb:OnBooks ] ;
+ sh:property [ sh:path hb:reviewPriority ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("desk-priority" "verify-party") ] ;
+ sh:property [ sh:path hb:releasedUnits ; sh:maxCount 0 ] ;
+ sh:property [ sh:path hb:remainingUnits ; sh:maxCount 0 ] .
+hb:BlockOutcomeShape a sh:NodeShape ; sh:targetClass hb:BlockOutcome ;
+ sh:property [ sh:path hb:snapshot ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hb:BlockSnapshot ] ;
+ sh:property [ sh:path hb:availableNotBefore ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+ sh:property [ sh:path hb:releasedUnits ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+ sh:property [ sh:path hb:remainingUnits ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+ sh:property [ sh:path hb:status ; sh:minCount 1 ; sh:maxCount 1 ; sh:in (hb:NoRecordedRelease hb:PartiallyReleased hb:FullyReleased) ] ;
+ sh:sparql [ sh:message "Outcome counts, status or availability bound are inconsistent with snapshot" ; sh:select """
+ PREFIX hb: <https://ari3217.example/hotel#>
+ SELECT $this WHERE {
+  $this hb:snapshot ?snapshot ; hb:releasedUnits ?released ; hb:remainingUnits ?remaining ; hb:availableNotBefore ?at ; hb:status ?status .
+  ?snapshot hb:liveSize ?n ; hb:arrival ?arrival .
+  FILTER(?released + ?remaining != ?n || ?at < ?arrival ||
+   (?released = 0 && ?status != hb:NoRecordedRelease) ||
+   (?released = ?n && ?status != hb:FullyReleased) ||
+   (?released > 0 && ?released < ?n && ?status != hb:PartiallyReleased))
+ }""" ] .

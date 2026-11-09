@@ -1,0 +1,149 @@
+{
+  "status": "FAIL",
+  "scope": "booking_to_arrival_historical_holdout",
+  "identity_verified": true,
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "lock_sha256": "43f6cea7f2af1a773c42a4044b564e1078419074a1e7fbbfef0d230be7e4c01d",
+  "thresholds": {
+    "City Hotel": {
+      "min_auprc": 0.7,
+      "ratio_band": [
+        0.85,
+        1.15
+      ],
+      "max_ece": 0.1,
+      "bins": 10
+    },
+    "Resort Hotel": {
+      "min_auprc": 0.55,
+      "ratio_band": [
+        0.85,
+        1.15
+      ],
+      "max_ece": 0.1,
+      "bins": 10
+    }
+  },
+  "hotels": {
+    "City Hotel": {
+      "n": 27508,
+      "cancellations": 11691,
+      "auprc": 0.785721886317962,
+      "expected_observed_ratio": 0.9112810321058089,
+      "ece": 0.04227523749271264,
+      "brier": 0.17239734512884491,
+      "checks": {
+        "two_classes": true,
+        "auprc": true,
+        "calibration_ratio": true,
+        "ece": true
+      },
+      "gate": "PASS"
+    },
+    "Resort Hotel": {
+      "n": 13179,
+      "cancellations": 4054,
+      "auprc": 0.627907608840626,
+      "expected_observed_ratio": 0.6817233437376264,
+      "ece": 0.0989614606930023,
+      "brier": 0.17757610639149055,
+      "checks": {
+        "two_classes": true,
+        "auprc": true,
+        "calibration_ratio": false,
+        "ece": true
+      },
+      "gate": "FAIL"
+    }
+  },
+  "fitted_on": "train only: Jul 2015\u2013Jun 2016",
+  "selected_on_holdout": false,
+  "packages": {
+    "pandas": "3.1.0",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0"
+  },
+  "python": "3.13.13",
+  "source_sha256": {
+    "history.py": "f5281f51d73c7057f22ab5e03add8bba02fb62035e29e499a6db709eaa6ac8c0",
+    "service.py": "34421f49c8f5fc4ef1c8203b7bac67bf95b4e9a4244e9d312262687226b95016",
+    "logging_setup.py": "33bdf438c9d280c0cc3e4f361b1ce74bb8197a0d0c091e9f3921aabbb02007ce",
+    "train.py": "0c93556b075ad70b698e9374b08546dadb05bf20df87de45661c9f09fe6b37d6",
+    "evaluate.py": "80341ec172c8ea7f0e8559019c6657a07c5f7e5462c39e307561e1f4e02d25bb",
+    "csv_parity.py": "5a63dd1cbcfffeb2ee56b122ba7ebb39f1272024ce090bde6fe42ae9e877ae2f",
+    "serving.py": "f20431200fff7a215d8d229eae01b7d3ab77609aabe0cae76ddb08ca4334f324",
+    "quality_gate.py": "04b744df440ae1d01ce5a82e331987f26197ca9798ea85711394493f036e6002",
+    "features.py": "48bc2ad4becdfa5c445a692d908bcdb5d9611f60345f5e27b0f36f256fcc6a62",
+    "policy.py": "a83e67909d88837e7aebf4d614f62282b3b135865a33fe2dc123fc307cf0783f",
+    "approvals.py": "af4b25b4c66acc5538cc4bcde2f8daa6c491c804730cd045c40be1340fee7a97",
+    "baseline.py": "95e64978922fc2119cfcb492739910b0d4acca5959d5dc63aea0e2d5e0b5a9fa",
+    "snapshot.py": "c2cb34622279807b15687fd6fc154dc35f6d0941b065a265e0d12a1ffe6a5671",
+    "monitor_replay.py": "d656960ea469a99a51b80cdb12e9c807d423a13c02a09c6b105c79754a49352a",
+    "knowledge.py": "ea5dc610d721e2da3b6ac097d562268f8ab91ae78d271ae2751e514d8906fd16",
+    "validate.py": "cce21f36834c8a4089401b41644c0852d80e844f6f2d1d856d515692d195ad7c",
+    "registry_model.py": "3bc3fd34fd356f720a340b398d85cfa40be956b2ddef0a11ce3392bca52fae5f",
+    "batch.py": "33c67f2091c5c152d79eb8d5d9d87d959c44e4001e88fbc879e41ea6c5b85b14",
+    "model.py": "8115a1a4da21ac1b64b896ab3285cdb58c362c4021653825685cf3c75ed38e53",
+    "stay_audit.py": "3fa890571dac6f5be28aee589de8c888f9367dd9ba50a803850ff23bfff581ed",
+    "blocks.py": "74f68712d7d584bffdf7aea2ed98788e4e89111d3e94313e5d0798256e0f1ca8",
+    "config.py": "916a22739395562fbfdaf0db581c20a59ebdcd80417314a212379a2c6394139c",
+    "audit.py": "5df925e0d700ff3b1a19d83e2f476a82c6cb414311458c6ba21c33f1d48947e8",
+    "contracts.py": "7d70e8341b0b46d2d04b18dbcc686fe19d06f544fc46d0d7b2f3257543f21f25",
+    "kb_ablation.py": "aa93ca5928561e0c9c2b2c57e15960667693c652e7abe46f76c7a920dd8c5a09",
+    "kb_briefing_eval.py": "d1d4be2c81aed0ec82897bb54100210416ef93a5d97621bf27a01445412e6422",
+    "data.py": "de4b4a636748bc1d1b76cf68a3c83545ec3db3eee196ccfee9c68545e3d59688",
+    "sensitivity.py": "f95eaddec05448a1cde8cb611876e31d7a03a15b48342739c78be0f9b6fb638e",
+    "__init__.py": "f6c4fa215f6a58cd6084213580e42b1f98d5d7f69f976d6e77499dbeba70feb4",
+    "tracking.py": "4cc60e6cbd7ad25958f0e50e5d65225ead437ec95821af52ae43845ef1cb2c68",
+    "monitoring.py": "6d3b6a969c5bac532d4058031ba9009072750147c8e0874e019de4907ff4926d",
+    "walking.py": "ee8265400f780fde2d46c259e1592df718b04d718f466deb8784129dec1fc9f3"
+  },
+  "failure_response": "Block promotion for a failing hotel; retain review-only simulation. Investigate with training/validation data; never tune on this holdout."
+}

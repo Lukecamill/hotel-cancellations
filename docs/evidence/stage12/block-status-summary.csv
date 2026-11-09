@@ -1,0 +1,21 @@
+hotel,multirow,group_segment,status,blocks,live_units,released_units,remaining_units
+City Hotel,False,False,FullyReleased,498,498,498,0
+City Hotel,False,False,NoRecordedRelease,8708,8708,0,8708
+City Hotel,False,True,FullyReleased,11,11,11,0
+City Hotel,False,True,NoRecordedRelease,145,145,0,145
+City Hotel,True,False,FullyReleased,34,98,98,0
+City Hotel,True,False,NoRecordedRelease,1064,2956,0,2956
+City Hotel,True,False,PartiallyReleased,54,239,65,174
+City Hotel,True,True,FullyReleased,5,21,21,0
+City Hotel,True,True,NoRecordedRelease,109,994,0,994
+City Hotel,True,True,PartiallyReleased,17,326,89,237
+Resort Hotel,False,False,FullyReleased,212,212,212,0
+Resort Hotel,False,False,NoRecordedRelease,4785,4785,0,4785
+Resort Hotel,False,True,FullyReleased,12,12,12,0
+Resort Hotel,False,True,NoRecordedRelease,215,215,0,215
+Resort Hotel,True,False,FullyReleased,14,49,49,0
+Resort Hotel,True,False,NoRecordedRelease,312,772,0,772
+Resort Hotel,True,False,PartiallyReleased,6,20,7,13
+Resort Hotel,True,True,FullyReleased,1,13,13,0
+Resort Hotel,True,True,NoRecordedRelease,126,549,0,549
+Resort Hotel,True,True,PartiallyReleased,6,96,12,84

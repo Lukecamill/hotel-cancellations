@@ -279,3 +279,14 @@ explicitly reports the unobserved-extra-sales assumption; it is not real guest
 selection or evidence of legal compliance. See [Stage 11 findings](docs/stage11-walking-fairness.md),
 [governance assessment](docs/stage11-governance.md), and
 [ADR 0013](docs/decisions/0013-walking-allocation-and-fairness.md).
+
+## Stage 12: inferred blocks and human handling
+
+`make block-audit` reconstructs the exact notebook blocks, preserves reference
+quantities and attributes simulated walks to multi-row versus singleton matches.
+It adds separated RDF block snapshots/outcomes, validates the generated combined
+knowledge graph, and compares covariance assumptions at fixed release means.
+The real overlay stays under ignored artifacts/; synthetic block examples are
+validated in CI. Matches are not verified parties, and no new policy or guest
+ranking is released. See [Stage 12 findings](docs/stage12-group-blocks.md) and
+[ADR 0014](docs/decisions/0014-inferred-blocks-and-human-desk.md).

@@ -1,0 +1,3 @@
+hotel,all_inferred_blocks,singleton_blocks,multirow_blocks,multirow_live_units,all_live_units,max_live_size,priority_blocks,fully_released_multirow,partially_released_multirow,multirow_not_group_segment
+City Hotel,10645,9362,1283,4634,13996,115,150,39,71,1152
+Resort Hotel,5689,5224,465,1499,6723,80,61,15,12,332

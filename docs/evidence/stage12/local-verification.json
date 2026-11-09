@@ -1,0 +1,25 @@
+{
+  "status": "VERIFIED",
+  "environment": "Mac pinned baseline environment; Ubuntu verification pending",
+  "collected_tests": 202,
+  "tests_passed": 196,
+  "tests_skipped": 6,
+  "inferred_live_blocks": 16334,
+  "multirow_blocks": 1748,
+  "multirow_live_units": 6133,
+  "complete_generated_block_shacl_conforms": true,
+  "reference_and_covariance_quantities_exact": true,
+  "stage11_allocation_preserved": true,
+  "block_state_digest": "f04eaf1fb48a192525ef830b34a80868863a01d12278a0f33cf0972adf90282b",
+  "serving_registry_core_kb_unchanged": true,
+  "protected_sha256": {
+    "compose.yaml": "382c206e54857c9ac0695e87911914ac143aa7e381484276ef8ec63b9697788b",
+    "knowledge/hotel.ttl": "ae239bf2c937ffc4b431daa4d8a55c75f5bb11e1fe2b420243edd584d241934c",
+    "models/serving/policy_state.joblib": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a",
+    "models/serving/booking_model.joblib": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+    "models/serving/manifest.json": "474dca36349a240367b6b298ded49bb030ba17aac8e0d03fcfcc61ff897b5fc8",
+    "artifacts/stage9/mlflow.db": "9df6b50e6ce08154584e1e41c300adf2bfebc235a0d5b4b69d04794b4dec097a"
+  },
+  "production_authorized": false,
+  "make_ci_expected_resort_calibration_failure": true
+}

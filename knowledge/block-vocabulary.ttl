@@ -1,0 +1,9 @@
+@prefix hb: <https://ari3217.example/hotel#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+hb:InferredBookingBlock a rdfs:Class ; rdfs:comment "Heuristic match on notebook fields; no verified party identity." .
+hb:BlockSnapshot a rdfs:Class ; rdfs:comment "Decision-time on-books state, separate from later outcomes." .
+hb:BlockOutcome a rdfs:Class ; rdfs:comment "Retrospective settled release counts; never an input to the earlier forecast." .
+hb:OnBooks rdfs:label "On books at decision date" .
+hb:NoRecordedRelease rdfs:label "No recorded late release" .
+hb:PartiallyReleased rdfs:label "Some, but not all, on-books units released" .
+hb:FullyReleased rdfs:label "All on-books units released" .

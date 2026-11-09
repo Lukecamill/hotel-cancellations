@@ -196,7 +196,9 @@ def kb_features(bookings, features, graph, *, temporal=False, as_of='2017-01-01'
 
 
 def validate_graph(graph, shapes=None):
-    shapes=shapes if shapes is not None else Graph().parse(KB_DIR/'shapes.ttl',format='turtle')
+    if shapes is None:
+        shapes=Graph().parse(KB_DIR/'shapes.ttl',format='turtle')
+        if (KB_DIR/'block-shapes.ttl').exists():shapes.parse(KB_DIR/'block-shapes.ttl',format='turtle')
     conforms, report, text=pyshacl.validate(graph,shacl_graph=shapes,advanced=True)
     violations=[]
     for r in report.subjects(RDF.type,SH.ValidationResult):
@@ -209,6 +211,8 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--graph',default=str(KB_DIR/'hotel.ttl'))
     p.add_argument('--output',default=str(ROOT/'docs/evidence/stage10/shacl'))
     args=p.parse_args();graph=Graph().parse(args.graph,format='turtle')
+    for filename in ['block-vocabulary.ttl','blocks-example.ttl']:
+        if (KB_DIR/filename).exists():graph.parse(KB_DIR/filename,format='turtle')
     conforms,report,text,violations=validate_graph(graph)
     out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
     report.serialize(out/'report.ttl',format='turtle');(out/'report.txt').write_text(text)

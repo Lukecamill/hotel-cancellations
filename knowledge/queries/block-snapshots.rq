@@ -1,0 +1,6 @@
+PREFIX hb: <https://ari3217.example/hotel#>
+SELECT ?snapshot ?hotel ?arrival ?size ?priority WHERE {
+ ?snapshot a hb:BlockSnapshot ; hb:asOf ?asOf ; hb:hotel ?hotel ; hb:arrival ?arrival ;
+   hb:liveSize ?size ; hb:status hb:OnBooks ; hb:reviewPriority ?priority .
+}
+# Bind ?asOf to the exact stored decision date. A snapshot is not a continuing live status.

@@ -1,3 +1,4 @@
+export PYTHONPATH := $(CURDIR)/src$(if $(PYTHONPATH),:$(PYTHONPATH))
 PYTHON ?= .venv/bin/python
 IMAGE ?= hotel-cancel:stage7
 CONFIG ?= config/config.yaml
@@ -62,3 +63,8 @@ kb-briefing-check:
 .PHONY: walking-audit
 walking-audit:
 	$(PYTHON) -m hotel_cancel.walking
+
+
+.PHONY: block-audit
+block-audit:
+	$(PYTHON) -m hotel_cancel.blocks
