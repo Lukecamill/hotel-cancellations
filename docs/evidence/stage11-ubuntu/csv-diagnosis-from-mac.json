@@ -1,0 +1,33 @@
+{
+  "status": "CSV_VALUES_MATCH",
+  "comparisons": {
+    "allocation-assumptions.csv": {
+      "byte_identical": true
+    },
+    "cost-attribution.csv": {
+      "byte_identical": true
+    },
+    "group-burden.csv": {
+      "byte_identical": true
+    },
+    "hotel-summary.csv": {
+      "byte_identical": true
+    },
+    "lottery-seeds.csv": {
+      "byte_identical": true
+    },
+    "lottery-sensitivity.csv": {
+      "byte_identical": true
+    },
+    "nightly-overflow.csv": {
+      "byte_identical": false,
+      "status": "PASS",
+      "rows": 486,
+      "all_other_columns_exact": true,
+      "changed_expected_cells": 205,
+      "maximum_absolute_expected_difference": 1e-15,
+      "expected_absolute_tolerance": 1e-12
+    }
+  },
+  "corrected_ubuntu_full_verification_pending": true
+}

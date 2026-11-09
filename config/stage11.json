@@ -1,0 +1,13 @@
+{
+  "primary_rule": "latest_booking_first",
+  "benchmark_rule": "seeded_lottery",
+  "seed": 3217,
+  "lottery_sensitivity_seeds": [3217, 3218, 3219, 3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234, 3235, 3236],
+  "nationality_top_training_codes_per_hotel": 10,
+  "minimum_eligible_for_reporting": 30,
+  "cost_attribution_eur": [100, 250, 500],
+  "allocation_assumption": "Incremental sold rooms are honoured; allocate simulated overflow to surviving recorded incumbent bookings",
+  "alternative_assumption": "Protect incumbents; unobserved incremental bookings bear all simulated walks",
+  "booking_unit": "One CSV booking row is treated as one room allocation, as in the given policy; not a count of people",
+  "production_authorized": false
+}

@@ -1,0 +1,52 @@
+make: Warning: File 'Makefile' has modification time 48 s in the future
+python -m pytest -q
+...............ssss..................................................... [ 40%]
+..............s.............s........................................... [ 80%]
+...................................                                      [100%]
+173 passed, 6 skipped in 11.78s
+python -m hotel_cancel.knowledge --output "docs/evidence/stage11-ubuntu/shacl"
+{
+  "conforms": true,
+  "triples": 3734,
+  "violations": []
+}
+make quality-gate PYTHON="python"
+make[1]: Warning: File 'Makefile' has modification time 34 s in the future
+make[1]: Entering directory '/project'
+python -m hotel_cancel.quality_gate --output "docs/evidence/stage11-ubuntu/quality-gate"
+{
+  "City Hotel": {
+    "n": 27508,
+    "cancellations": 11691,
+    "auprc": 0.785721886317962,
+    "expected_observed_ratio": 0.9112810321058089,
+    "ece": 0.04227523749271264,
+    "brier": 0.17239734512884491,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": true,
+      "ece": true
+    },
+    "gate": "PASS"
+  },
+  "Resort Hotel": {
+    "n": 13179,
+    "cancellations": 4054,
+    "auprc": 0.627907608840626,
+    "expected_observed_ratio": 0.6817233437376264,
+    "ece": 0.0989614606930023,
+    "brier": 0.17757610639149055,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": false,
+      "ece": true
+    },
+    "gate": "FAIL"
+  }
+}
+Quality gate: FAIL; evidence: docs/evidence/stage11-ubuntu/quality-gate
+make[1]: *** [Makefile:41: quality-gate] Error 1
+make[1]: Leaving directory '/project'
+make: *** [Makefile:44: ci] Error 2

@@ -1,0 +1,3 @@
+hotel,nights,overflow_nights,oversold_units,released_units,eligible_incumbent_survivors,walked_units,walking_rate,hotel_relocation_cost_eur
+City Hotel,243,83,603,782,13214,154,0.011654306039049492,38500.0
+Resort Hotel,243,25,75,305,6418,25,0.0038952944842630104,6250.0

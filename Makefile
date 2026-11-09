@@ -58,3 +58,7 @@ kb-ablation:
 
 kb-briefing-check:
 	$(PYTHON) -m hotel_cancel.kb_briefing_eval
+
+.PHONY: walking-audit
+walking-audit:
+	$(PYTHON) -m hotel_cancel.walking

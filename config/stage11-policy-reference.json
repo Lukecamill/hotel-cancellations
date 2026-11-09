@@ -1,0 +1,3412 @@
+{
+  "source_run": "20261107T124508Z-f8e71b6f",
+  "bundle_sha256": {
+    "booking_model.joblib": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+    "policy_state.joblib": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a"
+  },
+  "source_file_sha256": "109d33a75a61520cb659a902fdb2a08c6729d5037f4b920bb909eea46d50506d",
+  "rows": [
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-01",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-02",
+      "q": 3,
+      "released": 8,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-03",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-04",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-05",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-06",
+      "q": 1,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-07",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-08",
+      "q": 1,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-09",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-10",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-11",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-12",
+      "q": 1,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-13",
+      "q": 1,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-14",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-15",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-16",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-17",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-18",
+      "q": 4,
+      "released": 0,
+      "walked": 4
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-19",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-20",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-21",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-22",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-23",
+      "q": 1,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-24",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-25",
+      "q": 1,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-26",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-27",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-28",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-29",
+      "q": 0,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-30",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-01-31",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-01",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-02",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-03",
+      "q": 1,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-04",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-05",
+      "q": 2,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-06",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-07",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-08",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-09",
+      "q": 1,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-10",
+      "q": 2,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-11",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-12",
+      "q": 2,
+      "released": 0,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-13",
+      "q": 2,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-14",
+      "q": 1,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-15",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-16",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-17",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-18",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-19",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-20",
+      "q": 2,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-21",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-22",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-23",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-24",
+      "q": 1,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-25",
+      "q": 7,
+      "released": 60,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-26",
+      "q": 4,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-27",
+      "q": 2,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-02-28",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-01",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-02",
+      "q": 2,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-03",
+      "q": 3,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-04",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-05",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-06",
+      "q": 3,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-07",
+      "q": 2,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-08",
+      "q": 1,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-09",
+      "q": 2,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-10",
+      "q": 4,
+      "released": 2,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-11",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-12",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-13",
+      "q": 3,
+      "released": 8,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-14",
+      "q": 2,
+      "released": 11,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-15",
+      "q": 2,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-16",
+      "q": 3,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-17",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-18",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-19",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-20",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-21",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-22",
+      "q": 1,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-23",
+      "q": 2,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-24",
+      "q": 5,
+      "released": 3,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-25",
+      "q": 2,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-26",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-27",
+      "q": 4,
+      "released": 3,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-28",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-29",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-30",
+      "q": 3,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-03-31",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-01",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-02",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-03",
+      "q": 4,
+      "released": 1,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-04",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-05",
+      "q": 3,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-06",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-07",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-08",
+      "q": 2,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-09",
+      "q": 4,
+      "released": 10,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-10",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-11",
+      "q": 2,
+      "released": 0,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-12",
+      "q": 2,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-13",
+      "q": 3,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-14",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-15",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-16",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-17",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-18",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-19",
+      "q": 4,
+      "released": 0,
+      "walked": 4
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-20",
+      "q": 3,
+      "released": 0,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-21",
+      "q": 4,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-22",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-23",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-24",
+      "q": 4,
+      "released": 1,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-25",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-26",
+      "q": 2,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-27",
+      "q": 3,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-28",
+      "q": 6,
+      "released": 8,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-29",
+      "q": 3,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-04-30",
+      "q": 2,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-01",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-02",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-03",
+      "q": 2,
+      "released": 8,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-04",
+      "q": 2,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-05",
+      "q": 5,
+      "released": 4,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-06",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-07",
+      "q": 2,
+      "released": 0,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-08",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-09",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-10",
+      "q": 3,
+      "released": 11,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-11",
+      "q": 5,
+      "released": 2,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-12",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-13",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-14",
+      "q": 4,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-15",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-16",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-17",
+      "q": 4,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-18",
+      "q": 4,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-19",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-20",
+      "q": 4,
+      "released": 1,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-21",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-22",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-23",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-24",
+      "q": 5,
+      "released": 3,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-25",
+      "q": 4,
+      "released": 2,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-26",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-27",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-28",
+      "q": 4,
+      "released": 19,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-29",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-30",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-05-31",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-01",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-02",
+      "q": 4,
+      "released": 3,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-03",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-04",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-05",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-06",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-07",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-08",
+      "q": 4,
+      "released": 0,
+      "walked": 4
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-09",
+      "q": 4,
+      "released": 2,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-10",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-11",
+      "q": 4,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-12",
+      "q": 4,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-13",
+      "q": 2,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-14",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-15",
+      "q": 4,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-16",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-17",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-18",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-19",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-20",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-21",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-22",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-23",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-24",
+      "q": 2,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-25",
+      "q": 5,
+      "released": 1,
+      "walked": 4
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-26",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-27",
+      "q": 4,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-28",
+      "q": 3,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-29",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-06-30",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-01",
+      "q": 3,
+      "released": 0,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-02",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-03",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-04",
+      "q": 6,
+      "released": 13,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-05",
+      "q": 2,
+      "released": 0,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-06",
+      "q": 5,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-07",
+      "q": 3,
+      "released": 0,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-08",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-09",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-10",
+      "q": 3,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-11",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-12",
+      "q": 3,
+      "released": 0,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-13",
+      "q": 5,
+      "released": 2,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-14",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-15",
+      "q": 5,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-16",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-17",
+      "q": 3,
+      "released": 0,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-18",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-19",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-20",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-21",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-22",
+      "q": 5,
+      "released": 1,
+      "walked": 4
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-23",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-24",
+      "q": 5,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-25",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-26",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-27",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-28",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-29",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-30",
+      "q": 3,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-07-31",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-01",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-02",
+      "q": 4,
+      "released": 0,
+      "walked": 4
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-03",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-04",
+      "q": 3,
+      "released": 0,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-05",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-06",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-07",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-08",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-09",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-10",
+      "q": 2,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-11",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-12",
+      "q": 4,
+      "released": 0,
+      "walked": 4
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-13",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-14",
+      "q": 3,
+      "released": 0,
+      "walked": 3
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-15",
+      "q": 3,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-16",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-17",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-18",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-19",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-20",
+      "q": 3,
+      "released": 1,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-21",
+      "q": 3,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-22",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-23",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-24",
+      "q": 2,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-25",
+      "q": 5,
+      "released": 0,
+      "walked": 5
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-26",
+      "q": 3,
+      "released": 2,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-27",
+      "q": 3,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-28",
+      "q": 5,
+      "released": 3,
+      "walked": 2
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-29",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-30",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "City Hotel",
+      "night": "2017-08-31",
+      "q": 2,
+      "released": 0,
+      "walked": 2
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-01",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-02",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-03",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-04",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-05",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-06",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-07",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-08",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-09",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-10",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-11",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-12",
+      "q": 0,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-13",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-14",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-15",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-16",
+      "q": 0,
+      "released": 7,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-17",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-18",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-19",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-20",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-21",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-22",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-23",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-24",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-25",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-26",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-27",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-28",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-29",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-30",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-01-31",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-01",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-02",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-03",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-04",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-05",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-06",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-07",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-08",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-09",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-10",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-11",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-12",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-13",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-14",
+      "q": 0,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-15",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-16",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-17",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-18",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-19",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-20",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-21",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-22",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-23",
+      "q": 0,
+      "released": 13,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-24",
+      "q": 0,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-25",
+      "q": 2,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-26",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-27",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-02-28",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-01",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-02",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-03",
+      "q": 0,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-04",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-05",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-06",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-07",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-08",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-09",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-10",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-11",
+      "q": 0,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-12",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-13",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-14",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-15",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-16",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-17",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-18",
+      "q": 0,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-19",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-20",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-21",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-22",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-23",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-24",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-25",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-26",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-27",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-28",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-29",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-30",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-03-31",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-01",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-02",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-03",
+      "q": 0,
+      "released": 15,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-04",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-05",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-06",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-07",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-08",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-09",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-10",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-11",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-12",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-13",
+      "q": 2,
+      "released": 1,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-14",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-15",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-16",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-17",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-18",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-19",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-20",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-21",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-22",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-23",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-24",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-25",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-26",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-27",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-28",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-29",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-04-30",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-01",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-02",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-03",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-04",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-05",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-06",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-07",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-08",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-09",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-10",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-11",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-12",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-13",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-14",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-15",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-16",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-17",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-18",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-19",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-20",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-21",
+      "q": 0,
+      "released": 8,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-22",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-23",
+      "q": 0,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-24",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-25",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-26",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-27",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-28",
+      "q": 1,
+      "released": 6,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-29",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-30",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-05-31",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-01",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-02",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-03",
+      "q": 1,
+      "released": 4,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-04",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-05",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-06",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-07",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-08",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-09",
+      "q": 1,
+      "released": 5,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-10",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-11",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-12",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-13",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-14",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-15",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-16",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-17",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-18",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-19",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-20",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-21",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-22",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-23",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-24",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-25",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-26",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-27",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-28",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-29",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-06-30",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-01",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-02",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-03",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-04",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-05",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-06",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-07",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-08",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-09",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-10",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-11",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-12",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-13",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-14",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-15",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-16",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-17",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-18",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-19",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-20",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-21",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-22",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-23",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-24",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-25",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-26",
+      "q": 0,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-27",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-28",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-29",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-30",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-07-31",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-01",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-02",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-03",
+      "q": 1,
+      "released": 9,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-04",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-05",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-06",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-07",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-08",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-09",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-10",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-11",
+      "q": 0,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-12",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-13",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-14",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-15",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-16",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-17",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-18",
+      "q": 1,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-19",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-20",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-21",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-22",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-23",
+      "q": 1,
+      "released": 0,
+      "walked": 1
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-24",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-25",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-26",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-27",
+      "q": 1,
+      "released": 1,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-28",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-29",
+      "q": 0,
+      "released": 3,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-30",
+      "q": 0,
+      "released": 0,
+      "walked": 0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "night": "2017-08-31",
+      "q": 1,
+      "released": 2,
+      "walked": 0
+    }
+  ]
+}

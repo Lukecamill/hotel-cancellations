@@ -1,0 +1,7 @@
+hotel,cost_per_walk_eur,walked_units_fixed,hotel_relocation_cost_eur,scope
+City Hotel,100,154,15400,accounting sensitivity only; q and policy are held fixed
+City Hotel,250,154,38500,accounting sensitivity only; q and policy are held fixed
+City Hotel,500,154,77000,accounting sensitivity only; q and policy are held fixed
+Resort Hotel,100,25,2500,accounting sensitivity only; q and policy are held fixed
+Resort Hotel,250,25,6250,accounting sensitivity only; q and policy are held fixed
+Resort Hotel,500,25,12500,accounting sensitivity only; q and policy are held fixed

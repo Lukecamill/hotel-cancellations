@@ -1,0 +1,487 @@
+hotel,night,policy,q,expected,released,walked,empty,cost
+City Hotel,2017-01-01,flat rate (Jul – Sep 2016),2,3.881456392887394,1,1,0,250.0
+City Hotel,2017-01-02,flat rate (Jul – Sep 2016),3,4.528365791701962,8,0,5,392.30000000000007
+City Hotel,2017-01-03,flat rate (Jul – Sep 2016),1,2.6523285351397177,2,0,1,73.6
+City Hotel,2017-01-04,flat rate (Jul – Sep 2016),0,1.2291278577476725,2,0,2,136.0
+City Hotel,2017-01-05,flat rate (Jul – Sep 2016),1,1.487891617273499,2,0,1,74.88
+City Hotel,2017-01-06,flat rate (Jul – Sep 2016),1,2.0054191363251515,5,0,4,270.76
+City Hotel,2017-01-07,flat rate (Jul – Sep 2016),1,1.8113463166807815,2,0,1,66.845
+City Hotel,2017-01-08,flat rate (Jul – Sep 2016),1,2.1348010160880646,5,0,4,208.0
+City Hotel,2017-01-09,flat rate (Jul – Sep 2016),0,1.2938187976291289,2,0,2,130.3
+City Hotel,2017-01-10,flat rate (Jul – Sep 2016),0,0.9056731583403902,1,0,1,61.19
+City Hotel,2017-01-11,flat rate (Jul – Sep 2016),0,1.4232006773920418,3,0,3,203.07
+City Hotel,2017-01-12,flat rate (Jul – Sep 2016),1,2.781710414902631,4,0,3,138.66
+City Hotel,2017-01-13,flat rate (Jul – Sep 2016),1,1.7466553767993245,4,0,3,207.29999999999998
+City Hotel,2017-01-14,flat rate (Jul – Sep 2016),1,1.6172734970364122,0,1,0,250.0
+City Hotel,2017-01-15,flat rate (Jul – Sep 2016),1,1.6172734970364122,1,0,0,0.0
+City Hotel,2017-01-16,flat rate (Jul – Sep 2016),1,1.940728196443694,1,0,0,0.0
+City Hotel,2017-01-17,flat rate (Jul – Sep 2016),0,0.7116003386960206,1,0,1,55.0
+City Hotel,2017-01-18,flat rate (Jul – Sep 2016),4,5.886875529212555,0,4,0,1000.0
+City Hotel,2017-01-19,flat rate (Jul – Sep 2016),1,1.7466553767993245,1,0,0,0.0
+City Hotel,2017-01-20,flat rate (Jul – Sep 2016),1,1.7466553767993245,0,1,0,250.0
+City Hotel,2017-01-21,flat rate (Jul – Sep 2016),0,1.2938187976291289,1,0,1,63.94
+City Hotel,2017-01-22,flat rate (Jul – Sep 2016),1,2.2641828958509778,3,0,2,108.75999999999999
+City Hotel,2017-01-23,flat rate (Jul – Sep 2016),1,1.8760372565622383,5,0,4,304.8
+City Hotel,2017-01-24,flat rate (Jul – Sep 2016),1,1.6172734970364122,3,0,2,152.0
+City Hotel,2017-01-25,flat rate (Jul – Sep 2016),1,2.846401354784087,7,0,6,390.0
+City Hotel,2017-01-26,flat rate (Jul – Sep 2016),0,1.4232006773920418,1,0,1,65.0
+City Hotel,2017-01-27,flat rate (Jul – Sep 2016),1,2.328873835732434,3,0,2,114.19999999999999
+City Hotel,2017-01-28,flat rate (Jul – Sep 2016),0,1.487891617273499,0,0,0,0.0
+City Hotel,2017-01-29,flat rate (Jul – Sep 2016),0,1.4232006773920418,5,0,5,296.0
+City Hotel,2017-01-30,flat rate (Jul – Sep 2016),0,1.4232006773920418,3,0,3,192.60000000000002
+City Hotel,2017-01-31,flat rate (Jul – Sep 2016),0,0.4528365791701949,0,0,0,0.0
+City Hotel,2017-02-01,flat rate (Jul – Sep 2016),0,1.1644369178662164,2,0,2,150.4
+City Hotel,2017-02-02,flat rate (Jul – Sep 2016),1,2.717019475021174,1,0,0,0.0
+City Hotel,2017-02-03,flat rate (Jul – Sep 2016),1,2.781710414902631,6,0,5,340.0
+City Hotel,2017-02-04,flat rate (Jul – Sep 2016),1,2.1348010160880646,3,0,2,118.4
+City Hotel,2017-02-05,flat rate (Jul – Sep 2016),2,3.6226926333615674,3,0,1,55.0
+City Hotel,2017-02-06,flat rate (Jul – Sep 2016),0,1.2938187976291289,1,0,1,65.5
+City Hotel,2017-02-07,flat rate (Jul – Sep 2016),1,1.5525825571549552,3,0,2,137.54000000000002
+City Hotel,2017-02-08,flat rate (Jul – Sep 2016),0,1.3585097375105852,2,0,2,142.2
+City Hotel,2017-02-09,flat rate (Jul – Sep 2016),1,2.846401354784087,4,0,3,187.74
+City Hotel,2017-02-10,flat rate (Jul – Sep 2016),2,3.2345469940728275,4,0,2,136.0
+City Hotel,2017-02-11,flat rate (Jul – Sep 2016),1,2.1994919559695214,1,0,0,0.0
+City Hotel,2017-02-12,flat rate (Jul – Sep 2016),2,4.075529212531764,0,2,0,500.0
+City Hotel,2017-02-13,flat rate (Jul – Sep 2016),2,3.881456392887394,3,0,1,70.94999999999999
+City Hotel,2017-02-14,flat rate (Jul – Sep 2016),1,2.5876375952582613,6,0,5,357.75
+City Hotel,2017-02-15,flat rate (Jul – Sep 2016),4,5.692802709568186,4,0,0,0.0
+City Hotel,2017-02-16,flat rate (Jul – Sep 2016),1,1.8113463166807815,1,0,0,0.0
+City Hotel,2017-02-17,flat rate (Jul – Sep 2016),1,2.328873835732434,0,1,0,250.0
+City Hotel,2017-02-18,flat rate (Jul – Sep 2016),1,1.8113463166807815,1,0,0,0.0
+City Hotel,2017-02-19,flat rate (Jul – Sep 2016),2,4.075529212531764,2,0,0,0.0
+City Hotel,2017-02-20,flat rate (Jul – Sep 2016),2,3.2992379339542843,4,0,2,140.0
+City Hotel,2017-02-21,flat rate (Jul – Sep 2016),1,1.940728196443694,1,0,0,0.0
+City Hotel,2017-02-22,flat rate (Jul – Sep 2016),3,5.045893310753617,2,1,0,250.0
+City Hotel,2017-02-23,flat rate (Jul – Sep 2016),1,1.6172734970364122,0,1,0,250.0
+City Hotel,2017-02-24,flat rate (Jul – Sep 2016),1,2.4582557154953477,4,0,3,210.29999999999998
+City Hotel,2017-02-25,flat rate (Jul – Sep 2016),7,9.962404741744354,60,0,53,2915.0
+City Hotel,2017-02-26,flat rate (Jul – Sep 2016),4,5.628111769686728,7,0,3,171.0
+City Hotel,2017-02-27,flat rate (Jul – Sep 2016),2,3.6226926333615674,4,0,2,152.0
+City Hotel,2017-02-28,flat rate (Jul – Sep 2016),0,1.2938187976291289,3,0,3,215.39999999999998
+City Hotel,2017-03-01,flat rate (Jul – Sep 2016),1,2.5229466553768036,2,0,1,71.8
+City Hotel,2017-03-02,flat rate (Jul – Sep 2016),2,3.881456392887394,6,0,4,272.0
+City Hotel,2017-03-03,flat rate (Jul – Sep 2016),3,4.204911092294678,6,0,3,204.0
+City Hotel,2017-03-04,flat rate (Jul – Sep 2016),1,2.1348010160880646,3,0,2,143.6
+City Hotel,2017-03-05,flat rate (Jul – Sep 2016),3,4.204911092294678,3,0,0,0.0
+City Hotel,2017-03-06,flat rate (Jul – Sep 2016),3,5.304657070279443,7,0,4,240.0
+City Hotel,2017-03-07,flat rate (Jul – Sep 2016),2,3.169856054191371,6,0,4,272.0
+City Hotel,2017-03-08,flat rate (Jul – Sep 2016),1,2.5876375952582613,4,0,3,197.85000000000002
+City Hotel,2017-03-09,flat rate (Jul – Sep 2016),2,2.911092294665544,3,0,1,68.0
+City Hotel,2017-03-10,flat rate (Jul – Sep 2016),4,5.886875529212555,2,2,0,500.0
+City Hotel,2017-03-11,flat rate (Jul – Sep 2016),1,2.717019475021174,1,0,0,0.0
+City Hotel,2017-03-12,flat rate (Jul – Sep 2016),1,2.911092294665544,3,0,2,120.0
+City Hotel,2017-03-13,flat rate (Jul – Sep 2016),3,4.851820491109246,8,0,5,359.0
+City Hotel,2017-03-14,flat rate (Jul – Sep 2016),2,3.9461473327688514,11,0,9,486.0
+City Hotel,2017-03-15,flat rate (Jul – Sep 2016),2,3.881456392887394,7,0,5,337.0
+City Hotel,2017-03-16,flat rate (Jul – Sep 2016),3,4.851820491109246,6,0,3,174.0
+City Hotel,2017-03-17,flat rate (Jul – Sep 2016),3,4.528365791701962,2,1,0,250.0
+City Hotel,2017-03-18,flat rate (Jul – Sep 2016),2,3.040474174428457,1,1,0,250.0
+City Hotel,2017-03-19,flat rate (Jul – Sep 2016),3,4.722438611346332,4,0,1,59.2
+City Hotel,2017-03-20,flat rate (Jul – Sep 2016),4,5.692802709568186,4,0,0,0.0
+City Hotel,2017-03-21,flat rate (Jul – Sep 2016),1,2.2641828958509778,3,0,2,147.64
+City Hotel,2017-03-22,flat rate (Jul – Sep 2016),1,2.328873835732434,7,0,6,422.40000000000003
+City Hotel,2017-03-23,flat rate (Jul – Sep 2016),2,3.752074513124481,5,0,3,219.0
+City Hotel,2017-03-24,flat rate (Jul – Sep 2016),5,6.7278577476714965,3,2,0,500.0
+City Hotel,2017-03-25,flat rate (Jul – Sep 2016),2,2.975783234547001,4,0,2,165.7
+City Hotel,2017-03-26,flat rate (Jul – Sep 2016),3,4.787129551227789,2,1,0,250.0
+City Hotel,2017-03-27,flat rate (Jul – Sep 2016),4,5.304657070279443,3,1,0,250.0
+City Hotel,2017-03-28,flat rate (Jul – Sep 2016),1,2.070110076206608,2,0,1,77.475
+City Hotel,2017-03-29,flat rate (Jul – Sep 2016),2,3.493310753598654,1,1,0,250.0
+City Hotel,2017-03-30,flat rate (Jul – Sep 2016),3,4.334292972057591,7,0,4,285.88
+City Hotel,2017-03-31,flat rate (Jul – Sep 2016),3,4.398983911939048,2,1,0,250.0
+City Hotel,2017-04-01,flat rate (Jul – Sep 2016),3,3.687383573243024,4,0,1,97.0
+City Hotel,2017-04-02,flat rate (Jul – Sep 2016),2,3.169856054191371,1,1,0,250.0
+City Hotel,2017-04-03,flat rate (Jul – Sep 2016),4,6.01625740897547,1,3,0,750.0
+City Hotel,2017-04-04,flat rate (Jul – Sep 2016),1,1.7466553767993245,2,0,1,106.0
+City Hotel,2017-04-05,flat rate (Jul – Sep 2016),3,4.5930567315834185,7,0,4,320.0
+City Hotel,2017-04-06,flat rate (Jul – Sep 2016),3,3.9461473327688514,3,0,0,0.0
+City Hotel,2017-04-07,flat rate (Jul – Sep 2016),3,3.752074513124481,3,0,0,0.0
+City Hotel,2017-04-08,flat rate (Jul – Sep 2016),2,3.493310753598654,3,0,1,95.0
+City Hotel,2017-04-09,flat rate (Jul – Sep 2016),4,5.628111769686728,10,0,6,582.0
+City Hotel,2017-04-10,flat rate (Jul – Sep 2016),3,4.5930567315834185,3,0,0,0.0
+City Hotel,2017-04-11,flat rate (Jul – Sep 2016),2,3.169856054191371,0,2,0,500.0
+City Hotel,2017-04-12,flat rate (Jul – Sep 2016),2,3.3639288738357407,6,0,4,406.0
+City Hotel,2017-04-13,flat rate (Jul – Sep 2016),3,4.010838272650308,5,0,2,222.5
+City Hotel,2017-04-14,flat rate (Jul – Sep 2016),3,4.657747671464875,3,0,0,0.0
+City Hotel,2017-04-15,flat rate (Jul – Sep 2016),3,4.2696020321761345,1,2,0,500.0
+City Hotel,2017-04-16,flat rate (Jul – Sep 2016),2,3.040474174428457,2,0,0,0.0
+City Hotel,2017-04-17,flat rate (Jul – Sep 2016),3,4.2696020321761345,3,0,0,0.0
+City Hotel,2017-04-18,flat rate (Jul – Sep 2016),2,2.717019475021174,1,1,0,250.0
+City Hotel,2017-04-19,flat rate (Jul – Sep 2016),4,4.9165114309907025,0,4,0,1000.0
+City Hotel,2017-04-20,flat rate (Jul – Sep 2016),3,4.204911092294678,0,3,0,750.0
+City Hotel,2017-04-21,flat rate (Jul – Sep 2016),4,5.045893310753617,5,0,1,97.0
+City Hotel,2017-04-22,flat rate (Jul – Sep 2016),1,2.070110076206608,0,1,0,250.0
+City Hotel,2017-04-23,flat rate (Jul – Sep 2016),3,4.204911092294678,2,1,0,250.0
+City Hotel,2017-04-24,flat rate (Jul – Sep 2016),4,5.17527519051653,1,3,0,750.0
+City Hotel,2017-04-25,flat rate (Jul – Sep 2016),1,2.2641828958509778,1,0,0,0.0
+City Hotel,2017-04-26,flat rate (Jul – Sep 2016),2,2.6523285351397177,4,0,2,180.0
+City Hotel,2017-04-27,flat rate (Jul – Sep 2016),3,3.752074513124481,5,0,2,191.2
+City Hotel,2017-04-28,flat rate (Jul – Sep 2016),6,7.956985605419181,8,0,2,220.0
+City Hotel,2017-04-29,flat rate (Jul – Sep 2016),3,4.657747671464875,6,0,3,331.5
+City Hotel,2017-04-30,flat rate (Jul – Sep 2016),2,3.040474174428457,3,0,1,103.0
+City Hotel,2017-05-01,flat rate (Jul – Sep 2016),3,4.722438611346332,4,0,1,97.0
+City Hotel,2017-05-02,flat rate (Jul – Sep 2016),4,5.045893310753617,4,0,0,0.0
+City Hotel,2017-05-03,flat rate (Jul – Sep 2016),2,2.5229466553768036,8,0,6,660.0
+City Hotel,2017-05-04,flat rate (Jul – Sep 2016),2,3.493310753598654,4,0,2,214.0
+City Hotel,2017-05-05,flat rate (Jul – Sep 2016),5,6.01625740897547,4,1,0,250.0
+City Hotel,2017-05-06,flat rate (Jul – Sep 2016),4,5.17527519051653,4,0,0,0.0
+City Hotel,2017-05-07,flat rate (Jul – Sep 2016),2,2.911092294665544,0,2,0,500.0
+City Hotel,2017-05-08,flat rate (Jul – Sep 2016),2,3.5580016934801106,2,0,0,0.0
+City Hotel,2017-05-09,flat rate (Jul – Sep 2016),3,4.2696020321761345,2,1,0,250.0
+City Hotel,2017-05-10,flat rate (Jul – Sep 2016),3,4.334292972057591,11,0,8,880.0
+City Hotel,2017-05-11,flat rate (Jul – Sep 2016),5,5.951566469094013,2,3,0,750.0
+City Hotel,2017-05-12,flat rate (Jul – Sep 2016),3,3.881456392887394,4,0,1,127.0
+City Hotel,2017-05-13,flat rate (Jul – Sep 2016),3,3.816765453005938,2,1,0,250.0
+City Hotel,2017-05-14,flat rate (Jul – Sep 2016),4,5.498729889923814,6,0,2,220.0
+City Hotel,2017-05-15,flat rate (Jul – Sep 2016),3,4.075529212531764,4,0,1,117.25
+City Hotel,2017-05-16,flat rate (Jul – Sep 2016),2,3.040474174428457,2,0,0,0.0
+City Hotel,2017-05-17,flat rate (Jul – Sep 2016),4,4.851820491109246,6,0,2,220.0
+City Hotel,2017-05-18,flat rate (Jul – Sep 2016),4,5.045893310753617,7,0,3,345.0
+City Hotel,2017-05-19,flat rate (Jul – Sep 2016),4,4.851820491109246,4,0,0,0.0
+City Hotel,2017-05-20,flat rate (Jul – Sep 2016),4,5.304657070279443,1,3,0,750.0
+City Hotel,2017-05-21,flat rate (Jul – Sep 2016),3,4.010838272650308,4,0,1,124.0
+City Hotel,2017-05-22,flat rate (Jul – Sep 2016),4,4.9165114309907025,4,0,0,0.0
+City Hotel,2017-05-23,flat rate (Jul – Sep 2016),3,3.687383573243024,3,0,0,0.0
+City Hotel,2017-05-24,flat rate (Jul – Sep 2016),5,6.85723962743441,3,2,0,500.0
+City Hotel,2017-05-25,flat rate (Jul – Sep 2016),4,5.822184589331099,2,2,0,500.0
+City Hotel,2017-05-26,flat rate (Jul – Sep 2016),4,4.787129551227789,4,0,0,0.0
+City Hotel,2017-05-27,flat rate (Jul – Sep 2016),3,3.687383573243024,2,1,0,250.0
+City Hotel,2017-05-28,flat rate (Jul – Sep 2016),4,4.981202370872159,19,0,15,1372.8
+City Hotel,2017-05-29,flat rate (Jul – Sep 2016),3,3.687383573243024,2,1,0,250.0
+City Hotel,2017-05-30,flat rate (Jul – Sep 2016),2,3.040474174428457,2,0,0,0.0
+City Hotel,2017-05-31,flat rate (Jul – Sep 2016),2,3.6226926333615674,2,0,0,0.0
+City Hotel,2017-06-01,flat rate (Jul – Sep 2016),3,3.881456392887394,1,2,0,500.0
+City Hotel,2017-06-02,flat rate (Jul – Sep 2016),4,5.5634208298052705,3,1,0,250.0
+City Hotel,2017-06-03,flat rate (Jul – Sep 2016),3,4.2696020321761345,2,1,0,250.0
+City Hotel,2017-06-04,flat rate (Jul – Sep 2016),3,3.5580016934801106,1,2,0,500.0
+City Hotel,2017-06-05,flat rate (Jul – Sep 2016),4,5.3693480101609,4,0,0,0.0
+City Hotel,2017-06-06,flat rate (Jul – Sep 2016),3,4.010838272650308,2,1,0,250.0
+City Hotel,2017-06-07,flat rate (Jul – Sep 2016),2,3.428619813717197,2,0,0,0.0
+City Hotel,2017-06-08,flat rate (Jul – Sep 2016),4,4.657747671464875,0,4,0,1000.0
+City Hotel,2017-06-09,flat rate (Jul – Sep 2016),4,5.5634208298052705,2,2,0,500.0
+City Hotel,2017-06-10,flat rate (Jul – Sep 2016),1,2.2641828958509778,1,0,0,0.0
+City Hotel,2017-06-11,flat rate (Jul – Sep 2016),4,5.110584250635073,4,0,0,0.0
+City Hotel,2017-06-12,flat rate (Jul – Sep 2016),4,4.981202370872159,6,0,2,212.0
+City Hotel,2017-06-13,flat rate (Jul – Sep 2016),2,3.2992379339542843,4,0,2,203.0
+City Hotel,2017-06-14,flat rate (Jul – Sep 2016),3,4.075529212531764,3,0,0,0.0
+City Hotel,2017-06-15,flat rate (Jul – Sep 2016),4,4.9165114309907025,6,0,2,221.0
+City Hotel,2017-06-16,flat rate (Jul – Sep 2016),2,3.816765453005938,1,1,0,250.0
+City Hotel,2017-06-17,flat rate (Jul – Sep 2016),3,4.463674851820505,3,0,0,0.0
+City Hotel,2017-06-18,flat rate (Jul – Sep 2016),3,3.816765453005938,4,0,1,106.0
+City Hotel,2017-06-19,flat rate (Jul – Sep 2016),3,4.463674851820505,1,2,0,500.0
+City Hotel,2017-06-20,flat rate (Jul – Sep 2016),3,4.334292972057591,4,0,1,110.5
+City Hotel,2017-06-21,flat rate (Jul – Sep 2016),2,3.040474174428457,1,1,0,250.0
+City Hotel,2017-06-22,flat rate (Jul – Sep 2016),3,4.204911092294678,3,0,0,0.0
+City Hotel,2017-06-23,flat rate (Jul – Sep 2016),3,4.204911092294678,3,0,0,0.0
+City Hotel,2017-06-24,flat rate (Jul – Sep 2016),2,3.2345469940728275,7,0,5,550.0
+City Hotel,2017-06-25,flat rate (Jul – Sep 2016),5,6.533784928027125,1,4,0,1000.0
+City Hotel,2017-06-26,flat rate (Jul – Sep 2016),2,3.1051651143099144,2,0,0,0.0
+City Hotel,2017-06-27,flat rate (Jul – Sep 2016),4,5.304657070279443,5,0,1,85.75
+City Hotel,2017-06-28,flat rate (Jul – Sep 2016),3,4.787129551227789,7,0,4,370.68
+City Hotel,2017-06-29,flat rate (Jul – Sep 2016),3,3.687383573243024,2,1,0,250.0
+City Hotel,2017-06-30,flat rate (Jul – Sep 2016),3,3.881456392887394,2,1,0,250.0
+City Hotel,2017-07-01,flat rate (Jul – Sep 2016),3,3.816765453005938,0,3,0,750.0
+City Hotel,2017-07-02,flat rate (Jul – Sep 2016),2,3.1051651143099144,1,1,0,250.0
+City Hotel,2017-07-03,flat rate (Jul – Sep 2016),2,3.493310753598654,2,0,0,0.0
+City Hotel,2017-07-04,flat rate (Jul – Sep 2016),6,7.698221845893354,13,0,7,660.8000000000001
+City Hotel,2017-07-05,flat rate (Jul – Sep 2016),2,2.717019475021174,0,2,0,500.0
+City Hotel,2017-07-06,flat rate (Jul – Sep 2016),5,6.921930567315867,6,0,1,96.1
+City Hotel,2017-07-07,flat rate (Jul – Sep 2016),3,4.722438611346332,0,3,0,750.0
+City Hotel,2017-07-08,flat rate (Jul – Sep 2016),3,3.9461473327688514,1,2,0,500.0
+City Hotel,2017-07-09,flat rate (Jul – Sep 2016),3,4.722438611346332,1,2,0,500.0
+City Hotel,2017-07-10,flat rate (Jul – Sep 2016),3,4.5930567315834185,5,0,2,200.0
+City Hotel,2017-07-11,flat rate (Jul – Sep 2016),2,3.6226926333615674,2,0,0,0.0
+City Hotel,2017-07-12,flat rate (Jul – Sep 2016),3,4.204911092294678,0,3,0,750.0
+City Hotel,2017-07-13,flat rate (Jul – Sep 2016),5,6.4690939881456675,2,3,0,750.0
+City Hotel,2017-07-14,flat rate (Jul – Sep 2016),1,2.2641828958509778,2,0,1,110.0
+City Hotel,2017-07-15,flat rate (Jul – Sep 2016),5,6.7278577476714965,6,0,1,92.67
+City Hotel,2017-07-16,flat rate (Jul – Sep 2016),3,4.2696020321761345,3,0,0,0.0
+City Hotel,2017-07-17,flat rate (Jul – Sep 2016),3,4.5930567315834185,0,3,0,750.0
+City Hotel,2017-07-18,flat rate (Jul – Sep 2016),3,3.9461473327688514,1,2,0,500.0
+City Hotel,2017-07-19,flat rate (Jul – Sep 2016),2,3.1051651143099144,2,0,0,0.0
+City Hotel,2017-07-20,flat rate (Jul – Sep 2016),3,3.687383573243024,2,1,0,250.0
+City Hotel,2017-07-21,flat rate (Jul – Sep 2016),3,4.334292972057591,3,0,0,0.0
+City Hotel,2017-07-22,flat rate (Jul – Sep 2016),5,6.1456392887383835,1,4,0,1000.0
+City Hotel,2017-07-23,flat rate (Jul – Sep 2016),3,3.493310753598654,2,1,0,250.0
+City Hotel,2017-07-24,flat rate (Jul – Sep 2016),5,5.951566469094013,7,0,2,200.82999999999998
+City Hotel,2017-07-25,flat rate (Jul – Sep 2016),2,3.5580016934801106,2,0,0,0.0
+City Hotel,2017-07-26,flat rate (Jul – Sep 2016),3,4.075529212531764,2,1,0,250.0
+City Hotel,2017-07-27,flat rate (Jul – Sep 2016),3,3.881456392887394,1,2,0,500.0
+City Hotel,2017-07-28,flat rate (Jul – Sep 2016),2,3.2345469940728275,2,0,0,0.0
+City Hotel,2017-07-29,flat rate (Jul – Sep 2016),3,4.722438611346332,3,0,0,0.0
+City Hotel,2017-07-30,flat rate (Jul – Sep 2016),3,3.687383573243024,7,0,4,420.08
+City Hotel,2017-07-31,flat rate (Jul – Sep 2016),3,4.5930567315834185,4,0,1,110.5
+City Hotel,2017-08-01,flat rate (Jul – Sep 2016),2,3.428619813717197,2,0,0,0.0
+City Hotel,2017-08-02,flat rate (Jul – Sep 2016),4,4.398983911939048,0,4,0,1000.0
+City Hotel,2017-08-03,flat rate (Jul – Sep 2016),3,3.6226926333615674,3,0,0,0.0
+City Hotel,2017-08-04,flat rate (Jul – Sep 2016),3,4.204911092294678,0,3,0,750.0
+City Hotel,2017-08-05,flat rate (Jul – Sep 2016),2,2.911092294665544,1,1,0,250.0
+City Hotel,2017-08-06,flat rate (Jul – Sep 2016),2,2.911092294665544,1,1,0,250.0
+City Hotel,2017-08-07,flat rate (Jul – Sep 2016),3,4.398983911939048,2,1,0,250.0
+City Hotel,2017-08-08,flat rate (Jul – Sep 2016),2,2.5229466553768036,1,1,0,250.0
+City Hotel,2017-08-09,flat rate (Jul – Sep 2016),3,4.010838272650308,1,2,0,500.0
+City Hotel,2017-08-10,flat rate (Jul – Sep 2016),2,3.493310753598654,7,0,5,552.5
+City Hotel,2017-08-11,flat rate (Jul – Sep 2016),1,2.2641828958509778,1,0,0,0.0
+City Hotel,2017-08-12,flat rate (Jul – Sep 2016),4,5.045893310753617,0,4,0,1000.0
+City Hotel,2017-08-13,flat rate (Jul – Sep 2016),2,2.975783234547001,1,1,0,250.0
+City Hotel,2017-08-14,flat rate (Jul – Sep 2016),3,3.881456392887394,0,3,0,750.0
+City Hotel,2017-08-15,flat rate (Jul – Sep 2016),3,4.2696020321761345,5,0,2,210.1
+City Hotel,2017-08-16,flat rate (Jul – Sep 2016),3,3.881456392887394,4,0,1,105.0
+City Hotel,2017-08-17,flat rate (Jul – Sep 2016),3,3.881456392887394,1,2,0,500.0
+City Hotel,2017-08-18,flat rate (Jul – Sep 2016),3,3.6226926333615674,2,1,0,250.0
+City Hotel,2017-08-19,flat rate (Jul – Sep 2016),3,3.5580016934801106,4,0,1,111.5
+City Hotel,2017-08-20,flat rate (Jul – Sep 2016),3,4.722438611346332,1,2,0,500.0
+City Hotel,2017-08-21,flat rate (Jul – Sep 2016),3,4.075529212531764,4,0,1,105.0
+City Hotel,2017-08-22,flat rate (Jul – Sep 2016),1,2.1994919559695214,1,0,0,0.0
+City Hotel,2017-08-23,flat rate (Jul – Sep 2016),2,3.3639288738357407,1,1,0,250.0
+City Hotel,2017-08-24,flat rate (Jul – Sep 2016),2,2.6523285351397177,2,0,0,0.0
+City Hotel,2017-08-25,flat rate (Jul – Sep 2016),5,6.598475867908583,0,5,0,1250.0
+City Hotel,2017-08-26,flat rate (Jul – Sep 2016),3,3.9461473327688514,2,1,0,250.0
+City Hotel,2017-08-27,flat rate (Jul – Sep 2016),3,4.204911092294678,3,0,0,0.0
+City Hotel,2017-08-28,flat rate (Jul – Sep 2016),5,6.66316680779004,3,2,0,500.0
+City Hotel,2017-08-29,flat rate (Jul – Sep 2016),2,3.2345469940728275,1,1,0,250.0
+City Hotel,2017-08-30,flat rate (Jul – Sep 2016),1,2.070110076206608,1,0,0,0.0
+City Hotel,2017-08-31,flat rate (Jul – Sep 2016),2,2.717019475021174,0,2,0,500.0
+Resort Hotel,2017-01-01,model + blocks + re-level 8 wk,0,0.4777938153159326,0,0,0,0.0
+Resort Hotel,2017-01-02,model + blocks + re-level 8 wk,0,1.1471679176331693,1,0,1,28.0
+Resort Hotel,2017-01-03,model + blocks + re-level 8 wk,0,0.3590693803726545,0,0,0,0.0
+Resort Hotel,2017-01-04,model + blocks + re-level 8 wk,0,0.2856986470842339,1,0,1,33.0
+Resort Hotel,2017-01-05,model + blocks + re-level 8 wk,0,0.4908944547872211,0,0,0,0.0
+Resort Hotel,2017-01-06,model + blocks + re-level 8 wk,0,0.8004764911085713,0,0,0,0.0
+Resort Hotel,2017-01-07,model + blocks + re-level 8 wk,0,0.6796437608801229,0,0,0,0.0
+Resort Hotel,2017-01-08,model + blocks + re-level 8 wk,0,0.5795334440183699,0,0,0,0.0
+Resort Hotel,2017-01-09,model + blocks + re-level 8 wk,0,0.6314051222953209,0,0,0,0.0
+Resort Hotel,2017-01-10,model + blocks + re-level 8 wk,0,0.42765710434793686,0,0,0,0.0
+Resort Hotel,2017-01-11,model + blocks + re-level 8 wk,0,0.1389192239659811,1,0,1,42.0
+Resort Hotel,2017-01-12,model + blocks + re-level 8 wk,0,1.0986276721700405,4,0,4,112.0
+Resort Hotel,2017-01-13,model + blocks + re-level 8 wk,0,0.21216610028374688,1,0,1,34.27
+Resort Hotel,2017-01-14,model + blocks + re-level 8 wk,0,0.6157782756851391,2,0,2,70.0
+Resort Hotel,2017-01-15,model + blocks + re-level 8 wk,0,0.33648392121419474,0,0,0,0.0
+Resort Hotel,2017-01-16,model + blocks + re-level 8 wk,0,3.234265149056488,7,0,7,245.0
+Resort Hotel,2017-01-17,model + blocks + re-level 8 wk,0,0.6102811511047432,1,0,1,26.4
+Resort Hotel,2017-01-18,model + blocks + re-level 8 wk,0,0.3157103420748583,0,0,0,0.0
+Resort Hotel,2017-01-19,model + blocks + re-level 8 wk,0,0.7768644504772555,0,0,0,0.0
+Resort Hotel,2017-01-20,model + blocks + re-level 8 wk,0,0.15705271985470304,0,0,0,0.0
+Resort Hotel,2017-01-21,model + blocks + re-level 8 wk,0,0.6224624849557967,1,0,1,27.700000000000003
+Resort Hotel,2017-01-22,model + blocks + re-level 8 wk,0,0.6989636016563873,0,0,0,0.0
+Resort Hotel,2017-01-23,model + blocks + re-level 8 wk,0,0.6348279915208352,1,0,1,23.0
+Resort Hotel,2017-01-24,model + blocks + re-level 8 wk,0,0.5068087242905537,0,0,0,0.0
+Resort Hotel,2017-01-25,model + blocks + re-level 8 wk,0,0.49834281696127364,0,0,0,0.0
+Resort Hotel,2017-01-26,model + blocks + re-level 8 wk,0,0.9465739373274045,0,0,0,0.0
+Resort Hotel,2017-01-27,model + blocks + re-level 8 wk,0,1.3092605549194845,2,0,2,55.0
+Resort Hotel,2017-01-28,model + blocks + re-level 8 wk,0,1.4707903757422818,3,0,3,72.0
+Resort Hotel,2017-01-29,model + blocks + re-level 8 wk,0,0.36133788234809494,0,0,0,0.0
+Resort Hotel,2017-01-30,model + blocks + re-level 8 wk,0,1.342876554286083,2,0,2,70.2
+Resort Hotel,2017-01-31,model + blocks + re-level 8 wk,0,0.4253031815396766,0,0,0,0.0
+Resort Hotel,2017-02-01,model + blocks + re-level 8 wk,0,0.19161231469582002,0,0,0,0.0
+Resort Hotel,2017-02-02,model + blocks + re-level 8 wk,0,0.5351637559866561,1,0,1,19.5
+Resort Hotel,2017-02-03,model + blocks + re-level 8 wk,0,1.1729980987149513,0,0,0,0.0
+Resort Hotel,2017-02-04,model + blocks + re-level 8 wk,1,2.832198926609845,0,1,0,250.0
+Resort Hotel,2017-02-05,model + blocks + re-level 8 wk,0,0.2679066772311929,0,0,0,0.0
+Resort Hotel,2017-02-06,model + blocks + re-level 8 wk,0,2.0152752680230885,2,0,2,140.0
+Resort Hotel,2017-02-07,model + blocks + re-level 8 wk,0,0.3679111622988957,1,0,1,24.560000000000002
+Resort Hotel,2017-02-08,model + blocks + re-level 8 wk,0,0.7251028069025022,2,0,2,68.0
+Resort Hotel,2017-02-09,model + blocks + re-level 8 wk,0,0.6784668691967803,1,0,1,24.355000000000004
+Resort Hotel,2017-02-10,model + blocks + re-level 8 wk,0,0.6795314983573013,1,0,1,30.9
+Resort Hotel,2017-02-11,model + blocks + re-level 8 wk,0,1.0442488812982968,3,0,3,90.0
+Resort Hotel,2017-02-12,model + blocks + re-level 8 wk,0,0.626501612248939,1,0,1,45.91
+Resort Hotel,2017-02-13,model + blocks + re-level 8 wk,0,3.3446091842034242,3,0,3,126.0
+Resort Hotel,2017-02-14,model + blocks + re-level 8 wk,0,1.326486718211592,6,0,6,240.0
+Resort Hotel,2017-02-15,model + blocks + re-level 8 wk,0,0.5483877397666229,0,0,0,0.0
+Resort Hotel,2017-02-16,model + blocks + re-level 8 wk,0,0.9077958650482547,1,0,1,27.5
+Resort Hotel,2017-02-17,model + blocks + re-level 8 wk,0,2.5973124503464664,3,0,3,81.0
+Resort Hotel,2017-02-18,model + blocks + re-level 8 wk,0,1.675064788657187,1,0,1,35.05
+Resort Hotel,2017-02-19,model + blocks + re-level 8 wk,0,0.8395756110124812,0,0,0,0.0
+Resort Hotel,2017-02-20,model + blocks + re-level 8 wk,0,0.8420011703120441,0,0,0,0.0
+Resort Hotel,2017-02-21,model + blocks + re-level 8 wk,0,0.8545757021989774,2,0,2,48.0
+Resort Hotel,2017-02-22,model + blocks + re-level 8 wk,0,1.1121839101527509,0,0,0,0.0
+Resort Hotel,2017-02-23,model + blocks + re-level 8 wk,0,1.6516016965703744,13,0,13,520.0
+Resort Hotel,2017-02-24,model + blocks + re-level 8 wk,0,1.640600601546781,5,0,5,224.0
+Resort Hotel,2017-02-25,model + blocks + re-level 8 wk,2,4.437023731264789,4,0,2,86.0
+Resort Hotel,2017-02-26,model + blocks + re-level 8 wk,0,0.8719752519584146,1,0,1,35.4
+Resort Hotel,2017-02-27,model + blocks + re-level 8 wk,0,0.5954133438358153,1,0,1,34.4
+Resort Hotel,2017-02-28,model + blocks + re-level 8 wk,0,0.6397497305377285,0,0,0,0.0
+Resort Hotel,2017-03-01,model + blocks + re-level 8 wk,0,2.117069626703031,0,0,0,0.0
+Resort Hotel,2017-03-02,model + blocks + re-level 8 wk,0,0.5247061092499581,0,0,0,0.0
+Resort Hotel,2017-03-03,model + blocks + re-level 8 wk,0,0.7893680410225423,5,0,5,161.5
+Resort Hotel,2017-03-04,model + blocks + re-level 8 wk,0,0.5612829955707314,0,0,0,0.0
+Resort Hotel,2017-03-05,model + blocks + re-level 8 wk,1,2.995891785185872,0,1,0,250.0
+Resort Hotel,2017-03-06,model + blocks + re-level 8 wk,0,1.0933770933780225,0,0,0,0.0
+Resort Hotel,2017-03-07,model + blocks + re-level 8 wk,0,1.1564842153736237,0,0,0,0.0
+Resort Hotel,2017-03-08,model + blocks + re-level 8 wk,0,0.8833066228614964,1,0,1,40.0
+Resort Hotel,2017-03-09,model + blocks + re-level 8 wk,0,1.7787073374165123,2,0,2,95.67000000000002
+Resort Hotel,2017-03-10,model + blocks + re-level 8 wk,1,2.8678818535723956,2,0,1,45.0
+Resort Hotel,2017-03-11,model + blocks + re-level 8 wk,0,3.4961903879533582,4,0,4,124.0
+Resort Hotel,2017-03-12,model + blocks + re-level 8 wk,0,2.8220577443762793,1,0,1,32.55
+Resort Hotel,2017-03-13,model + blocks + re-level 8 wk,1,3.565847664394143,3,0,2,60.0
+Resort Hotel,2017-03-14,model + blocks + re-level 8 wk,0,1.8287205393035793,1,0,1,46.7
+Resort Hotel,2017-03-15,model + blocks + re-level 8 wk,0,1.7053393139374013,1,0,1,20.0
+Resort Hotel,2017-03-16,model + blocks + re-level 8 wk,0,2.455314362778314,0,0,0,0.0
+Resort Hotel,2017-03-17,model + blocks + re-level 8 wk,0,0.9063147321386916,1,0,1,48.0
+Resort Hotel,2017-03-18,model + blocks + re-level 8 wk,0,2.40773573514511,4,0,4,160.0
+Resort Hotel,2017-03-19,model + blocks + re-level 8 wk,0,2.2828180998940173,0,0,0,0.0
+Resort Hotel,2017-03-20,model + blocks + re-level 8 wk,0,1.8139371462278853,0,0,0,0.0
+Resort Hotel,2017-03-21,model + blocks + re-level 8 wk,0,1.1833344835125585,0,0,0,0.0
+Resort Hotel,2017-03-22,model + blocks + re-level 8 wk,0,0.5767501224073067,1,0,1,44.18000000000001
+Resort Hotel,2017-03-23,model + blocks + re-level 8 wk,0,0.8470089223622584,0,0,0,0.0
+Resort Hotel,2017-03-24,model + blocks + re-level 8 wk,0,1.1559519350350682,1,0,1,35.6
+Resort Hotel,2017-03-25,model + blocks + re-level 8 wk,0,2.8071650608281438,0,0,0,0.0
+Resort Hotel,2017-03-26,model + blocks + re-level 8 wk,0,1.6700925560065574,2,0,2,88.13999999999999
+Resort Hotel,2017-03-27,model + blocks + re-level 8 wk,0,1.3996119270313547,0,0,0,0.0
+Resort Hotel,2017-03-28,model + blocks + re-level 8 wk,0,1.3480217030113408,2,0,2,82.0
+Resort Hotel,2017-03-29,model + blocks + re-level 8 wk,0,2.152173139182297,2,0,2,60.0
+Resort Hotel,2017-03-30,model + blocks + re-level 8 wk,1,2.22937043544191,1,0,0,0.0
+Resort Hotel,2017-03-31,model + blocks + re-level 8 wk,1,2.627563841431269,0,1,0,250.0
+Resort Hotel,2017-04-01,model + blocks + re-level 8 wk,0,1.5376582693581047,0,0,0,0.0
+Resort Hotel,2017-04-02,model + blocks + re-level 8 wk,0,0.9695692139590383,0,0,0,0.0
+Resort Hotel,2017-04-03,model + blocks + re-level 8 wk,0,7.055565936677337,15,0,15,450.0
+Resort Hotel,2017-04-04,model + blocks + re-level 8 wk,0,0.8714086112212438,0,0,0,0.0
+Resort Hotel,2017-04-05,model + blocks + re-level 8 wk,0,3.021020396679585,2,0,2,56.0
+Resort Hotel,2017-04-06,model + blocks + re-level 8 wk,0,1.0699468108255248,1,0,1,49.64
+Resort Hotel,2017-04-07,model + blocks + re-level 8 wk,0,0.7655429816926753,1,0,1,63.5
+Resort Hotel,2017-04-08,model + blocks + re-level 8 wk,1,2.529061382540293,2,0,1,60.0
+Resort Hotel,2017-04-09,model + blocks + re-level 8 wk,1,2.8967469167459603,0,1,0,250.0
+Resort Hotel,2017-04-10,model + blocks + re-level 8 wk,0,1.4792632399254324,1,0,1,58.849999999999994
+Resort Hotel,2017-04-11,model + blocks + re-level 8 wk,1,1.7767558455029122,3,0,2,160.0
+Resort Hotel,2017-04-12,model + blocks + re-level 8 wk,1,1.868485244655244,0,1,0,250.0
+Resort Hotel,2017-04-13,model + blocks + re-level 8 wk,2,3.7627642641654715,1,1,0,250.0
+Resort Hotel,2017-04-14,model + blocks + re-level 8 wk,1,2.475441950320045,0,1,0,250.0
+Resort Hotel,2017-04-15,model + blocks + re-level 8 wk,0,1.6657865647794623,1,0,1,52.5
+Resort Hotel,2017-04-16,model + blocks + re-level 8 wk,0,1.8780900790801969,3,0,3,187.5
+Resort Hotel,2017-04-17,model + blocks + re-level 8 wk,1,1.913144508605973,0,1,0,250.0
+Resort Hotel,2017-04-18,model + blocks + re-level 8 wk,0,0.9391074875921602,1,0,1,54.599999999999994
+Resort Hotel,2017-04-19,model + blocks + re-level 8 wk,0,1.4561326596661162,1,0,1,64.0
+Resort Hotel,2017-04-20,model + blocks + re-level 8 wk,0,1.0679755873956265,2,0,2,107.58000000000001
+Resort Hotel,2017-04-21,model + blocks + re-level 8 wk,0,0.7274046318046461,1,0,1,41.5
+Resort Hotel,2017-04-22,model + blocks + re-level 8 wk,0,2.3650489108422152,0,0,0,0.0
+Resort Hotel,2017-04-23,model + blocks + re-level 8 wk,0,1.990536185208804,2,0,2,108.0
+Resort Hotel,2017-04-24,model + blocks + re-level 8 wk,0,0.32398970486188966,0,0,0,0.0
+Resort Hotel,2017-04-25,model + blocks + re-level 8 wk,0,1.2507909111454636,0,0,0,0.0
+Resort Hotel,2017-04-26,model + blocks + re-level 8 wk,0,0.540240129505694,0,0,0,0.0
+Resort Hotel,2017-04-27,model + blocks + re-level 8 wk,0,1.1813355867846282,2,0,2,151.5
+Resort Hotel,2017-04-28,model + blocks + re-level 8 wk,0,1.3399161057172857,0,0,0,0.0
+Resort Hotel,2017-04-29,model + blocks + re-level 8 wk,1,2.859881143940223,2,0,1,63.0
+Resort Hotel,2017-04-30,model + blocks + re-level 8 wk,0,1.3676859649829756,1,0,1,52.43000000000001
+Resort Hotel,2017-05-01,model + blocks + re-level 8 wk,0,0.9871063291725756,0,0,0,0.0
+Resort Hotel,2017-05-02,model + blocks + re-level 8 wk,0,1.039138273687871,1,0,1,32.85
+Resort Hotel,2017-05-03,model + blocks + re-level 8 wk,0,1.612938178414924,1,0,1,42.0
+Resort Hotel,2017-05-04,model + blocks + re-level 8 wk,0,1.5217135052905975,2,0,2,84.0
+Resort Hotel,2017-05-05,model + blocks + re-level 8 wk,0,1.029071604158515,1,0,1,56.0
+Resort Hotel,2017-05-06,model + blocks + re-level 8 wk,0,0.7504429576483623,0,0,0,0.0
+Resort Hotel,2017-05-07,model + blocks + re-level 8 wk,0,0.9011104254205285,1,0,1,54.25
+Resort Hotel,2017-05-08,model + blocks + re-level 8 wk,0,2.04690451532611,1,0,1,61.43000000000001
+Resort Hotel,2017-05-09,model + blocks + re-level 8 wk,0,1.398907671589551,0,0,0,0.0
+Resort Hotel,2017-05-10,model + blocks + re-level 8 wk,0,0.36086065062064354,0,0,0,0.0
+Resort Hotel,2017-05-11,model + blocks + re-level 8 wk,0,0.6823520249034334,1,0,1,80.0
+Resort Hotel,2017-05-12,model + blocks + re-level 8 wk,0,1.1478260744767423,1,0,1,76.25
+Resort Hotel,2017-05-13,model + blocks + re-level 8 wk,0,1.3741702383864531,3,0,3,168.0
+Resort Hotel,2017-05-14,model + blocks + re-level 8 wk,0,0.7597914723744607,0,0,0,0.0
+Resort Hotel,2017-05-15,model + blocks + re-level 8 wk,0,0.7988499234575438,0,0,0,0.0
+Resort Hotel,2017-05-16,model + blocks + re-level 8 wk,0,1.2756798138737018,2,0,2,109.35
+Resort Hotel,2017-05-17,model + blocks + re-level 8 wk,0,1.0505371092730285,0,0,0,0.0
+Resort Hotel,2017-05-18,model + blocks + re-level 8 wk,0,0.8194739686637931,0,0,0,0.0
+Resort Hotel,2017-05-19,model + blocks + re-level 8 wk,0,0.5313371101942175,1,0,1,73.73
+Resort Hotel,2017-05-20,model + blocks + re-level 8 wk,0,0.6093126439896113,0,0,0,0.0
+Resort Hotel,2017-05-21,model + blocks + re-level 8 wk,0,0.9572476938000222,8,0,8,262.8
+Resort Hotel,2017-05-22,model + blocks + re-level 8 wk,0,0.9285271903011981,0,0,0,0.0
+Resort Hotel,2017-05-23,model + blocks + re-level 8 wk,0,0.975948291672743,5,0,5,250.25000000000006
+Resort Hotel,2017-05-24,model + blocks + re-level 8 wk,0,1.1657882072960144,0,0,0,0.0
+Resort Hotel,2017-05-25,model + blocks + re-level 8 wk,1,3.4379525494289,1,0,0,0.0
+Resort Hotel,2017-05-26,model + blocks + re-level 8 wk,0,0.9446338321369087,3,0,3,232.92000000000002
+Resort Hotel,2017-05-27,model + blocks + re-level 8 wk,0,0.46941211321683163,0,0,0,0.0
+Resort Hotel,2017-05-28,model + blocks + re-level 8 wk,1,2.2760848189735796,6,0,5,361.375
+Resort Hotel,2017-05-29,model + blocks + re-level 8 wk,0,1.085438699760761,2,0,2,160.2
+Resort Hotel,2017-05-30,model + blocks + re-level 8 wk,0,0.8734150958329853,0,0,0,0.0
+Resort Hotel,2017-05-31,model + blocks + re-level 8 wk,0,0.6121664833645077,2,0,2,110.25
+Resort Hotel,2017-06-01,model + blocks + re-level 8 wk,0,0.9955192719590731,1,0,1,80.19999999999999
+Resort Hotel,2017-06-02,model + blocks + re-level 8 wk,1,1.8006336460763697,2,0,1,100.0
+Resort Hotel,2017-06-03,model + blocks + re-level 8 wk,1,2.9430285173302275,4,0,3,204.60000000000002
+Resort Hotel,2017-06-04,model + blocks + re-level 8 wk,0,1.5302416727738692,3,0,3,201.57
+Resort Hotel,2017-06-05,model + blocks + re-level 8 wk,0,0.7748756831939906,0,0,0,0.0
+Resort Hotel,2017-06-06,model + blocks + re-level 8 wk,0,0.6419262333455515,0,0,0,0.0
+Resort Hotel,2017-06-07,model + blocks + re-level 8 wk,0,0.838182352512984,2,0,2,150.0
+Resort Hotel,2017-06-08,model + blocks + re-level 8 wk,0,0.9860296194924253,0,0,0,0.0
+Resort Hotel,2017-06-09,model + blocks + re-level 8 wk,1,1.8987474444349366,5,0,4,456.0
+Resort Hotel,2017-06-10,model + blocks + re-level 8 wk,1,1.8774714969369404,2,0,1,112.5
+Resort Hotel,2017-06-11,model + blocks + re-level 8 wk,0,1.3889806602454182,2,0,2,94.4
+Resort Hotel,2017-06-12,model + blocks + re-level 8 wk,0,0.9304571643572296,1,0,1,95.0
+Resort Hotel,2017-06-13,model + blocks + re-level 8 wk,1,1.3346274499131014,0,1,0,250.0
+Resort Hotel,2017-06-14,model + blocks + re-level 8 wk,0,1.1201764531805958,2,0,2,208.0
+Resort Hotel,2017-06-15,model + blocks + re-level 8 wk,1,1.4272506734714863,1,0,0,0.0
+Resort Hotel,2017-06-16,model + blocks + re-level 8 wk,0,0.867409685566313,1,0,1,100.6
+Resort Hotel,2017-06-17,model + blocks + re-level 8 wk,1,1.6327644082977455,0,1,0,250.0
+Resort Hotel,2017-06-18,model + blocks + re-level 8 wk,0,0.9668752126097017,0,0,0,0.0
+Resort Hotel,2017-06-19,model + blocks + re-level 8 wk,1,1.48080780715209,0,1,0,250.0
+Resort Hotel,2017-06-20,model + blocks + re-level 8 wk,0,1.1706667778179278,0,0,0,0.0
+Resort Hotel,2017-06-21,model + blocks + re-level 8 wk,0,1.0968093300482116,0,0,0,0.0
+Resort Hotel,2017-06-22,model + blocks + re-level 8 wk,1,1.4675477528965788,0,1,0,250.0
+Resort Hotel,2017-06-23,model + blocks + re-level 8 wk,0,1.1028186793944654,1,0,1,114.0
+Resort Hotel,2017-06-24,model + blocks + re-level 8 wk,1,2.07429564938416,1,0,0,0.0
+Resort Hotel,2017-06-25,model + blocks + re-level 8 wk,0,0.7832960699818801,1,0,1,62.44999999999999
+Resort Hotel,2017-06-26,model + blocks + re-level 8 wk,0,1.5486261702508646,2,0,2,176.0
+Resort Hotel,2017-06-27,model + blocks + re-level 8 wk,0,0.5265005905007784,2,0,2,200.64
+Resort Hotel,2017-06-28,model + blocks + re-level 8 wk,0,0.5391343200191251,0,0,0,0.0
+Resort Hotel,2017-06-29,model + blocks + re-level 8 wk,0,0.8554908102454013,1,0,1,100.0
+Resort Hotel,2017-06-30,model + blocks + re-level 8 wk,1,1.8695825205233172,2,0,1,105.0
+Resort Hotel,2017-07-01,model + blocks + re-level 8 wk,1,2.1329192032520328,3,0,2,220.51
+Resort Hotel,2017-07-02,model + blocks + re-level 8 wk,0,1.0038125974910823,0,0,0,0.0
+Resort Hotel,2017-07-03,model + blocks + re-level 8 wk,0,1.068938503932292,0,0,0,0.0
+Resort Hotel,2017-07-04,model + blocks + re-level 8 wk,0,1.0340773364590972,0,0,0,0.0
+Resort Hotel,2017-07-05,model + blocks + re-level 8 wk,0,0.859720246330049,3,0,3,345.0
+Resort Hotel,2017-07-06,model + blocks + re-level 8 wk,0,1.2133038900121975,0,0,0,0.0
+Resort Hotel,2017-07-07,model + blocks + re-level 8 wk,0,0.8987247883060615,0,0,0,0.0
+Resort Hotel,2017-07-08,model + blocks + re-level 8 wk,1,1.181602118760784,1,0,0,0.0
+Resort Hotel,2017-07-09,model + blocks + re-level 8 wk,1,2.132651803206078,2,0,1,135.75
+Resort Hotel,2017-07-10,model + blocks + re-level 8 wk,1,1.7690260748700477,2,0,1,145.4
+Resort Hotel,2017-07-11,model + blocks + re-level 8 wk,1,1.7910536171559075,1,0,0,0.0
+Resort Hotel,2017-07-12,model + blocks + re-level 8 wk,1,1.3689118140181604,1,0,0,0.0
+Resort Hotel,2017-07-13,model + blocks + re-level 8 wk,1,1.3732642987340595,2,0,1,140.67
+Resort Hotel,2017-07-14,model + blocks + re-level 8 wk,1,1.2137798538805795,2,0,1,168.0
+Resort Hotel,2017-07-15,model + blocks + re-level 8 wk,1,1.338669463810158,2,0,1,183.24
+Resort Hotel,2017-07-16,model + blocks + re-level 8 wk,1,1.2953579404301498,2,0,1,151.47
+Resort Hotel,2017-07-17,model + blocks + re-level 8 wk,1,1.4012887051545815,1,0,0,0.0
+Resort Hotel,2017-07-18,model + blocks + re-level 8 wk,1,1.0876163061735045,0,1,0,250.0
+Resort Hotel,2017-07-19,model + blocks + re-level 8 wk,0,0.7272382180579967,0,0,0,0.0
+Resort Hotel,2017-07-20,model + blocks + re-level 8 wk,1,1.1678057630947547,0,1,0,250.0
+Resort Hotel,2017-07-21,model + blocks + re-level 8 wk,1,1.236548032934431,1,0,0,0.0
+Resort Hotel,2017-07-22,model + blocks + re-level 8 wk,0,0.9277440923891398,0,0,0,0.0
+Resort Hotel,2017-07-23,model + blocks + re-level 8 wk,1,1.3123517154649496,1,0,0,0.0
+Resort Hotel,2017-07-24,model + blocks + re-level 8 wk,1,1.64162457977423,0,1,0,250.0
+Resort Hotel,2017-07-25,model + blocks + re-level 8 wk,0,0.9763286707967344,1,0,1,165.055
+Resort Hotel,2017-07-26,model + blocks + re-level 8 wk,0,0.7074603678812051,2,0,2,338.2
+Resort Hotel,2017-07-27,model + blocks + re-level 8 wk,1,1.166353516327959,2,0,1,161.31
+Resort Hotel,2017-07-28,model + blocks + re-level 8 wk,1,1.015205267201567,1,0,0,0.0
+Resort Hotel,2017-07-29,model + blocks + re-level 8 wk,1,1.171292876962919,0,1,0,250.0
+Resort Hotel,2017-07-30,model + blocks + re-level 8 wk,1,1.4334056760107854,2,0,1,140.08
+Resort Hotel,2017-07-31,model + blocks + re-level 8 wk,1,1.2670634588882081,0,1,0,250.0
+Resort Hotel,2017-08-01,model + blocks + re-level 8 wk,1,1.3952329812864828,0,1,0,250.0
+Resort Hotel,2017-08-02,model + blocks + re-level 8 wk,1,0.918589164432714,1,0,0,0.0
+Resort Hotel,2017-08-03,model + blocks + re-level 8 wk,1,1.3225898527321616,9,0,8,1480.0
+Resort Hotel,2017-08-04,model + blocks + re-level 8 wk,1,1.106013780007269,1,0,0,0.0
+Resort Hotel,2017-08-05,model + blocks + re-level 8 wk,1,1.5241071145294134,1,0,0,0.0
+Resort Hotel,2017-08-06,model + blocks + re-level 8 wk,1,1.017739141257243,0,1,0,250.0
+Resort Hotel,2017-08-07,model + blocks + re-level 8 wk,1,1.4675991490276195,0,1,0,250.0
+Resort Hotel,2017-08-08,model + blocks + re-level 8 wk,1,1.0727126616328315,0,1,0,250.0
+Resort Hotel,2017-08-09,model + blocks + re-level 8 wk,0,0.720879028180289,3,0,3,672.0
+Resort Hotel,2017-08-10,model + blocks + re-level 8 wk,0,0.636268701219076,0,0,0,0.0
+Resort Hotel,2017-08-11,model + blocks + re-level 8 wk,0,0.9116587106220729,1,0,1,183.67
+Resort Hotel,2017-08-12,model + blocks + re-level 8 wk,1,1.264513151148017,1,0,0,0.0
+Resort Hotel,2017-08-13,model + blocks + re-level 8 wk,1,1.0042402445235272,1,0,0,0.0
+Resort Hotel,2017-08-14,model + blocks + re-level 8 wk,1,1.0199090967248414,2,0,1,171.95499999999998
+Resort Hotel,2017-08-15,model + blocks + re-level 8 wk,0,0.4631064953314142,0,0,0,0.0
+Resort Hotel,2017-08-16,model + blocks + re-level 8 wk,1,1.1635112384418678,2,0,1,193.0
+Resort Hotel,2017-08-17,model + blocks + re-level 8 wk,1,1.4945013052395548,3,0,2,382.4
+Resort Hotel,2017-08-18,model + blocks + re-level 8 wk,1,1.2039404805395781,3,0,2,396.0
+Resort Hotel,2017-08-19,model + blocks + re-level 8 wk,1,1.142399343741769,0,1,0,250.0
+Resort Hotel,2017-08-20,model + blocks + re-level 8 wk,1,0.9678984911459076,0,1,0,250.0
+Resort Hotel,2017-08-21,model + blocks + re-level 8 wk,1,1.1777654993608286,0,1,0,250.0
+Resort Hotel,2017-08-22,model + blocks + re-level 8 wk,1,1.127013766097081,1,0,0,0.0
+Resort Hotel,2017-08-23,model + blocks + re-level 8 wk,1,0.9065112809401987,0,1,0,250.0
+Resort Hotel,2017-08-24,model + blocks + re-level 8 wk,0,1.0304362103500198,0,0,0,0.0
+Resort Hotel,2017-08-25,model + blocks + re-level 8 wk,1,0.8929499547291807,1,0,0,0.0
+Resort Hotel,2017-08-26,model + blocks + re-level 8 wk,1,1.2246354984178487,2,0,1,149.0
+Resort Hotel,2017-08-27,model + blocks + re-level 8 wk,1,1.3702931110413945,1,0,0,0.0
+Resort Hotel,2017-08-28,model + blocks + re-level 8 wk,1,1.5319976800732098,2,0,1,184.16
+Resort Hotel,2017-08-29,model + blocks + re-level 8 wk,0,0.6298040661706659,3,0,3,437.40000000000003
+Resort Hotel,2017-08-30,model + blocks + re-level 8 wk,0,0.7859331889499391,0,0,0,0.0
+Resort Hotel,2017-08-31,model + blocks + re-level 8 wk,1,1.1571646646137967,2,0,1,138.53

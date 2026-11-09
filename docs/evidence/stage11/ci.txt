@@ -1,0 +1,48 @@
+.venv/bin/python -m pytest -q
+...............ssss..................................................... [ 38%]
+....................s.............s..................................... [ 77%]
+.........................................                                [100%]
+179 passed, 6 skipped in 10.63s
+.venv/bin/python -m hotel_cancel.knowledge --output "docs/evidence/stage11/shacl"
+{
+  "conforms": true,
+  "triples": 3734,
+  "violations": []
+}
+/Library/Developer/CommandLineTools/usr/bin/make quality-gate PYTHON=".venv/bin/python"
+.venv/bin/python -m hotel_cancel.quality_gate --output "docs/evidence/stage11/quality-gate"
+{
+  "City Hotel": {
+    "n": 27508,
+    "cancellations": 11691,
+    "auprc": 0.785721886317962,
+    "expected_observed_ratio": 0.9112810321058089,
+    "ece": 0.04227523749271264,
+    "brier": 0.17239734512884491,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": true,
+      "ece": true
+    },
+    "gate": "PASS"
+  },
+  "Resort Hotel": {
+    "n": 13179,
+    "cancellations": 4054,
+    "auprc": 0.627907608840626,
+    "expected_observed_ratio": 0.6817233437376264,
+    "ece": 0.0989614606930023,
+    "brier": 0.17757610639149055,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": false,
+      "ece": true
+    },
+    "gate": "FAIL"
+  }
+}
+Quality gate: FAIL; evidence: docs/evidence/stage11/quality-gate
+make[1]: *** [quality-gate] Error 1
+make: *** [ci] Error 2

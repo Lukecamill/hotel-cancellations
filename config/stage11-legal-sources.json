@@ -1,0 +1,95 @@
+{
+  "reviewed_on": "2026-11-09",
+  "scope": "Coursework governance reasoning; no operational legal clearance",
+  "sources": [
+    {
+      "id": "services",
+      "title": "European Commission: Services Directive, Article 20 explanation",
+      "url": "https://single-market-economy.ec.europa.eu/single-market/services/directive_en",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "gdpr-principles",
+      "title": "Irish Data Protection Commission: Article 5 principles",
+      "url": "https://www.dataprotection.ie/en/individuals/data-protection-basics/principles-data-protection",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "gdpr-basis",
+      "title": "Irish Data Protection Commission: Legal Bases guidance, December 2019",
+      "url": "https://www.dataprotection.ie/sites/default/files/uploads/2020-04/Guidance%20on%20Legal%20Bases.pdf",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "gdpr-art22",
+      "title": "Irish Data Protection Commission: Automated decision-making rights",
+      "url": "https://www.dataprotection.ie/en/individuals/know-your-rights/your-rights-relation-automated-decision-making-including-profiling",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "human-review",
+      "title": "WP29 WP251rev.01, endorsed by EDPB; official AEPD copy, page 21",
+      "url": "https://www.aepd.es/sites/default/files/2019-12/wp251rev01-en.pdf",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "dpia",
+      "title": "Irish Data Protection Commission: DPIA guidance",
+      "url": "https://www.dataprotection.ie/en/organisations/know-your-obligations/data-protection-impact-assessments",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "ai-classification",
+      "title": "European Commission AI Act Explorer: current Article 6",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "ai-annex3",
+      "title": "European Commission AI Act Explorer: current Annex III",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "ai-prohibitions",
+      "title": "European Commission AI Act Explorer: current Article 5",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "ai-literacy",
+      "title": "European Commission AI Act Explorer: amended Article 4",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "ai-transparency",
+      "title": "European Commission AI Act Explorer: current Article 50",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    },
+    {
+      "id": "ai-timing",
+      "title": "Council of the EU: 2026 AI Act timeline",
+      "url": "https://www.consilium.europa.eu/en/policies/artificial-intelligence-act/timeline-artificial-intelligence/",
+      "source_type": "EU institution or data-protection regulator",
+      "review_status": "retrieved through web research"
+    }
+  ],
+  "limitations": [
+    "Some direct EUR-Lex statutory endpoints returned a JavaScript verification page; substantive assessment uses official Commission/regulator guidance and current Explorer text",
+    "Commission Explorer identifies the 27 July 2026 AI Act consolidation; its summaries are non-binding",
+    "Specific national transposition, consumer/contract duties, controller basis and live-deployment context require separate review"
+  ]
+}

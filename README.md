@@ -268,3 +268,14 @@ explicit unknowns and historical UK membership. Country remains offline-only.
 See [Stage 10 results](docs/stage10-knowledge-base.md),
 [competency questions](knowledge/competency-questions.md), and
 [ADR 0012](docs/decisions/0012-knowledge-base.md).
+
+## Stage 11: conditional walking allocation and fairness
+
+`make walking-audit` attributes the given policy's simulated overflow under a
+latest-booking-first rule and a seeded lottery, reporting segment/channel and
+audit-only country-group exposure. Country and all audit labels are rejected by
+the ranking contract. The experiment preserves all reference quantities and
+explicitly reports the unobserved-extra-sales assumption; it is not real guest
+selection or evidence of legal compliance. See [Stage 11 findings](docs/stage11-walking-fairness.md),
+[governance assessment](docs/stage11-governance.md), and
+[ADR 0013](docs/decisions/0013-walking-allocation-and-fairness.md).
