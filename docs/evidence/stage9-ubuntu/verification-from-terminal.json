@@ -1,0 +1,24 @@
+{
+  "evidence_source": "User-supplied Ubuntu output: user-terminal-transcript.txt",
+  "verification": {
+    "status": "VERIFIED",
+    "environment": "Linux ARM64 container on Ubuntu VM",
+    "test_files_and_python_sources_identical": true,
+    "collected_tests": 146,
+    "tests_passed": 140,
+    "tests_skipped": 6,
+    "make_ci_expected_quality_failure": true,
+    "mlflow_readback_verified": true,
+    "all_holdout_probabilities_identical": true,
+    "serving_and_compose_unchanged": true,
+    "city_champion": true,
+    "resort_champion_withheld": true,
+    "mlflow_version": "3.18.0",
+    "image_id": "sha256:ffabab678b7c123cadcb40f2abaa6b43f2008960e7c28eac3f303f746deb1373",
+    "architecture": "arm64"
+  },
+  "limitations": [
+    "Six database integration tests skipped",
+    "Container lacks Git executable/user environment; source-file fingerprints and original training provenance remain recorded"
+  ]
+}

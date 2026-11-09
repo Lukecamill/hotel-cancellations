@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "environment": "Mac isolated .venv-tracking",
+  "passed": 140,
+  "tests": 146,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 6
+}

@@ -1,0 +1,973 @@
+hotel,night,policy,q,expected,released,walked,empty,cost
+City Hotel,2017-01-01,no overbooking,0,0.0,1,0,1,45.0
+City Hotel,2017-01-01,flat rate (Jul – Sep 2016),2,3.8814563928873946,1,1,0,250.0
+City Hotel,2017-01-02,no overbooking,0,0.0,8,0,8,627.6800000000001
+City Hotel,2017-01-02,flat rate (Jul – Sep 2016),3,4.528365791701962,8,0,5,392.30000000000007
+City Hotel,2017-01-03,no overbooking,0,0.0,2,0,2,147.2
+City Hotel,2017-01-03,flat rate (Jul – Sep 2016),1,2.6523285351397172,2,0,1,73.6
+City Hotel,2017-01-04,no overbooking,0,0.0,2,0,2,136.0
+City Hotel,2017-01-04,flat rate (Jul – Sep 2016),0,1.2291278577476725,2,0,2,136.0
+City Hotel,2017-01-05,no overbooking,0,0.0,2,0,2,149.76
+City Hotel,2017-01-05,flat rate (Jul – Sep 2016),1,1.4878916172734986,2,0,1,74.88
+City Hotel,2017-01-06,no overbooking,0,0.0,5,0,5,338.45
+City Hotel,2017-01-06,flat rate (Jul – Sep 2016),1,2.005419136325151,5,0,4,270.76
+City Hotel,2017-01-07,no overbooking,0,0.0,2,0,2,133.69
+City Hotel,2017-01-07,flat rate (Jul – Sep 2016),1,1.8113463166807815,2,0,1,66.845
+City Hotel,2017-01-08,no overbooking,0,0.0,5,0,5,260.0
+City Hotel,2017-01-08,flat rate (Jul – Sep 2016),1,2.1348010160880646,5,0,4,208.0
+City Hotel,2017-01-09,no overbooking,0,0.0,2,0,2,130.3
+City Hotel,2017-01-09,flat rate (Jul – Sep 2016),0,1.2938187976291289,2,0,2,130.3
+City Hotel,2017-01-10,no overbooking,0,0.0,1,0,1,61.19
+City Hotel,2017-01-10,flat rate (Jul – Sep 2016),0,0.9056731583403902,1,0,1,61.19
+City Hotel,2017-01-11,no overbooking,0,0.0,3,0,3,203.07
+City Hotel,2017-01-11,flat rate (Jul – Sep 2016),0,1.423200677392042,3,0,3,203.07
+City Hotel,2017-01-12,no overbooking,0,0.0,4,0,4,184.88
+City Hotel,2017-01-12,flat rate (Jul – Sep 2016),1,2.781710414902631,4,0,3,138.66
+City Hotel,2017-01-13,no overbooking,0,0.0,4,0,4,276.4
+City Hotel,2017-01-13,flat rate (Jul – Sep 2016),1,1.7466553767993251,4,0,3,207.29999999999998
+City Hotel,2017-01-14,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-01-14,flat rate (Jul – Sep 2016),1,1.6172734970364115,0,1,0,250.0
+City Hotel,2017-01-15,no overbooking,0,0.0,1,0,1,68.4
+City Hotel,2017-01-15,flat rate (Jul – Sep 2016),1,1.6172734970364115,1,0,0,0.0
+City Hotel,2017-01-16,no overbooking,0,0.0,1,0,1,68.4
+City Hotel,2017-01-16,flat rate (Jul – Sep 2016),1,1.9407281964436947,1,0,0,0.0
+City Hotel,2017-01-17,no overbooking,0,0.0,1,0,1,55.0
+City Hotel,2017-01-17,flat rate (Jul – Sep 2016),0,0.7116003386960206,1,0,1,55.0
+City Hotel,2017-01-18,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-01-18,flat rate (Jul – Sep 2016),4,5.886875529212556,0,4,0,1000.0
+City Hotel,2017-01-19,no overbooking,0,0.0,1,0,1,65.0
+City Hotel,2017-01-19,flat rate (Jul – Sep 2016),1,1.7466553767993251,1,0,0,0.0
+City Hotel,2017-01-20,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-01-20,flat rate (Jul – Sep 2016),1,1.7466553767993251,0,1,0,250.0
+City Hotel,2017-01-21,no overbooking,0,0.0,1,0,1,63.94
+City Hotel,2017-01-21,flat rate (Jul – Sep 2016),0,1.2938187976291289,1,0,1,63.94
+City Hotel,2017-01-22,no overbooking,0,0.0,3,0,3,163.14
+City Hotel,2017-01-22,flat rate (Jul – Sep 2016),1,2.2641828958509778,3,0,2,108.75999999999999
+City Hotel,2017-01-23,no overbooking,0,0.0,5,0,5,381.0
+City Hotel,2017-01-23,flat rate (Jul – Sep 2016),1,1.8760372565622379,5,0,4,304.8
+City Hotel,2017-01-24,no overbooking,0,0.0,3,0,3,228.0
+City Hotel,2017-01-24,flat rate (Jul – Sep 2016),1,1.6172734970364115,3,0,2,152.0
+City Hotel,2017-01-25,no overbooking,0,0.0,7,0,7,455.0
+City Hotel,2017-01-25,flat rate (Jul – Sep 2016),1,2.8464013547840876,7,0,6,390.0
+City Hotel,2017-01-26,no overbooking,0,0.0,1,0,1,65.0
+City Hotel,2017-01-26,flat rate (Jul – Sep 2016),0,1.423200677392042,1,0,1,65.0
+City Hotel,2017-01-27,no overbooking,0,0.0,3,0,3,171.29999999999998
+City Hotel,2017-01-27,flat rate (Jul – Sep 2016),1,2.328873835732434,3,0,2,114.19999999999999
+City Hotel,2017-01-28,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-01-28,flat rate (Jul – Sep 2016),0,1.4878916172734986,0,0,0,0.0
+City Hotel,2017-01-29,no overbooking,0,0.0,5,0,5,296.0
+City Hotel,2017-01-29,flat rate (Jul – Sep 2016),0,1.423200677392042,5,0,5,296.0
+City Hotel,2017-01-30,no overbooking,0,0.0,3,0,3,192.60000000000002
+City Hotel,2017-01-30,flat rate (Jul – Sep 2016),0,1.423200677392042,3,0,3,192.60000000000002
+City Hotel,2017-01-31,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-01-31,flat rate (Jul – Sep 2016),0,0.45283657917019493,0,0,0,0.0
+City Hotel,2017-02-01,no overbooking,0,0.0,2,0,2,150.4
+City Hotel,2017-02-01,flat rate (Jul – Sep 2016),0,1.164436917866216,2,0,2,150.4
+City Hotel,2017-02-02,no overbooking,0,0.0,1,0,1,60.0
+City Hotel,2017-02-02,flat rate (Jul – Sep 2016),1,2.717019475021174,1,0,0,0.0
+City Hotel,2017-02-03,no overbooking,0,0.0,6,0,6,408.0
+City Hotel,2017-02-03,flat rate (Jul – Sep 2016),1,2.781710414902631,6,0,5,340.0
+City Hotel,2017-02-04,no overbooking,0,0.0,3,0,3,177.60000000000002
+City Hotel,2017-02-04,flat rate (Jul – Sep 2016),1,2.1348010160880646,3,0,2,118.4
+City Hotel,2017-02-05,no overbooking,0,0.0,3,0,3,165.0
+City Hotel,2017-02-05,flat rate (Jul – Sep 2016),2,3.6226926333615674,3,0,1,55.0
+City Hotel,2017-02-06,no overbooking,0,0.0,1,0,1,65.5
+City Hotel,2017-02-06,flat rate (Jul – Sep 2016),0,1.2938187976291289,1,0,1,65.5
+City Hotel,2017-02-07,no overbooking,0,0.0,3,0,3,206.31000000000003
+City Hotel,2017-02-07,flat rate (Jul – Sep 2016),1,1.5525825571549552,3,0,2,137.54000000000002
+City Hotel,2017-02-08,no overbooking,0,0.0,2,0,2,142.2
+City Hotel,2017-02-08,flat rate (Jul – Sep 2016),0,1.3585097375105852,2,0,2,142.2
+City Hotel,2017-02-09,no overbooking,0,0.0,4,0,4,250.32
+City Hotel,2017-02-09,flat rate (Jul – Sep 2016),1,2.8464013547840876,4,0,3,187.74
+City Hotel,2017-02-10,no overbooking,0,0.0,4,0,4,272.0
+City Hotel,2017-02-10,flat rate (Jul – Sep 2016),2,3.2345469940728275,4,0,2,136.0
+City Hotel,2017-02-11,no overbooking,0,0.0,1,0,1,60.379999999999995
+City Hotel,2017-02-11,flat rate (Jul – Sep 2016),1,2.1994919559695214,1,0,0,0.0
+City Hotel,2017-02-12,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-02-12,flat rate (Jul – Sep 2016),2,4.075529212531764,0,2,0,500.0
+City Hotel,2017-02-13,no overbooking,0,0.0,3,0,3,212.84999999999997
+City Hotel,2017-02-13,flat rate (Jul – Sep 2016),2,3.8814563928873946,3,0,1,70.94999999999999
+City Hotel,2017-02-14,no overbooking,0,0.0,6,0,6,429.29999999999995
+City Hotel,2017-02-14,flat rate (Jul – Sep 2016),1,2.5876375952582613,6,0,5,357.75
+City Hotel,2017-02-15,no overbooking,0,0.0,4,0,4,232.0
+City Hotel,2017-02-15,flat rate (Jul – Sep 2016),4,5.692802709568185,4,0,0,0.0
+City Hotel,2017-02-16,no overbooking,0,0.0,1,0,1,77.78999999999999
+City Hotel,2017-02-16,flat rate (Jul – Sep 2016),1,1.8113463166807815,1,0,0,0.0
+City Hotel,2017-02-17,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-02-17,flat rate (Jul – Sep 2016),1,2.328873835732434,0,1,0,250.0
+City Hotel,2017-02-18,no overbooking,0,0.0,1,0,1,74.86
+City Hotel,2017-02-18,flat rate (Jul – Sep 2016),1,1.8113463166807815,1,0,0,0.0
+City Hotel,2017-02-19,no overbooking,0,0.0,2,0,2,130.0
+City Hotel,2017-02-19,flat rate (Jul – Sep 2016),2,4.075529212531764,2,0,0,0.0
+City Hotel,2017-02-20,no overbooking,0,0.0,4,0,4,280.0
+City Hotel,2017-02-20,flat rate (Jul – Sep 2016),2,3.299237933954284,4,0,2,140.0
+City Hotel,2017-02-21,no overbooking,0,0.0,1,0,1,58.16499999999999
+City Hotel,2017-02-21,flat rate (Jul – Sep 2016),1,1.9407281964436947,1,0,0,0.0
+City Hotel,2017-02-22,no overbooking,0,0.0,2,0,2,90.0
+City Hotel,2017-02-22,flat rate (Jul – Sep 2016),3,5.045893310753617,2,1,0,250.0
+City Hotel,2017-02-23,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-02-23,flat rate (Jul – Sep 2016),1,1.6172734970364115,0,1,0,250.0
+City Hotel,2017-02-24,no overbooking,0,0.0,4,0,4,280.4
+City Hotel,2017-02-24,flat rate (Jul – Sep 2016),1,2.4582557154953477,4,0,3,210.29999999999998
+City Hotel,2017-02-25,no overbooking,0,0.0,60,0,60,3300.0
+City Hotel,2017-02-25,flat rate (Jul – Sep 2016),7,9.962404741744354,60,0,53,2915.0
+City Hotel,2017-02-26,no overbooking,0,0.0,7,0,7,399.0
+City Hotel,2017-02-26,flat rate (Jul – Sep 2016),4,5.628111769686728,7,0,3,171.0
+City Hotel,2017-02-27,no overbooking,0,0.0,4,0,4,304.0
+City Hotel,2017-02-27,flat rate (Jul – Sep 2016),2,3.6226926333615674,4,0,2,152.0
+City Hotel,2017-02-28,no overbooking,0,0.0,3,0,3,215.39999999999998
+City Hotel,2017-02-28,flat rate (Jul – Sep 2016),0,1.2938187976291289,3,0,3,215.39999999999998
+City Hotel,2017-03-01,no overbooking,0,0.0,2,0,2,143.6
+City Hotel,2017-03-01,flat rate (Jul – Sep 2016),1,2.5229466553768045,2,0,1,71.8
+City Hotel,2017-03-02,no overbooking,0,0.0,6,0,6,408.0
+City Hotel,2017-03-02,flat rate (Jul – Sep 2016),2,3.8814563928873946,6,0,4,272.0
+City Hotel,2017-03-03,no overbooking,0,0.0,6,0,6,408.0
+City Hotel,2017-03-03,flat rate (Jul – Sep 2016),3,4.204911092294678,6,0,3,204.0
+City Hotel,2017-03-04,no overbooking,0,0.0,3,0,3,215.39999999999998
+City Hotel,2017-03-04,flat rate (Jul – Sep 2016),1,2.1348010160880646,3,0,2,143.6
+City Hotel,2017-03-05,no overbooking,0,0.0,3,0,3,210.0
+City Hotel,2017-03-05,flat rate (Jul – Sep 2016),3,4.204911092294678,3,0,0,0.0
+City Hotel,2017-03-06,no overbooking,0,0.0,7,0,7,420.0
+City Hotel,2017-03-06,flat rate (Jul – Sep 2016),3,5.304657070279443,7,0,4,240.0
+City Hotel,2017-03-07,no overbooking,0,0.0,6,0,6,408.0
+City Hotel,2017-03-07,flat rate (Jul – Sep 2016),2,3.1698560541913707,6,0,4,272.0
+City Hotel,2017-03-08,no overbooking,0,0.0,4,0,4,263.8
+City Hotel,2017-03-08,flat rate (Jul – Sep 2016),1,2.5876375952582613,4,0,3,197.85000000000002
+City Hotel,2017-03-09,no overbooking,0,0.0,3,0,3,204.0
+City Hotel,2017-03-09,flat rate (Jul – Sep 2016),2,2.911092294665544,3,0,1,68.0
+City Hotel,2017-03-10,no overbooking,0,0.0,2,0,2,120.0
+City Hotel,2017-03-10,flat rate (Jul – Sep 2016),4,5.886875529212556,2,2,0,500.0
+City Hotel,2017-03-11,no overbooking,0,0.0,1,0,1,69.2
+City Hotel,2017-03-11,flat rate (Jul – Sep 2016),1,2.717019475021174,1,0,0,0.0
+City Hotel,2017-03-12,no overbooking,0,0.0,3,0,3,180.0
+City Hotel,2017-03-12,flat rate (Jul – Sep 2016),1,2.911092294665544,3,0,2,120.0
+City Hotel,2017-03-13,no overbooking,0,0.0,8,0,8,574.4
+City Hotel,2017-03-13,flat rate (Jul – Sep 2016),3,4.851820491109246,8,0,5,359.0
+City Hotel,2017-03-14,no overbooking,0,0.0,11,0,11,594.0
+City Hotel,2017-03-14,flat rate (Jul – Sep 2016),2,3.9461473327688514,11,0,9,486.0
+City Hotel,2017-03-15,no overbooking,0,0.0,7,0,7,471.80000000000007
+City Hotel,2017-03-15,flat rate (Jul – Sep 2016),2,3.8814563928873946,7,0,5,337.0
+City Hotel,2017-03-16,no overbooking,0,0.0,6,0,6,348.0
+City Hotel,2017-03-16,flat rate (Jul – Sep 2016),3,4.851820491109246,6,0,3,174.0
+City Hotel,2017-03-17,no overbooking,0,0.0,2,0,2,133.44
+City Hotel,2017-03-17,flat rate (Jul – Sep 2016),3,4.528365791701962,2,1,0,250.0
+City Hotel,2017-03-18,no overbooking,0,0.0,1,0,1,59.2
+City Hotel,2017-03-18,flat rate (Jul – Sep 2016),2,3.040474174428457,1,1,0,250.0
+City Hotel,2017-03-19,no overbooking,0,0.0,4,0,4,236.8
+City Hotel,2017-03-19,flat rate (Jul – Sep 2016),3,4.722438611346332,4,0,1,59.2
+City Hotel,2017-03-20,no overbooking,0,0.0,4,0,4,300.0
+City Hotel,2017-03-20,flat rate (Jul – Sep 2016),4,5.692802709568185,4,0,0,0.0
+City Hotel,2017-03-21,no overbooking,0,0.0,3,0,3,221.45999999999998
+City Hotel,2017-03-21,flat rate (Jul – Sep 2016),1,2.2641828958509778,3,0,2,147.64
+City Hotel,2017-03-22,no overbooking,0,0.0,7,0,7,492.80000000000007
+City Hotel,2017-03-22,flat rate (Jul – Sep 2016),1,2.328873835732434,7,0,6,422.40000000000003
+City Hotel,2017-03-23,no overbooking,0,0.0,5,0,5,365.0
+City Hotel,2017-03-23,flat rate (Jul – Sep 2016),2,3.752074513124481,5,0,3,219.0
+City Hotel,2017-03-24,no overbooking,0,0.0,3,0,3,231.60000000000002
+City Hotel,2017-03-24,flat rate (Jul – Sep 2016),5,6.7278577476714965,3,2,0,500.0
+City Hotel,2017-03-25,no overbooking,0,0.0,4,0,4,331.4
+City Hotel,2017-03-25,flat rate (Jul – Sep 2016),2,2.9757832345470003,4,0,2,165.7
+City Hotel,2017-03-26,no overbooking,0,0.0,2,0,2,134.11
+City Hotel,2017-03-26,flat rate (Jul – Sep 2016),3,4.787129551227789,2,1,0,250.0
+City Hotel,2017-03-27,no overbooking,0,0.0,3,0,3,225.0
+City Hotel,2017-03-27,flat rate (Jul – Sep 2016),4,5.304657070279443,3,1,0,250.0
+City Hotel,2017-03-28,no overbooking,0,0.0,2,0,2,154.95
+City Hotel,2017-03-28,flat rate (Jul – Sep 2016),1,2.070110076206608,2,0,1,77.475
+City Hotel,2017-03-29,no overbooking,0,0.0,1,0,1,74.0
+City Hotel,2017-03-29,flat rate (Jul – Sep 2016),2,3.493310753598654,1,1,0,250.0
+City Hotel,2017-03-30,no overbooking,0,0.0,7,0,7,500.28999999999996
+City Hotel,2017-03-30,flat rate (Jul – Sep 2016),3,4.334292972057591,7,0,4,285.88
+City Hotel,2017-03-31,no overbooking,0,0.0,2,0,2,159.5
+City Hotel,2017-03-31,flat rate (Jul – Sep 2016),3,4.398983911939048,2,1,0,250.0
+City Hotel,2017-04-01,no overbooking,0,0.0,4,0,4,388.0
+City Hotel,2017-04-01,flat rate (Jul – Sep 2016),3,3.6873835732430242,4,0,1,97.0
+City Hotel,2017-04-02,no overbooking,0,0.0,1,0,1,91.92
+City Hotel,2017-04-02,flat rate (Jul – Sep 2016),2,3.1698560541913707,1,1,0,250.0
+City Hotel,2017-04-03,no overbooking,0,0.0,1,0,1,75.0
+City Hotel,2017-04-03,flat rate (Jul – Sep 2016),4,6.016257408975469,1,3,0,750.0
+City Hotel,2017-04-04,no overbooking,0,0.0,2,0,2,212.0
+City Hotel,2017-04-04,flat rate (Jul – Sep 2016),1,1.7466553767993251,2,0,1,106.0
+City Hotel,2017-04-05,no overbooking,0,0.0,7,0,7,560.0
+City Hotel,2017-04-05,flat rate (Jul – Sep 2016),3,4.5930567315834185,7,0,4,320.0
+City Hotel,2017-04-06,no overbooking,0,0.0,3,0,3,297.0
+City Hotel,2017-04-06,flat rate (Jul – Sep 2016),3,3.9461473327688514,3,0,0,0.0
+City Hotel,2017-04-07,no overbooking,0,0.0,3,0,3,329.25
+City Hotel,2017-04-07,flat rate (Jul – Sep 2016),3,3.752074513124481,3,0,0,0.0
+City Hotel,2017-04-08,no overbooking,0,0.0,3,0,3,285.0
+City Hotel,2017-04-08,flat rate (Jul – Sep 2016),2,3.493310753598654,3,0,1,95.0
+City Hotel,2017-04-09,no overbooking,0,0.0,10,0,10,970.0
+City Hotel,2017-04-09,flat rate (Jul – Sep 2016),4,5.628111769686728,10,0,6,582.0
+City Hotel,2017-04-10,no overbooking,0,0.0,3,0,3,297.75
+City Hotel,2017-04-10,flat rate (Jul – Sep 2016),3,4.5930567315834185,3,0,0,0.0
+City Hotel,2017-04-11,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-04-11,flat rate (Jul – Sep 2016),2,3.1698560541913707,0,2,0,500.0
+City Hotel,2017-04-12,no overbooking,0,0.0,6,0,6,609.0
+City Hotel,2017-04-12,flat rate (Jul – Sep 2016),2,3.3639288738357407,6,0,4,406.0
+City Hotel,2017-04-13,no overbooking,0,0.0,5,0,5,556.25
+City Hotel,2017-04-13,flat rate (Jul – Sep 2016),3,4.010838272650308,5,0,2,222.5
+City Hotel,2017-04-14,no overbooking,0,0.0,3,0,3,313.5
+City Hotel,2017-04-14,flat rate (Jul – Sep 2016),3,4.657747671464875,3,0,0,0.0
+City Hotel,2017-04-15,no overbooking,0,0.0,1,0,1,100.0
+City Hotel,2017-04-15,flat rate (Jul – Sep 2016),3,4.2696020321761345,1,2,0,500.0
+City Hotel,2017-04-16,no overbooking,0,0.0,2,0,2,190.4
+City Hotel,2017-04-16,flat rate (Jul – Sep 2016),2,3.040474174428457,2,0,0,0.0
+City Hotel,2017-04-17,no overbooking,0,0.0,3,0,3,291.0
+City Hotel,2017-04-17,flat rate (Jul – Sep 2016),3,4.2696020321761345,3,0,0,0.0
+City Hotel,2017-04-18,no overbooking,0,0.0,1,0,1,97.0
+City Hotel,2017-04-18,flat rate (Jul – Sep 2016),2,2.717019475021174,1,1,0,250.0
+City Hotel,2017-04-19,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-04-19,flat rate (Jul – Sep 2016),4,4.9165114309907025,0,4,0,1000.0
+City Hotel,2017-04-20,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-04-20,flat rate (Jul – Sep 2016),3,4.204911092294678,0,3,0,750.0
+City Hotel,2017-04-21,no overbooking,0,0.0,5,0,5,485.0
+City Hotel,2017-04-21,flat rate (Jul – Sep 2016),4,5.045893310753617,5,0,1,97.0
+City Hotel,2017-04-22,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-04-22,flat rate (Jul – Sep 2016),1,2.070110076206608,0,1,0,250.0
+City Hotel,2017-04-23,no overbooking,0,0.0,2,0,2,176.0
+City Hotel,2017-04-23,flat rate (Jul – Sep 2016),3,4.204911092294678,2,1,0,250.0
+City Hotel,2017-04-24,no overbooking,0,0.0,1,0,1,80.0
+City Hotel,2017-04-24,flat rate (Jul – Sep 2016),4,5.17527519051653,1,3,0,750.0
+City Hotel,2017-04-25,no overbooking,0,0.0,1,0,1,95.0
+City Hotel,2017-04-25,flat rate (Jul – Sep 2016),1,2.2641828958509778,1,0,0,0.0
+City Hotel,2017-04-26,no overbooking,0,0.0,4,0,4,360.0
+City Hotel,2017-04-26,flat rate (Jul – Sep 2016),2,2.6523285351397172,4,0,2,180.0
+City Hotel,2017-04-27,no overbooking,0,0.0,5,0,5,478.0
+City Hotel,2017-04-27,flat rate (Jul – Sep 2016),3,3.752074513124481,5,0,2,191.2
+City Hotel,2017-04-28,no overbooking,0,0.0,8,0,8,880.0
+City Hotel,2017-04-28,flat rate (Jul – Sep 2016),6,7.956985605419181,8,0,2,220.0
+City Hotel,2017-04-29,no overbooking,0,0.0,6,0,6,663.0
+City Hotel,2017-04-29,flat rate (Jul – Sep 2016),3,4.657747671464875,6,0,3,331.5
+City Hotel,2017-04-30,no overbooking,0,0.0,3,0,3,309.0
+City Hotel,2017-04-30,flat rate (Jul – Sep 2016),2,3.040474174428457,3,0,1,103.0
+City Hotel,2017-05-01,no overbooking,0,0.0,4,0,4,388.0
+City Hotel,2017-05-01,flat rate (Jul – Sep 2016),3,4.722438611346332,4,0,1,97.0
+City Hotel,2017-05-02,no overbooking,0,0.0,4,0,4,400.0
+City Hotel,2017-05-02,flat rate (Jul – Sep 2016),4,5.045893310753617,4,0,0,0.0
+City Hotel,2017-05-03,no overbooking,0,0.0,8,0,8,880.0
+City Hotel,2017-05-03,flat rate (Jul – Sep 2016),2,2.5229466553768045,8,0,6,660.0
+City Hotel,2017-05-04,no overbooking,0,0.0,4,0,4,428.0
+City Hotel,2017-05-04,flat rate (Jul – Sep 2016),2,3.493310753598654,4,0,2,214.0
+City Hotel,2017-05-05,no overbooking,0,0.0,4,0,4,424.0
+City Hotel,2017-05-05,flat rate (Jul – Sep 2016),5,6.016257408975469,4,1,0,250.0
+City Hotel,2017-05-06,no overbooking,0,0.0,4,0,4,413.72
+City Hotel,2017-05-06,flat rate (Jul – Sep 2016),4,5.17527519051653,4,0,0,0.0
+City Hotel,2017-05-07,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-05-07,flat rate (Jul – Sep 2016),2,2.911092294665544,0,2,0,500.0
+City Hotel,2017-05-08,no overbooking,0,0.0,2,0,2,212.0
+City Hotel,2017-05-08,flat rate (Jul – Sep 2016),2,3.5580016934801106,2,0,0,0.0
+City Hotel,2017-05-09,no overbooking,0,0.0,2,0,2,209.43
+City Hotel,2017-05-09,flat rate (Jul – Sep 2016),3,4.2696020321761345,2,1,0,250.0
+City Hotel,2017-05-10,no overbooking,0,0.0,11,0,11,1210.0
+City Hotel,2017-05-10,flat rate (Jul – Sep 2016),3,4.334292972057591,11,0,8,880.0
+City Hotel,2017-05-11,no overbooking,0,0.0,2,0,2,203.0
+City Hotel,2017-05-11,flat rate (Jul – Sep 2016),5,5.951566469094013,2,3,0,750.0
+City Hotel,2017-05-12,no overbooking,0,0.0,4,0,4,508.0
+City Hotel,2017-05-12,flat rate (Jul – Sep 2016),3,3.8814563928873946,4,0,1,127.0
+City Hotel,2017-05-13,no overbooking,0,0.0,2,0,2,240.8
+City Hotel,2017-05-13,flat rate (Jul – Sep 2016),3,3.816765453005938,2,1,0,250.0
+City Hotel,2017-05-14,no overbooking,0,0.0,6,0,6,660.0
+City Hotel,2017-05-14,flat rate (Jul – Sep 2016),4,5.498729889923814,6,0,2,220.0
+City Hotel,2017-05-15,no overbooking,0,0.0,4,0,4,469.0
+City Hotel,2017-05-15,flat rate (Jul – Sep 2016),3,4.075529212531764,4,0,1,117.25
+City Hotel,2017-05-16,no overbooking,0,0.0,2,0,2,220.0
+City Hotel,2017-05-16,flat rate (Jul – Sep 2016),2,3.040474174428457,2,0,0,0.0
+City Hotel,2017-05-17,no overbooking,0,0.0,6,0,6,660.0
+City Hotel,2017-05-17,flat rate (Jul – Sep 2016),4,4.851820491109246,6,0,2,220.0
+City Hotel,2017-05-18,no overbooking,0,0.0,7,0,7,805.0
+City Hotel,2017-05-18,flat rate (Jul – Sep 2016),4,5.045893310753617,7,0,3,345.0
+City Hotel,2017-05-19,no overbooking,0,0.0,4,0,4,480.0
+City Hotel,2017-05-19,flat rate (Jul – Sep 2016),4,4.851820491109246,4,0,0,0.0
+City Hotel,2017-05-20,no overbooking,0,0.0,1,0,1,117.25
+City Hotel,2017-05-20,flat rate (Jul – Sep 2016),4,5.304657070279443,1,3,0,750.0
+City Hotel,2017-05-21,no overbooking,0,0.0,4,0,4,496.0
+City Hotel,2017-05-21,flat rate (Jul – Sep 2016),3,4.010838272650308,4,0,1,124.0
+City Hotel,2017-05-22,no overbooking,0,0.0,4,0,4,438.4
+City Hotel,2017-05-22,flat rate (Jul – Sep 2016),4,4.9165114309907025,4,0,0,0.0
+City Hotel,2017-05-23,no overbooking,0,0.0,3,0,3,315.29999999999995
+City Hotel,2017-05-23,flat rate (Jul – Sep 2016),3,3.6873835732430242,3,0,0,0.0
+City Hotel,2017-05-24,no overbooking,0,0.0,3,0,3,283.20000000000005
+City Hotel,2017-05-24,flat rate (Jul – Sep 2016),5,6.857239627434411,3,2,0,500.0
+City Hotel,2017-05-25,no overbooking,0,0.0,2,0,2,214.0
+City Hotel,2017-05-25,flat rate (Jul – Sep 2016),4,5.8221845893310995,2,2,0,500.0
+City Hotel,2017-05-26,no overbooking,0,0.0,4,0,4,424.0
+City Hotel,2017-05-26,flat rate (Jul – Sep 2016),4,4.787129551227789,4,0,0,0.0
+City Hotel,2017-05-27,no overbooking,0,0.0,2,0,2,216.0
+City Hotel,2017-05-27,flat rate (Jul – Sep 2016),3,3.6873835732430242,2,1,0,250.0
+City Hotel,2017-05-28,no overbooking,0,0.0,19,0,19,1738.8799999999999
+City Hotel,2017-05-28,flat rate (Jul – Sep 2016),4,4.981202370872159,19,0,15,1372.8
+City Hotel,2017-05-29,no overbooking,0,0.0,2,0,2,208.8
+City Hotel,2017-05-29,flat rate (Jul – Sep 2016),3,3.6873835732430242,2,1,0,250.0
+City Hotel,2017-05-30,no overbooking,0,0.0,2,0,2,228.0
+City Hotel,2017-05-30,flat rate (Jul – Sep 2016),2,3.040474174428457,2,0,0,0.0
+City Hotel,2017-05-31,no overbooking,0,0.0,2,0,2,185.34
+City Hotel,2017-05-31,flat rate (Jul – Sep 2016),2,3.6226926333615674,2,0,0,0.0
+City Hotel,2017-06-01,no overbooking,0,0.0,1,0,1,115.30000000000001
+City Hotel,2017-06-01,flat rate (Jul – Sep 2016),3,3.8814563928873946,1,2,0,500.0
+City Hotel,2017-06-02,no overbooking,0,0.0,3,0,3,318.0
+City Hotel,2017-06-02,flat rate (Jul – Sep 2016),4,5.5634208298052705,3,1,0,250.0
+City Hotel,2017-06-03,no overbooking,0,0.0,2,0,2,212.0
+City Hotel,2017-06-03,flat rate (Jul – Sep 2016),3,4.2696020321761345,2,1,0,250.0
+City Hotel,2017-06-04,no overbooking,0,0.0,1,0,1,110.0
+City Hotel,2017-06-04,flat rate (Jul – Sep 2016),3,3.5580016934801106,1,2,0,500.0
+City Hotel,2017-06-05,no overbooking,0,0.0,4,0,4,480.0
+City Hotel,2017-06-05,flat rate (Jul – Sep 2016),4,5.3693480101609,4,0,0,0.0
+City Hotel,2017-06-06,no overbooking,0,0.0,2,0,2,215.0
+City Hotel,2017-06-06,flat rate (Jul – Sep 2016),3,4.010838272650308,2,1,0,250.0
+City Hotel,2017-06-07,no overbooking,0,0.0,2,0,2,224.0
+City Hotel,2017-06-07,flat rate (Jul – Sep 2016),2,3.428619813717197,2,0,0,0.0
+City Hotel,2017-06-08,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-06-08,flat rate (Jul – Sep 2016),4,4.657747671464875,0,4,0,1000.0
+City Hotel,2017-06-09,no overbooking,0,0.0,2,0,2,220.0
+City Hotel,2017-06-09,flat rate (Jul – Sep 2016),4,5.5634208298052705,2,2,0,500.0
+City Hotel,2017-06-10,no overbooking,0,0.0,1,0,1,110.5
+City Hotel,2017-06-10,flat rate (Jul – Sep 2016),1,2.2641828958509778,1,0,0,0.0
+City Hotel,2017-06-11,no overbooking,0,0.0,4,0,4,424.0
+City Hotel,2017-06-11,flat rate (Jul – Sep 2016),4,5.110584250635074,4,0,0,0.0
+City Hotel,2017-06-12,no overbooking,0,0.0,6,0,6,636.0
+City Hotel,2017-06-12,flat rate (Jul – Sep 2016),4,4.981202370872159,6,0,2,212.0
+City Hotel,2017-06-13,no overbooking,0,0.0,4,0,4,406.0
+City Hotel,2017-06-13,flat rate (Jul – Sep 2016),2,3.299237933954284,4,0,2,203.0
+City Hotel,2017-06-14,no overbooking,0,0.0,3,0,3,278.01
+City Hotel,2017-06-14,flat rate (Jul – Sep 2016),3,4.075529212531764,3,0,0,0.0
+City Hotel,2017-06-15,no overbooking,0,0.0,6,0,6,663.0
+City Hotel,2017-06-15,flat rate (Jul – Sep 2016),4,4.9165114309907025,6,0,2,221.0
+City Hotel,2017-06-16,no overbooking,0,0.0,1,0,1,79.0
+City Hotel,2017-06-16,flat rate (Jul – Sep 2016),2,3.816765453005938,1,1,0,250.0
+City Hotel,2017-06-17,no overbooking,0,0.0,3,0,3,278.01
+City Hotel,2017-06-17,flat rate (Jul – Sep 2016),3,4.463674851820505,3,0,0,0.0
+City Hotel,2017-06-18,no overbooking,0,0.0,4,0,4,424.0
+City Hotel,2017-06-18,flat rate (Jul – Sep 2016),3,3.816765453005938,4,0,1,106.0
+City Hotel,2017-06-19,no overbooking,0,0.0,1,0,1,109.19999999999999
+City Hotel,2017-06-19,flat rate (Jul – Sep 2016),3,4.463674851820505,1,2,0,500.0
+City Hotel,2017-06-20,no overbooking,0,0.0,4,0,4,442.0
+City Hotel,2017-06-20,flat rate (Jul – Sep 2016),3,4.334292972057591,4,0,1,110.5
+City Hotel,2017-06-21,no overbooking,0,0.0,1,0,1,108.21000000000001
+City Hotel,2017-06-21,flat rate (Jul – Sep 2016),2,3.040474174428457,1,1,0,250.0
+City Hotel,2017-06-22,no overbooking,0,0.0,3,0,3,300.0
+City Hotel,2017-06-22,flat rate (Jul – Sep 2016),3,4.204911092294678,3,0,0,0.0
+City Hotel,2017-06-23,no overbooking,0,0.0,3,0,3,255.0
+City Hotel,2017-06-23,flat rate (Jul – Sep 2016),3,4.204911092294678,3,0,0,0.0
+City Hotel,2017-06-24,no overbooking,0,0.0,7,0,7,770.0
+City Hotel,2017-06-24,flat rate (Jul – Sep 2016),2,3.2345469940728275,7,0,5,550.0
+City Hotel,2017-06-25,no overbooking,0,0.0,1,0,1,102.4
+City Hotel,2017-06-25,flat rate (Jul – Sep 2016),5,6.533784928027126,1,4,0,1000.0
+City Hotel,2017-06-26,no overbooking,0,0.0,2,0,2,206.1
+City Hotel,2017-06-26,flat rate (Jul – Sep 2016),2,3.105165114309914,2,0,0,0.0
+City Hotel,2017-06-27,no overbooking,0,0.0,5,0,5,428.75
+City Hotel,2017-06-27,flat rate (Jul – Sep 2016),4,5.304657070279443,5,0,1,85.75
+City Hotel,2017-06-28,no overbooking,0,0.0,7,0,7,648.69
+City Hotel,2017-06-28,flat rate (Jul – Sep 2016),3,4.787129551227789,7,0,4,370.68
+City Hotel,2017-06-29,no overbooking,0,0.0,2,0,2,200.0
+City Hotel,2017-06-29,flat rate (Jul – Sep 2016),3,3.6873835732430242,2,1,0,250.0
+City Hotel,2017-06-30,no overbooking,0,0.0,2,0,2,184.1
+City Hotel,2017-06-30,flat rate (Jul – Sep 2016),3,3.8814563928873946,2,1,0,250.0
+City Hotel,2017-07-01,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-07-01,flat rate (Jul – Sep 2016),3,3.816765453005938,0,3,0,750.0
+City Hotel,2017-07-02,no overbooking,0,0.0,1,0,1,110.05000000000001
+City Hotel,2017-07-02,flat rate (Jul – Sep 2016),2,3.105165114309914,1,1,0,250.0
+City Hotel,2017-07-03,no overbooking,0,0.0,2,0,2,203.23000000000002
+City Hotel,2017-07-03,flat rate (Jul – Sep 2016),2,3.493310753598654,2,0,0,0.0
+City Hotel,2017-07-04,no overbooking,0,0.0,13,0,13,1227.2
+City Hotel,2017-07-04,flat rate (Jul – Sep 2016),6,7.698221845893353,13,0,7,660.8000000000001
+City Hotel,2017-07-05,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-07-05,flat rate (Jul – Sep 2016),2,2.717019475021174,0,2,0,500.0
+City Hotel,2017-07-06,no overbooking,0,0.0,6,0,6,576.5999999999999
+City Hotel,2017-07-06,flat rate (Jul – Sep 2016),5,6.921930567315867,6,0,1,96.1
+City Hotel,2017-07-07,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-07-07,flat rate (Jul – Sep 2016),3,4.722438611346332,0,3,0,750.0
+City Hotel,2017-07-08,no overbooking,0,0.0,1,0,1,88.0
+City Hotel,2017-07-08,flat rate (Jul – Sep 2016),3,3.9461473327688514,1,2,0,500.0
+City Hotel,2017-07-09,no overbooking,0,0.0,1,0,1,105.1
+City Hotel,2017-07-09,flat rate (Jul – Sep 2016),3,4.722438611346332,1,2,0,500.0
+City Hotel,2017-07-10,no overbooking,0,0.0,5,0,5,500.0
+City Hotel,2017-07-10,flat rate (Jul – Sep 2016),3,4.5930567315834185,5,0,2,200.0
+City Hotel,2017-07-11,no overbooking,0,0.0,2,0,2,200.6
+City Hotel,2017-07-11,flat rate (Jul – Sep 2016),2,3.6226926333615674,2,0,0,0.0
+City Hotel,2017-07-12,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-07-12,flat rate (Jul – Sep 2016),3,4.204911092294678,0,3,0,750.0
+City Hotel,2017-07-13,no overbooking,0,0.0,2,0,2,204.8
+City Hotel,2017-07-13,flat rate (Jul – Sep 2016),5,6.4690939881456675,2,3,0,750.0
+City Hotel,2017-07-14,no overbooking,0,0.0,2,0,2,220.0
+City Hotel,2017-07-14,flat rate (Jul – Sep 2016),1,2.2641828958509778,2,0,1,110.0
+City Hotel,2017-07-15,no overbooking,0,0.0,6,0,6,556.02
+City Hotel,2017-07-15,flat rate (Jul – Sep 2016),5,6.7278577476714965,6,0,1,92.67
+City Hotel,2017-07-16,no overbooking,0,0.0,3,0,3,291.15
+City Hotel,2017-07-16,flat rate (Jul – Sep 2016),3,4.2696020321761345,3,0,0,0.0
+City Hotel,2017-07-17,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-07-17,flat rate (Jul – Sep 2016),3,4.5930567315834185,0,3,0,750.0
+City Hotel,2017-07-18,no overbooking,0,0.0,1,0,1,87.1
+City Hotel,2017-07-18,flat rate (Jul – Sep 2016),3,3.9461473327688514,1,2,0,500.0
+City Hotel,2017-07-19,no overbooking,0,0.0,2,0,2,207.3
+City Hotel,2017-07-19,flat rate (Jul – Sep 2016),2,3.105165114309914,2,0,0,0.0
+City Hotel,2017-07-20,no overbooking,0,0.0,2,0,2,212.24
+City Hotel,2017-07-20,flat rate (Jul – Sep 2016),3,3.6873835732430242,2,1,0,250.0
+City Hotel,2017-07-21,no overbooking,0,0.0,3,0,3,319.89
+City Hotel,2017-07-21,flat rate (Jul – Sep 2016),3,4.334292972057591,3,0,0,0.0
+City Hotel,2017-07-22,no overbooking,0,0.0,1,0,1,102.4
+City Hotel,2017-07-22,flat rate (Jul – Sep 2016),5,6.1456392887383835,1,4,0,1000.0
+City Hotel,2017-07-23,no overbooking,0,0.0,2,0,2,229.33000000000004
+City Hotel,2017-07-23,flat rate (Jul – Sep 2016),3,3.493310753598654,2,1,0,250.0
+City Hotel,2017-07-24,no overbooking,0,0.0,7,0,7,702.905
+City Hotel,2017-07-24,flat rate (Jul – Sep 2016),5,5.951566469094013,7,0,2,200.82999999999998
+City Hotel,2017-07-25,no overbooking,0,0.0,2,0,2,194.0
+City Hotel,2017-07-25,flat rate (Jul – Sep 2016),2,3.5580016934801106,2,0,0,0.0
+City Hotel,2017-07-26,no overbooking,0,0.0,2,0,2,203.0
+City Hotel,2017-07-26,flat rate (Jul – Sep 2016),3,4.075529212531764,2,1,0,250.0
+City Hotel,2017-07-27,no overbooking,0,0.0,1,0,1,101.015
+City Hotel,2017-07-27,flat rate (Jul – Sep 2016),3,3.8814563928873946,1,2,0,500.0
+City Hotel,2017-07-28,no overbooking,0,0.0,2,0,2,240.0
+City Hotel,2017-07-28,flat rate (Jul – Sep 2016),2,3.2345469940728275,2,0,0,0.0
+City Hotel,2017-07-29,no overbooking,0,0.0,3,0,3,315.0
+City Hotel,2017-07-29,flat rate (Jul – Sep 2016),3,4.722438611346332,3,0,0,0.0
+City Hotel,2017-07-30,no overbooking,0,0.0,7,0,7,735.14
+City Hotel,2017-07-30,flat rate (Jul – Sep 2016),3,3.6873835732430242,7,0,4,420.08
+City Hotel,2017-07-31,no overbooking,0,0.0,4,0,4,442.0
+City Hotel,2017-07-31,flat rate (Jul – Sep 2016),3,4.5930567315834185,4,0,1,110.5
+City Hotel,2017-08-01,no overbooking,0,0.0,2,0,2,221.0
+City Hotel,2017-08-01,flat rate (Jul – Sep 2016),2,3.428619813717197,2,0,0,0.0
+City Hotel,2017-08-02,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-08-02,flat rate (Jul – Sep 2016),4,4.398983911939048,0,4,0,1000.0
+City Hotel,2017-08-03,no overbooking,0,0.0,3,0,3,326.40000000000003
+City Hotel,2017-08-03,flat rate (Jul – Sep 2016),3,3.6226926333615674,3,0,0,0.0
+City Hotel,2017-08-04,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-08-04,flat rate (Jul – Sep 2016),3,4.204911092294678,0,3,0,750.0
+City Hotel,2017-08-05,no overbooking,0,0.0,1,0,1,110.5
+City Hotel,2017-08-05,flat rate (Jul – Sep 2016),2,2.911092294665544,1,1,0,250.0
+City Hotel,2017-08-06,no overbooking,0,0.0,1,0,1,110.5
+City Hotel,2017-08-06,flat rate (Jul – Sep 2016),2,2.911092294665544,1,1,0,250.0
+City Hotel,2017-08-07,no overbooking,0,0.0,2,0,2,239.0
+City Hotel,2017-08-07,flat rate (Jul – Sep 2016),3,4.398983911939048,2,1,0,250.0
+City Hotel,2017-08-08,no overbooking,0,0.0,1,0,1,121.5
+City Hotel,2017-08-08,flat rate (Jul – Sep 2016),2,2.5229466553768045,1,1,0,250.0
+City Hotel,2017-08-09,no overbooking,0,0.0,1,0,1,92.67
+City Hotel,2017-08-09,flat rate (Jul – Sep 2016),3,4.010838272650308,1,2,0,500.0
+City Hotel,2017-08-10,no overbooking,0,0.0,7,0,7,773.5
+City Hotel,2017-08-10,flat rate (Jul – Sep 2016),2,3.493310753598654,7,0,5,552.5
+City Hotel,2017-08-11,no overbooking,0,0.0,1,0,1,110.5
+City Hotel,2017-08-11,flat rate (Jul – Sep 2016),1,2.2641828958509778,1,0,0,0.0
+City Hotel,2017-08-12,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-08-12,flat rate (Jul – Sep 2016),4,5.045893310753617,0,4,0,1000.0
+City Hotel,2017-08-13,no overbooking,0,0.0,1,0,1,120.19999999999999
+City Hotel,2017-08-13,flat rate (Jul – Sep 2016),2,2.9757832345470003,1,1,0,250.0
+City Hotel,2017-08-14,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-08-14,flat rate (Jul – Sep 2016),3,3.8814563928873946,0,3,0,750.0
+City Hotel,2017-08-15,no overbooking,0,0.0,5,0,5,525.25
+City Hotel,2017-08-15,flat rate (Jul – Sep 2016),3,4.2696020321761345,5,0,2,210.1
+City Hotel,2017-08-16,no overbooking,0,0.0,4,0,4,420.0
+City Hotel,2017-08-16,flat rate (Jul – Sep 2016),3,3.8814563928873946,4,0,1,105.0
+City Hotel,2017-08-17,no overbooking,0,0.0,1,0,1,110.99000000000001
+City Hotel,2017-08-17,flat rate (Jul – Sep 2016),3,3.8814563928873946,1,2,0,500.0
+City Hotel,2017-08-18,no overbooking,0,0.0,2,0,2,229.89999999999998
+City Hotel,2017-08-18,flat rate (Jul – Sep 2016),3,3.6226926333615674,2,1,0,250.0
+City Hotel,2017-08-19,no overbooking,0,0.0,4,0,4,446.0
+City Hotel,2017-08-19,flat rate (Jul – Sep 2016),3,3.5580016934801106,4,0,1,111.5
+City Hotel,2017-08-20,no overbooking,0,0.0,1,0,1,105.0
+City Hotel,2017-08-20,flat rate (Jul – Sep 2016),3,4.722438611346332,1,2,0,500.0
+City Hotel,2017-08-21,no overbooking,0,0.0,4,0,4,420.0
+City Hotel,2017-08-21,flat rate (Jul – Sep 2016),3,4.075529212531764,4,0,1,105.0
+City Hotel,2017-08-22,no overbooking,0,0.0,1,0,1,111.15
+City Hotel,2017-08-22,flat rate (Jul – Sep 2016),1,2.1994919559695214,1,0,0,0.0
+City Hotel,2017-08-23,no overbooking,0,0.0,1,0,1,111.69
+City Hotel,2017-08-23,flat rate (Jul – Sep 2016),2,3.3639288738357407,1,1,0,250.0
+City Hotel,2017-08-24,no overbooking,0,0.0,2,0,2,236.0
+City Hotel,2017-08-24,flat rate (Jul – Sep 2016),2,2.6523285351397172,2,0,0,0.0
+City Hotel,2017-08-25,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-08-25,flat rate (Jul – Sep 2016),5,6.598475867908582,0,5,0,1250.0
+City Hotel,2017-08-26,no overbooking,0,0.0,2,0,2,185.34
+City Hotel,2017-08-26,flat rate (Jul – Sep 2016),3,3.9461473327688514,2,1,0,250.0
+City Hotel,2017-08-27,no overbooking,0,0.0,3,0,3,285.0
+City Hotel,2017-08-27,flat rate (Jul – Sep 2016),3,4.204911092294678,3,0,0,0.0
+City Hotel,2017-08-28,no overbooking,0,0.0,3,0,3,252.0
+City Hotel,2017-08-28,flat rate (Jul – Sep 2016),5,6.66316680779004,3,2,0,500.0
+City Hotel,2017-08-29,no overbooking,0,0.0,1,0,1,103.3
+City Hotel,2017-08-29,flat rate (Jul – Sep 2016),2,3.2345469940728275,1,1,0,250.0
+City Hotel,2017-08-30,no overbooking,0,0.0,1,0,1,92.275
+City Hotel,2017-08-30,flat rate (Jul – Sep 2016),1,2.070110076206608,1,0,0,0.0
+City Hotel,2017-08-31,no overbooking,0,0.0,0,0,0,0.0
+City Hotel,2017-08-31,flat rate (Jul – Sep 2016),2,2.717019475021174,0,2,0,500.0
+Resort Hotel,2017-01-01,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-01,model + blocks + re-level 8 wk,0,0.4777938153159327,0,0,0,0.0
+Resort Hotel,2017-01-02,no overbooking,0,0.0,1,0,1,28.0
+Resort Hotel,2017-01-02,model + blocks + re-level 8 wk,0,1.147167917633169,1,0,1,28.0
+Resort Hotel,2017-01-03,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-03,model + blocks + re-level 8 wk,0,0.35906938037265446,0,0,0,0.0
+Resort Hotel,2017-01-04,no overbooking,0,0.0,1,0,1,33.0
+Resort Hotel,2017-01-04,model + blocks + re-level 8 wk,0,0.285698647084234,1,0,1,33.0
+Resort Hotel,2017-01-05,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-05,model + blocks + re-level 8 wk,0,0.49089445478722116,0,0,0,0.0
+Resort Hotel,2017-01-06,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-06,model + blocks + re-level 8 wk,0,0.8004764911085713,0,0,0,0.0
+Resort Hotel,2017-01-07,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-07,model + blocks + re-level 8 wk,0,0.6796437608801231,0,0,0,0.0
+Resort Hotel,2017-01-08,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-08,model + blocks + re-level 8 wk,0,0.5795334440183699,0,0,0,0.0
+Resort Hotel,2017-01-09,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-09,model + blocks + re-level 8 wk,0,0.6314051222953208,0,0,0,0.0
+Resort Hotel,2017-01-10,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-10,model + blocks + re-level 8 wk,0,0.42765710434793675,0,0,0,0.0
+Resort Hotel,2017-01-11,no overbooking,0,0.0,1,0,1,42.0
+Resort Hotel,2017-01-11,model + blocks + re-level 8 wk,0,0.1389192239659811,1,0,1,42.0
+Resort Hotel,2017-01-12,no overbooking,0,0.0,4,0,4,112.0
+Resort Hotel,2017-01-12,model + blocks + re-level 8 wk,0,1.0986276721700399,4,0,4,112.0
+Resort Hotel,2017-01-13,no overbooking,0,0.0,1,0,1,34.27
+Resort Hotel,2017-01-13,model + blocks + re-level 8 wk,0,0.21216610028374688,1,0,1,34.27
+Resort Hotel,2017-01-14,no overbooking,0,0.0,2,0,2,70.0
+Resort Hotel,2017-01-14,model + blocks + re-level 8 wk,0,0.6157782756851391,2,0,2,70.0
+Resort Hotel,2017-01-15,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-15,model + blocks + re-level 8 wk,0,0.3364839212141948,0,0,0,0.0
+Resort Hotel,2017-01-16,no overbooking,0,0.0,7,0,7,245.0
+Resort Hotel,2017-01-16,model + blocks + re-level 8 wk,0,3.234265149056488,7,0,7,245.0
+Resort Hotel,2017-01-17,no overbooking,0,0.0,1,0,1,26.4
+Resort Hotel,2017-01-17,model + blocks + re-level 8 wk,0,0.6102811511047435,1,0,1,26.4
+Resort Hotel,2017-01-18,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-18,model + blocks + re-level 8 wk,0,0.31571034207485826,0,0,0,0.0
+Resort Hotel,2017-01-19,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-19,model + blocks + re-level 8 wk,0,0.7768644504772557,0,0,0,0.0
+Resort Hotel,2017-01-20,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-20,model + blocks + re-level 8 wk,0,0.15705271985470304,0,0,0,0.0
+Resort Hotel,2017-01-21,no overbooking,0,0.0,1,0,1,27.700000000000003
+Resort Hotel,2017-01-21,model + blocks + re-level 8 wk,0,0.6224624849557966,1,0,1,27.700000000000003
+Resort Hotel,2017-01-22,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-22,model + blocks + re-level 8 wk,0,0.6989636016563872,0,0,0,0.0
+Resort Hotel,2017-01-23,no overbooking,0,0.0,1,0,1,23.0
+Resort Hotel,2017-01-23,model + blocks + re-level 8 wk,0,0.6348279915208352,1,0,1,23.0
+Resort Hotel,2017-01-24,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-24,model + blocks + re-level 8 wk,0,0.5068087242905535,0,0,0,0.0
+Resort Hotel,2017-01-25,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-25,model + blocks + re-level 8 wk,0,0.4983428169612735,0,0,0,0.0
+Resort Hotel,2017-01-26,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-26,model + blocks + re-level 8 wk,0,0.9465739373274046,0,0,0,0.0
+Resort Hotel,2017-01-27,no overbooking,0,0.0,2,0,2,55.0
+Resort Hotel,2017-01-27,model + blocks + re-level 8 wk,0,1.3092605549194842,2,0,2,55.0
+Resort Hotel,2017-01-28,no overbooking,0,0.0,3,0,3,72.0
+Resort Hotel,2017-01-28,model + blocks + re-level 8 wk,0,1.4707903757422818,3,0,3,72.0
+Resort Hotel,2017-01-29,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-29,model + blocks + re-level 8 wk,0,0.36133788234809494,0,0,0,0.0
+Resort Hotel,2017-01-30,no overbooking,0,0.0,2,0,2,70.2
+Resort Hotel,2017-01-30,model + blocks + re-level 8 wk,0,1.3428765542860832,2,0,2,70.2
+Resort Hotel,2017-01-31,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-01-31,model + blocks + re-level 8 wk,0,0.4253031815396766,0,0,0,0.0
+Resort Hotel,2017-02-01,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-01,model + blocks + re-level 8 wk,0,0.19161231469582,0,0,0,0.0
+Resort Hotel,2017-02-02,no overbooking,0,0.0,1,0,1,19.5
+Resort Hotel,2017-02-02,model + blocks + re-level 8 wk,0,0.5351637559866562,1,0,1,19.5
+Resort Hotel,2017-02-03,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-03,model + blocks + re-level 8 wk,0,1.172998098714951,0,0,0,0.0
+Resort Hotel,2017-02-04,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-04,model + blocks + re-level 8 wk,1,2.832198926609845,0,1,0,250.0
+Resort Hotel,2017-02-05,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-05,model + blocks + re-level 8 wk,0,0.2679066772311929,0,0,0,0.0
+Resort Hotel,2017-02-06,no overbooking,0,0.0,2,0,2,140.0
+Resort Hotel,2017-02-06,model + blocks + re-level 8 wk,0,2.0152752680230885,2,0,2,140.0
+Resort Hotel,2017-02-07,no overbooking,0,0.0,1,0,1,24.560000000000002
+Resort Hotel,2017-02-07,model + blocks + re-level 8 wk,0,0.36791116229889564,1,0,1,24.560000000000002
+Resort Hotel,2017-02-08,no overbooking,0,0.0,2,0,2,68.0
+Resort Hotel,2017-02-08,model + blocks + re-level 8 wk,0,0.7251028069025023,2,0,2,68.0
+Resort Hotel,2017-02-09,no overbooking,0,0.0,1,0,1,24.355000000000004
+Resort Hotel,2017-02-09,model + blocks + re-level 8 wk,0,0.6784668691967806,1,0,1,24.355000000000004
+Resort Hotel,2017-02-10,no overbooking,0,0.0,1,0,1,30.9
+Resort Hotel,2017-02-10,model + blocks + re-level 8 wk,0,0.6795314983573011,1,0,1,30.9
+Resort Hotel,2017-02-11,no overbooking,0,0.0,3,0,3,90.0
+Resort Hotel,2017-02-11,model + blocks + re-level 8 wk,0,1.0442488812982968,3,0,3,90.0
+Resort Hotel,2017-02-12,no overbooking,0,0.0,1,0,1,45.91
+Resort Hotel,2017-02-12,model + blocks + re-level 8 wk,0,0.6265016122489391,1,0,1,45.91
+Resort Hotel,2017-02-13,no overbooking,0,0.0,3,0,3,126.0
+Resort Hotel,2017-02-13,model + blocks + re-level 8 wk,0,3.3446091842034242,3,0,3,126.0
+Resort Hotel,2017-02-14,no overbooking,0,0.0,6,0,6,240.0
+Resort Hotel,2017-02-14,model + blocks + re-level 8 wk,0,1.3264867182115925,6,0,6,240.0
+Resort Hotel,2017-02-15,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-15,model + blocks + re-level 8 wk,0,0.548387739766623,0,0,0,0.0
+Resort Hotel,2017-02-16,no overbooking,0,0.0,1,0,1,27.5
+Resort Hotel,2017-02-16,model + blocks + re-level 8 wk,0,0.9077958650482547,1,0,1,27.5
+Resort Hotel,2017-02-17,no overbooking,0,0.0,3,0,3,81.0
+Resort Hotel,2017-02-17,model + blocks + re-level 8 wk,0,2.5973124503464664,3,0,3,81.0
+Resort Hotel,2017-02-18,no overbooking,0,0.0,1,0,1,35.05
+Resort Hotel,2017-02-18,model + blocks + re-level 8 wk,0,1.675064788657187,1,0,1,35.05
+Resort Hotel,2017-02-19,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-19,model + blocks + re-level 8 wk,0,0.8395756110124811,0,0,0,0.0
+Resort Hotel,2017-02-20,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-20,model + blocks + re-level 8 wk,0,0.8420011703120439,0,0,0,0.0
+Resort Hotel,2017-02-21,no overbooking,0,0.0,2,0,2,48.0
+Resort Hotel,2017-02-21,model + blocks + re-level 8 wk,0,0.8545757021989775,2,0,2,48.0
+Resort Hotel,2017-02-22,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-22,model + blocks + re-level 8 wk,0,1.1121839101527509,0,0,0,0.0
+Resort Hotel,2017-02-23,no overbooking,0,0.0,13,0,13,520.0
+Resort Hotel,2017-02-23,model + blocks + re-level 8 wk,0,1.6516016965703746,13,0,13,520.0
+Resort Hotel,2017-02-24,no overbooking,0,0.0,5,0,5,224.0
+Resort Hotel,2017-02-24,model + blocks + re-level 8 wk,0,1.6406006015467807,5,0,5,224.0
+Resort Hotel,2017-02-25,no overbooking,0,0.0,4,0,4,172.0
+Resort Hotel,2017-02-25,model + blocks + re-level 8 wk,2,4.437023731264789,4,0,2,86.0
+Resort Hotel,2017-02-26,no overbooking,0,0.0,1,0,1,35.4
+Resort Hotel,2017-02-26,model + blocks + re-level 8 wk,0,0.8719752519584147,1,0,1,35.4
+Resort Hotel,2017-02-27,no overbooking,0,0.0,1,0,1,34.4
+Resort Hotel,2017-02-27,model + blocks + re-level 8 wk,0,0.5954133438358155,1,0,1,34.4
+Resort Hotel,2017-02-28,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-02-28,model + blocks + re-level 8 wk,0,0.6397497305377284,0,0,0,0.0
+Resort Hotel,2017-03-01,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-01,model + blocks + re-level 8 wk,0,2.1170696267030307,0,0,0,0.0
+Resort Hotel,2017-03-02,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-02,model + blocks + re-level 8 wk,0,0.5247061092499583,0,0,0,0.0
+Resort Hotel,2017-03-03,no overbooking,0,0.0,5,0,5,161.5
+Resort Hotel,2017-03-03,model + blocks + re-level 8 wk,0,0.7893680410225423,5,0,5,161.5
+Resort Hotel,2017-03-04,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-04,model + blocks + re-level 8 wk,0,0.5612829955707314,0,0,0,0.0
+Resort Hotel,2017-03-05,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-05,model + blocks + re-level 8 wk,1,2.995891785185872,0,1,0,250.0
+Resort Hotel,2017-03-06,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-06,model + blocks + re-level 8 wk,0,1.0933770933780227,0,0,0,0.0
+Resort Hotel,2017-03-07,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-07,model + blocks + re-level 8 wk,0,1.1564842153736237,0,0,0,0.0
+Resort Hotel,2017-03-08,no overbooking,0,0.0,1,0,1,40.0
+Resort Hotel,2017-03-08,model + blocks + re-level 8 wk,0,0.8833066228614965,1,0,1,40.0
+Resort Hotel,2017-03-09,no overbooking,0,0.0,2,0,2,95.67000000000002
+Resort Hotel,2017-03-09,model + blocks + re-level 8 wk,0,1.7787073374165123,2,0,2,95.67000000000002
+Resort Hotel,2017-03-10,no overbooking,0,0.0,2,0,2,90.0
+Resort Hotel,2017-03-10,model + blocks + re-level 8 wk,1,2.867881853572395,2,0,1,45.0
+Resort Hotel,2017-03-11,no overbooking,0,0.0,4,0,4,124.0
+Resort Hotel,2017-03-11,model + blocks + re-level 8 wk,0,3.496190387953359,4,0,4,124.0
+Resort Hotel,2017-03-12,no overbooking,0,0.0,1,0,1,32.55
+Resort Hotel,2017-03-12,model + blocks + re-level 8 wk,0,2.8220577443762793,1,0,1,32.55
+Resort Hotel,2017-03-13,no overbooking,0,0.0,3,0,3,90.0
+Resort Hotel,2017-03-13,model + blocks + re-level 8 wk,1,3.565847664394143,3,0,2,60.0
+Resort Hotel,2017-03-14,no overbooking,0,0.0,1,0,1,46.7
+Resort Hotel,2017-03-14,model + blocks + re-level 8 wk,0,1.8287205393035797,1,0,1,46.7
+Resort Hotel,2017-03-15,no overbooking,0,0.0,1,0,1,20.0
+Resort Hotel,2017-03-15,model + blocks + re-level 8 wk,0,1.7053393139374013,1,0,1,20.0
+Resort Hotel,2017-03-16,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-16,model + blocks + re-level 8 wk,0,2.4553143627783136,0,0,0,0.0
+Resort Hotel,2017-03-17,no overbooking,0,0.0,1,0,1,48.0
+Resort Hotel,2017-03-17,model + blocks + re-level 8 wk,0,0.9063147321386917,1,0,1,48.0
+Resort Hotel,2017-03-18,no overbooking,0,0.0,4,0,4,160.0
+Resort Hotel,2017-03-18,model + blocks + re-level 8 wk,0,2.40773573514511,4,0,4,160.0
+Resort Hotel,2017-03-19,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-19,model + blocks + re-level 8 wk,0,2.2828180998940177,0,0,0,0.0
+Resort Hotel,2017-03-20,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-20,model + blocks + re-level 8 wk,0,1.813937146227885,0,0,0,0.0
+Resort Hotel,2017-03-21,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-21,model + blocks + re-level 8 wk,0,1.1833344835125585,0,0,0,0.0
+Resort Hotel,2017-03-22,no overbooking,0,0.0,1,0,1,44.18000000000001
+Resort Hotel,2017-03-22,model + blocks + re-level 8 wk,0,0.5767501224073068,1,0,1,44.18000000000001
+Resort Hotel,2017-03-23,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-23,model + blocks + re-level 8 wk,0,0.8470089223622587,0,0,0,0.0
+Resort Hotel,2017-03-24,no overbooking,0,0.0,1,0,1,35.6
+Resort Hotel,2017-03-24,model + blocks + re-level 8 wk,0,1.1559519350350684,1,0,1,35.6
+Resort Hotel,2017-03-25,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-25,model + blocks + re-level 8 wk,0,2.8071650608281433,0,0,0,0.0
+Resort Hotel,2017-03-26,no overbooking,0,0.0,2,0,2,88.13999999999999
+Resort Hotel,2017-03-26,model + blocks + re-level 8 wk,0,1.6700925560065574,2,0,2,88.13999999999999
+Resort Hotel,2017-03-27,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-27,model + blocks + re-level 8 wk,0,1.3996119270313545,0,0,0,0.0
+Resort Hotel,2017-03-28,no overbooking,0,0.0,2,0,2,82.0
+Resort Hotel,2017-03-28,model + blocks + re-level 8 wk,0,1.3480217030113413,2,0,2,82.0
+Resort Hotel,2017-03-29,no overbooking,0,0.0,2,0,2,60.0
+Resort Hotel,2017-03-29,model + blocks + re-level 8 wk,0,2.1521731391822967,2,0,2,60.0
+Resort Hotel,2017-03-30,no overbooking,0,0.0,1,0,1,56.5
+Resort Hotel,2017-03-30,model + blocks + re-level 8 wk,1,2.2293704354419095,1,0,0,0.0
+Resort Hotel,2017-03-31,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-03-31,model + blocks + re-level 8 wk,1,2.627563841431269,0,1,0,250.0
+Resort Hotel,2017-04-01,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-01,model + blocks + re-level 8 wk,0,1.5376582693581053,0,0,0,0.0
+Resort Hotel,2017-04-02,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-02,model + blocks + re-level 8 wk,0,0.969569213959038,0,0,0,0.0
+Resort Hotel,2017-04-03,no overbooking,0,0.0,15,0,15,450.0
+Resort Hotel,2017-04-03,model + blocks + re-level 8 wk,0,7.055565936677338,15,0,15,450.0
+Resort Hotel,2017-04-04,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-04,model + blocks + re-level 8 wk,0,0.8714086112212438,0,0,0,0.0
+Resort Hotel,2017-04-05,no overbooking,0,0.0,2,0,2,56.0
+Resort Hotel,2017-04-05,model + blocks + re-level 8 wk,0,3.021020396679585,2,0,2,56.0
+Resort Hotel,2017-04-06,no overbooking,0,0.0,1,0,1,49.64
+Resort Hotel,2017-04-06,model + blocks + re-level 8 wk,0,1.0699468108255248,1,0,1,49.64
+Resort Hotel,2017-04-07,no overbooking,0,0.0,1,0,1,63.5
+Resort Hotel,2017-04-07,model + blocks + re-level 8 wk,0,0.7655429816926751,1,0,1,63.5
+Resort Hotel,2017-04-08,no overbooking,0,0.0,2,0,2,120.0
+Resort Hotel,2017-04-08,model + blocks + re-level 8 wk,1,2.529061382540293,2,0,1,60.0
+Resort Hotel,2017-04-09,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-09,model + blocks + re-level 8 wk,1,2.8967469167459603,0,1,0,250.0
+Resort Hotel,2017-04-10,no overbooking,0,0.0,1,0,1,58.849999999999994
+Resort Hotel,2017-04-10,model + blocks + re-level 8 wk,0,1.4792632399254324,1,0,1,58.849999999999994
+Resort Hotel,2017-04-11,no overbooking,0,0.0,3,0,3,240.0
+Resort Hotel,2017-04-11,model + blocks + re-level 8 wk,1,1.7767558455029122,3,0,2,160.0
+Resort Hotel,2017-04-12,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-12,model + blocks + re-level 8 wk,1,1.8684852446552438,0,1,0,250.0
+Resort Hotel,2017-04-13,no overbooking,0,0.0,1,0,1,85.5
+Resort Hotel,2017-04-13,model + blocks + re-level 8 wk,2,3.7627642641654715,1,1,0,250.0
+Resort Hotel,2017-04-14,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-14,model + blocks + re-level 8 wk,1,2.475441950320045,0,1,0,250.0
+Resort Hotel,2017-04-15,no overbooking,0,0.0,1,0,1,52.5
+Resort Hotel,2017-04-15,model + blocks + re-level 8 wk,0,1.6657865647794619,1,0,1,52.5
+Resort Hotel,2017-04-16,no overbooking,0,0.0,3,0,3,187.5
+Resort Hotel,2017-04-16,model + blocks + re-level 8 wk,0,1.8780900790801969,3,0,3,187.5
+Resort Hotel,2017-04-17,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-17,model + blocks + re-level 8 wk,1,1.9131445086059737,0,1,0,250.0
+Resort Hotel,2017-04-18,no overbooking,0,0.0,1,0,1,54.599999999999994
+Resort Hotel,2017-04-18,model + blocks + re-level 8 wk,0,0.9391074875921605,1,0,1,54.599999999999994
+Resort Hotel,2017-04-19,no overbooking,0,0.0,1,0,1,64.0
+Resort Hotel,2017-04-19,model + blocks + re-level 8 wk,0,1.4561326596661166,1,0,1,64.0
+Resort Hotel,2017-04-20,no overbooking,0,0.0,2,0,2,107.58000000000001
+Resort Hotel,2017-04-20,model + blocks + re-level 8 wk,0,1.0679755873956263,2,0,2,107.58000000000001
+Resort Hotel,2017-04-21,no overbooking,0,0.0,1,0,1,41.5
+Resort Hotel,2017-04-21,model + blocks + re-level 8 wk,0,0.7274046318046461,1,0,1,41.5
+Resort Hotel,2017-04-22,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-22,model + blocks + re-level 8 wk,0,2.3650489108422152,0,0,0,0.0
+Resort Hotel,2017-04-23,no overbooking,0,0.0,2,0,2,108.0
+Resort Hotel,2017-04-23,model + blocks + re-level 8 wk,0,1.990536185208804,2,0,2,108.0
+Resort Hotel,2017-04-24,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-24,model + blocks + re-level 8 wk,0,0.32398970486188966,0,0,0,0.0
+Resort Hotel,2017-04-25,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-25,model + blocks + re-level 8 wk,0,1.250790911145464,0,0,0,0.0
+Resort Hotel,2017-04-26,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-26,model + blocks + re-level 8 wk,0,0.540240129505694,0,0,0,0.0
+Resort Hotel,2017-04-27,no overbooking,0,0.0,2,0,2,151.5
+Resort Hotel,2017-04-27,model + blocks + re-level 8 wk,0,1.1813355867846282,2,0,2,151.5
+Resort Hotel,2017-04-28,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-04-28,model + blocks + re-level 8 wk,0,1.3399161057172853,0,0,0,0.0
+Resort Hotel,2017-04-29,no overbooking,0,0.0,2,0,2,126.0
+Resort Hotel,2017-04-29,model + blocks + re-level 8 wk,1,2.859881143940223,2,0,1,63.0
+Resort Hotel,2017-04-30,no overbooking,0,0.0,1,0,1,52.43000000000001
+Resort Hotel,2017-04-30,model + blocks + re-level 8 wk,0,1.3676859649829756,1,0,1,52.43000000000001
+Resort Hotel,2017-05-01,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-01,model + blocks + re-level 8 wk,0,0.9871063291725757,0,0,0,0.0
+Resort Hotel,2017-05-02,no overbooking,0,0.0,1,0,1,32.85
+Resort Hotel,2017-05-02,model + blocks + re-level 8 wk,0,1.039138273687871,1,0,1,32.85
+Resort Hotel,2017-05-03,no overbooking,0,0.0,1,0,1,42.0
+Resort Hotel,2017-05-03,model + blocks + re-level 8 wk,0,1.6129381784149242,1,0,1,42.0
+Resort Hotel,2017-05-04,no overbooking,0,0.0,2,0,2,84.0
+Resort Hotel,2017-05-04,model + blocks + re-level 8 wk,0,1.5217135052905975,2,0,2,84.0
+Resort Hotel,2017-05-05,no overbooking,0,0.0,1,0,1,56.0
+Resort Hotel,2017-05-05,model + blocks + re-level 8 wk,0,1.029071604158515,1,0,1,56.0
+Resort Hotel,2017-05-06,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-06,model + blocks + re-level 8 wk,0,0.7504429576483624,0,0,0,0.0
+Resort Hotel,2017-05-07,no overbooking,0,0.0,1,0,1,54.25
+Resort Hotel,2017-05-07,model + blocks + re-level 8 wk,0,0.9011104254205284,1,0,1,54.25
+Resort Hotel,2017-05-08,no overbooking,0,0.0,1,0,1,61.43000000000001
+Resort Hotel,2017-05-08,model + blocks + re-level 8 wk,0,2.04690451532611,1,0,1,61.43000000000001
+Resort Hotel,2017-05-09,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-09,model + blocks + re-level 8 wk,0,1.398907671589551,0,0,0,0.0
+Resort Hotel,2017-05-10,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-10,model + blocks + re-level 8 wk,0,0.36086065062064354,0,0,0,0.0
+Resort Hotel,2017-05-11,no overbooking,0,0.0,1,0,1,80.0
+Resort Hotel,2017-05-11,model + blocks + re-level 8 wk,0,0.6823520249034334,1,0,1,80.0
+Resort Hotel,2017-05-12,no overbooking,0,0.0,1,0,1,76.25
+Resort Hotel,2017-05-12,model + blocks + re-level 8 wk,0,1.147826074476742,1,0,1,76.25
+Resort Hotel,2017-05-13,no overbooking,0,0.0,3,0,3,168.0
+Resort Hotel,2017-05-13,model + blocks + re-level 8 wk,0,1.3741702383864531,3,0,3,168.0
+Resort Hotel,2017-05-14,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-14,model + blocks + re-level 8 wk,0,0.7597914723744608,0,0,0,0.0
+Resort Hotel,2017-05-15,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-15,model + blocks + re-level 8 wk,0,0.7988499234575437,0,0,0,0.0
+Resort Hotel,2017-05-16,no overbooking,0,0.0,2,0,2,109.35
+Resort Hotel,2017-05-16,model + blocks + re-level 8 wk,0,1.2756798138737018,2,0,2,109.35
+Resort Hotel,2017-05-17,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-17,model + blocks + re-level 8 wk,0,1.0505371092730282,0,0,0,0.0
+Resort Hotel,2017-05-18,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-18,model + blocks + re-level 8 wk,0,0.8194739686637931,0,0,0,0.0
+Resort Hotel,2017-05-19,no overbooking,0,0.0,1,0,1,73.73
+Resort Hotel,2017-05-19,model + blocks + re-level 8 wk,0,0.5313371101942173,1,0,1,73.73
+Resort Hotel,2017-05-20,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-20,model + blocks + re-level 8 wk,0,0.6093126439896113,0,0,0,0.0
+Resort Hotel,2017-05-21,no overbooking,0,0.0,8,0,8,262.8
+Resort Hotel,2017-05-21,model + blocks + re-level 8 wk,0,0.9572476938000224,8,0,8,262.8
+Resort Hotel,2017-05-22,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-22,model + blocks + re-level 8 wk,0,0.9285271903011979,0,0,0,0.0
+Resort Hotel,2017-05-23,no overbooking,0,0.0,5,0,5,250.25000000000006
+Resort Hotel,2017-05-23,model + blocks + re-level 8 wk,0,0.975948291672743,5,0,5,250.25000000000006
+Resort Hotel,2017-05-24,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-24,model + blocks + re-level 8 wk,0,1.1657882072960142,0,0,0,0.0
+Resort Hotel,2017-05-25,no overbooking,0,0.0,1,0,1,47.0
+Resort Hotel,2017-05-25,model + blocks + re-level 8 wk,1,3.4379525494289,1,0,0,0.0
+Resort Hotel,2017-05-26,no overbooking,0,0.0,3,0,3,232.92000000000002
+Resort Hotel,2017-05-26,model + blocks + re-level 8 wk,0,0.9446338321369089,3,0,3,232.92000000000002
+Resort Hotel,2017-05-27,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-27,model + blocks + re-level 8 wk,0,0.46941211321683163,0,0,0,0.0
+Resort Hotel,2017-05-28,no overbooking,0,0.0,6,0,6,433.65000000000003
+Resort Hotel,2017-05-28,model + blocks + re-level 8 wk,1,2.2760848189735796,6,0,5,361.375
+Resort Hotel,2017-05-29,no overbooking,0,0.0,2,0,2,160.2
+Resort Hotel,2017-05-29,model + blocks + re-level 8 wk,0,1.0854386997607608,2,0,2,160.2
+Resort Hotel,2017-05-30,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-05-30,model + blocks + re-level 8 wk,0,0.8734150958329852,0,0,0,0.0
+Resort Hotel,2017-05-31,no overbooking,0,0.0,2,0,2,110.25
+Resort Hotel,2017-05-31,model + blocks + re-level 8 wk,0,0.6121664833645075,2,0,2,110.25
+Resort Hotel,2017-06-01,no overbooking,0,0.0,1,0,1,80.19999999999999
+Resort Hotel,2017-06-01,model + blocks + re-level 8 wk,0,0.9955192719590729,1,0,1,80.19999999999999
+Resort Hotel,2017-06-02,no overbooking,0,0.0,2,0,2,200.0
+Resort Hotel,2017-06-02,model + blocks + re-level 8 wk,1,1.8006336460763697,2,0,1,100.0
+Resort Hotel,2017-06-03,no overbooking,0,0.0,4,0,4,272.8
+Resort Hotel,2017-06-03,model + blocks + re-level 8 wk,1,2.9430285173302275,4,0,3,204.60000000000002
+Resort Hotel,2017-06-04,no overbooking,0,0.0,3,0,3,201.57
+Resort Hotel,2017-06-04,model + blocks + re-level 8 wk,0,1.5302416727738692,3,0,3,201.57
+Resort Hotel,2017-06-05,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-05,model + blocks + re-level 8 wk,0,0.7748756831939905,0,0,0,0.0
+Resort Hotel,2017-06-06,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-06,model + blocks + re-level 8 wk,0,0.6419262333455513,0,0,0,0.0
+Resort Hotel,2017-06-07,no overbooking,0,0.0,2,0,2,150.0
+Resort Hotel,2017-06-07,model + blocks + re-level 8 wk,0,0.838182352512984,2,0,2,150.0
+Resort Hotel,2017-06-08,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-08,model + blocks + re-level 8 wk,0,0.9860296194924252,0,0,0,0.0
+Resort Hotel,2017-06-09,no overbooking,0,0.0,5,0,5,570.0
+Resort Hotel,2017-06-09,model + blocks + re-level 8 wk,1,1.8987474444349368,5,0,4,456.0
+Resort Hotel,2017-06-10,no overbooking,0,0.0,2,0,2,225.0
+Resort Hotel,2017-06-10,model + blocks + re-level 8 wk,1,1.8774714969369404,2,0,1,112.5
+Resort Hotel,2017-06-11,no overbooking,0,0.0,2,0,2,94.4
+Resort Hotel,2017-06-11,model + blocks + re-level 8 wk,0,1.388980660245418,2,0,2,94.4
+Resort Hotel,2017-06-12,no overbooking,0,0.0,1,0,1,95.0
+Resort Hotel,2017-06-12,model + blocks + re-level 8 wk,0,0.9304571643572296,1,0,1,95.0
+Resort Hotel,2017-06-13,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-13,model + blocks + re-level 8 wk,1,1.334627449913102,0,1,0,250.0
+Resort Hotel,2017-06-14,no overbooking,0,0.0,2,0,2,208.0
+Resort Hotel,2017-06-14,model + blocks + re-level 8 wk,0,1.1201764531805956,2,0,2,208.0
+Resort Hotel,2017-06-15,no overbooking,0,0.0,1,0,1,78.7
+Resort Hotel,2017-06-15,model + blocks + re-level 8 wk,1,1.4272506734714865,1,0,0,0.0
+Resort Hotel,2017-06-16,no overbooking,0,0.0,1,0,1,100.6
+Resort Hotel,2017-06-16,model + blocks + re-level 8 wk,0,0.8674096855663129,1,0,1,100.6
+Resort Hotel,2017-06-17,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-17,model + blocks + re-level 8 wk,1,1.6327644082977457,0,1,0,250.0
+Resort Hotel,2017-06-18,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-18,model + blocks + re-level 8 wk,0,0.9668752126097017,0,0,0,0.0
+Resort Hotel,2017-06-19,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-19,model + blocks + re-level 8 wk,1,1.4808078071520898,0,1,0,250.0
+Resort Hotel,2017-06-20,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-20,model + blocks + re-level 8 wk,0,1.170666777817928,0,0,0,0.0
+Resort Hotel,2017-06-21,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-21,model + blocks + re-level 8 wk,0,1.0968093300482118,0,0,0,0.0
+Resort Hotel,2017-06-22,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-22,model + blocks + re-level 8 wk,1,1.4675477528965788,0,1,0,250.0
+Resort Hotel,2017-06-23,no overbooking,0,0.0,1,0,1,114.0
+Resort Hotel,2017-06-23,model + blocks + re-level 8 wk,0,1.1028186793944652,1,0,1,114.0
+Resort Hotel,2017-06-24,no overbooking,0,0.0,1,0,1,108.07499999999999
+Resort Hotel,2017-06-24,model + blocks + re-level 8 wk,1,2.07429564938416,1,0,0,0.0
+Resort Hotel,2017-06-25,no overbooking,0,0.0,1,0,1,62.44999999999999
+Resort Hotel,2017-06-25,model + blocks + re-level 8 wk,0,0.7832960699818801,1,0,1,62.44999999999999
+Resort Hotel,2017-06-26,no overbooking,0,0.0,2,0,2,176.0
+Resort Hotel,2017-06-26,model + blocks + re-level 8 wk,0,1.5486261702508646,2,0,2,176.0
+Resort Hotel,2017-06-27,no overbooking,0,0.0,2,0,2,200.64
+Resort Hotel,2017-06-27,model + blocks + re-level 8 wk,0,0.5265005905007786,2,0,2,200.64
+Resort Hotel,2017-06-28,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-06-28,model + blocks + re-level 8 wk,0,0.5391343200191252,0,0,0,0.0
+Resort Hotel,2017-06-29,no overbooking,0,0.0,1,0,1,100.0
+Resort Hotel,2017-06-29,model + blocks + re-level 8 wk,0,0.8554908102454017,1,0,1,100.0
+Resort Hotel,2017-06-30,no overbooking,0,0.0,2,0,2,210.0
+Resort Hotel,2017-06-30,model + blocks + re-level 8 wk,1,1.8695825205233172,2,0,1,105.0
+Resort Hotel,2017-07-01,no overbooking,0,0.0,3,0,3,330.765
+Resort Hotel,2017-07-01,model + blocks + re-level 8 wk,1,2.1329192032520323,3,0,2,220.51
+Resort Hotel,2017-07-02,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-02,model + blocks + re-level 8 wk,0,1.0038125974910823,0,0,0,0.0
+Resort Hotel,2017-07-03,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-03,model + blocks + re-level 8 wk,0,1.0689385039322925,0,0,0,0.0
+Resort Hotel,2017-07-04,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-04,model + blocks + re-level 8 wk,0,1.034077336459097,0,0,0,0.0
+Resort Hotel,2017-07-05,no overbooking,0,0.0,3,0,3,345.0
+Resort Hotel,2017-07-05,model + blocks + re-level 8 wk,0,0.8597202463300488,3,0,3,345.0
+Resort Hotel,2017-07-06,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-06,model + blocks + re-level 8 wk,0,1.213303890012197,0,0,0,0.0
+Resort Hotel,2017-07-07,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-07,model + blocks + re-level 8 wk,0,0.8987247883060614,0,0,0,0.0
+Resort Hotel,2017-07-08,no overbooking,0,0.0,1,0,1,140.0
+Resort Hotel,2017-07-08,model + blocks + re-level 8 wk,1,1.1816021187607841,1,0,0,0.0
+Resort Hotel,2017-07-09,no overbooking,0,0.0,2,0,2,271.5
+Resort Hotel,2017-07-09,model + blocks + re-level 8 wk,1,2.132651803206078,2,0,1,135.75
+Resort Hotel,2017-07-10,no overbooking,0,0.0,2,0,2,290.8
+Resort Hotel,2017-07-10,model + blocks + re-level 8 wk,1,1.7690260748700475,2,0,1,145.4
+Resort Hotel,2017-07-11,no overbooking,0,0.0,1,0,1,149.5
+Resort Hotel,2017-07-11,model + blocks + re-level 8 wk,1,1.7910536171559075,1,0,0,0.0
+Resort Hotel,2017-07-12,no overbooking,0,0.0,1,0,1,152.14499999999998
+Resort Hotel,2017-07-12,model + blocks + re-level 8 wk,1,1.3689118140181602,1,0,0,0.0
+Resort Hotel,2017-07-13,no overbooking,0,0.0,2,0,2,281.34
+Resort Hotel,2017-07-13,model + blocks + re-level 8 wk,1,1.3732642987340598,2,0,1,140.67
+Resort Hotel,2017-07-14,no overbooking,0,0.0,2,0,2,336.0
+Resort Hotel,2017-07-14,model + blocks + re-level 8 wk,1,1.2137798538805795,2,0,1,168.0
+Resort Hotel,2017-07-15,no overbooking,0,0.0,2,0,2,366.48
+Resort Hotel,2017-07-15,model + blocks + re-level 8 wk,1,1.338669463810158,2,0,1,183.24
+Resort Hotel,2017-07-16,no overbooking,0,0.0,2,0,2,302.94
+Resort Hotel,2017-07-16,model + blocks + re-level 8 wk,1,1.2953579404301498,2,0,1,151.47
+Resort Hotel,2017-07-17,no overbooking,0,0.0,1,0,1,170.0
+Resort Hotel,2017-07-17,model + blocks + re-level 8 wk,1,1.4012887051545813,1,0,0,0.0
+Resort Hotel,2017-07-18,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-18,model + blocks + re-level 8 wk,1,1.0876163061735045,0,1,0,250.0
+Resort Hotel,2017-07-19,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-19,model + blocks + re-level 8 wk,0,0.7272382180579968,0,0,0,0.0
+Resort Hotel,2017-07-20,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-20,model + blocks + re-level 8 wk,1,1.1678057630947545,0,1,0,250.0
+Resort Hotel,2017-07-21,no overbooking,0,0.0,1,0,1,183.75
+Resort Hotel,2017-07-21,model + blocks + re-level 8 wk,1,1.2365480329344312,1,0,0,0.0
+Resort Hotel,2017-07-22,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-22,model + blocks + re-level 8 wk,0,0.9277440923891398,0,0,0,0.0
+Resort Hotel,2017-07-23,no overbooking,0,0.0,1,0,1,180.0
+Resort Hotel,2017-07-23,model + blocks + re-level 8 wk,1,1.3123517154649496,1,0,0,0.0
+Resort Hotel,2017-07-24,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-24,model + blocks + re-level 8 wk,1,1.64162457977423,0,1,0,250.0
+Resort Hotel,2017-07-25,no overbooking,0,0.0,1,0,1,165.055
+Resort Hotel,2017-07-25,model + blocks + re-level 8 wk,0,0.976328670796734,1,0,1,165.055
+Resort Hotel,2017-07-26,no overbooking,0,0.0,2,0,2,338.2
+Resort Hotel,2017-07-26,model + blocks + re-level 8 wk,0,0.7074603678812053,2,0,2,338.2
+Resort Hotel,2017-07-27,no overbooking,0,0.0,2,0,2,322.62
+Resort Hotel,2017-07-27,model + blocks + re-level 8 wk,1,1.1663535163279586,2,0,1,161.31
+Resort Hotel,2017-07-28,no overbooking,0,0.0,1,0,1,164.5
+Resort Hotel,2017-07-28,model + blocks + re-level 8 wk,1,1.0152052672015675,1,0,0,0.0
+Resort Hotel,2017-07-29,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-29,model + blocks + re-level 8 wk,1,1.171292876962919,0,1,0,250.0
+Resort Hotel,2017-07-30,no overbooking,0,0.0,2,0,2,280.16
+Resort Hotel,2017-07-30,model + blocks + re-level 8 wk,1,1.4334056760107854,2,0,1,140.08
+Resort Hotel,2017-07-31,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-07-31,model + blocks + re-level 8 wk,1,1.2670634588882081,0,1,0,250.0
+Resort Hotel,2017-08-01,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-01,model + blocks + re-level 8 wk,1,1.3952329812864828,0,1,0,250.0
+Resort Hotel,2017-08-02,no overbooking,0,0.0,1,0,1,208.5
+Resort Hotel,2017-08-02,model + blocks + re-level 8 wk,1,0.918589164432714,1,0,0,0.0
+Resort Hotel,2017-08-03,no overbooking,0,0.0,9,0,9,1665.0
+Resort Hotel,2017-08-03,model + blocks + re-level 8 wk,1,1.3225898527321616,9,0,8,1480.0
+Resort Hotel,2017-08-04,no overbooking,0,0.0,1,0,1,195.5
+Resort Hotel,2017-08-04,model + blocks + re-level 8 wk,1,1.1060137800072691,1,0,0,0.0
+Resort Hotel,2017-08-05,no overbooking,0,0.0,1,0,1,192.0
+Resort Hotel,2017-08-05,model + blocks + re-level 8 wk,1,1.5241071145294132,1,0,0,0.0
+Resort Hotel,2017-08-06,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-06,model + blocks + re-level 8 wk,1,1.017739141257243,0,1,0,250.0
+Resort Hotel,2017-08-07,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-07,model + blocks + re-level 8 wk,1,1.4675991490276195,0,1,0,250.0
+Resort Hotel,2017-08-08,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-08,model + blocks + re-level 8 wk,1,1.0727126616328313,0,1,0,250.0
+Resort Hotel,2017-08-09,no overbooking,0,0.0,3,0,3,672.0
+Resort Hotel,2017-08-09,model + blocks + re-level 8 wk,0,0.720879028180289,3,0,3,672.0
+Resort Hotel,2017-08-10,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-10,model + blocks + re-level 8 wk,0,0.636268701219076,0,0,0,0.0
+Resort Hotel,2017-08-11,no overbooking,0,0.0,1,0,1,183.67
+Resort Hotel,2017-08-11,model + blocks + re-level 8 wk,0,0.9116587106220728,1,0,1,183.67
+Resort Hotel,2017-08-12,no overbooking,0,0.0,1,0,1,187.29
+Resort Hotel,2017-08-12,model + blocks + re-level 8 wk,1,1.264513151148017,1,0,0,0.0
+Resort Hotel,2017-08-13,no overbooking,0,0.0,1,0,1,161.2
+Resort Hotel,2017-08-13,model + blocks + re-level 8 wk,1,1.004240244523527,1,0,0,0.0
+Resort Hotel,2017-08-14,no overbooking,0,0.0,2,0,2,343.90999999999997
+Resort Hotel,2017-08-14,model + blocks + re-level 8 wk,1,1.0199090967248414,2,0,1,171.95499999999998
+Resort Hotel,2017-08-15,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-15,model + blocks + re-level 8 wk,0,0.4631064953314141,0,0,0,0.0
+Resort Hotel,2017-08-16,no overbooking,0,0.0,2,0,2,386.0
+Resort Hotel,2017-08-16,model + blocks + re-level 8 wk,1,1.1635112384418678,2,0,1,193.0
+Resort Hotel,2017-08-17,no overbooking,0,0.0,3,0,3,573.5999999999999
+Resort Hotel,2017-08-17,model + blocks + re-level 8 wk,1,1.494501305239555,3,0,2,382.4
+Resort Hotel,2017-08-18,no overbooking,0,0.0,3,0,3,594.0
+Resort Hotel,2017-08-18,model + blocks + re-level 8 wk,1,1.2039404805395781,3,0,2,396.0
+Resort Hotel,2017-08-19,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-19,model + blocks + re-level 8 wk,1,1.1423993437417692,0,1,0,250.0
+Resort Hotel,2017-08-20,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-20,model + blocks + re-level 8 wk,1,0.9678984911459079,0,1,0,250.0
+Resort Hotel,2017-08-21,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-21,model + blocks + re-level 8 wk,1,1.1777654993608286,0,1,0,250.0
+Resort Hotel,2017-08-22,no overbooking,0,0.0,1,0,1,219.0
+Resort Hotel,2017-08-22,model + blocks + re-level 8 wk,1,1.1270137660970811,1,0,0,0.0
+Resort Hotel,2017-08-23,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-23,model + blocks + re-level 8 wk,1,0.9065112809401988,0,1,0,250.0
+Resort Hotel,2017-08-24,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-24,model + blocks + re-level 8 wk,0,1.03043621035002,0,0,0,0.0
+Resort Hotel,2017-08-25,no overbooking,0,0.0,1,0,1,210.0
+Resort Hotel,2017-08-25,model + blocks + re-level 8 wk,1,0.8929499547291804,1,0,0,0.0
+Resort Hotel,2017-08-26,no overbooking,0,0.0,2,0,2,298.0
+Resort Hotel,2017-08-26,model + blocks + re-level 8 wk,1,1.2246354984178487,2,0,1,149.0
+Resort Hotel,2017-08-27,no overbooking,0,0.0,1,0,1,136.0
+Resort Hotel,2017-08-27,model + blocks + re-level 8 wk,1,1.3702931110413945,1,0,0,0.0
+Resort Hotel,2017-08-28,no overbooking,0,0.0,2,0,2,368.32
+Resort Hotel,2017-08-28,model + blocks + re-level 8 wk,1,1.5319976800732098,2,0,1,184.16
+Resort Hotel,2017-08-29,no overbooking,0,0.0,3,0,3,437.40000000000003
+Resort Hotel,2017-08-29,model + blocks + re-level 8 wk,0,0.629804066170666,3,0,3,437.40000000000003
+Resort Hotel,2017-08-30,no overbooking,0,0.0,0,0,0,0.0
+Resort Hotel,2017-08-30,model + blocks + re-level 8 wk,0,0.785933188949939,0,0,0,0.0
+Resort Hotel,2017-08-31,no overbooking,0,0.0,2,0,2,277.06
+Resort Hotel,2017-08-31,model + blocks + re-level 8 wk,1,1.1571646646137965,2,0,1,138.53

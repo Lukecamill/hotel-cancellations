@@ -1,0 +1,70 @@
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/pyfunc/utils/data_validation.py:187: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+2026/11/09 14:36:11 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/09 14:36:11 INFO mlflow.store.db.utils: Updating database tables
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/types/utils.py:440: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  warnings.warn(
+2026/11/09 14:36:12 WARNING mlflow.pyfunc: Passing a Python object as `python_model` causes it to be serialized using CloudPickle, it requires exercising caution as Python object serialization mechanisms may execute arbitrary code during deserialization.Consider using a file path (str or Path) instead. See https://mlflow.org/docs/latest/ml/model/models-from-code/ for details.
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/pyfunc/__init__.py:3364: UserWarning: [1;33mAn input example was not provided when logging the model. To ensure the model signature functions correctly, specify the `input_example` parameter. See https://mlflow.org/docs/latest/model/signatures.html#model-input-example for more details about the benefits of using input_example.[0m
+  color_warning(
+
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]
+Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 898.33it/s]
+Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 835.35it/s]
+2026/11/09 14:36:12 WARNING mlflow.utils.environment: Failed to resolve installed pip version. ``pip`` will be added to conda.yaml environment spec without a version specifier.
+Successfully registered model 'task19-city-booking'.
+Created version '1' of model 'task19-city-booking'.
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/types/utils.py:440: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  warnings.warn(
+2026/11/09 14:36:13 WARNING mlflow.pyfunc: Passing a Python object as `python_model` causes it to be serialized using CloudPickle, it requires exercising caution as Python object serialization mechanisms may execute arbitrary code during deserialization.Consider using a file path (str or Path) instead. See https://mlflow.org/docs/latest/ml/model/models-from-code/ for details.
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/pyfunc/__init__.py:3364: UserWarning: [1;33mAn input example was not provided when logging the model. To ensure the model signature functions correctly, specify the `input_example` parameter. See https://mlflow.org/docs/latest/model/signatures.html#model-input-example for more details about the benefits of using input_example.[0m
+  color_warning(
+
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]
+Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 2041.02it/s]
+Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 1824.40it/s]
+2026/11/09 14:36:13 WARNING mlflow.utils.environment: Failed to resolve installed pip version. ``pip`` will be added to conda.yaml environment spec without a version specifier.
+Successfully registered model 'task19-resort-booking'.
+Created version '1' of model 'task19-resort-booking'.
+{
+  "status": "VERIFIED",
+  "environment": "local tracking execution",
+  "tracking_uri": "sqlite:////Users/lukecamilleri/Desktop/hotel-cancellations/artifacts/stage9/mlflow.db",
+  "mlflow_version": "3.18.0",
+  "experiment_id": "1",
+  "models": {
+    "City Hotel": {
+      "name": "task19-city-booking",
+      "version": 1,
+      "run_id": "8ace0e89f6fc4b299e20b236eea2eb7e",
+      "gate": "PASS",
+      "aliases": {
+        "challenger": 1,
+        "champion": 1
+      },
+      "holdout_bookings_verified": 27508,
+      "maximum_probability_error": 0.0,
+      "champion_withheld_reason": null,
+      "production_authorized": false
+    },
+    "Resort Hotel": {
+      "name": "task19-resort-booking",
+      "version": 1,
+      "run_id": "9c06a1c320b745f08c688e735a5c19ad",
+      "gate": "FAIL",
+      "aliases": {
+        "challenger": 1
+      },
+      "holdout_bookings_verified": 13179,
+      "maximum_probability_error": 0.0,
+      "champion_withheld_reason": "Frozen calibration gate failed; manual review/no-overbooking fallback",
+      "production_authorized": false
+    }
+  },
+  "source_digest": "038fd202711576286a2ebbcd4aabacf2447b205a570a022641ba964c5a069bbc",
+  "source_run": "20261107T124508Z-f8e71b6f",
+  "refitted": false,
+  "serving_bundle_changed": false,
+  "mlflow_ece_readback_verified": true,
+  "completed_at_utc": "2026-11-09T13:36:13.982591+00:00"
+}

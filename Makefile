@@ -40,3 +40,8 @@ quality-gate:
 
 ci: test
 	$(MAKE) quality-gate PYTHON="$(PYTHON)"
+
+TRACKING_PYTHON ?= .venv-tracking/bin/python
+.PHONY: track-models
+track-models:
+	$(TRACKING_PYTHON) -m hotel_cancel.tracking

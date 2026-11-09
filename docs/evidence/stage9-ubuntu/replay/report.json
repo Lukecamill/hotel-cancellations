@@ -1,0 +1,195 @@
+{
+  "scope": "historical_dataset_replay_not_live_quality",
+  "as_of_exclusive": "2017-09-02",
+  "source_sha256": {
+    "monitor_replay.py": "d656960ea469a99a51b80cdb12e9c807d423a13c02a09c6b105c79754a49352a",
+    "policy.py": "a83e67909d88837e7aebf4d614f62282b3b135865a33fe2dc123fc307cf0783f",
+    "model.py": "8115a1a4da21ac1b64b896ab3285cdb58c362c4021653825685cf3c75ed38e53",
+    "features.py": "48bc2ad4becdfa5c445a692d908bcdb5d9611f60345f5e27b0f36f256fcc6a62"
+  },
+  "generated_at_epoch": 1794231521.2694175,
+  "model_version": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+  "policy_version": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a",
+  "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+  "thresholds": {
+    "calibration_low": 0.85,
+    "calibration_high": 1.15,
+    "min_bookings": 30,
+    "min_observed_cancellations": 20,
+    "psi_warning": 0.1,
+    "psi_action": 0.25
+  },
+  "latest_week": [
+    {
+      "hotel": "Resort Hotel",
+      "week": "2017-08-21T00:00:00.000",
+      "expected": 82.4289240377,
+      "observed": 142,
+      "n": 392,
+      "horizon": "booking_to_arrival",
+      "ratio": 0.5804853805,
+      "enough_labels": true,
+      "alert": true
+    },
+    {
+      "hotel": "City Hotel",
+      "week": "2017-08-21T00:00:00.000",
+      "expected": 153.1967995585,
+      "observed": 206,
+      "n": 678,
+      "horizon": "booking_to_arrival",
+      "ratio": 0.7436737843,
+      "enough_labels": true,
+      "alert": true
+    },
+    {
+      "hotel": "City Hotel",
+      "week": "2017-08-21T00:00:00.000",
+      "expected": 26.1183119583,
+      "observed": 13,
+      "n": 418,
+      "horizon": "active_7_day",
+      "ratio": 2.0091009199,
+      "enough_labels": false,
+      "alert": false
+    },
+    {
+      "hotel": "Resort Hotel",
+      "week": "2017-08-21T00:00:00.000",
+      "expected": 5.2113863213,
+      "observed": 5,
+      "n": 208,
+      "horizon": "active_7_day",
+      "ratio": 1.0422772643,
+      "enough_labels": false,
+      "alert": false
+    }
+  ],
+  "latest_drift": [
+    {
+      "hotel": "City Hotel",
+      "quarter": "2017Q3",
+      "feature": "lead_time",
+      "psi": 0.4361225975,
+      "n": 6684,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "City Hotel",
+      "quarter": "2017Q3",
+      "feature": "market_segment",
+      "psi": 0.5635615631,
+      "n": 6684,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "City Hotel",
+      "quarter": "2017Q3",
+      "feature": "distribution_channel",
+      "psi": 0.0396294209,
+      "n": 6684,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "City Hotel",
+      "quarter": "2017Q3",
+      "feature": "country",
+      "psi": 0.6559519051,
+      "n": 6684,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "City Hotel",
+      "quarter": "2017Q3",
+      "feature": "deposit_type",
+      "psi": 0.3350643639,
+      "n": 6684,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "Resort Hotel",
+      "quarter": "2017Q3",
+      "feature": "lead_time",
+      "psi": 0.3099446391,
+      "n": 3554,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "Resort Hotel",
+      "quarter": "2017Q3",
+      "feature": "market_segment",
+      "psi": 1.052331635,
+      "n": 3554,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "Resort Hotel",
+      "quarter": "2017Q3",
+      "feature": "distribution_channel",
+      "psi": 0.1192246585,
+      "n": 3554,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "Resort Hotel",
+      "quarter": "2017Q3",
+      "feature": "country",
+      "psi": 0.340858567,
+      "n": 3554,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    },
+    {
+      "hotel": "Resort Hotel",
+      "quarter": "2017Q3",
+      "feature": "deposit_type",
+      "psi": 0.1981844601,
+      "n": 3554,
+      "period_start": "2017-07-01",
+      "period_end_exclusive": "2017-09-01"
+    }
+  ],
+  "policy_costs": [
+    {
+      "hotel": "City Hotel",
+      "policy": "no overbooking",
+      "cost_per_night": 278.6494650206,
+      "saving vs none (\u20ac)": 0.0
+    },
+    {
+      "hotel": "City Hotel",
+      "policy": "flat rate (Jul \u2013 Sep 2016)",
+      "cost_per_night": 264.4246502058,
+      "saving vs none (\u20ac)": 3456.63
+    },
+    {
+      "hotel": "Resort Hotel",
+      "policy": "no overbooking",
+      "cost_per_night": 98.0685390947,
+      "saving vs none (\u20ac)": 0.0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "policy": "model + blocks + re-level 8 wk",
+      "cost_per_night": 96.183127572,
+      "saving vs none (\u20ac)": 458.155
+    }
+  ],
+  "fitted_or_selected_on_holdout": false,
+  "limitations": [
+    "Final-state features do not establish event-time availability",
+    "Country is offline diagnostic only and never an online input",
+    "2017Q3 is partial July-August",
+    "Capacity unknown; arrival-night sold-out/no-resale cost proxy",
+    "No new learner or calibrator fitting; saved policy choices reused"
+  ],
+  "report_id": "84442e6e22a2367940c407e7e87e6112ff825d6689cd6e04bd80c892eba9c2a2"
+}

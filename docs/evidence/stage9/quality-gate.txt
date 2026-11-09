@@ -1,0 +1,33 @@
+{
+  "City Hotel": {
+    "n": 27508,
+    "cancellations": 11691,
+    "auprc": 0.785721886317962,
+    "expected_observed_ratio": 0.9112810321058089,
+    "ece": 0.04227523749271264,
+    "brier": 0.17239734512884491,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": true,
+      "ece": true
+    },
+    "gate": "PASS"
+  },
+  "Resort Hotel": {
+    "n": 13179,
+    "cancellations": 4054,
+    "auprc": 0.627907608840626,
+    "expected_observed_ratio": 0.6817233437376264,
+    "ece": 0.0989614606930023,
+    "brier": 0.17757610639149055,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": false,
+      "ece": true
+    },
+    "gate": "FAIL"
+  }
+}
+Quality gate: FAIL; evidence: docs/evidence/stage9/quality-gate

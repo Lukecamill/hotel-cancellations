@@ -1,0 +1,239 @@
+}
+luke@MacbookM5:~/hotel-stage6$ cd ~/hotel-stage6 &&
+cp -a docs/evidence/stage8-ubuntu "$HOME/stage8-before-parity-$(date +%Y%m%d-%H%M%S)" &&
+tar -xzf ~/stage8-parity-update.tar.gz &&
+python3 scripts/verify_stage8_test_parity.py &&
+python3 scripts/verify_stage8_ubuntu.py
+tests/test_approvals.py::test_valid_decisions[approve-3]
+tests/test_approvals.py::test_valid_decisions[reduce-1]
+tests/test_approvals.py::test_valid_decisions[reduce-0]
+tests/test_approvals.py::test_valid_decisions[reject-0]
+tests/test_approvals.py::test_invalid_decisions[changes0]
+tests/test_approvals.py::test_invalid_decisions[changes1]
+tests/test_approvals.py::test_invalid_decisions[changes2]
+tests/test_approvals.py::test_invalid_decisions[changes3]
+tests/test_approvals.py::test_invalid_decisions[changes4]
+tests/test_approvals.py::test_invalid_decisions[changes5]
+tests/test_approvals.py::test_invalid_decisions[changes6]
+tests/test_approvals.py::test_invalid_decisions[changes7]
+tests/test_approvals.py::test_invalid_decisions[changes8]
+tests/test_approvals.py::test_invalid_decisions[changes9]
+tests/test_approvals.py::test_zero_recommendation_can_be_rejected
+tests/test_approvals.py::test_database_decision_survives_new_store_and_cannot_be_overwritten
+tests/test_approvals.py::test_concurrent_reviewers_cannot_both_approve
+tests/test_approvals.py::test_http_review_requires_token_and_same_origin
+tests/test_approvals.py::test_publish_from_snapshot_is_idempotent_and_preserves_versions
+tests/test_audit.py::test_duplicate_overlap_detects_copies_but_not_similar_rows
+tests/test_audit.py::test_quirk_counts_preserve_anomalies_and_use_correct_denominators
+tests/test_config.py::test_paths_are_independent_of_working_directory
+tests/test_config.py::test_shell_beats_dotenv_beats_yaml
+tests/test_config.py::test_explicit_config_beats_environment
+tests/test_config.py::test_invalid_settings_fail_early[decision_lead_days-15]
+tests/test_config.py::test_invalid_settings_fail_early[train_end-2018-01-01]
+tests/test_config.py::test_invalid_settings_fail_early[walk_cost_eur--1]
+tests/test_config.py::test_invalid_settings_fail_early[recal_weeks_grid-value3]
+tests/test_config.py::test_invalid_settings_fail_early[gate_min_auprc-value4]
+tests/test_config.py::test_invalid_settings_fail_early[calibration_band-value5]
+tests/test_contracts.py::test_contract_accepts_valid_input_without_mutating_it
+tests/test_contracts.py::test_contract_rejects_invalid_rows[is_canceled-2]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[is_canceled-1]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[lead_time--1]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[adults-1.5]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[adr-inf]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[adr-nan]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[hotel-Other Hotel]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[arrival_date_month-Bad]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[arrival_date_day_of_month-30]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[arrival_date_year-2018]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[arrival_date_week_number-54]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[reservation_status_date-bad]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[meal-]
+tests/test_contracts.py::test_contract_rejects_invalid_rows[lead_time-7]
+tests/test_contracts.py::test_contract_rejects_missing_extra_duplicate_columns_and_empty_input
+tests/test_contracts.py::test_known_anomalies_are_counted_not_silently_removed
+tests/test_data.py::test_cache_is_rebuilt_after_raw_change_and_tampering
+tests/test_data.py::test_cache_never_bypasses_raw_contract
+tests/test_features.py::test_agent_vocabulary_uses_only_training_rows
+tests/test_features.py::test_features_do_not_modify_input_and_ignore_forbidden_columns
+tests/test_features.py::test_outcome_separation_and_only_allowed_inputs_available
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[is_canceled]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[reservation_status]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[status_date]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[country]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[assigned_room_type]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[booking_changes]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[required_car_parking_spaces]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[total_of_special_requests]
+tests/test_features.py::test_each_forbidden_input_cannot_change_any_feature_even_under_an_alias[days_in_waiting_list]
+tests/test_history.py::test_asof_excludes_later_entries_and_earlier_cancellations_includes_same_day_cancellation
+tests/test_history.py::test_asof_lead_time_uses_requested_horizon[0]
+tests/test_history.py::test_asof_lead_time_uses_requested_horizon[7]
+tests/test_history.py::test_asof_lead_time_uses_requested_horizon[14]
+tests/test_history.py::test_asof_rejects_misaligned_rows_and_invalid_horizon
+tests/test_monitoring.py::test_psi_identical_shift_and_constant_reference
+tests/test_monitoring.py::test_weekly_excludes_unmatured_week_and_handles_zero_events
+tests/test_monitoring.py::test_database_failure_does_not_disguise_loss
+tests/test_monitoring.py::test_bounded_label_cardinality
+tests/test_monitoring.py::test_online_request_persisted_and_metrics_exposed
+tests/test_monitoring.py::test_monitoring_can_reuse_saved_calibrators_without_fitting
+tests/test_policy.py::test_two_room_block_cannot_release_only_one_room
+tests/test_policy.py::test_independent_rooms_have_partial_release_probability
+tests/test_policy.py::test_walk_cost_changes_optimal_quantity_and_ties_choose_smallest
+tests/test_policy.py::test_nightly_median_is_not_global_mean_and_negative_value_is_floored
+tests/test_policy.py::test_calibration_must_match_decision_horizon
+tests/test_policy.py::test_policy_rejects_untagged_booking_probabilities_or_wrong_horizon
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities0-None]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities1-None]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities2-None]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities3-None]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities4-sizes4]
+tests/test_policy.py::test_invalid_policy_probabilities_and_block_counts_fail[probabilities5-sizes5]
+tests/test_postgres.py::test_postgres_snapshot_roundtrip
+tests/test_quality_gate.py::test_reliability_edges_weighting_and_empty_bins
+tests/test_quality_gate.py::test_invalid_probabilities_fail[p0]
+tests/test_quality_gate.py::test_invalid_probabilities_fail[p1]
+tests/test_quality_gate.py::test_invalid_probabilities_fail[p2]
+tests/test_quality_gate.py::test_invalid_probabilities_fail[p3]
+tests/test_quality_gate.py::test_perfect_ranking_cannot_hide_bad_calibration
+tests/test_quality_gate.py::test_gate_pass_and_exact_inclusive_thresholds
+tests/test_quality_gate.py::test_one_class_is_not_a_passing_gate[labels0]
+tests/test_quality_gate.py::test_one_class_is_not_a_passing_gate[labels1]
+tests/test_quality_gate.py::test_any_frozen_identity_change_is_rejected
+tests/test_quality_gate.py::test_identity_error_prevents_fit_and_removes_stale_success
+tests/test_quality_gate.py::test_exit_status_requires_every_hotel_to_pass[resort_p0-0]
+tests/test_quality_gate.py::test_exit_status_requires_every_hotel_to_pass[resort_p1-1]
+tests/test_sensitivity.py::test_quantile_minimises_expected_cost
+tests/test_sensitivity.py::test_resale_and_cost_monotonicity
+tests/test_sensitivity.py::test_blocks_preserve_mean_increase_variance
+tests/test_sensitivity.py::test_selection_tie_prefers_no_overbooking
+tests/test_sensitivity.py::test_test_period_rejected
+tests/test_sensitivity.py::test_invalid_grid[lead_days-value0]
+tests/test_sensitivity.py::test_invalid_grid[walk_costs_eur-value1]
+tests/test_sensitivity.py::test_invalid_grid[resale_rates-value2]
+tests/test_sensitivity.py::test_invalid_grid[recal_weeks-value3]
+tests/test_sensitivity.py::test_invalid_grid[variable_costs_eur-value4]
+tests/test_sensitivity.py::test_calibration_and_rolling_features_ignore_unmatured_labels
+tests/test_serving.py::test_training_serving_parity
+tests/test_serving.py::test_invalid_or_leaking_input[country-PRT]
+tests/test_serving.py::test_invalid_or_leaking_input[reservation_status-Canceled]
+tests/test_serving.py::test_invalid_or_leaking_input[booked-2017-07-01]
+tests/test_serving.py::test_invalid_or_leaking_input[lead_time--1]
+tests/test_serving.py::test_invalid_or_leaking_input[adults-True]
+tests/test_serving.py::test_invalid_or_leaking_input[adr-nan]
+tests/test_serving.py::test_invalid_or_leaking_input[arrival-2017-08-15T12:00:00]
+tests/test_serving.py::test_null_semantics
+tests/test_serving.py::test_artifact_tampering
+tests/test_serving.py::test_http_real_prediction_and_errors
+tests/test_serving.py::test_batch_uses_mature_history_and_requires_approval
+tests/test_serving.py::test_batch_rejects_mismatches[lead_days-14]
+tests/test_serving.py::test_batch_rejects_mismatches[model_version-wrong]
+tests/test_serving.py::test_batch_rejects_mismatches[arrival-2017-08-16]
+tests/test_serving.py::test_snapshot_tampering
+tests/test_serving.py::test_service_sigterm_exits_cleanly
+tests/test_splits.py::test_forward_partitions_pass
+tests/test_splits.py::test_bad_partitions_fail[overlap]
+tests/test_splits.py::test_bad_partitions_fail[omitted]
+tests/test_splits.py::test_bad_partitions_fail[random]
+tests/test_splits.py::test_bad_partitions_fail[duplicate]
+tests/test_stay_audit.py::test_expected_checkout_matches_stay_including_weekends
+tests/test_stay_audit.py::test_same_day_checkout_positive_stay_is_flagged_without_changing_label
+tests/test_stay_audit.py::test_shorter_checkout_is_flagged_and_cancelled_booking_is_not_checkout
+tests/test_stay_audit.py::test_valid_zero_night_checkout_is_not_this_additional_quirk
+
+135 tests collected in 0.46s
+STAGE8_TEST_PARITY_VERIFIED
+{
+  "status": "PASS",
+  "collected": 135,
+  "all_test_ids_identical": true,
+  "all_test_files_identical": true,
+  "all_python_sources_identical": true,
+  "previous_difference": "Diary 1 checkout-date audit module and four tests were omitted from the Stage 8 transfer",
+  "added_tests": [
+    "tests/test_stay_audit.py::test_expected_checkout_matches_stay_including_weekends",
+    "tests/test_stay_audit.py::test_same_day_checkout_positive_stay_is_flagged_without_changing_label",
+    "tests/test_stay_audit.py::test_shorter_checkout_is_flagged_and_cancelled_booking_is_not_checkout",
+    "tests/test_stay_audit.py::test_valid_zero_night_checkout_is_not_this_additional_quirk"
+  ]
+}
+[+] Building 0.1s (9/9) FINISHED                                                                         docker:default
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 314B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/hotel-cancel:stage7                                             0.0s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/4] FROM docker.io/library/hotel-cancel:stage7@sha256:5df58351e662d3c84bc6d3401bfae4a42005f1bb94c56e6f3ccf9  0.0s
+ => => resolve docker.io/library/hotel-cancel:stage7@sha256:5df58351e662d3c84bc6d3401bfae4a42005f1bb94c56e6f3ccf9  0.0s
+ => [internal] load build context                                                                                  0.0s
+ => => transferring context: 364B                                                                                  0.0s
+ => CACHED [2/4] RUN apt-get update && apt-get install -y --no-install-recommends make && rm -rf /var/lib/apt/lis  0.0s
+ => CACHED [3/4] COPY requirements-check.txt /tmp/requirements-check.txt                                           0.0s
+ => CACHED [4/4] RUN python -m pip install --no-cache-dir -r /tmp/requirements-check.txt                           0.0s
+ => exporting to image                                                                                             0.0s
+ => => exporting layers                                                                                            0.0s
+ => => exporting manifest sha256:36c75570caa23c51848350835cc109c928b726c8990f31cb5765da60e257c14c                  0.0s
+ => => exporting config sha256:f021cb32698723ec9ea66c7e7bc74b5e9fa8dfddedc603ddc07168290dcf2037                    0.0s
+ => => exporting attestation manifest sha256:40e3a604c9207b51477fefd640a9d72cd7c5ae0e7a255c00bb014189a370e4f1      0.0s
+ => => exporting manifest list sha256:d424361573d076a68ebb6eff8463a11ea53feba1945439b761336f37ce0d7f93             0.0s
+ => => naming to docker.io/library/hotel-cancel:stage8-check                                                       0.0s
+ => => unpacking to docker.io/library/hotel-cancel:stage8-check                                                    0.0s
+python -m pytest -q
+...............ssss...................................................s. [ 53%]
+............s..................................................          [100%]
+129 passed, 6 skipped in 2.54s
+make quality-gate PYTHON="python"
+make[1]: Entering directory '/project'
+python -m hotel_cancel.quality_gate
+{
+  "City Hotel": {
+    "n": 27508,
+    "cancellations": 11691,
+    "auprc": 0.785721886317962,
+    "expected_observed_ratio": 0.9112810321058089,
+    "ece": 0.04227523749271264,
+    "brier": 0.17239734512884491,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": true,
+      "ece": true
+    },
+    "gate": "PASS"
+  },
+  "Resort Hotel": {
+    "n": 13179,
+    "cancellations": 4054,
+    "auprc": 0.627907608840626,
+    "expected_observed_ratio": 0.6817233437376264,
+    "ece": 0.0989614606930023,
+    "brier": 0.17757610639149055,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": false,
+      "ece": true
+    },
+    "gate": "FAIL"
+  }
+}
+Quality gate: FAIL; evidence: /project/docs/evidence/stage8
+make[1]: Leaving directory '/project'
+make[1]: *** [Makefile:39: quality-gate] Error 1
+make: *** [Makefile:42: ci] Error 2
+
+STAGE8_UBUNTU_VERIFIED
+{
+  "status": "VERIFIED",
+  "environment": "Linux container on Ubuntu VM",
+  "tests_passed": 129,
+  "tests_skipped": 6,
+  "database_tests": "not connected; reported as skipped",
+  "make_ci_exit_code": 2,
+  "gate_status": "FAIL",
+  "identity_verified": true,
+  "city": "PASS",
+  "resort": "FAIL: expected/observed cancellation ratio",
+  "demo_runtime_files_unchanged": true,
+  "image_id": "sha256:d424361573d076a68ebb6eff8463a11ea53feba1945439b761336f37ce0d7f93",
+  "architecture": "arm64"
+}

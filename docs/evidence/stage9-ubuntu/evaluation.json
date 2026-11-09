@@ -1,0 +1,143 @@
+{
+  "identity_verified": true,
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "hotels": {
+    "City Hotel": {
+      "valid": {
+        "n": 20199,
+        "cancellations": 8236,
+        "auprc": 0.7614988673179341,
+        "expected_observed_ratio": 0.7451954802964013,
+        "ece": 0.10671084432933471,
+        "brier": 0.1872602488508151,
+        "checks": {
+          "two_classes": true,
+          "auprc": true,
+          "calibration_ratio": false,
+          "ece": false
+        },
+        "gate": "FAIL"
+      },
+      "test": {
+        "n": 27508,
+        "cancellations": 11691,
+        "auprc": 0.785721886317962,
+        "expected_observed_ratio": 0.9112810321058089,
+        "ece": 0.04227523749271264,
+        "brier": 0.17239734512884491,
+        "checks": {
+          "two_classes": true,
+          "auprc": true,
+          "calibration_ratio": true,
+          "ece": true
+        },
+        "gate": "PASS"
+      }
+    },
+    "Resort Hotel": {
+      "valid": {
+        "n": 9347,
+        "cancellations": 2658,
+        "auprc": 0.6179361417748571,
+        "expected_observed_ratio": 0.6928663408227275,
+        "ece": 0.09007443062044317,
+        "brier": 0.16720384906655422,
+        "checks": {
+          "two_classes": true,
+          "auprc": true,
+          "calibration_ratio": false,
+          "ece": true
+        },
+        "gate": "FAIL"
+      },
+      "test": {
+        "n": 13179,
+        "cancellations": 4054,
+        "auprc": 0.627907608840626,
+        "expected_observed_ratio": 0.6817233437376264,
+        "ece": 0.0989614606930023,
+        "brier": 0.17757610639149055,
+        "checks": {
+          "two_classes": true,
+          "auprc": true,
+          "calibration_ratio": false,
+          "ece": true
+        },
+        "gate": "FAIL"
+      }
+    }
+  },
+  "bundle_sha256": {
+    "booking_model.joblib": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+    "policy_state.joblib": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a"
+  },
+  "thresholds": {
+    "City Hotel": {
+      "min_auprc": 0.7,
+      "ratio_band": [
+        0.85,
+        1.15
+      ],
+      "max_ece": 0.1,
+      "bins": 10
+    },
+    "Resort Hotel": {
+      "min_auprc": 0.55,
+      "ratio_band": [
+        0.85,
+        1.15
+      ],
+      "max_ece": 0.1,
+      "bins": 10
+    }
+  },
+  "trained_or_selected_on_holdout": false,
+  "refitted": false,
+  "scope": "saved_booking_to_arrival_model; policy is separate active-seven-day horizon"
+}

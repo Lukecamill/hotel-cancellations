@@ -1,0 +1,42 @@
+{
+  "status": "VERIFIED",
+  "environment": "local tracking execution",
+  "tracking_uri": "sqlite:////project/artifacts/stage9-ubuntu/mlflow.db",
+  "mlflow_version": "3.18.0",
+  "experiment_id": "1",
+  "models": {
+    "City Hotel": {
+      "name": "task19-city-booking",
+      "version": 1,
+      "run_id": "4f1dbef9fac94893b6afe8dc57ce365a",
+      "gate": "PASS",
+      "aliases": {
+        "challenger": 1,
+        "champion": 1
+      },
+      "holdout_bookings_verified": 27508,
+      "maximum_probability_error": 0.0,
+      "champion_withheld_reason": null,
+      "production_authorized": false
+    },
+    "Resort Hotel": {
+      "name": "task19-resort-booking",
+      "version": 1,
+      "run_id": "7e1ba70fb2134b1ab4158cfb1e6b486f",
+      "gate": "FAIL",
+      "aliases": {
+        "challenger": 1
+      },
+      "holdout_bookings_verified": 13179,
+      "maximum_probability_error": 0.0,
+      "champion_withheld_reason": "Frozen calibration gate failed; manual review/no-overbooking fallback",
+      "production_authorized": false
+    }
+  },
+  "source_digest": "038fd202711576286a2ebbcd4aabacf2447b205a570a022641ba964c5a069bbc",
+  "source_run": "20261107T124508Z-f8e71b6f",
+  "refitted": false,
+  "serving_bundle_changed": false,
+  "mlflow_ece_readback_verified": true,
+  "completed_at_utc": "2026-11-09T13:38:45.095152+00:00"
+}

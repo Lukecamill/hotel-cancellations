@@ -244,3 +244,14 @@ replacing the serving artifacts. ECE uses ten equal-width bins with a fixed
 See [Stage 8 evidence and commands](docs/stage8-evaluation.md) and
 [ADR 0010](docs/decisions/0010-frozen-evaluation-gate.md). MLflow integration
 of the calibration metric follows in Stage 9.
+
+## Stage 9: local MLflow registry and model card
+
+Use the separate `requirements-tracking.txt` environment, then run
+`PYTHONPATH=src make track-models`. This records the actual saved reference
+model, fixed policy, parameters, fingerprints, calibration metrics and artifacts
+in a local SQLite MLflow registry without refitting or changing the API.
+City can bootstrap an offline champion; Resort stays challenger-only because
+its quality gate fails. See [tracking setup and verification](docs/stage9-tracking.md),
+[model card](docs/model-card.md) and
+[ADR 0011](docs/decisions/0011-model-tracking-and-registry.md).
