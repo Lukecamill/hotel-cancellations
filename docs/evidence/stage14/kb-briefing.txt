@@ -1,0 +1,39 @@
+.venv/bin/python -m hotel_cancel.kb_briefing_eval
+{
+  "status": "VERIFIED",
+  "scope": "deterministic grounding contract; no language model run",
+  "reports": {
+    "codes only (abstain)": {
+      "cases": 19,
+      "supported_cases": 12,
+      "semantic_cases_answered": 0,
+      "semantic_coverage": 0.0,
+      "asserted_semantic_claims": 0,
+      "correct_semantic_claims": 0,
+      "unsupported_semantic_claims": 0,
+      "semantic_claim_precision": null,
+      "exact_case_answers": 7,
+      "numeric_context_exact_cases": 19
+    },
+    "codes + temporal KB": {
+      "cases": 19,
+      "supported_cases": 12,
+      "semantic_cases_answered": 12,
+      "semantic_coverage": 1.0,
+      "asserted_semantic_claims": 18,
+      "correct_semantic_claims": 18,
+      "unsupported_semantic_claims": 0,
+      "semantic_claim_precision": 1.0,
+      "exact_case_answers": 19,
+      "numeric_context_exact_cases": 19
+    }
+  },
+  "golden_sha256": "a418c0341c5a0dd49d682e689c23d4a9d5214ddba59116a4f50466a99f44cb78",
+  "knowledge_sha256": "ae239bf2c937ffc4b431daa4d8a55c75f5bb11e1fe2b420243edd584d241934c",
+  "limitations": [
+    "Synthetic context numbers and curated semantic cases, not real guest messages",
+    "No-KB baseline abstains rather than inventing semantic meanings",
+    "Does not establish LLM factuality or complete the Stage 13 30-night evaluation",
+    "Unknown and expired mappings produce explicit abstention, not guessed facts"
+  ]
+}

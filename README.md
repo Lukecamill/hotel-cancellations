@@ -4,11 +4,11 @@ ARI3217 Task 19: package, reproduce, evaluate and operationalise the supplied ho
 
 ## Setup status
 
-Repository structure and Python 3.13.13 environment prepared following Session 02. Dependencies are pinned in `requirements.txt`; configuration loading and the booking-time baseline training command are implemented. The given overbooking policy is now packaged; monitoring and knowledge-base packaging remain for later stages.
+Stages 1–13 are implemented and evidenced, including Ubuntu replay. Stage 14 prepares the technical hand-in and verifies an independent clean clone. Start with [the submission checklist](docs/submission-checklist.md), [reproduction guide](docs/reproduce-final.md) and [manager recommendation](docs/revenue-manager-recommendation.md). Resort calibration and local briefing factuality remain FAIL; no operational authorisation is claimed. The final-project rubric and later diary/submission requirements remain unconfirmed.
 
 ## Structure
 
-- `src/hotel_cancel/`: reusable loading, features, model persistence, training and evaluation; the given policy is packaged; the operational batch module will follow.
+- `src/hotel_cancel/`: reusable training, inference, nightly policy, monitoring, KB, walking/block audits and local-model briefing.
 - `config/`: shared non-secret configuration.
 - `notebooks/reference/`: unchanged supplied notebook.
 - `tests/`: automated checks.

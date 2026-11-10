@@ -1,0 +1,35 @@
+{
+  "evidence_present": true,
+  "missing_files": [],
+  "production_authorized": false,
+  "limitations": [
+    "Final-project rubric/milestone brief not supplied",
+    "Policy-wide manager sign-off outstanding",
+    "Final run skips six PostgreSQL tests; prior PostgreSQL checks remain historical",
+    "Later diary requirements/submission not verified",
+    "VLE hand-in not performed"
+  ],
+  "hotel_quality_gates": {
+    "City Hotel": "PASS",
+    "Resort Hotel": "FAIL"
+  },
+  "briefing_quality_gate": "FAIL",
+  "briefing_exact_nights": 27,
+  "clean_clone_verified": true,
+  "tested_commit": "3ca26fe969b7dd1e8397fe6a8af7dedda123681b",
+  "current_commit": "3ca26fe969b7dd1e8397fe6a8af7dedda123681b",
+  "ready_for_unconditional_submission": false,
+  "review_file_sha256": {
+    "docs/submission-checklist.md": "edf7a8198cc7247dc2d41499e6bb39b36c349c5fb7a0f698f556e91d4c54b78e",
+    "docs/reproduce-final.md": "580629a3ab99623d8d1630ca7486023b44334553dde3ad34ab9c18f11b9e9ae1",
+    "docs/revenue-manager-recommendation.md": "52ed1b3f6201873ffd74e6d3903bcaacbec9adf6051327a5487a85be12be7457",
+    "docs/stage14-final-verification.md": "6fae3bbd23ca50bd9c37275afe225144eccc527a579c05a187322811929d0420",
+    "docs/evidence/stage14/clean-clone-summary.json": "090aeddb8ca862645f6738b5d2874b41a12411e2347cb1214f9c9278007c0123",
+    "docs/evidence/stage14/quality-gate/report.json": "e586380736efb0a0809f2950de9336ad0d7c0de9c0da59a013266c3405cd202f",
+    "docs/evidence/stage13-ubuntu/verification.json": "a9f37271f1e96c33044f43469f976afe32968fad60c26d59c184d7b29aad8816",
+    "docs/evidence/stage13/report.json": "91af995524b4cabdad28125953b836275738c2135c144b7e20ad668f5df85e67",
+    "docs/evidence/stage12-ubuntu/ubuntu-verification.json": "0f77f0502fc6577596a67bd471d36af00b5b9ee456745bf1a8f59d43b9a8475b",
+    "docs/model-card.md": "de47831b3b93d0f8d8c58d037ec18a4f652efd8281634b32d0fecd8c83e66719",
+    "docs/llm-access.md": "dbdbb037eaea157a3a20b14ebd0777542f7a1145c05fc2af90481d71fa1bea0e"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "REPRODUCED_WITH_EXPECTED_QUALITY_FAILURES",
+  "tested_commit": "3ca26fe969b7dd1e8397fe6a8af7dedda123681b",
+  "clone_path": "/private/tmp/hotel-stage14-clean",
+  "python": "3.13.13",
+  "fresh_environment": true,
+  "reused": [
+    "Installed Python and OS OpenMP runtime",
+    "Downloaded dependency cache",
+    "Raw CSV supplied separately"
+  ],
+  "baseline_used_original_models": false,
+  "baseline_reference_checks_passed": 20,
+  "tests_passed": 215,
+  "tests_skipped": 6,
+  "collected_tests": 221,
+  "pip_check": "No broken requirements found",
+  "baseline_runtime_seconds": 4.556978625012562,
+  "shacl_conforms": true,
+  "fixture_replay_records": 66,
+  "fixture_replay_accepted": 58,
+  "fixture_regression_gate": "PASS",
+  "briefing_quality_gate": "FAIL",
+  "resort_calibration_gate": "FAIL",
+  "make_ci_exit_code": 2,
+  "thin_notebook_code_cells_executed": 5,
+  "kb_ablation_rerun": "VERIFIED",
+  "kb_semantic_contract_rerun": "VERIFIED",
+  "walking_rerun": "VERIFIED",
+  "block_rerun": "VERIFIED",
+  "later_audits_reference_runtime_supplied_separately": true,
+  "booking_model_bytes_match_original": true,
+  "rebuilt_policy_pickle_bytes_match_original": false,
+  "notes": [
+    "Initial local socket restrictions caused two HTTP test failures; rerun with localhost permission passed all 215 tests",
+    "Prior PostgreSQL/container/monitoring/MLflow evidence retained; no new live database, load test or local LLM inference claimed",
+    "Stage 14 documentation, audit script and recommendation are a later uncommitted overlay on this tested source commit"
+  ],
+  "production_authorized": false
+}

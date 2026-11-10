@@ -1,0 +1,17 @@
+# Revenue-manager recommendation
+
+**Recommendation: retain zero authorised extra sales and use this system only for a supervised historical simulation.** City Hotel may proceed to an inventory-linked shadow trial after manager sign-off; Resort Hotel and generated briefings require further validation before operational use. This is a recommendation, not a signed approval.
+
+The unchanged supplied learner was evaluated on 40,687 bookings arriving January–August 2017. City achieved AUPRC 0.786 and a predicted/observed cancellation ratio of 0.911, passing the recorded engineering gate. Resort achieved AUPRC 0.628 but a ratio of 0.682, outside the 0.85–1.15 band: it materially underpredicted cancellations. Ranking performance alone does not clear its probabilities or overbooking decisions. These are booking-horizon diagnostics; the seven-day policy uses separate horizon calibration and its own assumptions.
+
+The retained reference policies are City's fixed July–September 2016 cancellation rate and Resort's block model with eight-week re-level. Stage 5 explored walking cost, lead time, recalibration and resale on validation data only. Its selected savings describe the same nights used to select winners and are optimistic, not demonstrated future savings. Those sensitivity candidates remain unsigned and were not silently promoted. A manager must supply real capacity, walking/variable costs, resale evidence and acceptable risk before any candidate is locked.
+
+The data describe final-state arrival bookings, not a complete multi-night room inventory or verified history of every field. Each row is a room proxy. Exact-key groups are inferred matches, not verified parties. Under the explicit assumption that incremental sales are honoured and incumbents bear relocation, the retained policies produce 179 simulated walked booking units. The allocation rule changes who bears that burden; descriptive group differences are not causal or legal findings. Confirm actual parties and suitable alternatives with a person, particularly large inferred blocks, before considering relocation. Nationality must not enter the allocation selector.
+
+Operational engineering is demonstrated: the Ubuntu service, database path and monitoring have recorded evidence. At a five-request/second historical burst, 600/600 requests succeeded and were persisted; phase p95 latency was approximately 34 ms. That limited test does not prove peak capacity or live business value. Monitor errors, latency, feature drift, delayed-label calibration and realised policy costs by hotel; retain a zero-authorisation fallback.
+
+The local briefing model reproduced every number on 27/30 golden nights, not 30/30. It answered all 23 supplied KB facts correctly and abstained on seven unresolved cases. Invalid responses are withheld. Six injection tests observed no requested override, but do not establish universal security. Keep the factuality gate failing, guest drafts unsent and human approval mandatory.
+
+Before a live trial, resolve calibration and briefing factuality, validate inventory/event history, obtain policy-wide sign-off and complete the governance actions. Meaningful human review and the existing simulation screen are separate from production authorisation. The final recommendation remains **no automatic overbooking and no automatic guest communication**.
+
+Evidence: `model-card.md`; `stage5-policy-evaluation.md`; `stage7-monitoring.md`; `stage11-walking-fairness.md`; `stage12-group-blocks.md`; `stage13-briefing.md`; their linked evidence folders.

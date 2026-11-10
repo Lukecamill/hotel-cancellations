@@ -1,0 +1,182 @@
+.venv/bin/python -m hotel_cancel.walking
+/Users/lukecamilleri/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/_q/3cj1yz7j5d9c591nhcfmrl3r0000gn/T/matplotlib-xqvvo321 because there was an issue with the default path (/Users/lukecamilleri/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib is building the font cache; this may take a moment.
+{
+  "status": "VERIFIED",
+  "scope": "retrospective conditional simulation; not realised guest walks or release approval",
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "model_sha256": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+  "policy_sha256": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a",
+  "selected_policies": {
+    "City Hotel": "flat rate (Jul \u2013 Sep 2016)",
+    "Resort Hotel": "model + blocks + re-level 8 wk"
+  },
+  "settings": {
+    "primary_rule": "latest_booking_first",
+    "benchmark_rule": "seeded_lottery",
+    "seed": 3217,
+    "lottery_sensitivity_seeds": [
+      3217,
+      3218,
+      3219,
+      3220,
+      3221,
+      3222,
+      3223,
+      3224,
+      3225,
+      3226,
+      3227,
+      3228,
+      3229,
+      3230,
+      3231,
+      3232,
+      3233,
+      3234,
+      3235,
+      3236
+    ],
+    "nationality_top_training_codes_per_hotel": 10,
+    "minimum_eligible_for_reporting": 30,
+    "cost_attribution_eur": [
+      100,
+      250,
+      500
+    ],
+    "allocation_assumption": "Incremental sold rooms are honoured; allocate simulated overflow to surviving recorded incumbent bookings",
+    "alternative_assumption": "Protect incumbents; unobserved incremental bookings bear all simulated walks",
+    "booking_unit": "One CSV booking row is treated as one room allocation, as in the given policy; not a count of people",
+    "production_authorized": false
+  },
+  "hotel_summaries": [
+    {
+      "hotel": "City Hotel",
+      "nights": 243,
+      "overflow_nights": 83,
+      "oversold_units": 603,
+      "released_units": 782,
+      "eligible_incumbent_survivors": 13214,
+      "walked_units": 154,
+      "walking_rate": 0.011654306039049492,
+      "hotel_relocation_cost_eur": 38500.0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "nights": 243,
+      "overflow_nights": 25,
+      "oversold_units": 75,
+      "released_units": 305,
+      "eligible_incumbent_survivors": 6418,
+      "walked_units": 25,
+      "walking_rate": 0.0038952944842630104,
+      "hotel_relocation_cost_eur": 6250.0
+    }
+  ],
+  "nationality_reporting_codes_from_training_only": {
+    "City Hotel": [
+      "PRT",
+      "FRA",
+      "ESP",
+      "DEU",
+      "ITA",
+      "GBR",
+      "BEL",
+      "NLD",
+      "BRA",
+      "USA"
+    ],
+    "Resort Hotel": [
+      "PRT",
+      "GBR",
+      "ESP",
+      "IRL",
+      "FRA",
+      "DEU",
+      "NLD",
+      "BEL",
+      "CN",
+      "USA"
+    ]
+  },
+  "allocation_digest": "64cba3f69fd6a9a970693e6688ff3f133a87797d590f60d24ad76c3ec55f44aa",
+  "reference_nightly_quantities_exact": true,
+  "total_simulated_walks": 179,
+  "selector_fields": [
+    "booked",
+    "unit_id"
+  ],
+  "audit_attribute_permutation_does_not_change_selection": true,
+  "allocation_conserved_per_hotel": true,
+  "lottery_seed_count": 20,
+  "no_model_or_policy_refitting": true,
+  "country_never_used_for_ranking": true,
+  "production_authorized": false,
+  "source_sha256": {
+    "walking.py": "ee8265400f780fde2d46c259e1592df718b04d718f466deb8784129dec1fc9f3",
+    "policy.py": "a83e67909d88837e7aebf4d614f62282b3b135865a33fe2dc123fc307cf0783f",
+    "history.py": "f5281f51d73c7057f22ab5e03add8bba02fb62035e29e499a6db709eaa6ac8c0",
+    "features.py": "48bc2ad4becdfa5c445a692d908bcdb5d9611f60345f5e27b0f36f256fcc6a62"
+  },
+  "config_sha256": "40d08c6aa5fdd09e9634f4fa244f9f780d5f17f5b5ff2c2239ddc181041a7f39",
+  "policy_reference_sha256": "c3196beecdf19c5b7a44322e240e4695f31557f215f6feb3f8aa7db99fa8eb2a",
+  "legal_sources_sha256": "c68a6e1d17cd4d2277f7f1d1eca718e160b1a366aa4e9bdbee0929383bdde140",
+  "limitations": [
+    "Unknown capacity; given sold-out arrival-night/no-resale proxy, not a real occupancy reconstruction",
+    "Incremental sales are unobserved; primary burden assumes they are honoured; alternative shifts all walks to those unknown bookings",
+    "CSV row treated as one room unit, not a guest; party size, accessibility, consent and contract priority are unknown",
+    "Exact duplicates are retained as in the supplied baseline; rows cannot establish unique people",
+    "Final-state data and inferred booking date do not prove event-time availability or actual check-in order",
+    "Source country codes are audit proxies, not verified citizenship or ethnicity; nationality effects can reflect channel/night mix",
+    "Seed range is simulation variation, not a confidence interval; small cells are descriptive and suppressed below the stated denominator",
+    "Allocated hotel expense is not a valuation of guest harm; no automatic ranking is recommended for production",
+    "Resort calibration still fails; reference exposure is evaluated only for coursework, with no registry promotion"
+  ]
+}

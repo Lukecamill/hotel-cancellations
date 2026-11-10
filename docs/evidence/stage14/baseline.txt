@@ -1,0 +1,11 @@
+.venv/bin/python -m hotel_cancel.baseline --config "config/config.yaml"
+2026-11-10 23:06:22,734 INFO hotel_cancel.data: Raw contract hotel-bookings-raw-v1 accepted 119390 rows; anomalies: {'negative_adr': 1, 'zero_adr': 1959, 'adr_above_1000': 1, 'zero_guests': 180, 'zero_nights': 715, 'duplicate_extra_rows': 31994, 'missing_children': 4, 'missing_country': 488, 'non_alpha3_country': 1279, 'undefined_segment': 2, 'undefined_channel': 5}
+2026-11-10 23:06:24,550 INFO hotel_cancel.data: Loaded and cached bookings in 2.1s
+2026-11-10 23:06:25,879 INFO hotel_cancel.train: Baseline finished in 3.4s; split counts {'train': 49157, 'valid': 29546, 'test': 40687}
+2026-11-10 23:06:25,883 INFO hotel_cancel.train: Test gate:
+                 AUPRC  expected ÷ realised  AUPRC ≥  AUPRC ok  calibration ok  gate
+City Hotel    0.785722             0.911281     0.70      True            True  PASS
+Resort Hotel  0.627908             0.681723     0.55      True           False  FAIL
+2026-11-10 23:06:26,999 INFO __main__: Complete baseline saved to /private/tmp/hotel-stage14-clean/models/baseline/20261110T220622Z-c46e4308
+Baseline saved: /private/tmp/hotel-stage14-clean/models/baseline/20261110T220622Z-c46e4308
+Resort diagnostic FAIL is expected; this command is not a deployment gate.

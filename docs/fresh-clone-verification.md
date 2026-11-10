@@ -41,3 +41,7 @@ This verifies a genuine **local Git clone** of the stated commit, not a download
 Full C2 still includes the upcoming raw-data contract, and this does not replace the later deployment CI gate. The original full teaching notebook was not rerun here; the newly cloned complete packaged baseline and thin notebook were run and compared to the recorded original execution.
 
 This verification report and its evidence were created after the tested commit. Commit them separately to preserve the audit trail; the tested commit identifies the code, and the later evidence commit will identify this verification record.
+
+## Later final verification
+
+The original 7 November report above is historical. See [Stage 14 verification](stage14-final-verification.md) for the latest 215-test independent-clone run, extended audits and explicit quality failures.

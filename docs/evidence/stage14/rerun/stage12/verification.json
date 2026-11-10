@@ -1,0 +1,191 @@
+{
+  "status": "VERIFIED",
+  "scope": "offline inferred-block diagnostics; no verified party identity or live handling",
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "model_sha256": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+  "policy_sha256": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a",
+  "settings": {
+    "manual_review_size": 5,
+    "horizon_days": 7,
+    "inference_method": "Exact notebook 16-field grouping; not a verified group or party identifier",
+    "booking_unit": "One retained CSV row is one room proxy; duplicates remain; no count of unique people",
+    "reference_policy_frozen": true,
+    "review_threshold_status": "Prespecified coursework prioritisation assumption, not approved hotel policy",
+    "production_authorized": false
+  },
+  "block_key": [
+    "hotel",
+    "arrival",
+    "booked",
+    "market_segment",
+    "distribution_channel",
+    "deposit_type",
+    "agent",
+    "company",
+    "reserved_room_type",
+    "customer_type",
+    "meal",
+    "adults",
+    "children",
+    "adr",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights"
+  ],
+  "overview": [
+    {
+      "hotel": "City Hotel",
+      "all_inferred_blocks": 10645,
+      "singleton_blocks": 9362,
+      "multirow_blocks": 1283,
+      "multirow_live_units": 4634,
+      "all_live_units": 13996,
+      "max_live_size": 115,
+      "priority_blocks": 150,
+      "fully_released_multirow": 39,
+      "partially_released_multirow": 71,
+      "multirow_not_group_segment": 1152
+    },
+    {
+      "hotel": "Resort Hotel",
+      "all_inferred_blocks": 5689,
+      "singleton_blocks": 5224,
+      "multirow_blocks": 465,
+      "multirow_live_units": 1499,
+      "all_live_units": 6723,
+      "max_live_size": 80,
+      "priority_blocks": 61,
+      "fully_released_multirow": 15,
+      "partially_released_multirow": 12,
+      "multirow_not_group_segment": 332
+    }
+  ],
+  "walking_cost_attribution": [
+    {
+      "hotel": "City Hotel",
+      "rule": "latest_booking_first",
+      "total_walked": 154,
+      "walked_in_inferred_multirow_blocks": 24,
+      "walked_in_singletons": 130,
+      "multirow_share": 0.15584415584415584,
+      "affected_multirow_blocks": 15,
+      "partially_relocated_inferred_blocks": 9,
+      "multirow_hotel_walk_cost_eur": 6000.0,
+      "singleton_hotel_walk_cost_eur": 32500.0
+    },
+    {
+      "hotel": "City Hotel",
+      "rule": "seeded_lottery",
+      "total_walked": 154,
+      "walked_in_inferred_multirow_blocks": 60,
+      "walked_in_singletons": 94,
+      "multirow_share": 0.38961038961038963,
+      "affected_multirow_blocks": 49,
+      "partially_relocated_inferred_blocks": 49,
+      "multirow_hotel_walk_cost_eur": 15000.0,
+      "singleton_hotel_walk_cost_eur": 23500.0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "rule": "latest_booking_first",
+      "total_walked": 25,
+      "walked_in_inferred_multirow_blocks": 0,
+      "walked_in_singletons": 25,
+      "multirow_share": 0.0,
+      "affected_multirow_blocks": 0,
+      "partially_relocated_inferred_blocks": 0,
+      "multirow_hotel_walk_cost_eur": 0.0,
+      "singleton_hotel_walk_cost_eur": 6250.0
+    },
+    {
+      "hotel": "Resort Hotel",
+      "rule": "seeded_lottery",
+      "total_walked": 25,
+      "walked_in_inferred_multirow_blocks": 5,
+      "walked_in_singletons": 20,
+      "multirow_share": 0.2,
+      "affected_multirow_blocks": 5,
+      "partially_relocated_inferred_blocks": 5,
+      "multirow_hotel_walk_cost_eur": 1250.0,
+      "singleton_hotel_walk_cost_eur": 5000.0
+    }
+  ],
+  "reference_nightly_quantities_exact": true,
+  "covariance_reference_matches_original_q": true,
+  "stage11_allocation_digest": "64cba3f69fd6a9a970693e6688ff3f133a87797d590f60d24ad76c3ec55f44aa",
+  "inferred_live_blocks": 16334,
+  "multirow_blocks": 1748,
+  "multirow_live_units": 6133,
+  "block_overlay_triples": 33212,
+  "combined_knowledge_triples": 36956,
+  "generated_block_shacl_conforms": true,
+  "block_state_digest": "f04eaf1fb48a192525ef830b34a80868863a01d12278a0f33cf0972adf90282b",
+  "all_blocks_reconstructed": true,
+  "singletons_in_csv_not_rdf": true,
+  "no_model_or_calibrator_refitting": true,
+  "production_authorized": false,
+  "source_sha256": {
+    "blocks.py": "74f68712d7d584bffdf7aea2ed98788e4e89111d3e94313e5d0798256e0f1ca8",
+    "policy.py": "a83e67909d88837e7aebf4d614f62282b3b135865a33fe2dc123fc307cf0783f",
+    "history.py": "f5281f51d73c7057f22ab5e03add8bba02fb62035e29e499a6db709eaa6ac8c0",
+    "walking.py": "ee8265400f780fde2d46c259e1592df718b04d718f466deb8784129dec1fc9f3"
+  },
+  "knowledge_sha256": {
+    "block-shapes.ttl": "9569c35ec23f8eba764033e4a81a875bf37bcfa302a00ba94cc4d1b42b9643d4",
+    "block-vocabulary.ttl": "80d428b91affd1bcd1ec0c742b31f6bbdc0dff35e806bd74256fc77d77540588",
+    "blocks-example.ttl": "1b4715ae7e9ed1f190b0f3ea97d94db898f6339b502d321ac9eb953c8c261054"
+  },
+  "limitations": [
+    "Exact-key blocks can merge unrelated bookings or split real parties; original duplicates are preserved",
+    "One CSV row is a room proxy, not a unique person or verified room reservation",
+    "Recorded release outcomes are separated from decision-time state and never used to rank or forecast earlier",
+    "Attributed walks retain Stage 11 incumbent-only assumption; incremental sales and real inventory are unknown",
+    "Independent/perfect-correlation diagnostics hold marginals fixed; realised cost differences are not causal block effects or model selection",
+    "Five-unit review threshold is an unapproved prioritisation assumption, not a safety guarantee for smaller parties"
+  ]
+}
