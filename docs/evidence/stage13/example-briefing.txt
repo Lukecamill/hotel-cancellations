@@ -1,0 +1,6 @@
+AI-generated simulation — arrival 2017-08-15 (as of 2017-08-08)
+City Hotel: 66 on-book booking units; expected releases 4.27; proposed extra rooms 3; walking probability 0.192; gate PASS.
+Resort Hotel: 15 on-book booking units; expected releases 0.463; proposed extra rooms 0; walking probability 0.0; gate FAIL.
+hold for calibration review. No operational approval.
+Deposit prepaid: unknown
+Unsent guest draft — human approval required: We are sorry for the disruption. Our team will discuss suitable alternatives with you.

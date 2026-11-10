@@ -23,3 +23,12 @@ calibration_band: [0.85, 1.15]
 data_dir: data
 model_dir: models
 log_level: INFO
+
+# Required S1 local baseline; digest populated after download.
+llm:
+  base_url: http://127.0.0.1:11434/v1
+  model: qwen3:4b-instruct
+  api_key_env: LLM_API_KEY
+  temperature: 0.0
+  max_tokens: 1024
+  digest: 0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0

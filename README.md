@@ -290,3 +290,13 @@ The real overlay stays under ignored artifacts/; synthetic block examples are
 validated in CI. Matches are not verified parties, and no new policy or guest
 ranking is released. See [Stage 12 findings](docs/stage12-group-blocks.md) and
 [ADR 0014](docs/decisions/0014-inferred-blocks-and-human-desk.md).
+
+### Stage 13 — local manager briefing (S1)
+
+See [the briefing contract, evaluation and reproduction guide](docs/stage13-briefing.md).
+`make briefing-record` uses the configured local open-weight model; recorded raw
+responses are replayed without inference using `make briefing-replay`.
+`make briefing-quality` requires every response to satisfy the factual/approval
+contract. CI runs this strict gate as well as the frozen model calibration gate;
+a stable failing fixture is not a passing model. No guest message can be sent by
+this component. Model weights/runtime stay in ignored `artifacts/`.

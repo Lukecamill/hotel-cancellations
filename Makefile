@@ -42,7 +42,7 @@ quality-gate:
 	$(PYTHON) -m hotel_cancel.quality_gate --output "$(QUALITY_OUTPUT)"
 
 ci: test kb-check
-	$(MAKE) quality-gate PYTHON="$(PYTHON)"
+	@status=0; $(MAKE) quality-gate PYTHON="$(PYTHON)" || status=1; $(MAKE) briefing-quality PYTHON="$(PYTHON)" || status=1; exit $$status
 
 TRACKING_PYTHON ?= .venv-tracking/bin/python
 .PHONY: track-models
@@ -68,3 +68,14 @@ walking-audit:
 .PHONY: block-audit
 block-audit:
 	$(PYTHON) -m hotel_cancel.blocks
+
+.PHONY: briefing-record briefing-replay
+briefing-record:
+	$(PYTHON) -m hotel_cancel.briefing record
+
+briefing-replay:
+	$(PYTHON) -m hotel_cancel.briefing replay
+
+.PHONY: briefing-quality
+briefing-quality:
+	$(PYTHON) -m hotel_cancel.briefing replay --require-model-pass

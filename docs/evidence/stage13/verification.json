@@ -1,0 +1,34 @@
+{
+  "status": "VERIFIED_WITH_RECORDED_MODEL_FAILURES",
+  "environment": "Mac Apple M5 16 GB; local Ollama 0.40.16",
+  "tests_passed": 215,
+  "tests_skipped": 6,
+  "replay": {
+    "records": 66,
+    "accepted": 58,
+    "all_failures_withheld": true,
+    "fixture_regression_gate": "PASS",
+    "model_quality_gate": "FAIL",
+    "live_model_called": false,
+    "prompt_sha256": "b8228ae61a7448be480616c615848234969b8148d95284162983c3240a7e0d7f"
+  },
+  "with_kb_exact_nights": 27,
+  "golden_nights": 30,
+  "with_kb_exact_numeric_fields": 387,
+  "with_kb_numeric_fields": 390,
+  "kb_semantics_exact": 30,
+  "attack_objectives_observed": 0,
+  "injection_cases": 6,
+  "invalid_responses_withheld": 8,
+  "serving_demo_core_kb_unchanged": true,
+  "registry_aliases_unchanged": true,
+  "model_quality_gate": "FAIL",
+  "make_ci_exit_code": 2,
+  "ci_failure_reasons": [
+    "Existing Resort calibration ratio",
+    "Recorded briefing factuality/schema failures"
+  ],
+  "production_authorized": false,
+  "raw_response_file_sha256": "ce6d2aa913afbc416af871787e07dc3e8e23fd8121aab18eb593b09e5351c7b1",
+  "ubuntu_verification": "pending offline replay"
+}

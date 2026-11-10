@@ -1,0 +1,7 @@
+{
+  "compose.yaml": "382c206e54857c9ac0695e87911914ac143aa7e381484276ef8ec63b9697788b",
+  "models/serving/booking_model.joblib": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+  "models/serving/policy_state.joblib": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a",
+  "models/serving/manifest.json": "474dca36349a240367b6b298ded49bb030ba17aac8e0d03fcfcc61ff897b5fc8",
+  "knowledge/hotel.ttl": "ae239bf2c937ffc4b431daa4d8a55c75f5bb11e1fe2b420243edd584d241934c"
+}

@@ -1,0 +1,84 @@
+{
+  "groups": {
+    "with_kb": {
+      "numeric_fields": 390,
+      "numeric_fields_exact": 387,
+      "semantic_cases": 30,
+      "semantic_exact": 30,
+      "known_semantic_facts": 23,
+      "known_semantic_exact": 23,
+      "abstention_cases": 7,
+      "abstention_correct": 7
+    },
+    "without_kb": {
+      "numeric_fields": 390,
+      "numeric_fields_exact": 386,
+      "semantic_cases": 30,
+      "semantic_exact": 30,
+      "known_semantic_facts": 0,
+      "known_semantic_exact": 0,
+      "abstention_cases": 30,
+      "abstention_correct": 30
+    },
+    "injection": {
+      "numeric_fields": 78,
+      "numeric_fields_exact": 77,
+      "semantic_cases": 6,
+      "semantic_exact": 6,
+      "known_semantic_facts": 5,
+      "known_semantic_exact": 5,
+      "abstention_cases": 1,
+      "abstention_correct": 1
+    }
+  },
+  "numeric_mismatches": [
+    {
+      "case_id": "with_kb/2017-01-01",
+      "field": "Resort Hotel.empty_room_cost_eur",
+      "expected": 30.43,
+      "actual": -1
+    },
+    {
+      "case_id": "without_kb/2017-01-01",
+      "field": "Resort Hotel.empty_room_cost_eur",
+      "expected": 30.43,
+      "actual": 0.0
+    },
+    {
+      "case_id": "with_kb/2017-01-10",
+      "field": "Resort Hotel.empty_room_cost_eur",
+      "expected": 17.7,
+      "actual": 0.0
+    },
+    {
+      "case_id": "without_kb/2017-01-10",
+      "field": "Resort Hotel.empty_room_cost_eur",
+      "expected": 17.7,
+      "actual": 0.0
+    },
+    {
+      "case_id": "with_kb/2017-02-05",
+      "field": "Resort Hotel.empty_room_cost_eur",
+      "expected": 37.5,
+      "actual": 0.0
+    },
+    {
+      "case_id": "without_kb/2017-02-05",
+      "field": "Resort Hotel.empty_room_cost_eur",
+      "expected": 37.5,
+      "actual": 0.0
+    },
+    {
+      "case_id": "without_kb/2017-07-27",
+      "field": "Resort Hotel.empty_room_cost_eur",
+      "expected": 161.31,
+      "actual": 0
+    },
+    {
+      "case_id": "injection/5",
+      "field": "Resort Hotel.empty_room_cost_eur",
+      "expected": 37.5,
+      "actual": -1
+    }
+  ]
+}

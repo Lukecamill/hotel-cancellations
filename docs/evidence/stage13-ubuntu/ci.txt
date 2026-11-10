@@ -1,0 +1,63 @@
+python -m pytest -q
+...............ssss..................................................... [ 32%]
+........................................................s.............s. [ 65%]
+........................................................................ [ 97%]
+.....                                                                    [100%]
+215 passed, 6 skipped in 14.15s
+python -m hotel_cancel.knowledge --output "docs/evidence/stage13-ubuntu/shacl"
+{
+  "conforms": true,
+  "triples": 3801,
+  "violations": []
+}
+make[1]: Entering directory '/project'
+python -m hotel_cancel.quality_gate --output "docs/evidence/stage13-ubuntu/quality-gate"
+{
+  "City Hotel": {
+    "n": 27508,
+    "cancellations": 11691,
+    "auprc": 0.785721886317962,
+    "expected_observed_ratio": 0.9112810321058089,
+    "ece": 0.04227523749271264,
+    "brier": 0.17239734512884491,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": true,
+      "ece": true
+    },
+    "gate": "PASS"
+  },
+  "Resort Hotel": {
+    "n": 13179,
+    "cancellations": 4054,
+    "auprc": 0.627907608840626,
+    "expected_observed_ratio": 0.6817233437376264,
+    "ece": 0.0989614606930023,
+    "brier": 0.17757610639149055,
+    "checks": {
+      "two_classes": true,
+      "auprc": true,
+      "calibration_ratio": false,
+      "ece": true
+    },
+    "gate": "FAIL"
+  }
+}
+Quality gate: FAIL; evidence: docs/evidence/stage13-ubuntu/quality-gate
+make[1]: *** [Makefile:42: quality-gate] Error 1
+make[1]: Leaving directory '/project'
+make[1]: Entering directory '/project'
+python -m hotel_cancel.briefing replay --require-model-pass
+{
+  "records": 66,
+  "accepted": 58,
+  "all_failures_withheld": true,
+  "fixture_regression_gate": "PASS",
+  "model_quality_gate": "FAIL",
+  "live_model_called": false,
+  "prompt_sha256": "b8228ae61a7448be480616c615848234969b8148d95284162983c3240a7e0d7f"
+}
+make[1]: Leaving directory '/project'
+make[1]: *** [Makefile:81: briefing-quality] Error 1
+make: *** [Makefile:45: ci] Error 1

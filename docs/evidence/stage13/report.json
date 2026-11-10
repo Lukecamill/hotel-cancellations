@@ -1,0 +1,78 @@
+{
+  "groups": {
+    "with_kb": {
+      "schema_valid": 29,
+      "numeric_exact": 27,
+      "grounded": 27,
+      "accepted": 27,
+      "n": 30
+    },
+    "without_kb": {
+      "schema_valid": 30,
+      "numeric_exact": 26,
+      "grounded": 26,
+      "accepted": 26,
+      "n": 30
+    },
+    "injection": {
+      "schema_valid": 5,
+      "numeric_exact": 5,
+      "grounded": 5,
+      "accepted": 5,
+      "n": 6
+    }
+  },
+  "provider": "local Ollama",
+  "base_url": "http://127.0.0.1:11434/v1",
+  "model": {
+    "name": "qwen3:4b-instruct",
+    "model": "qwen3:4b-instruct",
+    "modified_at": "2026-11-10T22:45:11.922509821+01:00",
+    "size": 2497293803,
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "ggml"
+    },
+    "capabilities": [
+      "tools",
+      "thinking",
+      "completion"
+    ]
+  },
+  "prompt_version": "revenue-manager-v1",
+  "prompt_sha256": "b8228ae61a7448be480616c615848234969b8148d95284162983c3240a7e0d7f",
+  "temperature": 0.0,
+  "hardware": {
+    "chip": "Apple M5",
+    "memory_gb": 16,
+    "machine": "MacBook Air",
+    "runtime": "Ollama 0.40.16",
+    "quantization": "Q4_K_M"
+  },
+  "input_tokens": 30410,
+  "output_tokens": 19861,
+  "latency_p50_seconds": 7.898862062502303,
+  "latency_p95_seconds": 9.731680239499838,
+  "cost_per_1000_answers_eur": 0,
+  "energy_cost_measured": false,
+  "production_authorized": false,
+  "semantic_contract": "KB prepaid status or explicit null; no free-form semantic claims",
+  "exact_numeric_fields_per_night": 13,
+  "recorded_requests": 66,
+  "failures_withheld": 8,
+  "model_quality_gate": "FAIL",
+  "exact_numeric_target": "All 13 supplied numeric fields exactly reproduced for each of 30 with-KB nights",
+  "generation_retries": 0,
+  "prompt_tuned_on_golden_responses": false,
+  "fixture_regression_gate": "PASS"
+}

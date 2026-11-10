@@ -1,0 +1,9 @@
+{
+  "records": 66,
+  "accepted": 58,
+  "all_failures_withheld": true,
+  "fixture_regression_gate": "PASS",
+  "model_quality_gate": "FAIL",
+  "live_model_called": false,
+  "prompt_sha256": "b8228ae61a7448be480616c615848234969b8148d95284162983c3240a7e0d7f"
+}

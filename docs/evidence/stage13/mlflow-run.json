@@ -1,0 +1,15 @@
+{
+  "run_id": "4f74ae9482ed4048bf8adec933ef22d8",
+  "experiment_id": "2",
+  "registered_models_changed": false,
+  "registry_aliases_before_and_after": {
+    "task19-city-booking": {
+      "challenger": 1,
+      "champion": 1
+    },
+    "task19-resort-booking": {
+      "challenger": 1
+    }
+  },
+  "artifact_uri": "/Users/lukecamilleri/Desktop/hotel-cancellations/mlruns/2/4f74ae9482ed4048bf8adec933ef22d8/artifacts"
+}
