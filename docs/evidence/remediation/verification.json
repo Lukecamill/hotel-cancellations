@@ -1,0 +1,23 @@
+{
+  "status": "QUALITY_FIXES_VERIFIED_MAC_SIGNOFF_PENDING",
+  "tests_passed": 234,
+  "tests_skipped": 6,
+  "calibration_challenger_gate": "PASS",
+  "resort_ratio": 1.0302477572464026,
+  "resort_ece": 0.014244378217589497,
+  "briefing_component_gate": "PASS",
+  "ordinary_briefings_exact": 90,
+  "original_regression_nights_exact": 30,
+  "additional_nights_exact": 30,
+  "injection_safe": 6,
+  "injection_withheld": 1,
+  "raw_model_all_case_gate": "FAIL",
+  "raw_model_accepted": 95,
+  "raw_model_requests": 96,
+  "numeric_source": "trusted context, not generated or repaired",
+  "coursework_signoff": "PENDING_USER_REQUEST",
+  "production_authorized": false,
+  "ubuntu_verification": "VERIFIED_FROM_USER_TERMINAL",
+  "original_demo_unchanged": true,
+  "native_ubuntu_evidence_copy": "pending"
+}

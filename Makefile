@@ -79,3 +79,19 @@ briefing-replay:
 .PHONY: briefing-quality
 briefing-quality:
 	$(PYTHON) -m hotel_cancel.briefing replay --require-model-pass
+
+CALIBRATION_OUTPUT ?= docs/evidence/remediation/calibration
+.PHONY: calibration-challenger revised-briefing-quality remediation-check
+calibration-challenger:
+	$(PYTHON) -m hotel_cancel.calibration_challenger verify --output "$(CALIBRATION_OUTPUT)"
+
+revised-briefing-quality:
+	$(PYTHON) -m hotel_cancel.briefing_revision replay
+
+remediation-check: test calibration-challenger revised-briefing-quality
+
+.PHONY: simulation-signoff-check coursework-release-check
+simulation-signoff-check:
+	$(PYTHON) scripts/record_simulation_signoff.py verify
+
+coursework-release-check: remediation-check simulation-signoff-check

@@ -1,0 +1,8 @@
+{
+  "status": "ABORTED_DURING_DEVELOPMENT",
+  "completed_requests": 13,
+  "all_cases_original_regression": true,
+  "new_validation_responses_seen": false,
+  "reason": "Date and policy-string errors detected on original regression cases; revised before new calendar evaluation",
+  "recorded_at": "2026-11-10T22:24:56.302288+00:00"
+}

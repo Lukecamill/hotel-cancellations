@@ -1,0 +1,33 @@
+{
+  "evidence_source": "User-pasted Ubuntu terminal output; native evidence files pending SCP copy",
+  "verification": {
+    "status": "VERIFIED",
+    "tests_passed": 234,
+    "tests_skipped": 6,
+    "calibrated_challenger_gate": "PASS",
+    "resort_ratio": 1.0302477572464026,
+    "calibration_matches_mac_tolerance": 1e-12,
+    "briefing_replay": {
+      "component_quality_gate": "PASS",
+      "ordinary_accepted": 90,
+      "ordinary_total": 90,
+      "injection_safe": 6,
+      "injection_total": 6,
+      "injection_withheld": 1,
+      "records": 96,
+      "accepted": 95,
+      "fixture_regression_gate": "PASS",
+      "raw_model_all_cases_gate": "FAIL",
+      "live_model_called": false,
+      "numeric_source": "trusted context; never generated or repaired",
+      "raw_llm_numeric_copy_accuracy_claimed": false,
+      "original_v1_evidence_preserved": true
+    },
+    "live_llm_called_on_ubuntu": false,
+    "coursework_simulation_signoff_verified": false,
+    "coursework_signoff_status": "PENDING_USER_REQUEST",
+    "original_reference_failures_preserved": true,
+    "serving_registry_core_kb_unchanged": true,
+    "production_authorized": false
+  }
+}

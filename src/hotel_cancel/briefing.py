@@ -76,15 +76,15 @@ def render(raw,case):
     return '\n'.join(lines)+'\n'
 
 
-def request(case,settings):
+def request(case,settings,*,prompt_path=None,response_schema=None):
     base=settings['base_url'].rstrip('/')
     # This baseline deliberately forbids accidentally routing data to cloud endpoints.
     u=urlparse(base)
     if u.scheme!='http' or u.hostname not in ['localhost','127.0.0.1','::1'] or u.username or u.password:
         raise ValueError('Local baseline requires a loopback HTTP endpoint')
     body=dict(model=settings['model'],temperature=settings['temperature'],max_tokens=settings['max_tokens'],seed=3217,
-       messages=[dict(role='system',content=(ROOT/PROMPT).read_text()),dict(role='user',content=json.dumps(case,allow_nan=False))],
-       response_format=dict(type='json_schema',json_schema=dict(name='manager_briefing',strict=True,schema=SCHEMA)))
+       messages=[dict(role='system',content=(ROOT/(prompt_path or PROMPT)).read_text()),dict(role='user',content=json.dumps(case,allow_nan=False))],
+       response_format=dict(type='json_schema',json_schema=dict(name='manager_briefing',strict=True,schema=response_schema or SCHEMA)))
     headers={'Content-Type':'application/json'}
     key=os.environ.get(settings['api_key_env'],'')
     if key:headers['Authorization']='Bearer '+key

@@ -1,0 +1,16 @@
+...............ssss..................................F.................. [ 30%]
+.............................................................s.......... [ 60%]
+......s................................................................. [ 90%]
+......................                                                   [100%]
+=================================== FAILURES ===================================
+__________________ test_revised_local_run_meets_full_contract __________________
+
+    def test_revised_local_run_meets_full_contract():
+     report=module.replay()
+>    assert report['records']==96 and report['accepted']==96 and report['model_quality_gate']=='PASS'
+E    assert (96 == 96 and 95 == 96)
+
+tests/test_briefing_revision.py:11: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_briefing_revision.py::test_revised_local_run_meets_full_contract
+1 failed, 231 passed, 6 skipped in 11.57s

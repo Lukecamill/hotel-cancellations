@@ -1,0 +1,2401 @@
+[
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-01\",\n  \"batch_date\": \"2016-01-01\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 45.0,\n      \"expected_releases\": 3.881,\n      \"gate\": \"PASS\",\n      \"on_books\": 60,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 36,\n      \"walk_probability\": 0.093\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 30.43,\n      \"expected_releases\": 0.478,\n      \"gate\": \"FAIL\",\n      \"on_books\": 13,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 583,
+      "prompt_tokens_details": {
+        "cached_tokens": 4
+      },
+      "completion_tokens": 306,
+      "total_tokens": 889
+    },
+    "latency_seconds": 7.959304332995089,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-01-01",
+    "case": {
+      "context_pack": {
+        "batch_date": "2016-12-25",
+        "arrival_night": "2017-01-01",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 60,
+            "rooms_in_blocks": 36,
+            "expected_releases": 3.881,
+            "walk_probability": 0.093,
+            "empty_room_cost_eur": 45.0,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 13,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.478,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 30.43,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": false,
+      "accepted": false,
+      "error": "factual or approval mismatch"
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-10\",\n  \"batch_date\": \"2017-01-03\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 61.19,\n      \"expected_releases\": 0.906,\n      \"gate\": \"PASS\",\n      \"on_books\": 14,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 17.7,\n      \"expected_releases\": 0.428,\n      \"gate\": \"FAIL\",\n      \"on_books\": 8,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 3,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 579,
+      "prompt_tokens_details": {
+        "cached_tokens": 335
+      },
+      "completion_tokens": 302,
+      "total_tokens": 881
+    },
+    "latency_seconds": 7.4637619580025785,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-01-10",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-03",
+        "arrival_night": "2017-01-10",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 14,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.906,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 61.19,
+            "proposed_q": 0,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 8,
+            "rooms_in_blocks": 3,
+            "expected_releases": 0.428,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 17.7,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-18\",\n  \"batch_date\": \"2017-01-11\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 55.0,\n      \"expected_releases\": 5.887,\n      \"gate\": \"PASS\",\n      \"on_books\": 91,\n      \"policy\": \"flat rate (Jul \u2013 Sep 2016)\",\n      \"proposed_q\": 4,\n      \"rooms_in_blocks\": 79,\n      \"walk_probability\": 0.153\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 45.0,\n      \"expected_releases\": 0.316,\n      \"gate\": \"FAIL\",\n      \"on_books\": 7,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 0,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 580,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 299,
+      "total_tokens": 879
+    },
+    "latency_seconds": 7.4222449169901665,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-01-18",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-11",
+        "arrival_night": "2017-01-18",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 91,
+            "rooms_in_blocks": 79,
+            "expected_releases": 5.887,
+            "walk_probability": 0.153,
+            "empty_room_cost_eur": 55.0,
+            "proposed_q": 4,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 7,
+            "rooms_in_blocks": 0,
+            "expected_releases": 0.316,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 45.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-27\",\n  \"batch_date\": \"2017-01-20\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 57.1,\n      \"expected_releases\": 2.329,\n      \"gate\": \"PASS\",\n      \"on_books\": 36,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 3,\n      \"walk_probability\": 0.09\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 27.5,\n      \"expected_releases\": 1.309,\n      \"gate\": \"FAIL\",\n      \"on_books\": 28,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 9,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 578,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 303,
+      "total_tokens": 881
+    },
+    "latency_seconds": 7.75485125000705,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-01-27",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-20",
+        "arrival_night": "2017-01-27",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 36,
+            "rooms_in_blocks": 3,
+            "expected_releases": 2.329,
+            "walk_probability": 0.09,
+            "empty_room_cost_eur": 57.1,
+            "proposed_q": 1,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 28,
+            "rooms_in_blocks": 9,
+            "expected_releases": 1.309,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 27.5,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "kb_facts": {
+        "deposit_prepaid": null
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-05\",\n  \"batch_date\": \"2017-01-29\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 55.0,\n      \"expected_releases\": 3.623,\n      \"gate\": \"PASS\",\n      \"on_books\": 56,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 24,\n      \"walk_probability\": 0.115\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 37.5,\n      \"expected_releases\": 0.268,\n      \"gate\": \"FAIL\",\n      \"on_books\": 6,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 0,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 581,
+      "prompt_tokens_details": {
+        "cached_tokens": 341
+      },
+      "completion_tokens": 304,
+      "total_tokens": 885
+    },
+    "latency_seconds": 7.531266625010176,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-02-05",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-29",
+        "arrival_night": "2017-02-05",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 56,
+            "rooms_in_blocks": 24,
+            "expected_releases": 3.623,
+            "walk_probability": 0.115,
+            "empty_room_cost_eur": 55.0,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 6,
+            "rooms_in_blocks": 0,
+            "expected_releases": 0.268,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 37.5,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-13\",\n  \"batch_date\": \"2017-02-06\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 70.95,\n      \"expected_releases\": 3.881,\n      \"gate\": \"PASS\",\n      \"on_books\": 60,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 8,\n      \"walk_probability\": 0.093\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 42.0,\n      \"expected_releases\": 3.345,\n      \"gate\": \"FAIL\",\n      \"on_books\": 61,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 31,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 583,
+      "prompt_tokens_details": {
+        "cached_tokens": 338
+      },
+      "completion_tokens": 306,
+      "total_tokens": 889
+    },
+    "latency_seconds": 7.59199066599831,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-02-13",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-02-06",
+        "arrival_night": "2017-02-13",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 60,
+            "rooms_in_blocks": 8,
+            "expected_releases": 3.881,
+            "walk_probability": 0.093,
+            "empty_room_cost_eur": 70.95,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 61,
+            "rooms_in_blocks": 31,
+            "expected_releases": 3.345,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 42.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-22\",\n  \"batch_date\": \"2017-02-15\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 45.0,\n      \"expected_releases\": 5.046,\n      \"gate\": \"PASS\",\n      \"on_books\": 78,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 54,\n      \"walk_probability\": 0.113\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 22.0,\n      \"expected_releases\": 1.112,\n      \"gate\": \"FAIL\",\n      \"on_books\": 29,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 15,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 582,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 306,
+      "total_tokens": 888
+    },
+    "latency_seconds": 7.793427041993709,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-02-22",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-02-15",
+        "arrival_night": "2017-02-22",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 78,
+            "rooms_in_blocks": 54,
+            "expected_releases": 5.046,
+            "walk_probability": 0.113,
+            "empty_room_cost_eur": 45.0,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 29,
+            "rooms_in_blocks": 15,
+            "expected_releases": 1.112,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 22.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-03-02\",\n  \"batch_date\": \"2017-02-23\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 68.0,\n      \"expected_releases\": 3.881,\n      \"gate\": \"PASS\",\n      \"on_books\": 60,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 22,\n      \"walk_probability\": 0.093\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 50.0,\n      \"expected_releases\": 0.525,\n      \"gate\": \"FAIL\",\n      \"on_books\": 11,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 5,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 580,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 305,
+      "total_tokens": 885
+    },
+    "latency_seconds": 7.6377154999936465,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-03-02",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-02-23",
+        "arrival_night": "2017-03-02",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 60,
+            "rooms_in_blocks": 22,
+            "expected_releases": 3.881,
+            "walk_probability": 0.093,
+            "empty_room_cost_eur": 68.0,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 11,
+            "rooms_in_blocks": 5,
+            "expected_releases": 0.525,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 50.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "kb_facts": {
+        "deposit_prepaid": null
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-03-11\",\n  \"batch_date\": \"2017-03-04\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 69.2,\n      \"expected_releases\": 2.717,\n      \"gate\": \"PASS\",\n      \"on_books\": 42,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 10,\n      \"walk_probability\": 0.06\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 31.0,\n      \"expected_releases\": 3.496,\n      \"gate\": \"FAIL\",\n      \"on_books\": 43,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 27,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 582,
+      "prompt_tokens_details": {
+        "cached_tokens": 338
+      },
+      "completion_tokens": 305,
+      "total_tokens": 887
+    },
+    "latency_seconds": 7.570253916986985,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-03-11",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-03-04",
+        "arrival_night": "2017-03-11",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 42,
+            "rooms_in_blocks": 10,
+            "expected_releases": 2.717,
+            "walk_probability": 0.06,
+            "empty_room_cost_eur": 69.2,
+            "proposed_q": 1,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 43,
+            "rooms_in_blocks": 27,
+            "expected_releases": 3.496,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 31.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-03-20\",\n  \"batch_date\": \"2017-03-13\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 75.0,\n      \"expected_releases\": 5.693,\n      \"gate\": \"PASS\",\n      \"on_books\": 88,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 4,\n      \"rooms_in_blocks\": 45,\n      \"walk_probability\": 0.172\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 51.5,\n      \"expected_releases\": 1.814,\n      \"gate\": \"FAIL\",\n      \"on_books\": 24,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 12,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 583,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 306,
+      "total_tokens": 889
+    },
+    "latency_seconds": 7.639465332991676,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-03-20",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-03-13",
+        "arrival_night": "2017-03-20",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 88,
+            "rooms_in_blocks": 45,
+            "expected_releases": 5.693,
+            "walk_probability": 0.172,
+            "empty_room_cost_eur": 75.0,
+            "proposed_q": 4,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 24,
+            "rooms_in_blocks": 12,
+            "expected_releases": 1.814,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 51.5,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-03-28\",\n  \"batch_date\": \"2017-03-21\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 77.475,\n      \"expected_releases\": 2.07,\n      \"gate\": \"PASS\",\n      \"on_books\": 32,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 6,\n      \"walk_probability\": 0.118\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 41.0,\n      \"expected_releases\": 1.348,\n      \"gate\": \"FAIL\",\n      \"on_books\": 22,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 581,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 305,
+      "total_tokens": 886
+    },
+    "latency_seconds": 7.712972125009401,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-03-28",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-03-21",
+        "arrival_night": "2017-03-28",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 32,
+            "rooms_in_blocks": 6,
+            "expected_releases": 2.07,
+            "walk_probability": 0.118,
+            "empty_room_cost_eur": 77.475,
+            "proposed_q": 1,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 22,
+            "rooms_in_blocks": 2,
+            "expected_releases": 1.348,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 41.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-04-06\",\n  \"batch_date\": \"2017-03-30\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 99.0,\n      \"expected_releases\": 3.946,\n      \"gate\": \"PASS\",\n      \"on_books\": 61,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 20,\n      \"walk_probability\": 0.236\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 49.64,\n      \"expected_releases\": 1.07,\n      \"gate\": \"FAIL\",\n      \"on_books\": 21,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 4,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 580,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 305,
+      "total_tokens": 885
+    },
+    "latency_seconds": 7.7397091669845395,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-04-06",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-03-30",
+        "arrival_night": "2017-04-06",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 61,
+            "rooms_in_blocks": 20,
+            "expected_releases": 3.946,
+            "walk_probability": 0.236,
+            "empty_room_cost_eur": 99.0,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 21,
+            "rooms_in_blocks": 4,
+            "expected_releases": 1.07,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 49.64,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "kb_facts": {
+        "deposit_prepaid": null
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-04-15\",\n  \"batch_date\": \"2017-04-08\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 100.0,\n      \"expected_releases\": 4.27,\n      \"gate\": \"PASS\",\n      \"on_books\": 66,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 28,\n      \"walk_probability\": 0.192\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 52.5,\n      \"expected_releases\": 1.666,\n      \"gate\": \"FAIL\",\n      \"on_books\": 27,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 582,
+      "prompt_tokens_details": {
+        "cached_tokens": 338
+      },
+      "completion_tokens": 305,
+      "total_tokens": 887
+    },
+    "latency_seconds": 7.789001708995784,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-04-15",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-04-08",
+        "arrival_night": "2017-04-15",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 66,
+            "rooms_in_blocks": 28,
+            "expected_releases": 4.27,
+            "walk_probability": 0.192,
+            "empty_room_cost_eur": 100.0,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 27,
+            "rooms_in_blocks": 2,
+            "expected_releases": 1.666,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 52.5,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-04-23\",\n  \"batch_date\": \"2017-04-16\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 88.0,\n      \"expected_releases\": 4.205,\n      \"gate\": \"PASS\",\n      \"on_books\": 65,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 21,\n      \"walk_probability\": 0.2\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 54.0,\n      \"expected_releases\": 1.991,\n      \"gate\": \"FAIL\",\n      \"on_books\": 45,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 27,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 581,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 304,
+      "total_tokens": 885
+    },
+    "latency_seconds": 7.8892924170068,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-04-23",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-04-16",
+        "arrival_night": "2017-04-23",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 65,
+            "rooms_in_blocks": 21,
+            "expected_releases": 4.205,
+            "walk_probability": 0.2,
+            "empty_room_cost_eur": 88.0,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 45,
+            "rooms_in_blocks": 27,
+            "expected_releases": 1.991,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 54.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-05-02\",\n  \"batch_date\": \"2017-04-25\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 100.0,\n      \"expected_releases\": 5.046,\n      \"gate\": \"PASS\",\n      \"on_books\": 78,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 4,\n      \"rooms_in_blocks\": 29,\n      \"walk_probability\": 0.249\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 32.85,\n      \"expected_releases\": 1.039,\n      \"gate\": \"FAIL\",\n      \"on_books\": 31,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 6,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 583,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 307,
+      "total_tokens": 890
+    },
+    "latency_seconds": 8.247027749981498,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-05-02",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-04-25",
+        "arrival_night": "2017-05-02",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 78,
+            "rooms_in_blocks": 29,
+            "expected_releases": 5.046,
+            "walk_probability": 0.249,
+            "empty_room_cost_eur": 100.0,
+            "proposed_q": 4,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 31,
+            "rooms_in_blocks": 6,
+            "expected_releases": 1.039,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 32.85,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-05-11\",\n  \"batch_date\": \"2017-05-04\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 101.5,\n      \"expected_releases\": 5.952,\n      \"gate\": \"PASS\",\n      \"on_books\": 92,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 5,\n      \"rooms_in_blocks\": 53,\n      \"walk_probability\": 0.283\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 80.0,\n      \"expected_releases\": 0.682,\n      \"gate\": \"FAIL\",\n      \"on_books\": 23,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 7,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 581,
+      "prompt_tokens_details": {
+        "cached_tokens": 338
+      },
+      "completion_tokens": 306,
+      "total_tokens": 887
+    },
+    "latency_seconds": 8.178781958005857,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-05-11",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-05-04",
+        "arrival_night": "2017-05-11",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 92,
+            "rooms_in_blocks": 53,
+            "expected_releases": 5.952,
+            "walk_probability": 0.283,
+            "empty_room_cost_eur": 101.5,
+            "proposed_q": 5,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 23,
+            "rooms_in_blocks": 7,
+            "expected_releases": 0.682,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 80.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "kb_facts": {
+        "deposit_prepaid": null
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-05-19\",\n  \"batch_date\": \"2017-05-12\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 120.0,\n      \"expected_releases\": 4.852,\n      \"gate\": \"PASS\",\n      \"on_books\": 75,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 4,\n      \"rooms_in_blocks\": 25,\n      \"walk_probability\": 0.277\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 73.73,\n      \"expected_releases\": 0.531,\n      \"gate\": \"FAIL\",\n      \"on_books\": 15,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 584,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 307,
+      "total_tokens": 891
+    },
+    "latency_seconds": 8.72801762499148,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-05-19",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-05-12",
+        "arrival_night": "2017-05-19",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 75,
+            "rooms_in_blocks": 25,
+            "expected_releases": 4.852,
+            "walk_probability": 0.277,
+            "empty_room_cost_eur": 120.0,
+            "proposed_q": 4,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 15,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.531,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 73.73,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-05-28\",\n  \"batch_date\": \"2017-05-21\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 91.52,\n      \"expected_releases\": 4.981,\n      \"gate\": \"PASS\",\n      \"on_books\": 77,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 4,\n      \"rooms_in_blocks\": 34,\n      \"walk_probability\": 0.258\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 72.275,\n      \"expected_releases\": 2.276,\n      \"gate\": \"FAIL\",\n      \"on_books\": 62,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 6,\n      \"walk_probability\": 0.108\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 587,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 310,
+      "total_tokens": 897
+    },
+    "latency_seconds": 9.366725999978371,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-05-28",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-05-21",
+        "arrival_night": "2017-05-28",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 77,
+            "rooms_in_blocks": 34,
+            "expected_releases": 4.981,
+            "walk_probability": 0.258,
+            "empty_room_cost_eur": 91.52,
+            "proposed_q": 4,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 62,
+            "rooms_in_blocks": 6,
+            "expected_releases": 2.276,
+            "walk_probability": 0.108,
+            "empty_room_cost_eur": 72.275,
+            "proposed_q": 1,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-06-06\",\n  \"batch_date\": \"2017-05-30\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 107.5,\n      \"expected_releases\": 4.011,\n      \"gate\": \"PASS\",\n      \"on_books\": 62,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 14,\n      \"walk_probability\": 0.227\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 70.0,\n      \"expected_releases\": 0.642,\n      \"gate\": \"FAIL\",\n      \"on_books\": 18,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 582,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 306,
+      "total_tokens": 888
+    },
+    "latency_seconds": 8.845352083997568,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-06-06",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-05-30",
+        "arrival_night": "2017-06-06",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 62,
+            "rooms_in_blocks": 14,
+            "expected_releases": 4.011,
+            "walk_probability": 0.227,
+            "empty_room_cost_eur": 107.5,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 18,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.642,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 70.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-06-14\",\n  \"batch_date\": \"2017-06-07\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 92.67,\n      \"expected_releases\": 4.076,\n      \"gate\": \"PASS\",\n      \"on_books\": 63,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 37,\n      \"walk_probability\": 0.218\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 104.0,\n      \"expected_releases\": 1.12,\n      \"gate\": \"FAIL\",\n      \"on_books\": 19,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 0,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 581,
+      "prompt_tokens_details": {
+        "cached_tokens": 338
+      },
+      "completion_tokens": 306,
+      "total_tokens": 887
+    },
+    "latency_seconds": 8.960394749999978,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-06-14",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-06-07",
+        "arrival_night": "2017-06-14",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 63,
+            "rooms_in_blocks": 37,
+            "expected_releases": 4.076,
+            "walk_probability": 0.218,
+            "empty_room_cost_eur": 92.67,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 19,
+            "rooms_in_blocks": 0,
+            "expected_releases": 1.12,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 104.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "kb_facts": {
+        "deposit_prepaid": null
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-06-23\",\n  \"batch_date\": \"2017-06-16\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 85.0,\n      \"expected_releases\": 4.205,\n      \"gate\": \"PASS\",\n      \"on_books\": 65,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 37,\n      \"walk_probability\": 0.2\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 114.0,\n      \"expected_releases\": 1.103,\n      \"gate\": \"FAIL\",\n      \"on_books\": 23,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 4,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 581,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 304,
+      "total_tokens": 885
+    },
+    "latency_seconds": 9.374790333997225,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-06-23",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-06-16",
+        "arrival_night": "2017-06-23",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 65,
+            "rooms_in_blocks": 37,
+            "expected_releases": 4.205,
+            "walk_probability": 0.2,
+            "empty_room_cost_eur": 85.0,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 23,
+            "rooms_in_blocks": 4,
+            "expected_releases": 1.103,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 114.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-07-02\",\n  \"batch_date\": \"2017-06-25\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 110.05,\n      \"expected_releases\": 3.105,\n      \"gate\": \"PASS\",\n      \"on_books\": 48,\n      \"policy\": \"flat rate (Jul \u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 8,\n      \"walk_probability\": 0.174\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 92.95,\n      \"expected_releases\": 1.004,\n      \"gate\": \"FAIL\",\n      \"on_books\": 28,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 0,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 584,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 302,
+      "total_tokens": 886
+    },
+    "latency_seconds": 9.298093249992235,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-07-02",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-06-25",
+        "arrival_night": "2017-07-02",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 48,
+            "rooms_in_blocks": 8,
+            "expected_releases": 3.105,
+            "walk_probability": 0.174,
+            "empty_room_cost_eur": 110.05,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 28,
+            "rooms_in_blocks": 0,
+            "expected_releases": 1.004,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 92.95,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-07-10\",\n  \"batch_date\": \"2017-07-03\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 100.0,\n      \"expected_releases\": 4.593,\n      \"gate\": \"PASS\",\n      \"on_books\": 71,\n      \"policy\": \"flat rate (Jul \u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 12,\n      \"walk_probability\": 0.154\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 145.4,\n      \"expected_releases\": 1.769,\n      \"gate\": \"FAIL\",\n      \"on_books\": 38,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.168\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 585,
+      "prompt_tokens_details": {
+        "cached_tokens": 338
+      },
+      "completion_tokens": 304,
+      "total_tokens": 889
+    },
+    "latency_seconds": 9.445588000002317,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-07-10",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-07-03",
+        "arrival_night": "2017-07-10",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 71,
+            "rooms_in_blocks": 12,
+            "expected_releases": 4.593,
+            "walk_probability": 0.154,
+            "empty_room_cost_eur": 100.0,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 38,
+            "rooms_in_blocks": 2,
+            "expected_releases": 1.769,
+            "walk_probability": 0.168,
+            "empty_room_cost_eur": 145.4,
+            "proposed_q": 1,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-07-19\",\n  \"batch_date\": \"2017-07-12\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 103.65,\n      \"expected_releases\": 3.105,\n      \"gate\": \"PASS\",\n      \"on_books\": 48,\n      \"policy\": \"flat rate (Jul \u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 8,\n      \"walk_probability\": 0.174\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 167.0,\n      \"expected_releases\": 0.727,\n      \"gate\": \"FAIL\",\n      \"on_books\": 15,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 582,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 302,
+      "total_tokens": 884
+    },
+    "latency_seconds": 9.504159749980317,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-07-19",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-07-12",
+        "arrival_night": "2017-07-19",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 48,
+            "rooms_in_blocks": 8,
+            "expected_releases": 3.105,
+            "walk_probability": 0.174,
+            "empty_room_cost_eur": 103.65,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 15,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.727,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 167.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "kb_facts": {
+        "deposit_prepaid": null
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-07-27\",\n  \"batch_date\": \"2017-07-20\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 101.015,\n      \"expected_releases\": 3.881,\n      \"gate\": \"PASS\",\n      \"on_books\": 60,\n      \"policy\": \"flat rate (Jul \u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 19,\n      \"walk_probability\": 0.246\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 161.31,\n      \"expected_releases\": 1.166,\n      \"gate\": \"FAIL\",\n      \"on_books\": 27,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 0,\n      \"walk_probability\": 0.302\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 589,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 307,
+      "total_tokens": 896
+    },
+    "latency_seconds": 9.768942249997053,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-07-27",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-07-20",
+        "arrival_night": "2017-07-27",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 60,
+            "rooms_in_blocks": 19,
+            "expected_releases": 3.881,
+            "walk_probability": 0.246,
+            "empty_room_cost_eur": 101.015,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 27,
+            "rooms_in_blocks": 0,
+            "expected_releases": 1.166,
+            "walk_probability": 0.302,
+            "empty_room_cost_eur": 161.31,
+            "proposed_q": 1,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-08-05\",\n  \"batch_date\": \"2017-07-29\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 110.5,\n      \"expected_releases\": 2.911,\n      \"gate\": \"PASS\",\n      \"on_books\": 45,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 8,\n      \"walk_probability\": 0.203\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 192.0,\n      \"expected_releases\": 1.524,\n      \"gate\": \"FAIL\",\n      \"on_books\": 31,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 3,\n      \"walk_probability\": 0.199\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 585,
+      "prompt_tokens_details": {
+        "cached_tokens": 341
+      },
+      "completion_tokens": 308,
+      "total_tokens": 893
+    },
+    "latency_seconds": 9.797050875000423,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-08-05",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-07-29",
+        "arrival_night": "2017-08-05",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 45,
+            "rooms_in_blocks": 8,
+            "expected_releases": 2.911,
+            "walk_probability": 0.203,
+            "empty_room_cost_eur": 110.5,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 31,
+            "rooms_in_blocks": 3,
+            "expected_releases": 1.524,
+            "walk_probability": 0.199,
+            "empty_room_cost_eur": 192.0,
+            "proposed_q": 1,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-08-14\",\n  \"batch_date\": \"2017-08-07\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 129.75,\n      \"expected_releases\": 3.881,\n      \"gate\": \"PASS\",\n      \"on_books\": 60,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 8,\n      \"walk_probability\": 0.246\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 171.955,\n      \"expected_releases\": 1.02,\n      \"gate\": \"FAIL\",\n      \"on_books\": 34,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.366\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 586,
+      "prompt_tokens_details": {
+        "cached_tokens": 338
+      },
+      "completion_tokens": 310,
+      "total_tokens": 896
+    },
+    "latency_seconds": 9.794712208997225,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-08-14",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-08-07",
+        "arrival_night": "2017-08-14",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 60,
+            "rooms_in_blocks": 8,
+            "expected_releases": 3.881,
+            "walk_probability": 0.246,
+            "empty_room_cost_eur": 129.75,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 34,
+            "rooms_in_blocks": 2,
+            "expected_releases": 1.02,
+            "walk_probability": 0.366,
+            "empty_room_cost_eur": 171.955,
+            "proposed_q": 1,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-08-15\",\n  \"batch_date\": \"2017-08-08\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 105.05,\n      \"expected_releases\": 4.27,\n      \"gate\": \"PASS\",\n      \"on_books\": 66,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 16,\n      \"walk_probability\": 0.192\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 189.0,\n      \"expected_releases\": 0.463,\n      \"gate\": \"FAIL\",\n      \"on_books\": 15,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 582,
+      "prompt_tokens_details": {
+        "cached_tokens": 341
+      },
+      "completion_tokens": 307,
+      "total_tokens": 889
+    },
+    "latency_seconds": 9.882053709006868,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-08-15",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-08-08",
+        "arrival_night": "2017-08-15",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 66,
+            "rooms_in_blocks": 16,
+            "expected_releases": 4.27,
+            "walk_probability": 0.192,
+            "empty_room_cost_eur": 105.05,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 15,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.463,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 189.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "kb_facts": {
+        "deposit_prepaid": null
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-08-22\",\n  \"batch_date\": \"2017-08-15\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 111.15,\n      \"expected_releases\": 2.199,\n      \"gate\": \"PASS\",\n      \"on_books\": 34,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 4,\n      \"walk_probability\": 0.103\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 219.0,\n      \"expected_releases\": 1.127,\n      \"gate\": \"FAIL\",\n      \"on_books\": 29,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 0,\n      \"walk_probability\": 0.316\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 586,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 309,
+      "total_tokens": 895
+    },
+    "latency_seconds": 9.807542833004845,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-08-22",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-08-15",
+        "arrival_night": "2017-08-22",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 34,
+            "rooms_in_blocks": 4,
+            "expected_releases": 2.199,
+            "walk_probability": 0.103,
+            "empty_room_cost_eur": 111.15,
+            "proposed_q": 1,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 29,
+            "rooms_in_blocks": 0,
+            "expected_releases": 1.127,
+            "walk_probability": 0.316,
+            "empty_room_cost_eur": 219.0,
+            "proposed_q": 1,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-08-31\",\n  \"batch_date\": \"2017-08-24\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 106.0,\n      \"expected_releases\": 2.717,\n      \"gate\": \"PASS\",\n      \"on_books\": 42,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 16,\n      \"walk_probability\": 0.235\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 138.53,\n      \"expected_releases\": 1.157,\n      \"gate\": \"FAIL\",\n      \"on_books\": 35,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 4,\n      \"walk_probability\": 0.316\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 587,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 310,
+      "total_tokens": 897
+    },
+    "latency_seconds": 9.949610332987504,
+    "finish_reason": "stop",
+    "case_id": "regression/2017-08-31",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-08-24",
+        "arrival_night": "2017-08-31",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 42,
+            "rooms_in_blocks": 16,
+            "expected_releases": 2.717,
+            "walk_probability": 0.235,
+            "empty_room_cost_eur": 106.0,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 35,
+            "rooms_in_blocks": 4,
+            "expected_releases": 1.157,
+            "walk_probability": 0.316,
+            "empty_room_cost_eur": 138.53,
+            "proposed_q": 1,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-02\",\n  \"batch_date\": \"2016-12-26\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 78.46,\n      \"expected_releases\": 4.528,\n      \"gate\": \"PASS\",\n      \"on_books\": 70,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 16,\n      \"walk_probability\": 0.161\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 28.0,\n      \"expected_releases\": 1.147,\n      \"gate\": \"FAIL\",\n      \"on_books\": 27,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 7,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 583,
+      "prompt_tokens_details": {
+        "cached_tokens": 341
+      },
+      "completion_tokens": 306,
+      "total_tokens": 889
+    },
+    "latency_seconds": 9.864193374989554,
+    "finish_reason": "stop",
+    "case_id": "with_kb/2017-01-02",
+    "case": {
+      "context_pack": {
+        "batch_date": "2016-12-26",
+        "arrival_night": "2017-01-02",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 70,
+            "rooms_in_blocks": 16,
+            "expected_releases": 4.528,
+            "walk_probability": 0.161,
+            "empty_room_cost_eur": 78.46,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 27,
+            "rooms_in_blocks": 7,
+            "expected_releases": 1.147,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 28.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-02\",\n  \"batch_date\": \"2016-12-26\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 78.46,\n      \"expected_releases\": 4.528,\n      \"gate\": \"PASS\",\n      \"on_books\": 70,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 3,\n      \"rooms_in_blocks\": 16,\n      \"walk_probability\": 0.161\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 28.0,\n      \"expected_releases\": 1.147,\n      \"gate\": \"FAIL\",\n      \"on_books\": 27,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 7,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 571,
+      "prompt_tokens_details": {
+        "cached_tokens": 562
+      },
+      "completion_tokens": 306,
+      "total_tokens": 877
+    },
+    "latency_seconds": 9.73959887502133,
+    "finish_reason": "stop",
+    "case_id": "without_kb/2017-01-02",
+    "case": {
+      "context_pack": {
+        "batch_date": "2016-12-26",
+        "arrival_night": "2017-01-02",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 70,
+            "rooms_in_blocks": 16,
+            "expected_releases": 4.528,
+            "walk_probability": 0.161,
+            "empty_room_cost_eur": 78.46,
+            "proposed_q": 3,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 27,
+            "rooms_in_blocks": 7,
+            "expected_releases": 1.147,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 28.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-09\",\n  \"batch_date\": \"2017-01-02\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 65.15,\n      \"expected_releases\": 1.294,\n      \"gate\": \"PASS\",\n      \"on_books\": 20,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 5,\n      \"walk_probability\": 0.0\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 15.9,\n      \"expected_releases\": 0.631,\n      \"gate\": \"FAIL\",\n      \"on_books\": 12,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 3,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 580,
+      "prompt_tokens_details": {
+        "cached_tokens": 341
+      },
+      "completion_tokens": 303,
+      "total_tokens": 883
+    },
+    "latency_seconds": 9.633990959002404,
+    "finish_reason": "stop",
+    "case_id": "with_kb/2017-01-09",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-02",
+        "arrival_night": "2017-01-09",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 20,
+            "rooms_in_blocks": 5,
+            "expected_releases": 1.294,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 65.15,
+            "proposed_q": 0,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 12,
+            "rooms_in_blocks": 3,
+            "expected_releases": 0.631,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 15.9,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-09\",\n  \"batch_date\": \"2017-01-02\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 65.15,\n      \"expected_releases\": 1.294,\n      \"gate\": \"PASS\",\n      \"on_books\": 20,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 5,\n      \"walk_probability\": 0.0\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 15.9,\n      \"expected_releases\": 0.631,\n      \"gate\": \"FAIL\",\n      \"on_books\": 12,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 3,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 568,
+      "prompt_tokens_details": {
+        "cached_tokens": 559
+      },
+      "completion_tokens": 303,
+      "total_tokens": 871
+    },
+    "latency_seconds": 9.424561874999199,
+    "finish_reason": "stop",
+    "case_id": "without_kb/2017-01-09",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-02",
+        "arrival_night": "2017-01-09",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 20,
+            "rooms_in_blocks": 5,
+            "expected_releases": 1.294,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 65.15,
+            "proposed_q": 0,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 12,
+            "rooms_in_blocks": 3,
+            "expected_releases": 0.631,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 15.9,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-19\",\n  \"batch_date\": \"2017-01-12\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 65.0,\n      \"expected_releases\": 1.747,\n      \"gate\": \"PASS\",\n      \"on_books\": 27,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 5,\n      \"walk_probability\": 0.164\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 47.5,\n      \"expected_releases\": 0.777,\n      \"gate\": \"FAIL\",\n      \"on_books\": 18,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 3,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 580,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 304,
+      "total_tokens": 884
+    },
+    "latency_seconds": 9.788485582976136,
+    "finish_reason": "stop",
+    "case_id": "with_kb/2017-01-19",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-12",
+        "arrival_night": "2017-01-19",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 27,
+            "rooms_in_blocks": 5,
+            "expected_releases": 1.747,
+            "walk_probability": 0.164,
+            "empty_room_cost_eur": 65.0,
+            "proposed_q": 1,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 18,
+            "rooms_in_blocks": 3,
+            "expected_releases": 0.777,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 47.5,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-19\",\n  \"batch_date\": \"2017-01-12\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 65.0,\n      \"expected_releases\": 1.747,\n      \"gate\": \"PASS\",\n      \"on_books\": 27,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 06)\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 5,\n      \"walk_probability\": 0.164\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 47.5,\n      \"expected_releases\": 0.777,\n      \"gate\": \"FAIL\",\n      \"on_books\": 18,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 3,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 568,
+      "prompt_tokens_details": {
+        "cached_tokens": 559
+      },
+      "completion_tokens": 302,
+      "total_tokens": 870
+    },
+    "latency_seconds": 9.391698874998838,
+    "finish_reason": "stop",
+    "case_id": "without_kb/2017-01-19",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-12",
+        "arrival_night": "2017-01-19",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 27,
+            "rooms_in_blocks": 5,
+            "expected_releases": 1.747,
+            "walk_probability": 0.164,
+            "empty_room_cost_eur": 65.0,
+            "proposed_q": 1,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 18,
+            "rooms_in_blocks": 3,
+            "expected_releases": 0.777,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 47.5,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": false,
+      "accepted": false,
+      "error": "factual or approval mismatch"
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-26\",\n  \"batch_date\": \"2017-01-19\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 65.0,\n      \"expected_releases\": 1.423,\n      \"gate\": \"PASS\",\n      \"on_books\": 22,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 6,\n      \"walk_probability\": 0.0\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 28.0,\n      \"expected_releases\": 0.947,\n      \"gate\": \"FAIL\",\n      \"on_books\": 21,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 7,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 577,
+      "prompt_tokens_details": {
+        "cached_tokens": 341
+      },
+      "completion_tokens": 302,
+      "total_tokens": 879
+    },
+    "latency_seconds": 9.762426417000825,
+    "finish_reason": "stop",
+    "case_id": "with_kb/2017-01-26",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-19",
+        "arrival_night": "2017-01-26",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 22,
+            "rooms_in_blocks": 6,
+            "expected_releases": 1.423,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 65.0,
+            "proposed_q": 0,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 21,
+            "rooms_in_blocks": 7,
+            "expected_releases": 0.947,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 28.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "kb_facts": {
+        "deposit_prepaid": null
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-01-26\",\n  \"batch_date\": \"2017-01-19\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 65.0,\n      \"expected_releases\": 1.423,\n      \"gate\": \"PASS\",\n      \"on_books\": 22,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 6,\n      \"walk_probability\": 0.0\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 28.0,\n      \"expected_releases\": 0.947,\n      \"gate\": \"FAIL\",\n      \"on_books\": 21,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 7,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 565,
+      "prompt_tokens_details": {
+        "cached_tokens": 556
+      },
+      "completion_tokens": 302,
+      "total_tokens": 867
+    },
+    "latency_seconds": 9.46736733301077,
+    "finish_reason": "stop",
+    "case_id": "without_kb/2017-01-26",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-19",
+        "arrival_night": "2017-01-26",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 22,
+            "rooms_in_blocks": 6,
+            "expected_releases": 1.423,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 65.0,
+            "proposed_q": 0,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 21,
+            "rooms_in_blocks": 7,
+            "expected_releases": 0.947,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 28.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Undefined",
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-03\",\n  \"batch_date\": \"2017-01-27\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 68.0,\n      \"expected_releases\": 2.782,\n      \"gate\": \"PASS\",\n      \"on_books\": 43,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 14,\n      \"walk_probability\": 0.056\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 32.0,\n      \"expected_releases\": 1.173,\n      \"gate\": \"FAIL\",\n      \"on_books\": 22,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 582,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 305,
+      "total_tokens": 887
+    },
+    "latency_seconds": 9.892783542018151,
+    "finish_reason": "stop",
+    "case_id": "with_kb/2017-02-03",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-27",
+        "arrival_night": "2017-02-03",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 43,
+            "rooms_in_blocks": 14,
+            "expected_releases": 2.782,
+            "walk_probability": 0.056,
+            "empty_room_cost_eur": 68.0,
+            "proposed_q": 1,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 22,
+            "rooms_in_blocks": 2,
+            "expected_releases": 1.173,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 32.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-03\",\n  \"batch_date\": \"2017-01-27\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 68.0,\n      \"expected_releases\": 2.782,\n      \"gate\": \"PASS\",\n      \"on_books\": 43,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 1,\n      \"rooms_in_blocks\": 14,\n      \"walk_probability\": 0.056\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 32.0,\n      \"expected_releases\": 1.173,\n      \"gate\": \"FAIL\",\n      \"on_books\": 22,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 570,
+      "prompt_tokens_details": {
+        "cached_tokens": 561
+      },
+      "completion_tokens": 305,
+      "total_tokens": 875
+    },
+    "latency_seconds": 9.597058499988634,
+    "finish_reason": "stop",
+    "case_id": "without_kb/2017-02-03",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-01-27",
+        "arrival_night": "2017-02-03",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 43,
+            "rooms_in_blocks": 14,
+            "expected_releases": 2.782,
+            "walk_probability": 0.056,
+            "empty_room_cost_eur": 68.0,
+            "proposed_q": 1,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 22,
+            "rooms_in_blocks": 2,
+            "expected_releases": 1.173,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 32.0,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Non Refund",
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-12\",\n  \"batch_date\": \"2017-02-05\",\n  \"deposit_prepaid\": true,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 68.0,\n      \"expected_releases\": 4.076,\n      \"gate\": \"PASS\",\n      \"on_books\": 63,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 13,\n      \"walk_probability\": 0.079\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 45.91,\n      \"expected_releases\": 0.627,\n      \"gate\": \"FAIL\",\n      \"on_books\": 17,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 583,
+      "prompt_tokens_details": {
+        "cached_tokens": 338
+      },
+      "completion_tokens": 306,
+      "total_tokens": 889
+    },
+    "latency_seconds": 9.932292125013191,
+    "finish_reason": "stop",
+    "case_id": "with_kb/2017-02-12",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-02-05",
+        "arrival_night": "2017-02-12",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 63,
+            "rooms_in_blocks": 13,
+            "expected_releases": 4.076,
+            "walk_probability": 0.079,
+            "empty_room_cost_eur": 68.0,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 17,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.627,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 45.91,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "kb_facts": {
+        "deposit_prepaid": true
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-12\",\n  \"batch_date\": \"2017-02-05\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 68.0,\n      \"expected_releases\": 4.076,\n      \"gate\": \"PASS\",\n      \"on_books\": 63,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 13,\n      \"walk_probability\": 0.079\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 45.91,\n      \"expected_releases\": 0.627,\n      \"gate\": \"FAIL\",\n      \"on_books\": 17,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 571,
+      "prompt_tokens_details": {
+        "cached_tokens": 562
+      },
+      "completion_tokens": 306,
+      "total_tokens": 877
+    },
+    "latency_seconds": 9.621986332989763,
+    "finish_reason": "stop",
+    "case_id": "without_kb/2017-02-12",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-02-05",
+        "arrival_night": "2017-02-12",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 63,
+            "rooms_in_blocks": 13,
+            "expected_releases": 4.076,
+            "walk_probability": 0.079,
+            "empty_room_cost_eur": 68.0,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 17,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.627,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 45.91,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "Refundable",
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-20\",\n  \"batch_date\": \"2017-02-13\",\n  \"deposit_prepaid\": false,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 70.0,\n      \"expected_releases\": 3.299,\n      \"gate\": \"PASS\",\n      \"on_books\": 51,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 5,\n      \"walk_probability\": 0.149\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 20.2,\n      \"expected_releases\": 0.842,\n      \"gate\": \"FAIL\",\n      \"on_books\": 22,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 580,
+      "prompt_tokens_details": {
+        "cached_tokens": 340
+      },
+      "completion_tokens": 304,
+      "total_tokens": 884
+    },
+    "latency_seconds": 9.932364334003069,
+    "finish_reason": "stop",
+    "case_id": "with_kb/2017-02-20",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-02-13",
+        "arrival_night": "2017-02-20",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 51,
+            "rooms_in_blocks": 5,
+            "expected_releases": 3.299,
+            "walk_probability": 0.149,
+            "empty_room_cost_eur": 70.0,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 22,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.842,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 20.2,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "kb_facts": {
+        "deposit_prepaid": false
+      },
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  },
+  {
+    "raw": "{\n  \"action\": \"hold_for_calibration_review\",\n  \"arrival_night\": \"2017-02-20\",\n  \"batch_date\": \"2017-02-13\",\n  \"deposit_prepaid\": null,\n  \"guest_message\": \"We are sorry for the disruption. Our team will discuss suitable alternatives with you.\",\n  \"hotels\": {\n    \"City Hotel\": {\n      \"empty_room_cost_eur\": 70.0,\n      \"expected_releases\": 3.299,\n      \"gate\": \"PASS\",\n      \"on_books\": 51,\n      \"policy\": \"flat rate (Jul \\u2013 Sep 2016)\",\n      \"proposed_q\": 2,\n      \"rooms_in_blocks\": 5,\n      \"walk_probability\": 0.149\n    },\n    \"Resort Hotel\": {\n      \"empty_room_cost_eur\": 20.2,\n      \"expected_releases\": 0.842,\n      \"gate\": \"FAIL\",\n      \"on_books\": 22,\n      \"policy\": \"model + blocks + re-level 8 wk\",\n      \"proposed_q\": 0,\n      \"rooms_in_blocks\": 2,\n      \"walk_probability\": 0.0\n    }\n  },\n  \"human_approval_required\": true,\n  \"walk_cost_eur\": 250\n}",
+    "usage": {
+      "prompt_tokens": 568,
+      "prompt_tokens_details": {
+        "cached_tokens": 559
+      },
+      "completion_tokens": 304,
+      "total_tokens": 872
+    },
+    "latency_seconds": 9.60664074998931,
+    "finish_reason": "stop",
+    "case_id": "without_kb/2017-02-20",
+    "case": {
+      "context_pack": {
+        "batch_date": "2017-02-13",
+        "arrival_night": "2017-02-20",
+        "walk_cost_eur": 250,
+        "hotels": {
+          "City Hotel": {
+            "on_books": 51,
+            "rooms_in_blocks": 5,
+            "expected_releases": 3.299,
+            "walk_probability": 0.149,
+            "empty_room_cost_eur": 70.0,
+            "proposed_q": 2,
+            "policy": "flat rate (Jul \u2013 Sep 2016)",
+            "gate": "PASS"
+          },
+          "Resort Hotel": {
+            "on_books": 22,
+            "rooms_in_blocks": 2,
+            "expected_releases": 0.842,
+            "walk_probability": 0.0,
+            "empty_room_cost_eur": 20.2,
+            "proposed_q": 0,
+            "policy": "model + blocks + re-level 8 wk",
+            "gate": "FAIL"
+          }
+        }
+      },
+      "deposit_code": "No Deposit",
+      "notes": ""
+    },
+    "evaluation": {
+      "schema_valid": true,
+      "numeric_exact": true,
+      "grounded": true,
+      "accepted": true,
+      "error": null
+    }
+  }
+]

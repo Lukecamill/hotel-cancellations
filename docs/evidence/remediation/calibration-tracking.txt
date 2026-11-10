@@ -1,0 +1,36 @@
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/pyfunc/utils/data_validation.py:187: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/pyfunc/utils/data_validation.py:187: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+2026/11/10 23:27:12 INFO mlflow.tracking.fluent: Experiment with name 'task19-calibration-remediation' does not exist. Creating a new experiment.
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/types/utils.py:440: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  warnings.warn(
+2026/11/10 23:27:12 WARNING mlflow.pyfunc: Passing a Python object as `python_model` causes it to be serialized using CloudPickle, it requires exercising caution as Python object serialization mechanisms may execute arbitrary code during deserialization.Consider using a file path (str or Path) instead. See https://mlflow.org/docs/latest/ml/model/models-from-code/ for details.
+/Users/lukecamilleri/Desktop/hotel-cancellations/.venv-tracking/lib/python3.13/site-packages/mlflow/pyfunc/__init__.py:3364: UserWarning: [1;33mAn input example was not provided when logging the model. To ensure the model signature functions correctly, specify the `input_example` parameter. See https://mlflow.org/docs/latest/model/signatures.html#model-input-example for more details about the benefits of using input_example.[0m
+  color_warning(
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 1592.37it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 1267.16it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 2444.23it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 1965.47it/s]
+2026/11/10 23:27:13 WARNING mlflow.utils.environment: Failed to resolve installed pip version. ``pip`` will be added to conda.yaml environment spec without a version specifier.
+Successfully registered model 'task19-resort-booking-calibrated'.
+Created version '1' of model 'task19-resort-booking-calibrated'.
+{
+  "run_id": "820284aaa90c4ccf9ac20965c1d7ddda",
+  "registered_name": "task19-resort-booking-calibrated",
+  "version": 1,
+  "alias": "challenger",
+  "champion_set": false,
+  "holdout_booking_adapter_parity_rows": 13179,
+  "maximum_probability_difference": 0.0,
+  "original_aliases_unchanged": true,
+  "original_aliases": {
+    "task19-city-booking": {
+      "challenger": 1,
+      "champion": 1
+    },
+    "task19-resort-booking": {
+      "challenger": 1
+    }
+  },
+  "serving_unchanged": true,
+  "production_authorized": false
+}

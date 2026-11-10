@@ -4,7 +4,7 @@ ARI3217 Task 19: package, reproduce, evaluate and operationalise the supplied ho
 
 ## Setup status
 
-Stages 1–13 are implemented and evidenced, including Ubuntu replay. Stage 14 prepares the technical hand-in and verifies an independent clean clone. Start with [the submission checklist](docs/submission-checklist.md), [reproduction guide](docs/reproduce-final.md) and [manager recommendation](docs/revenue-manager-recommendation.md). Resort calibration and local briefing factuality remain FAIL; no operational authorisation is claimed. The final-project rubric and later diary/submission requirements remain unconfirmed.
+Stages 1–13 are implemented and evidenced, including Ubuntu replay. Stage 14 prepares the technical hand-in and verifies an independent clean clone. Start with [the submission checklist](docs/submission-checklist.md), [reproduction guide](docs/reproduce-final.md) and [manager recommendation](docs/revenue-manager-recommendation.md). The original reference failures are retained. Separate Resort calibration and source-owned briefing remedies now pass; see [quality remediation](docs/remediation-review.md). Formal coursework sign-off is pending at the user's request; no operational authorisation is claimed. The final-project rubric and later diary/submission requirements remain unconfirmed.
 
 ## Structure
 

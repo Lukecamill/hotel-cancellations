@@ -13,6 +13,11 @@ def main():
  new=['docs/revenue-manager-recommendation.md','docs/submission-checklist.md','docs/reproduce-final.md','docs/stage14-final-verification.md',
       'scripts/submission_audit.py','scripts/build_submission_bundle.py','output/pdf/revenue-manager-recommendation.pdf']
  names.update(new);names.update(str(p.relative_to(ROOT)) for p in (ROOT/'docs/evidence/stage14').rglob('*') if p.is_file())
+ for folder in ['docs/evidence/remediation','docs/reviews']:
+  names.update(str(p.relative_to(ROOT)) for p in (ROOT/folder).rglob('*') if p.is_file())
+ for folder,pattern in [('src/hotel_cancel','*.py'),('tests','*.py'),('config','*.json'),('prompts','*.txt'),('scripts','*.py')]:
+  names.update(str(p.relative_to(ROOT)) for p in (ROOT/folder).glob(pattern) if p.is_file())
+ names.add('docs/remediation-review.md');names.add('.gitattributes')
  for name in names:
   path=Path(name)
   if path.parts[0] in ['data','models','artifacts','.git','.venv','.venv-tracking'] or path.name=='.env' or path.name.startswith('.env.') or 'id_ed25519' in name:
@@ -35,7 +40,12 @@ def main():
  artifact=out/'reference-runtime.tar.gz'
  with tarfile.open(artifact,'w:gz') as tar:
   for n in ['booking_model.joblib','policy_state.joblib','manifest.json']:tar.add(runtime/n,arcname='models/serving/'+n,filter=info_clean)
- checksums={p.name:sha(p) for p in [archive,artifact]}
+ calibration=ROOT/'artifacts/remediation/booking-calibrator.joblib'
+ calibration_report=json.loads((ROOT/'docs/evidence/remediation/calibration/report.json').read_text())
+ if sha(calibration)!=calibration_report['calibrator_sha256']:raise ValueError('Calibrator changed')
+ calibration_archive=out/'booking-calibration-runtime.tar.gz'
+ with tarfile.open(calibration_archive,'w:gz') as tar:tar.add(calibration,arcname='artifacts/remediation/booking-calibrator.joblib',filter=info_clean)
+ checksums={p.name:sha(p) for p in [archive,artifact,calibration_archive]}
  (out/'SHA256SUMS.txt').write_text(''.join(h+'  '+n+'\n' for n,h in checksums.items()))
  (out/'submission-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
  with tarfile.open(archive) as tar:

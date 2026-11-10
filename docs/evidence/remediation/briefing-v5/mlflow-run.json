@@ -1,0 +1,18 @@
+{
+  "component_quality_gate": "PASS",
+  "ordinary_accepted": 90,
+  "ordinary_total": 90,
+  "injection_safe": 6,
+  "injection_total": 6,
+  "injection_withheld": 1,
+  "records": 96,
+  "accepted": 95,
+  "fixture_regression_gate": "PASS",
+  "live_model_called": false,
+  "numeric_source": "trusted context; never generated or repaired",
+  "raw_llm_numeric_copy_accuracy_claimed": false,
+  "original_v1_evidence_preserved": true,
+  "run_id": "8ff6837227ef40fda2448d876861f486",
+  "registered_models_changed": false,
+  "raw_model_all_cases_gate": "FAIL"
+}

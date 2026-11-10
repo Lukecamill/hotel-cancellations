@@ -116,3 +116,15 @@ automatically replace champions, or promote Resort because the failure is
 expected. Retain the prior version and audit trail for rollback. No production
 PMS data, credentials or booking rows are uploaded by Stage 9; the registry is
 local SQLite with local artifacts. Protect/backup that store separately from Git.
+
+## Separate calibrated research challenger — 10 November 2026
+
+The prescribed baseline above is unchanged. `calibration_challenger.py` adds an
+optional Resort booking-horizon post-calibrator using the notebook's existing
+logistic-on-logit method, fitted on mature July–September 2016 outcomes. It passes
+October–December validation (ratio 1.1074) and the already exposed historical
+holdout (ratio 1.0302, ECE 0.01424, Brier 0.16600; AUPRC unchanged at 0.62791).
+City probabilities, the learner and all seven-day policies remain unchanged.
+The separately named MLflow model `task19-resort-booking-calibrated@challenger`
+reproduces all 13,179 Resort request predictions exactly. It is not a production
+champion. See [remediation evidence](remediation-review.md).

@@ -64,3 +64,20 @@ verify the full configured digest, start `scripts/serve_stage13_local.sh` and ru
 re-recording and do not claim new output will be byte-identical across hardware.
 The original run costs zero API fees; hardware/electricity are not free. See
 `stage13-briefing.md` for all limitations and strict quality checks.
+
+## Reproduce the separate remedies
+
+`make remediation-check` checks the calibrated challenger and the V5 delivery
+contract. It requires the reference runtime and the separately provided
+`booking-calibration-runtime.tar.gz` (or regenerate the predeclared calibrator
+with `python -m hotel_cancel.calibration_challenger run`). Replay uses committed
+raw local-model interpretations and calls no model. The live component entry is
+`hotel_cancel.briefing_revision.generate(case, settings)`, which returns only
+validated assembled facts. `briefing_revision record` uses the original pinned
+local Qwen model and V5 prompt, retaining raw interpretations and composed outputs.
+
+`make coursework-release-check` additionally requires formal simulation sign-off.
+It remains blocked because the user chose to leave reviewer details for now.
+No command here authorises real hotel operation. The dedicated Ubuntu verifier
+is `scripts/verify_remediation_ubuntu.py`; it writes independent evidence, fits
+only the prespecified calibration window, and never calls the LLM.

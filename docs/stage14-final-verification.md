@@ -44,3 +44,11 @@ remain unresolved.
 
 See `evidence/stage14/clean-clone-summary.json` and its logs,
 `submission-checklist.md`, `reproduce-final.md`, and the manager recommendation.
+
+## Later quality-remediation worktree check
+
+The original clean-clone report above predates the remedies. The updated Mac
+worktree passes 234 tests with six database skips and both current remedy gates.
+Original baseline/V1 failures are still reproducible. See
+`evidence/remediation/verification.json` for exact scope. New-source Ubuntu
+verification remains pending; no new clean-clone result is invented here.

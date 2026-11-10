@@ -1,0 +1,21 @@
+{
+  "run_id": "820284aaa90c4ccf9ac20965c1d7ddda",
+  "registered_name": "task19-resort-booking-calibrated",
+  "version": 1,
+  "alias": "challenger",
+  "champion_set": false,
+  "holdout_booking_adapter_parity_rows": 13179,
+  "maximum_probability_difference": 0.0,
+  "original_aliases_unchanged": true,
+  "original_aliases": {
+    "task19-city-booking": {
+      "challenger": 1,
+      "champion": 1
+    },
+    "task19-resort-booking": {
+      "challenger": 1
+    }
+  },
+  "serving_unchanged": true,
+  "production_authorized": false
+}

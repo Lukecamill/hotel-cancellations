@@ -163,3 +163,17 @@ serving, registry and core KB files were unchanged. CI also retained the known
 Resort calibration failure. This verifies reproduction, not operational clearance
 or attainment of the 30/30 exact-night target. Original native evidence files
 should be copied from Ubuntu; the local confirmation is labelled as pasted output.
+
+## Remediation component V5
+
+The original V1 copying results and failures above are retained. The revised
+`briefing_revision.generate` component copies authoritative numeric context in
+code and uses the local model only for structured interpretation and draft text.
+All 30 original and 30 additional nights, plus 30 no-KB cases, are exact delivered
+briefings. Six injection safety tests pass: five correct outputs and one invalid
+raw action withheld. Raw-model perfection is not claimed. See
+[the version history, contract and evidence](remediation-review.md).
+Use `make revised-briefing-quality` for the revised component and
+`make remediation-check` for the current calibration/component acceptance checks.
+The original `make ci` retains its historical baseline/V1 failures by design.
+Formal review is pending at the user's request.

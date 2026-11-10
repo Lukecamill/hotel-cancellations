@@ -1,0 +1,40 @@
+{
+  "prompt_version": "revenue-manager-v4",
+  "prompt_sha256": "77387cce62579e496741580947ce8c2ef074ab65c52def6303fcfe98287d10f6",
+  "schema_sha256": "b6cd849da94757228eff717bfd09b93285309ad0f4ec1e6a2492939c59eeb1ef",
+  "cases_sha256": "60828805fe9d8f50192f88313464630a7c56e39df320dcea11bb8d6110cdbbb0",
+  "model": {
+    "name": "qwen3:4b-instruct",
+    "model": "qwen3:4b-instruct",
+    "modified_at": "2026-11-10T22:45:11.922509821+01:00",
+    "size": 2497293803,
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "ggml"
+    },
+    "capabilities": [
+      "tools",
+      "thinking",
+      "completion"
+    ]
+  },
+  "settings": {
+    "base_url": "http://127.0.0.1:11434/v1",
+    "model": "qwen3:4b-instruct",
+    "api_key_env": "LLM_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0"
+  },
+  "design": "v4 uses source-enumerated dates, policy/gate strings and guest/approval constants during decoding. All 13 numeric fields remain unconstrained and independently evaluated. Original 30 are regression; new 30 exclude every v1/v3 planned date. v2/v3 failures retained.; 30 old nights are regression only. 30 different dates are new calendar evaluation; paired KB/no-KB plus six attacks. No retry or output repair."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "ABORTED_WITH_RECORDED_NUMERIC_FAILURE",
+  "completed_requests": 50,
+  "accepted": 49,
+  "numeric_exact": 49,
+  "reason": "A freely generated no-KB numeric value was wrong; prompt-only copying is insufficient. Next component version removes numeric generation and copies source facts explicitly.",
+  "recorded_at": "2026-11-10T22:40:28.683052+00:00"
+}

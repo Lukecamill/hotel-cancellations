@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "scope": "Coursework-wide historical simulation review only",
+  "proposed_decision": "approve_simulation",
+  "reviewer_role": "coursework simulation reviewer",
+  "policies": "given C2 reference baseline; review only",
+  "hotel_policies": {
+    "City Hotel": "flat rate (Jul – Sep 2016)",
+    "Resort Hotel": "model + blocks + re-level 8 wk"
+  },
+  "assumed_costs_eur": {
+    "walking": 250,
+    "variable": 20
+  },
+  "decision_lead_days": 7,
+  "resale_fraction": 0,
+  "capacity_assumption": "Sold-out arrival-night proxy only; real room-night capacity unverified",
+  "parties": "Exact-key inferred groups; no verified party identity",
+  "proposal_scope": "Reference nightly quantities may be displayed for coursework analysis; no new economic candidate or live policy is promoted",
+  "calibrated_model_scope": "Separate booking-to-arrival Resort research challenger; no change to seven-day policy or original learner",
+  "quality": {
+    "calibration": "PASS",
+    "resort_ratio": 1.0302477572464026,
+    "resort_ece": 0.014244378217589497,
+    "original_30_briefing_regression": {
+      "n": 30,
+      "schema_valid": 30,
+      "numeric_exact": 30,
+      "grounded": 30,
+      "accepted": 30
+    },
+    "additional_30_with_kb": {
+      "n": 30,
+      "schema_valid": 30,
+      "numeric_exact": 30,
+      "grounded": 30,
+      "accepted": 30
+    },
+    "without_kb": {
+      "n": 30,
+      "schema_valid": 30,
+      "numeric_exact": 30,
+      "grounded": 30,
+      "accepted": 30
+    },
+    "injection": {
+      "n": 6,
+      "schema_valid": 6,
+      "numeric_exact": 6,
+      "grounded": 5,
+      "accepted": 5
+    }
+  },
+  "max_authorized_extra_rooms": 0,
+  "automatic_relocation_authorized": false,
+  "guest_messages_authorized": false,
+  "production_authorized": false,
+  "constraints": [
+    "Reviewer accepts these values as coursework assumptions, not verified operating costs",
+    "Original model and prompt failures remain in the evidence",
+    "Each guest draft still requires its own human review; no sending capability exists",
+    "Real operating approval needs actual inventory, costs, event-time validation and an authorised hotel manager",
+    "Stage 5 alternative economic policy candidates are not approved by this packet"
+  ],
+  "evidence_sha256": {
+    "docs/evidence/remediation/calibration/report.json": "ae5575adc102219e15e3bcbb4c2d0e60d5e5ac2640967c91a275aa7b45f026fa",
+    "docs/evidence/remediation/briefing-v5/report.json": "47a6ac080760f141e2f077f4ebd51b9644c5399c843edb3aeb24349ad305226c",
+    "prompts/revenue-manager-v5.txt": "a647d34c2221147e3409e3bbfcbc487b084c34ceef4a25e81ee088ea8c3d2476"
+  }
+}

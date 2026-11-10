@@ -1,0 +1,44 @@
+{
+  "evidence_present": true,
+  "missing_files": [],
+  "production_authorized": false,
+  "limitations": [
+    "Final-project rubric/milestone brief not supplied",
+    "Formal coursework sign-off left pending at user request; real hotel sign-off also absent",
+    "Final run skips six PostgreSQL tests; prior PostgreSQL checks remain historical",
+    "Later diary requirements/submission not verified",
+    "VLE hand-in not performed"
+  ],
+  "hotel_quality_gates": {
+    "City Hotel": "PASS",
+    "Resort Hotel": "PASS"
+  },
+  "briefing_quality_gate": "PASS",
+  "briefing_exact_nights": 30,
+  "clean_clone_verified": true,
+  "tested_commit": "3ca26fe969b7dd1e8397fe6a8af7dedda123681b",
+  "reference_hotel_quality_gates": {
+    "City Hotel": "PASS",
+    "Resort Hotel": "FAIL"
+  },
+  "reference_briefing_quality_gate": "FAIL",
+  "current_worktree_tests_passed": 234,
+  "current_remedy_ubuntu_verification": "pending",
+  "coursework_signoff": "PENDING_USER_REQUEST",
+  "raw_model_numeric_copy_perfection_claimed": false,
+  "current_commit": "50404131f1a22fc2aca55f654a3e4868ea95c9ce",
+  "ready_for_unconditional_submission": false,
+  "review_file_sha256": {
+    "docs/submission-checklist.md": "4df4c2ab786013783fb8ea7182ce481f872f8c4790329323dd70f64e39980772",
+    "docs/reproduce-final.md": "559c8144fac3726c86b6bd9cbb069c533f311c1cd6a5b3254f41a9a95b342bf0",
+    "docs/revenue-manager-recommendation.md": "83cdb1729242b64715d25830457040d91fb10ae99ab241c3730b4dfe0f5eff6a",
+    "docs/stage14-final-verification.md": "71583942023e2748f5a344a18154c04ead5ba10fc6f5f74eedae0608c08b1e1c",
+    "docs/evidence/stage14/clean-clone-summary.json": "090aeddb8ca862645f6738b5d2874b41a12411e2347cb1214f9c9278007c0123",
+    "docs/evidence/stage14/quality-gate/report.json": "e586380736efb0a0809f2950de9336ad0d7c0de9c0da59a013266c3405cd202f",
+    "docs/evidence/stage13-ubuntu/verification.json": "a9f37271f1e96c33044f43469f976afe32968fad60c26d59c184d7b29aad8816",
+    "docs/evidence/stage13/report.json": "91af995524b4cabdad28125953b836275738c2135c144b7e20ad668f5df85e67",
+    "docs/evidence/stage12-ubuntu/ubuntu-verification.json": "0f77f0502fc6577596a67bd471d36af00b5b9ee456745bf1a8f59d43b9a8475b",
+    "docs/model-card.md": "e9b253f90adcae63b981b543f3cce1006434ede11883be5f860d04de2c6e316b",
+    "docs/llm-access.md": "dbdbb037eaea157a3a20b14ebd0777542f7a1145c05fc2af90481d71fa1bea0e"
+  }
+}

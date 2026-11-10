@@ -25,6 +25,20 @@ def main():
    briefing_quality_gate=briefing['model_quality_gate'],briefing_exact_nights=briefing['groups']['with_kb']['accepted'],
    clean_clone_verified=clone['baseline_reference_checks_passed']==20 and clone['tests_passed']==215,
    tested_commit=clone['tested_commit'])
+ remediation=ROOT/'docs/evidence/remediation/verification.json'
+ if remediation.exists():
+  current=json.loads(remediation.read_text())
+  report['reference_hotel_quality_gates']=report.get('hotel_quality_gates')
+  report['reference_briefing_quality_gate']=report.get('briefing_quality_gate')
+  corrected=json.loads((ROOT/'docs/evidence/remediation/calibration/report.json').read_text())
+  report['hotel_quality_gates']={h:v['gate'] for h,v in corrected['hotels'].items()}
+  report['briefing_quality_gate']=current['briefing_component_gate']
+  report['briefing_exact_nights']=current['additional_nights_exact']
+  report['current_worktree_tests_passed']=current['tests_passed']
+  report['current_remedy_ubuntu_verification']=current['ubuntu_verification']
+  report['coursework_signoff']=current['coursework_signoff']
+  report['raw_model_numeric_copy_perfection_claimed']=False
+  report['limitations'][1]='Formal coursework sign-off left pending at user request; real hotel sign-off also absent'
  try:
   report['current_commit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
  except (OSError,subprocess.CalledProcessError):report['current_commit']=None

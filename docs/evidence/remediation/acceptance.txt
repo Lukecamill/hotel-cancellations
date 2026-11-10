@@ -1,0 +1,30 @@
+.venv/bin/python -m pytest -q
+...............ssss..................................................... [ 30%]
+...............................................................s........ [ 60%]
+........s............................................................... [ 90%]
+........................                                                 [100%]
+234 passed, 6 skipped in 10.55s
+.venv/bin/python -m hotel_cancel.calibration_challenger verify --output "docs/evidence/remediation/calibration"
+{
+  "status": "PASS",
+  "reference_baseline_changed": false,
+  "calibrated_challenger_only": true,
+  "production_authorized": false
+}
+.venv/bin/python -m hotel_cancel.briefing_revision replay
+{
+  "component_quality_gate": "PASS",
+  "ordinary_accepted": 90,
+  "ordinary_total": 90,
+  "injection_safe": 6,
+  "injection_total": 6,
+  "injection_withheld": 1,
+  "records": 96,
+  "accepted": 95,
+  "fixture_regression_gate": "PASS",
+  "model_quality_gate": "FAIL",
+  "live_model_called": false,
+  "numeric_source": "trusted context; never generated or repaired",
+  "raw_llm_numeric_copy_accuracy_claimed": false,
+  "original_v1_evidence_preserved": true
+}

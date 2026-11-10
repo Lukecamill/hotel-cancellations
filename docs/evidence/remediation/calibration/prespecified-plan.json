@@ -1,0 +1,13 @@
+{
+  "method": "Existing notebook LogisticRegression on clipped logit booking probabilities; Resort only",
+  "fit_start": "2016-07-01",
+  "fit_end": "2016-10-01",
+  "validation_end": "2017-01-01",
+  "status_date_rule": "Recorded status strictly before fit end",
+  "selection": "Evaluate unchanged thresholds on Oct-Dec validation; inspect frozen test once only if candidate passes validation",
+  "no_learner_refit": true,
+  "no_policy_change": true,
+  "no_threshold_change": true,
+  "reference_gate_retained": true,
+  "limitation": "Already exposed historical holdout; not a new pristine generalisation claim"
+}

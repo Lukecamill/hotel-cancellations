@@ -1,0 +1,242 @@
+{
+  "selection": "30 uniformly spaced dates excluding all original and all v3-planned dates; frozen before v4 inference",
+  "dates": [
+    "2017-01-03",
+    "2017-01-11",
+    "2017-01-20",
+    "2017-01-28",
+    "2017-02-04",
+    "2017-02-11",
+    "2017-02-21",
+    "2017-03-01",
+    "2017-03-09",
+    "2017-03-16",
+    "2017-03-26",
+    "2017-04-03",
+    "2017-04-10",
+    "2017-04-20",
+    "2017-04-28",
+    "2017-05-05",
+    "2017-05-13",
+    "2017-05-23",
+    "2017-05-30",
+    "2017-06-07",
+    "2017-06-17",
+    "2017-06-24",
+    "2017-07-01",
+    "2017-07-09",
+    "2017-07-20",
+    "2017-07-26",
+    "2017-08-03",
+    "2017-08-11",
+    "2017-08-21",
+    "2017-08-29"
+  ],
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "bundle": {
+    "booking_model.joblib": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+    "policy_state.joblib": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a"
+  },
+  "knowledge_sha256": "ae239bf2c937ffc4b431daa4d8a55c75f5bb11e1fe2b420243edd584d241934c",
+  "outcome_fields_exported": false,
+  "rounding": "Notebook context display precision: 3 decimal places; exact decimal numeric equality on supplied values",
+  "gates": "Frozen retrospective engineering gate from Stage 8, not contemporaneous PMS knowledge or production approval",
+  "kb_cases": [
+    {
+      "arrival_night": "2017-01-03",
+      "deposit_code": "Non Refund",
+      "kb_query_as_of": "2016-12-27"
+    },
+    {
+      "arrival_night": "2017-01-11",
+      "deposit_code": "Refundable",
+      "kb_query_as_of": "2017-01-04"
+    },
+    {
+      "arrival_night": "2017-01-20",
+      "deposit_code": "No Deposit",
+      "kb_query_as_of": "2017-01-13"
+    },
+    {
+      "arrival_night": "2017-01-28",
+      "deposit_code": "Undefined",
+      "kb_query_as_of": "2017-01-21"
+    },
+    {
+      "arrival_night": "2017-02-04",
+      "deposit_code": "Non Refund",
+      "kb_query_as_of": "2017-01-28"
+    },
+    {
+      "arrival_night": "2017-02-11",
+      "deposit_code": "Refundable",
+      "kb_query_as_of": "2017-02-04"
+    },
+    {
+      "arrival_night": "2017-02-21",
+      "deposit_code": "No Deposit",
+      "kb_query_as_of": "2017-02-14"
+    },
+    {
+      "arrival_night": "2017-03-01",
+      "deposit_code": "Undefined",
+      "kb_query_as_of": "2017-02-22"
+    },
+    {
+      "arrival_night": "2017-03-09",
+      "deposit_code": "Non Refund",
+      "kb_query_as_of": "2017-03-02"
+    },
+    {
+      "arrival_night": "2017-03-16",
+      "deposit_code": "Refundable",
+      "kb_query_as_of": "2017-03-09"
+    },
+    {
+      "arrival_night": "2017-03-26",
+      "deposit_code": "No Deposit",
+      "kb_query_as_of": "2017-03-19"
+    },
+    {
+      "arrival_night": "2017-04-03",
+      "deposit_code": "Undefined",
+      "kb_query_as_of": "2017-03-27"
+    },
+    {
+      "arrival_night": "2017-04-10",
+      "deposit_code": "Non Refund",
+      "kb_query_as_of": "2017-04-03"
+    },
+    {
+      "arrival_night": "2017-04-20",
+      "deposit_code": "Refundable",
+      "kb_query_as_of": "2017-04-13"
+    },
+    {
+      "arrival_night": "2017-04-28",
+      "deposit_code": "No Deposit",
+      "kb_query_as_of": "2017-04-21"
+    },
+    {
+      "arrival_night": "2017-05-05",
+      "deposit_code": "Undefined",
+      "kb_query_as_of": "2017-04-28"
+    },
+    {
+      "arrival_night": "2017-05-13",
+      "deposit_code": "Non Refund",
+      "kb_query_as_of": "2017-05-06"
+    },
+    {
+      "arrival_night": "2017-05-23",
+      "deposit_code": "Refundable",
+      "kb_query_as_of": "2017-05-16"
+    },
+    {
+      "arrival_night": "2017-05-30",
+      "deposit_code": "No Deposit",
+      "kb_query_as_of": "2017-05-23"
+    },
+    {
+      "arrival_night": "2017-06-07",
+      "deposit_code": "Undefined",
+      "kb_query_as_of": "2017-05-31"
+    },
+    {
+      "arrival_night": "2017-06-17",
+      "deposit_code": "Non Refund",
+      "kb_query_as_of": "2017-06-10"
+    },
+    {
+      "arrival_night": "2017-06-24",
+      "deposit_code": "Refundable",
+      "kb_query_as_of": "2017-06-17"
+    },
+    {
+      "arrival_night": "2017-07-01",
+      "deposit_code": "No Deposit",
+      "kb_query_as_of": "2017-06-24"
+    },
+    {
+      "arrival_night": "2017-07-09",
+      "deposit_code": "Undefined",
+      "kb_query_as_of": "2017-07-02"
+    },
+    {
+      "arrival_night": "2017-07-20",
+      "deposit_code": "Non Refund",
+      "kb_query_as_of": "2017-07-13"
+    },
+    {
+      "arrival_night": "2017-07-26",
+      "deposit_code": "Refundable",
+      "kb_query_as_of": "2017-07-19"
+    },
+    {
+      "arrival_night": "2017-08-03",
+      "deposit_code": "No Deposit",
+      "kb_query_as_of": "2017-07-27"
+    },
+    {
+      "arrival_night": "2017-08-11",
+      "deposit_code": "Undefined",
+      "kb_query_as_of": "2017-08-04"
+    },
+    {
+      "arrival_night": "2017-08-21",
+      "deposit_code": "Non Refund",
+      "kb_query_as_of": "2017-08-14"
+    },
+    {
+      "arrival_night": "2017-08-29",
+      "deposit_code": "Refundable",
+      "kb_query_as_of": "2017-08-22"
+    }
+  ]
+}

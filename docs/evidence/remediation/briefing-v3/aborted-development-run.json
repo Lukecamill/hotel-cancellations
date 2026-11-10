@@ -1,0 +1,9 @@
+{
+  "status": "ABORTED_WITH_RECORDED_COPY_FAILURES",
+  "completed_requests": 44,
+  "accepted": 42,
+  "numeric_exact": 44,
+  "reason": "Dates and policy names still miscopied. Retain these failures; next version constrains known string facts during decoding, not numeric answers.",
+  "new_calendar_set_will_exclude_all_v3_planned_dates": true,
+  "recorded_at": "2026-11-10T22:31:41.470128+00:00"
+}

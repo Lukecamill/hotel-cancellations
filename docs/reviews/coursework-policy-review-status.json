@@ -1,0 +1,6 @@
+{
+  "status": "PENDING_USER_REQUEST",
+  "formal_signoff_recorded": false,
+  "reason": "User asked to leave reviewer name/reason for now; no signed record was created.",
+  "production_authorized": false
+}

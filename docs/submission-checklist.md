@@ -52,3 +52,17 @@ python3 scripts/build_submission_bundle.py --output /path/to/submission-output
 The builder records source/tested commits, any uncommitted overlay and per-file
 SHA-256 hashes, verifies archive contents, and writes separate source/runtime
 archives plus checksum files. It does not publish, upload or commit anything.
+
+## Remediation update
+
+The initial checklist above records the reference-stage findings. Two quality
+remedies now pass the current Mac worktree checks: a separately calibrated Resort
+research challenger and the V5 source-owned numeric briefing component. Original
+reference failures remain visible, including 27/30 raw copying. Current delivered
+briefings are 30/30 original and 30/30 additional nights; one injected raw action
+is withheld. All 234 software tests pass, six database tests skip. This is not a
+new clean-clone claim for the revised source; Ubuntu verification is pending.
+
+The user asked to leave formal sign-off for now. The review packet is ready, but
+no reviewer name/reason was supplied and no approval record was created. Real
+operating permission remains zero. See `remediation-review.md` before hand-in.
