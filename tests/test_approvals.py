@@ -11,6 +11,7 @@ from psycopg.types.json import Jsonb
 
 from hotel_cancel.approvals import ApprovalStore, DecisionConflict, validate_decision
 from hotel_cancel.service import make_server
+from test_serving import runtime as runtime, records as records, snapshot as snapshot
 
 
 def decision(**changes):
