@@ -300,3 +300,64 @@ responses are replayed without inference using `make briefing-replay`.
 contract. CI runs this strict gate as well as the frozen model calibration gate;
 a stable failing fixture is not a passing model. No guest message can be sent by
 this component. Model weights/runtime stay in ignored `artifacts/`.
+
+## The pipeline
+
+Session 5 CI/CD is implemented independently of the earlier project stage numbers.
+Use Python 3.13.13 and create `.venv` first, then run `make install`. Supply the
+attributed CSV locally or run `make ci-data`: it downloads from the original
+Kaggle source and refuses any file whose SHA-256 differs from the frozen lock.
+No dataset or credentials are committed.
+
+| Target | Purpose |
+| --- | --- |
+| `make lint` | Ruff rules E4, E7, E9 and F for source and tests |
+| `make test` | Unit, integration and 200-example Hypothesis business-property checks |
+| `make data-check` | Raw schema, leakage and temporal split validation |
+| `make kb-check` | Knowledge graph validation |
+| `make quality-gate` | Frozen per-hotel model quality gate |
+| `make briefing-quality` | Original recorded briefing factuality gate |
+| `make build` | Build the service image with version and commit tags |
+| `make ci` | Run all the above checks, then build, stopping at the first failure |
+| `make version` | Print the release version from `pyproject.toml` |
+| `make up` | Start Compose with that release version |
+
+`make ci` is explicitly sequential even when called with `make -j`.
+The original Resort model and original briefing remain blocked by their gates.
+The separate calibrated challenger and revised briefing checks remain available
+through `make remediation-check`; they do not bypass the original release gates.
+A failed gate is not repaired by lowering thresholds or changing the frozen lock.
+Historical evidence and old submission archives retain their original source hashes.
+Rebuild a new submission archive for this revision rather than relabelling an old one.
+
+Hypothesis checks that room-release distributions are finite, nonnegative and sum
+to one, that expected released rooms match the block forecasts, that increasing
+walking costs never increases proposed extra rooms, and that room value stays
+nonnegative and does not increase with variable costs. These are hotel business
+properties; a shop-price monotonicity assumption is not imposed on this model.
+
+## Continuous integration
+
+`.github/workflows/ci.yml` runs `make ci` on every push and pull request on a fresh
+Ubuntu runner. It installs the pinned environment, copies the placeholder-only
+`env.example`, starts an isolated test PostgreSQL database and downloads/verifies
+the source CSV. Recorded local LLM responses are replayed; no live LLM server or
+cloud key is needed. Local database tests require `TEST_DATABASE_URL` pointing to
+a disposable database. Without it those integration tests skip; GitHub supplies it.
+
+Only a successful push to `main` logs into GHCR with GitHub's temporary token and
+publishes the exact image built by `make ci`, without rebuilding it. The destination
+is `ghcr.io/lukecamill/hotel-cancellations:<version>` plus
+`<version>-<12-character-commit>`. New packages may initially be private. Visibility
+is managed separately from repository visibility and is not automatically changed.
+
+To release, change `[project].version` in `pyproject.toml`, open a pull request and
+pass the required `ci` check. The Makefile reads that version for both image tags,
+OCI labels, Docker's `MODEL_VERSION` and `make up`. `/health` reports
+`service_version` separately from the existing model artifact fingerprint.
+The image contains service code; its trusted model bundle remains a separate
+read-only mount as designed in the registry/serving stages.
+
+The GitHub `main` protection rule should require the check named `ci`, with the
+branch up to date before merging, and include administrators. See
+`docs/session5-ci-cd.md` for verification and any external setup limitations.

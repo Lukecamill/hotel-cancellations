@@ -1,0 +1,57 @@
+name: ci
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
+    services:
+      postgres:
+        image: postgres:18.1-bookworm
+        env:
+          POSTGRES_DB: hotel_test
+          POSTGRES_USER: hotel
+          POSTGRES_PASSWORD: ci-only-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U hotel -d hotel_test"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      PYTHON: python
+      TEST_DATABASE_URL: postgresql://hotel:ci-only-password@127.0.0.1:5432/hotel_test
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MPLCONFIGDIR: /tmp/hotel-matplotlib
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version-file: .python-version
+      - run: sudo apt-get update && sudo apt-get install -y libgomp1
+      - run: make install
+      - run: cp env.example .env
+      - name: Download and verify frozen source data
+        run: make ci-data
+      - name: Lowercase registry image name
+        run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/hotel-cancellations" >> "$GITHUB_ENV"
+      - name: Run the complete local pipeline
+        run: make ci IMAGE="$IMAGE" SOURCE="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+      - name: Publish the checked image on main only
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          printf '%s' "$GHCR_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          make publish IMAGE="$IMAGE"

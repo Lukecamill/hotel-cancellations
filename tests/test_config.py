@@ -1,4 +1,5 @@
 """Checks for configuration precedence and portable path handling."""
+
 from pathlib import Path
 
 import pytest
@@ -44,7 +45,17 @@ def test_explicit_config_beats_environment(project, monkeypatch):
     assert load_config("config/config.yaml", project_root=project)["seed"] == 3217
 
 
-@pytest.mark.parametrize("key,value", [("decision_lead_days", 15), ("train_end", "2018-01-01"), ("walk_cost_eur", -1), ("recal_weeks_grid", [0]), ("gate_min_auprc", {"City Hotel": 0.7}), ("calibration_band", [1.2, 0.8])])
+@pytest.mark.parametrize(
+    "key,value",
+    [
+        ("decision_lead_days", 15),
+        ("train_end", "2018-01-01"),
+        ("walk_cost_eur", -1),
+        ("recal_weeks_grid", [0]),
+        ("gate_min_auprc", {"City Hotel": 0.7}),
+        ("calibration_band", [1.2, 0.8]),
+    ],
+)
 def test_invalid_settings_fail_early(project, key, value):
     path = project / "config/config.yaml"
     config = yaml.safe_load(path.read_text())

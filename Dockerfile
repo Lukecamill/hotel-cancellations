@@ -4,6 +4,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONPATH=/app/src \
     OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
 RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 \
     && rm -rf /var/lib/apt/lists/*
+ARG MODEL_VERSION=dev
+ENV MODEL_VERSION=${MODEL_VERSION}
 WORKDIR /app
 COPY requirements-serving.txt ./
 RUN pip install --no-cache-dir -r requirements-serving.txt \
