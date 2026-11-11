@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-11",
+  "tests": {
+    "passed": 240,
+    "skipped": 6,
+    "reason": "PostgreSQL integration requires disposable database"
+  },
+  "lint": "PASS",
+  "data_validation": "PASS",
+  "knowledge_validation": "PASS",
+  "original_quality_gate": "FAIL",
+  "hotels": {
+    "City Hotel": {
+      "n": 27508,
+      "cancellations": 11691,
+      "auprc": 0.785721886317962,
+      "expected_observed_ratio": 0.9112810321058089,
+      "ece": 0.04227523749271264,
+      "brier": 0.17239734512884491,
+      "checks": {
+        "two_classes": true,
+        "auprc": true,
+        "calibration_ratio": true,
+        "ece": true
+      },
+      "gate": "PASS"
+    },
+    "Resort Hotel": {
+      "n": 13179,
+      "cancellations": 4054,
+      "auprc": 0.627907608840626,
+      "expected_observed_ratio": 0.6817233437376264,
+      "ece": 0.0989614606930023,
+      "brier": 0.17757610639149055,
+      "checks": {
+        "two_classes": true,
+        "auprc": true,
+        "calibration_ratio": false,
+        "ece": true
+      },
+      "gate": "FAIL"
+    }
+  },
+  "identity_verified": true,
+  "image_build": "not reached: quality gate blocked; Docker unavailable locally",
+  "secrets_scan": {
+    "tool": "gitleaks 8.30.1",
+    "commits_scanned": 24,
+    "findings": 3,
+    "classification": "All three findings are SHA-256 file digests keyed by docs/llm-access.md; no credentials detected"
+  }
+}

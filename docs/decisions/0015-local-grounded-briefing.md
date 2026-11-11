@@ -27,3 +27,15 @@ registry changes. No model training or prompt tuning on golden responses is plan
 An unavailable provider stops live generation, retains replay, and exposes the
 failure; it never silently moves data to a hosted endpoint. A marker can install
 Ollama, pull the pinned tag, verify its digest and rerun locally without payment.
+
+## 11 November 2026 delivery contract clarification
+
+The paragraphs above record the original V1 numerical-copying contract and its
+failed 27/30 result. V5 is a separately versioned design, described in
+[the revised briefing explanation](../revised-briefing.md): code copies source facts,
+and the model supplies only four interpretation fields. V5 delivered all 90 ordinary
+cases exactly; one of six injected interpretations was withheld. Component safety
+passes while raw-model all-case acceptance remains 95/96, FAIL. No raw numerical
+copying improvement is claimed. Prompt/schema/context/model fingerprints and both
+sets of failures remain preserved. Coursework replay verifies this distinction;
+strict model release approval remains separate.

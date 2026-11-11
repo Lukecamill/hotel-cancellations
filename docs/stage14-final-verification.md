@@ -1,5 +1,10 @@
 # Stage 14 final technical verification
 
+Current CI and submission status: see [the updated audit](submission-checklist.md) and
+[coursework/release separation](coursework-and-release.md). The stage results and
+old command outcomes below are historical; `make quality-gate` remains strict,
+while current `make ci` verifies expected reproduction before building.
+
 Verified 10 November 2026 against committed source `3ca26fe969b7dd1e8397fe6a8af7dedda123681b`.
 An independent local Git clone in `/private/tmp/hotel-stage14-clean` used a new
 Python 3.13.13 virtual environment and editable installation from pinned requirements.

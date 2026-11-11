@@ -1,4 +1,5 @@
 """Small examples verify audit counts without requiring the private local CSV."""
+
 import pandas as pd
 from hotel_cancel.audit import duplicate_overlap, quirk_counts
 
@@ -10,16 +11,22 @@ def test_duplicate_overlap_detects_copies_but_not_similar_rows():
 
 
 def test_quirk_counts_preserve_anomalies_and_use_correct_denominators():
-    df = pd.DataFrame({
-        "hotel": ["City Hotel"] * 4,
-        "is_canceled": [1, 0, 1, 0],
-        "reservation_status": ["Canceled", "Check-Out", "No-Show", "Check-Out"],
-        "country": ["PRT", "CHN", "CN", None],
-        "market_segment": ["Offline TA/TO"] * 4,
-        "deposit_type": ["Non Refund", "No Deposit", "Non Refund", "No Deposit"],
-        "adr": [-1., 0., 5400., 100.], "adults": [0, 1, 2, 1],
-        "children": [None, 0, 0, 0], "babies": [0] * 4,
-        "stays_in_weekend_nights": [0, 1, 0, 0], "stays_in_week_nights": [0, 0, 1, 2]})
+    df = pd.DataFrame(
+        {
+            "hotel": ["City Hotel"] * 4,
+            "is_canceled": [1, 0, 1, 0],
+            "reservation_status": ["Canceled", "Check-Out", "No-Show", "Check-Out"],
+            "country": ["PRT", "CHN", "CN", None],
+            "market_segment": ["Offline TA/TO"] * 4,
+            "deposit_type": ["Non Refund", "No Deposit", "Non Refund", "No Deposit"],
+            "adr": [-1.0, 0.0, 5400.0, 100.0],
+            "adults": [0, 1, 2, 1],
+            "children": [None, 0, 0, 0],
+            "babies": [0] * 4,
+            "stays_in_weekend_nights": [0, 1, 0, 0],
+            "stays_in_week_nights": [0, 0, 1, 2],
+        }
+    )
     before = df.copy(deep=True)
     c = quirk_counts(df)
     assert c["outcome_status_label_matches"] == 4

@@ -7,8 +7,20 @@ from dotenv import dotenv_values
 import pandas as pd
 import yaml
 
-DATE_KEYS = ("window_start", "window_end", "train_end", "calib_end", "valid_end", "test_end", "tonight")
-ENV_SETTINGS = {"DATASETS_TASKS_DATA": "data_dir", "MODEL_DIR": "model_dir", "LOG_LEVEL": "log_level"}
+DATE_KEYS = (
+    "window_start",
+    "window_end",
+    "train_end",
+    "calib_end",
+    "valid_end",
+    "test_end",
+    "tonight",
+)
+ENV_SETTINGS = {
+    "DATASETS_TASKS_DATA": "data_dir",
+    "MODEL_DIR": "model_dir",
+    "LOG_LEVEL": "log_level",
+}
 
 
 def load_config(path=None, *, project_root=None):
@@ -19,7 +31,9 @@ def load_config(path=None, *, project_root=None):
     Relative config and data paths always resolve against project_root.
     Explicit path beats CONFIG_PATH; shell beats .env; .env beats YAML.
     """
-    root = Path(project_root).expanduser().resolve() if project_root is not None else Path(__file__).resolve().parents[2]
+    root = (
+        Path(project_root).expanduser().resolve() if project_root is not None else Path(__file__).resolve().parents[2]
+    )
     env = {k: v for k, v in dotenv_values(root / ".env").items() if v is not None}
     env.update(os.environ)
 
@@ -32,7 +46,20 @@ def load_config(path=None, *, project_root=None):
         config = yaml.safe_load(stream)
     if not isinstance(config, dict):
         raise ValueError(f"Configuration must be a mapping: {config_path}")
-    required = set(DATE_KEYS) | {"seed", "kaggle_handle", "decision_lead_days", "walk_cost_eur", "variable_cost_eur", "recal_weeks_grid", "hotels", "gate_min_auprc", "calibration_band", "data_dir", "model_dir", "log_level"}
+    required = set(DATE_KEYS) | {
+        "seed",
+        "kaggle_handle",
+        "decision_lead_days",
+        "walk_cost_eur",
+        "variable_cost_eur",
+        "recal_weeks_grid",
+        "hotels",
+        "gate_min_auprc",
+        "calibration_band",
+        "data_dir",
+        "model_dir",
+        "log_level",
+    }
     missing = sorted(required - config.keys())
     if missing:
         raise ValueError(f"Missing configuration settings: {', '.join(missing)}")
@@ -43,7 +70,14 @@ def load_config(path=None, *, project_root=None):
         config[key] = pd.Timestamp(config[key])
         if pd.isna(config[key]):
             raise ValueError(f"Invalid date: {key}")
-    if not (config["window_start"] < config["train_end"] < config["calib_end"] < config["valid_end"] < config["test_end"] == config["window_end"]):
+    if not (
+        config["window_start"]
+        < config["train_end"]
+        < config["calib_end"]
+        < config["valid_end"]
+        < config["test_end"]
+        == config["window_end"]
+    ):
         raise ValueError("Expected ordered train/calibration/validation/test boundaries within the data window")
     if type(config["seed"]) is not int or config["seed"] < 0:
         raise ValueError("seed must be a non-negative integer")
@@ -59,15 +93,27 @@ def load_config(path=None, *, project_root=None):
     if hotels != ["City Hotel", "Resort Hotel"]:
         raise ValueError("hotels must contain City Hotel and Resort Hotel in notebook order")
     gates = config["gate_min_auprc"]
-    if not isinstance(gates, dict) or set(gates) != set(hotels) or any(isinstance(v, bool) or not isinstance(v, (int, float)) or not 0 <= v <= 1 for v in gates.values()):
+    if (
+        not isinstance(gates, dict)
+        or set(gates) != set(hotels)
+        or any(isinstance(v, bool) or not isinstance(v, (int, float)) or not 0 <= v <= 1 for v in gates.values())
+    ):
         raise ValueError("gate_min_auprc must contain a probability threshold for each hotel")
     band = config["calibration_band"]
-    if not isinstance(band, list) or len(band) != 2 or any(isinstance(v, bool) or not isinstance(v, (int, float)) for v in band) or not 0 < band[0] <= 1 <= band[1] < float("inf"):
+    if (
+        not isinstance(band, list)
+        or len(band) != 2
+        or any(isinstance(v, bool) or not isinstance(v, (int, float)) for v in band)
+        or not 0 < band[0] <= 1 <= band[1] < float("inf")
+    ):
         raise ValueError("calibration_band must be two positive finite bounds enclosing 1")
     config["log_level"] = str(config["log_level"]).upper()
     if config["log_level"] not in {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}:
         raise ValueError("Invalid log_level")
-    config["data_dir"], config["model_dir"] = absolute(config["data_dir"]), absolute(config["model_dir"])
+    config["data_dir"], config["model_dir"] = (
+        absolute(config["data_dir"]),
+        absolute(config["model_dir"]),
+    )
     config["raw_dir"] = config["data_dir"] / "raw" / "hotel_bookings"
     config["processed_dir"] = config["data_dir"] / "processed"
     return config

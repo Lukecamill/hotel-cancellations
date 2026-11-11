@@ -1,10 +1,15 @@
 export PYTHONPATH := $(CURDIR)/src$(if $(PYTHONPATH),:$(PYTHONPATH))
 PYTHON ?= .venv/bin/python
-IMAGE ?= hotel-cancel:stage7
+VERSION := $(shell $(PYTHON) -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")
+GIT_SHA := $(shell git rev-parse --short=12 HEAD 2>/dev/null || echo nogit)
+IMAGE ?= hotel-cancel
+SOURCE ?=
+LABELS = $(if $(SOURCE),--label org.opencontainers.image.source=$(SOURCE))
 CONFIG ?= config/config.yaml
 SNAPSHOT ?= artifacts/stage6/snapshot.json
 OUTPUT ?= artifacts/stage6/batch.json
 QUALITY_OUTPUT ?= docs/evidence/stage8
+DATA_CHECK_OUTPUT ?= docs/evidence/stage4
 KB_OUTPUT ?= docs/evidence/stage10/shacl
 
 .PHONY: baseline
@@ -13,7 +18,7 @@ baseline:
 
 .PHONY: data-check
 data-check:
-	$(PYTHON) -m hotel_cancel.validate --config "$(CONFIG)"
+	$(PYTHON) -m hotel_cancel.validate --config "$(CONFIG)" --output "$(DATA_CHECK_OUTPUT)"
 
 .PHONY: policy-sensitivity
 policy-sensitivity:
@@ -26,8 +31,7 @@ serve:
 nightly-batch:
 	$(PYTHON) -m hotel_cancel.batch --snapshot-file "$(SNAPSHOT)" --output "$(OUTPUT)"
 
-container:
-	docker build -t "$(IMAGE)" .
+container: build
 
 .PHONY: monitoring-replay
 monitoring-replay:
@@ -41,8 +45,25 @@ test:
 quality-gate:
 	$(PYTHON) -m hotel_cancel.quality_gate --output "$(QUALITY_OUTPUT)"
 
-ci: test kb-check
-	@status=0; $(MAKE) quality-gate PYTHON="$(PYTHON)" || status=1; $(MAKE) briefing-quality PYTHON="$(PYTHON)" || status=1; exit $$status
+# Coursework verifies the expected failure; release approval stays strict.
+.PHONY: coursework-verify coursework-check release-check
+coursework-verify:
+	$(PYTHON) -m hotel_cancel.coursework
+
+coursework-check:
+	$(MAKE) lint
+	$(MAKE) test
+	$(MAKE) data-check DATA_CHECK_OUTPUT=artifacts/ci/data-check
+	$(MAKE) kb-check KB_OUTPUT=artifacts/ci/shacl
+	$(MAKE) coursework-verify
+
+ci:
+	$(MAKE) coursework-check
+	$(MAKE) build
+
+release-check:
+	$(MAKE) quality-gate QUALITY_OUTPUT=artifacts/ci/release-gate
+	$(MAKE) revised-briefing-quality
 
 TRACKING_PYTHON ?= .venv-tracking/bin/python
 .PHONY: track-models
@@ -95,3 +116,28 @@ simulation-signoff-check:
 	$(PYTHON) scripts/record_simulation_signoff.py verify
 
 coursework-release-check: remediation-check simulation-signoff-check
+
+.PHONY: install lint version build publish up ci-data
+install:
+	$(PYTHON) -m pip install -r requirements.txt
+	$(PYTHON) -m pip install --no-deps --no-build-isolation -e ".[dev]"
+
+lint:
+	$(PYTHON) -m ruff check src tests scripts/prepare_ci_data.py
+
+version:
+	@echo $(VERSION)
+
+ci-data:
+	$(PYTHON) scripts/prepare_ci_data.py
+
+build:
+	docker build --build-arg MODEL_VERSION=$(VERSION) --label org.opencontainers.image.version=$(VERSION) --label org.opencontainers.image.revision=$(GIT_SHA) $(LABELS) -t "$(IMAGE):$(VERSION)" -t "$(IMAGE):$(VERSION)-$(GIT_SHA)" .
+
+# Publication always rechecks release quality, including when called manually.
+publish: release-check
+	docker push "$(IMAGE):$(VERSION)"
+	docker push "$(IMAGE):$(VERSION)-$(GIT_SHA)"
+
+up:
+	MODEL_VERSION=$(VERSION) IMAGE=$(IMAGE) docker compose up -d --build

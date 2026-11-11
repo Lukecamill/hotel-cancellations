@@ -1,5 +1,10 @@
 # Reproduce the final technical submission
 
+Current CI and submission status: see [the updated audit](submission-checklist.md) and
+[coursework/release separation](coursework-and-release.md). The stage results and
+old command outcomes below are historical; `make quality-gate` remains strict,
+while current `make ci` verifies expected reproduction before building.
+
 Use a clean checkout/source extraction on Python 3.13.13 with the OS OpenMP runtime
 (macOS libomp; Linux container uses its documented runtime). See README for pinned
 setup. The Stage 14 audit used an independent local Git clone and fresh venv,

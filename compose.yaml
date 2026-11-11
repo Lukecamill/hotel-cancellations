@@ -15,8 +15,11 @@ services:
       timeout: 5s
       retries: 12
   api:
-    image: hotel-cancel:stage7
-    build: .
+    image: ${IMAGE:-hotel-cancel}:${MODEL_VERSION:-dev}
+    build:
+      context: .
+      args:
+        MODEL_VERSION: ${MODEL_VERSION:-dev}
     environment:
       DATABASE_URL: postgresql://hotel:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/hotel
     depends_on:

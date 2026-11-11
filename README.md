@@ -232,11 +232,12 @@ The [pattern comparison](docs/diary1-pattern-comparison.md) assesses current nig
 
 The [AI Act research note](docs/diary1-ai-act-classification.md) records a scoped other/non-high-risk assessment for prospective ordinary hotel cancellation/overbooking advice, a separate conditional analysis of current pre-deployment testing, provider/deployer roles and reassessment triggers. It uses official EU sources and the July 2026 amended text; this is not production regulatory clearance. See [ADR 0009](docs/decisions/0009-intended-use-ai-act.md).
 
-## Stage 8: frozen evaluation and strict CI
+## Stage 8: frozen evaluation and strict model gate
 
-Run `make ci` to execute the software tests and the per-hotel gate on the
+Run `make quality-gate` for the strict per-hotel gate on the
 fingerprinted Jan–Aug 2017 holdout. The supplied Resort model **fails** the
-aggregate calibration check, so CI must currently return nonzero. City passes.
+aggregate calibration check, so release approval returns nonzero. Coursework CI
+verifies that this exact failure is reproduced. City passes.
 `make test` runs correctness tests separately. `make quality-gate` regenerates
 Stage 8 metrics, reliability diagrams and the machine-readable report without
 replacing the serving artifacts. ECE uses ten equal-width bins with a fixed
@@ -300,3 +301,51 @@ responses are replayed without inference using `make briefing-replay`.
 contract. CI runs this strict gate as well as the frozen model calibration gate;
 a stable failing fixture is not a passing model. No guest message can be sent by
 this component. Model weights/runtime stay in ignored `artifacts/`.
+
+## Coursework CI and release approval
+
+Start with the current [required-task evidence checklist](docs/submission-checklist.md),
+[coursework versus release guide](docs/coursework-and-release.md), and
+[revised briefing explanation](docs/revised-briefing.md).
+
+Use Python 3.13.13 and create `.venv` first, then `make install`. Supply the
+attributed CSV or run `make ci-data` to download it and verify its frozen SHA-256.
+
+| Command | Meaning |
+| --- | --- |
+| `make coursework-check` | Lint, tests, raw/split validation, SHACL and verified original-model/briefing reproduction |
+| `make ci` | Coursework checks followed by service image build |
+| `make quality-gate` | Original strict per-hotel model gate; Resort still fails |
+| `make revised-briefing-quality` | Recorded V5 delivery contract, including withholding unsafe responses |
+| `make release-check` | Strict model gate followed by V5 quality; expected failures are never accepted here |
+| `make publish` | Requires strict release checks before either image push |
+| `make version` / `make build` / `make up` | Read release version from pyproject.toml; build or start that version |
+
+Coursework verification requires the specific original result: City PASS and Resort
+calibration FAIL, with matching metrics/checks and frozen data. Errors or unexpected
+results fail CI. Passing coursework does not approve a release. The research
+calibrator is not substituted for the given learner. Numeric facts in V5 are owned
+by trusted context, while the local model supplies a validated interpretation.
+
+GitHub runs `ci` on pushes and pull requests with a fresh Ubuntu environment,
+verified Kaggle data and a disposable PostgreSQL service. Local DB tests skip unless
+`TEST_DATABASE_URL` points at a disposable database; GitHub runs them. LLM fixtures
+are replayed without a live endpoint or quota. Hypothesis tests cover room-release
+distributions, cost/quantity monotonicity and nonnegative room values.
+
+The main branch requires the `ci` check and an up-to-date pull request, including for
+administrators. A separate `release` job runs only after successful CI on a push to
+main. It loads the exact image saved by CI and runs the strict checks before any
+registry push. The current original Resort model blocks that job. Only that job
+has package-write permission. No model aliases, policy approvals or guest messages
+are changed by coursework verification.
+
+Image tags are `ghcr.io/lukecamill/hotel-cancellations:<version>` and
+`<version>-<12-character-commit>`. `pyproject.toml` supplies the version, Docker
+build/Compose propagate it, and `/health` reports `service_version` separately from
+the model artifact fingerprint. A successful future release must use a separately
+reviewed suitable candidate; it cannot relabel the original failure. The service
+image still loads its trusted model bundle through a separate read-only mount.
+
+Historical stage reports and old archives keep their original evidence scope and
+source hashes. Regenerate the hand-in archives after choosing the final commit.

@@ -1,0 +1,62 @@
+{
+  "scope": "Reproduction expectations, never release approval; based on original notebook and recorded reference outputs",
+  "reference_gate": {
+    "exit_code": 1,
+    "status": "FAIL",
+    "lock_sha256": "43f6cea7f2af1a773c42a4044b564e1078419074a1e7fbbfef0d230be7e4c01d",
+    "hotels": {
+      "City Hotel": {
+        "n": 27508,
+        "cancellations": 11691,
+        "auprc": 0.785721886317962,
+        "expected_observed_ratio": 0.9112810321058089,
+        "ece": 0.04227523749271264,
+        "brier": 0.17239734512884491,
+        "checks": {
+          "two_classes": true,
+          "auprc": true,
+          "calibration_ratio": true,
+          "ece": true
+        },
+        "gate": "PASS"
+      },
+      "Resort Hotel": {
+        "n": 13179,
+        "cancellations": 4054,
+        "auprc": 0.627907608840626,
+        "expected_observed_ratio": 0.6817233437376264,
+        "ece": 0.0989614606930023,
+        "brier": 0.17757610639149055,
+        "checks": {
+          "two_classes": true,
+          "auprc": true,
+          "calibration_ratio": false,
+          "ece": true
+        },
+        "gate": "FAIL"
+      }
+    }
+  },
+  "original_briefing": {
+    "records": 66,
+    "accepted": 58,
+    "all_failures_withheld": true,
+    "fixture_regression_gate": "PASS",
+    "model_quality_gate": "FAIL",
+    "live_model_called": false
+  },
+  "revised_briefing": {
+    "records": 96,
+    "accepted": 95,
+    "ordinary_accepted": 90,
+    "ordinary_total": 90,
+    "injection_safe": 6,
+    "injection_total": 6,
+    "injection_withheld": 1,
+    "component_quality_gate": "PASS",
+    "fixture_regression_gate": "PASS",
+    "raw_model_all_cases_gate": "FAIL",
+    "live_model_called": false,
+    "raw_llm_numeric_copy_accuracy_claimed": false
+  }
+}

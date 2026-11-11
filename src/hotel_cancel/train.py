@@ -1,4 +1,5 @@
 """Run the supplied booking-time baseline without notebook state."""
+
 import argparse
 from dataclasses import dataclass
 import json
@@ -11,7 +12,13 @@ from hotel_cancel.config import load_config
 from hotel_cancel.data import load_bookings, separate_outcome
 from hotel_cancel.features import build_features, select_top_agents
 from hotel_cancel.model import fit, save_model
-from hotel_cancel.evaluate import split_masks, per_hotel, holdout_fingerprint, diagnostic_gate, guard_temporal_splits
+from hotel_cancel.evaluate import (
+    split_masks,
+    per_hotel,
+    holdout_fingerprint,
+    diagnostic_gate,
+    guard_temporal_splits,
+)
 from hotel_cancel.logging_setup import setup_logging
 
 logger = logging.getLogger(__name__)
@@ -49,24 +56,52 @@ def run_baseline(config, *, use_cache=False, save=True):
     columns = list(X.columns)
     model = fit(columns, masks["train"], X, y, seed=config["seed"])
     probabilities = model.predict_proba(X[columns])[:, 1]
-    metrics = pd.concat({name: per_hotel(probabilities[mask.values], mask, bk, y, config["hotels"])
-                         for name, mask in masks.items() if name != "train"})
+    metrics = pd.concat(
+        {
+            name: per_hotel(probabilities[mask.values], mask, bk, y, config["hotels"])
+            for name, mask in masks.items()
+            if name != "train"
+        }
+    )
     gate = diagnostic_gate(metrics.loc["test"], config)
     fingerprint = holdout_fingerprint(X, y, masks["test"])
     elapsed = time.perf_counter() - started
-    result = BaselineResult(bk, outcome, X, masks, model, top_agents,
-                            probabilities, metrics, gate, fingerprint, elapsed)
+    result = BaselineResult(
+        bk,
+        outcome,
+        X,
+        masks,
+        model,
+        top_agents,
+        probabilities,
+        metrics,
+        gate,
+        fingerprint,
+        elapsed,
+    )
     if save:
         output = config["model_dir"]
-        save_model(model, output / "baseline.joblib", top_agents=top_agents, feature_columns=columns)
+        save_model(
+            model,
+            output / "baseline.joblib",
+            top_agents=top_agents,
+            feature_columns=columns,
+        )
         metrics.to_csv(output / "baseline_metrics.csv")
         gate.to_csv(output / "baseline_gate.csv")
-        report = {"split_counts": {k: int(v.sum()) for k, v in masks.items()},
-                  "holdout_sha256": fingerprint, "runtime_seconds": elapsed,
-                  "seed": config["seed"], "model_parameters": model.get_params()}
+        report = {
+            "split_counts": {k: int(v.sum()) for k, v in masks.items()},
+            "holdout_sha256": fingerprint,
+            "runtime_seconds": elapsed,
+            "seed": config["seed"],
+            "model_parameters": model.get_params(),
+        }
         (output / "baseline_run.json").write_text(json.dumps(report, indent=2) + "\n")
-    logger.info("Baseline finished in %.1fs; split counts %s", elapsed,
-                {k: int(v.sum()) for k, v in masks.items()})
+    logger.info(
+        "Baseline finished in %.1fs; split counts %s",
+        elapsed,
+        {k: int(v.sum()) for k, v in masks.items()},
+    )
     logger.info("Test gate:\n%s", gate.to_string())
     return result
 
