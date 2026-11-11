@@ -41,11 +41,17 @@ challenger cannot replace the unchanged-model evidence for C2/C4/E3.
 
 ## Verification scope and current CI
 
-[GitHub run 43022126664](https://github.com/Lukecamill/hotel-cancellations/actions/runs/43022126664)
-at `8e8d6c6` passed all 246 tests with real PostgreSQL, lint, raw validation and
-SHACL before the old combined pipeline stopped at the expected Resort gate.
-That supersedes the blanket statement that the current database tests are skipped.
-It does not replace the dated historical MLflow/load/container experiments.
+[GitHub run 43025312530](https://github.com/Lukecamill/hotel-cancellations/actions/runs/43025312530)
+at `bc0d450` passed all **259 tests with real PostgreSQL and zero skips**, lint,
+raw validation, SHACL, the coursework reference/briefing checks and the service
+image build. The image was built, not published. The separate release job was
+skipped on the feature branch; a local strict release check still rejected Resort.
+See [the verification record](evidence/coursework-audit/verification.json).
+
+The earlier [246-test run](https://github.com/Lukecamill/hotel-cancellations/actions/runs/43022126664)
+at `8e8d6c6` stopped at the expected failure under the former combined pipeline.
+Those dated results are preserved. Current verification does not rerun the
+historical live MLflow/load experiments or turn the original model gate green.
 
 The revised pipeline separates those meanings:
 

@@ -1,0 +1,23 @@
+{
+  "reviewed_on": "2026-11-11",
+  "tested_commit": "bc0d45004d4db05e360d636d19051774651df177",
+  "github_run_id": 43025312530,
+  "github_run_url": "https://github.com/Lukecamill/hotel-cancellations/actions/runs/43025312530",
+  "tests_passed": 259,
+  "tests_skipped": 0,
+  "database": "Disposable PostgreSQL 18.1 service on GitHub",
+  "lint": "PASS",
+  "raw_validation": "PASS",
+  "shacl": "PASS",
+  "coursework_verification": "PASS",
+  "reference_gate_status": "FAIL",
+  "reference_identity_verified": true,
+  "service_image_build": "PASS",
+  "registry_publication": "NOT_PERFORMED",
+  "release_job": "Skipped on feature branch; main-push only",
+  "strict_local_release_check": "FAIL as required for original Resort calibration",
+  "release_approved": false,
+  "production_authorized": false,
+  "live_llm_called": false,
+  "scope": "Fresh GitHub tests, reference-model fit/evaluation, fixture replay and image build; historical full policy/MLflow/load/LLM experiments were inspected, not all rerun"
+}
