@@ -1,5 +1,10 @@
 # Session 5 CI CD alignment
 
+Current CI and submission status: see [the updated audit](submission-checklist.md) and
+[coursework/release separation](coursework-and-release.md). The stage results and
+old command outcomes below are historical; `make quality-gate` remains strict,
+while current `make ci` verifies expected reproduction before building.
+
 Implemented 11 November 2026. This adds release engineering to the hotel project;
 it does not replace the supplied learner, change evaluation data or alter gates.
 

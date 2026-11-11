@@ -1,5 +1,10 @@
 # Stage 10 — Versioned knowledge base and E1 comparisons
 
+Current CI and submission status: see [the updated audit](submission-checklist.md) and
+[coursework/release separation](coursework-and-release.md). The stage results and
+old command outcomes below are historical; `make quality-gate` remains strict,
+while current `make ci` verifies expected reproduction before building.
+
 Implemented 9 November 2026. Local and Ubuntu verification are recorded
 separately. Existing service, model bundle and MLflow aliases are unchanged.
 

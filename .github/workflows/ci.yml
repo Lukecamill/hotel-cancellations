@@ -13,7 +13,6 @@ jobs:
     timeout-minutes: 30
     permissions:
       contents: read
-      packages: write
     services:
       postgres:
         image: postgres:18.1-bookworm
@@ -48,8 +47,55 @@ jobs:
         run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/hotel-cancellations" >> "$GITHUB_ENV"
       - name: Run the complete local pipeline
         run: make ci IMAGE="$IMAGE" SOURCE="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
-      - name: Publish the checked image on main only
+      - name: Save the tested image for the separate release job
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          mkdir -p artifacts/ci/image
+          VERSION=$(make version)
+          GIT_SHA=$(git rev-parse --short=12 HEAD)
+          docker save "$IMAGE:$VERSION" "$IMAGE:$VERSION-$GIT_SHA" -o artifacts/ci/image/service.tar
+          sha256sum artifacts/ci/image/service.tar > artifacts/ci/image/service.tar.sha256
+      - uses: actions/upload-artifact@v7
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        with:
+          name: tested-service-image
+          path: artifacts/ci/image/
+          retention-days: 1
+          if-no-files-found: error
+  release:
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      packages: write
+    env:
+      PYTHON: python
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MPLCONFIGDIR: /tmp/hotel-matplotlib
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version-file: .python-version
+      - run: sudo apt-get update && sudo apt-get install -y libgomp1
+      - run: make install
+      - run: cp env.example .env
+      - run: make ci-data
+      - uses: actions/download-artifact@v8
+        with:
+          name: tested-service-image
+          path: artifacts/ci/image/
+      - name: Verify and load the exact image built by coursework CI
+        run: |
+          sha256sum -c artifacts/ci/image/service.tar.sha256
+          docker load -i artifacts/ci/image/service.tar
+          echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/hotel-cancellations" >> "$GITHUB_ENV"
+      - name: Check strict release quality before any registry push
         env:
           GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

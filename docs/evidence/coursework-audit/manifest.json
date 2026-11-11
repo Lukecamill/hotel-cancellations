@@ -1,0 +1,293 @@
+{
+  "reviewed_on": "2026-11-11",
+  "scope": "Existing required-task evidence inspected; not a rerun of every historical experiment",
+  "sources": {
+    "19_hotel_cancellations.ipynb": {
+      "sha256": "a623a0eb83a295b3e9feadde454157e442f62ab6b3b717ff4ef8db3c028d4377",
+      "interpretation": "Supplied project reference"
+    },
+    "llm-access.md": {
+      "sha256": "dbdbb037eaea157a3a20b14ebd0777542f7a1145c05fc2af90481d71fa1bea0e",
+      "interpretation": "Supplied project reference"
+    },
+    "task-rubric.md": {
+      "sha256": "91445155ffab08ec3c2ed75c67838e9a8174d1800ea8166f7507e44cf62df51b",
+      "interpretation": "Diary Entry 1 rubric only"
+    }
+  },
+  "tasks": {
+    "C1": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "docs/evidence/stage4/data-checks.json",
+          "sha256": "db6afcb9ea6f8e5836557de3fbbfa1f0c33df2f4daacd41c95b89f245805f792"
+        },
+        {
+          "path": "docs/data-contract.md",
+          "sha256": "e59e79290066cfd323ff3fd0b7775acfa0e9a382a206c854fabcde1476943b33"
+        },
+        {
+          "path": "tests/test_features.py",
+          "sha256": "86eb61dcb99ebebe077d53646a36cc46b188a08b2a4b61bf9d5de39139c6d46c"
+        },
+        {
+          "path": "tests/test_splits.py",
+          "sha256": "c415520ec62bd04eeb8d986fe8bc58d362bf0d8d92d319d65a388a627efd867a"
+        },
+        {
+          "path": "tests/test_history.py",
+          "sha256": "d552107a48ea4276ab215f0aefdfce7e7228808b5de37cc397eb87a328d8cbb2"
+        },
+        {
+          "path": "tests/test_policy.py",
+          "sha256": "d6f7e0d4ae28662369f32b7a8e025ac82a8d7a4469e0c9670110877c7878e6a0"
+        }
+      ]
+    },
+    "C2": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "docs/evidence/baseline-comparison.json",
+          "sha256": "5d3070b67aa45cd832b9fbdad32fe9cf0772a9710a86e655dce957bc145383cd"
+        },
+        {
+          "path": "docs/evidence/extraction-verification.json",
+          "sha256": "d33ea7ebfb916f2cc0b3ee7a6303d136bb057b82fe0e63e401b49fbb01a96afb"
+        },
+        {
+          "path": "docs/evidence/stage14/clean-clone-summary.json",
+          "sha256": "090aeddb8ca862645f6738b5d2874b41a12411e2347cb1214f9c9278007c0123"
+        },
+        {
+          "path": "docs/baseline-reproduction.md",
+          "sha256": "eb1512278e7a0261f0876c52af0eee2fe9fa7fb02b8c0bb548a81a00f410d312"
+        }
+      ]
+    },
+    "C3": {
+      "finding": "Approval pending",
+      "files": [
+        {
+          "path": "docs/evidence/stage5/run.json",
+          "sha256": "c190780d723b1047cf3857315ecb9d9654d6caf68f449337d6760f5245ded4d8"
+        },
+        {
+          "path": "docs/evidence/stage5/selected-policies.csv",
+          "sha256": "14c8c367dd527cb3bcb4e8d6237b0f2c5ca55afdfacf287d76653471ae2e413b"
+        },
+        {
+          "path": "docs/evidence/stage5/all-policies.csv",
+          "sha256": "3c093de357f1f1d78eefb7d406481f3025a033bb0eb31977b0e6cca9200de1af"
+        },
+        {
+          "path": "docs/evidence/stage5/calibration.csv",
+          "sha256": "844665ff1770fb2d94a180b3fd8d145139a8fbdd28b422c725d2e1a50e26bf55"
+        },
+        {
+          "path": "docs/decisions/0005-policy-sensitivity.md",
+          "sha256": "90b2d9bcf366d9a49c79794e512bdeb2e1a25ae93bdde772c7090443bd597aa8"
+        },
+        {
+          "path": "docs/reviews/coursework-policy-review-v1.json",
+          "sha256": "ed98e92ef836ca8b1113dfb4cb110e5409eb30d5e6160e906e04b0fedfb5837a"
+        }
+      ]
+    },
+    "C4": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "Dockerfile",
+          "sha256": "be9647c2648e82fc2cddee05292481bad5cffaa6614c4dd1c87b237436bea30d"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "79e72dcf9d34cedc58af2b25305bf3caab5f6eb816e1baf338035fc3ee754711"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "7eb8175d869d251c791a2ed086e55bb036de471b8f6fd91b43186737614069af"
+        },
+        {
+          "path": ".github/workflows/ci.yml",
+          "sha256": "665615c37650c19a2fbc7a3b7aed870739ec752b8632395f7a70754a228b9780"
+        },
+        {
+          "path": "docs/evidence/stage6/container.json",
+          "sha256": "d2d577788172cf3966ae56c67a9904d5948262b89c7aac2ad6a0022309060c36"
+        },
+        {
+          "path": "docs/evidence/stage6/tests-linux.json",
+          "sha256": "d61291bdab9d32706998bd1bd0a6e473cf255df12e0c8a83f5d0c910bd4898b6"
+        },
+        {
+          "path": "src/hotel_cancel/service.py",
+          "sha256": "4417f39eeaeab53378c8d523c96c4a8a51e300d730865c0674cffb847e01432b"
+        },
+        {
+          "path": "src/hotel_cancel/batch.py",
+          "sha256": "9eeebbb9541a9c701c466d9cfcbe9a164c627b22d959f09e4096d3514de9cc74"
+        }
+      ]
+    },
+    "C5": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "docs/evidence/stage9/verification.json",
+          "sha256": "02ff3636a57707aad3c8e742966f1ed1686fc9b17163ddf86036b5a15e680e37"
+        },
+        {
+          "path": "docs/evidence/stage9-ubuntu/verification.json",
+          "sha256": "6c767f249e1c12d3d736fab42b607868040f0b26a3ecf29625404f048f34d779"
+        },
+        {
+          "path": "docs/evidence/stage7/performance.json",
+          "sha256": "1d9139d1a00dc47b13bf7c098fa7063f1dd78bee5f8976a95ca43669c53028b1"
+        },
+        {
+          "path": "docs/evidence/stage7/replay/report.json",
+          "sha256": "06bc6418a515a264a7099fd942e1d37707bb86c7053ad4e2dd7764642bc64386"
+        },
+        {
+          "path": "docs/model-card.md",
+          "sha256": "e9b253f90adcae63b981b543f3cce1006434ede11883be5f860d04de2c6e316b"
+        },
+        {
+          "path": "monitoring/alerts.yml",
+          "sha256": "4a868d6b2d4bac0711835edf5ab3fb8a9b3dc8f42b21c454bc9a21275ef35efb"
+        }
+      ]
+    },
+    "E1": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "docs/evidence/stage10/ablation/verification.json",
+          "sha256": "a4854f76c4611cb72e27d607a269a04e636606658d3809bfa334a12d57a541ca"
+        },
+        {
+          "path": "docs/evidence/stage10/briefing/report.json",
+          "sha256": "dde8d527e31194ee466872eb1a4f619e61c3507840b4597a95c234c0555c0251"
+        },
+        {
+          "path": "knowledge/competency-questions.md",
+          "sha256": "1d1fc78c831cc2314939e47b393742a291ca824789b2680150cdcbd6392be0dd"
+        },
+        {
+          "path": "knowledge/shapes.ttl",
+          "sha256": "ba5edf087d882186fe3830537071ae054e6f82bb72e84288280059baf9f22a93"
+        },
+        {
+          "path": "docs/evidence/stage10-ubuntu/verification.json",
+          "sha256": "38b591d8061fcd2d57bd31375423b64c5a8dd0272ce22bfe0d4883e65d7a7acb"
+        }
+      ]
+    },
+    "E2": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "docs/evidence/stage11/verification.json",
+          "sha256": "901a1a10d7674dc30f7abfc05f9146c3379fd8d618480a8ed795e08865404074"
+        },
+        {
+          "path": "docs/evidence/stage11/group-burden.csv",
+          "sha256": "a97d78eda660fd7c9d678c4d8e3ebd8f977dccc394a36775edada4472f4c8fe1"
+        },
+        {
+          "path": "docs/stage11-governance.md",
+          "sha256": "f9bc521565c78b9b64959f45af18e44d84c2a2a8a902329296ee727a0cdab735"
+        }
+      ]
+    },
+    "E3": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "config/evaluation-lock.json",
+          "sha256": "43f6cea7f2af1a773c42a4044b564e1078419074a1e7fbbfef0d230be7e4c01d"
+        },
+        {
+          "path": "docs/evidence/stage8/report.json",
+          "sha256": "e7bd0489a96efbdf4fa55096dfede699c2046fb3296bc324d3baa5392dc6ee97"
+        },
+        {
+          "path": "docs/evidence/stage8/reliability.csv",
+          "sha256": "4b375473860c92afe2936c3d082ceddeb8114701acb8902f46790659d987b80d"
+        },
+        {
+          "path": "docs/evidence/stage8/reliability.png",
+          "sha256": "389b668786e806931f16a347d6d7c329c95fbb2524af1ac3e338386ef917a3ba"
+        },
+        {
+          "path": "docs/decisions/0010-frozen-evaluation-gate.md",
+          "sha256": "51378e85999f0d76309ca44ee00d4424b53082eb21c57e112fe23b4e5d6545a2"
+        }
+      ]
+    },
+    "E4": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "docs/evidence/stage12/verification.json",
+          "sha256": "16aead877ca9a15fbaf0661b21aa1b28abdeb8b69d4dd6fb18b5ab68ededab44"
+        },
+        {
+          "path": "docs/evidence/stage12/block-walking-cost.csv",
+          "sha256": "1489182c53eb57dcef5a197a774aa1c42137e6036ac1337afcc7f5f7d765e741"
+        },
+        {
+          "path": "docs/evidence/stage12/block-size-bands.csv",
+          "sha256": "c5069fb7ae2637b08bdf281927368cd742742dfdb3198b92458aa16feb0ceb7f"
+        },
+        {
+          "path": "docs/decisions/0014-inferred-blocks-and-human-desk.md",
+          "sha256": "d00bf1125900089d37af8ae614a8bae0d1cd4d3aea1c72e3ccad4d449cfefddf"
+        }
+      ]
+    },
+    "S1": {
+      "finding": "Evidenced; scope and limitations in submission-checklist.md",
+      "files": [
+        {
+          "path": "docs/evidence/stage13/report.json",
+          "sha256": "91af995524b4cabdad28125953b836275738c2135c144b7e20ad668f5df85e67"
+        },
+        {
+          "path": "docs/evidence/remediation/briefing-v5/report.json",
+          "sha256": "47a6ac080760f141e2f077f4ebd51b9644c5399c843edb3aeb24349ad305226c"
+        },
+        {
+          "path": "docs/evidence/remediation/briefing-v5/responses.json",
+          "sha256": "c9fb715a46ffe6ad3fbde3069973003597a1d1135497f234f0697d5ab020feb6"
+        },
+        {
+          "path": "docs/evidence/remediation/briefing-v5/mlflow-run.json",
+          "sha256": "cf8f1c544aa88cfdd45a6772e3437e5c1a29683159cea184ab41ba42aa9cab4b"
+        },
+        {
+          "path": "prompts/revenue-manager-v5.txt",
+          "sha256": "a647d34c2221147e3409e3bbfcbc487b084c34ceef4a25e81ee088ea8c3d2476"
+        },
+        {
+          "path": "tests/test_briefing_revision.py",
+          "sha256": "34fa5444844d0184ce0c03838edf87d7474098c930e6deb1cd3397f35b799660"
+        },
+        {
+          "path": "docs/revised-briefing.md",
+          "sha256": "d4f3b0a148e4cd93f8de1cbd13f10c4765350d92ccd45719b2e6314feb314255"
+        }
+      ]
+    }
+  },
+  "open_requirements": [
+    "C3 named sign-off for the policy ADR; unsigned reference review does not sign distinct sensitivity candidates",
+    "Final diary text/slides/video consistency, recording and VLE upload not verified",
+    "Final hand-in archives need regeneration for selected submission commit"
+  ],
+  "release_approved": false,
+  "production_authorized": false
+}

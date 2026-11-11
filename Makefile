@@ -45,15 +45,25 @@ test:
 quality-gate:
 	$(PYTHON) -m hotel_cancel.quality_gate --output "$(QUALITY_OUTPUT)"
 
-# Recursive calls keep the pipeline sequential even with make -j.
-ci:
+# Coursework verifies the expected failure; release approval stays strict.
+.PHONY: coursework-verify coursework-check release-check
+coursework-verify:
+	$(PYTHON) -m hotel_cancel.coursework
+
+coursework-check:
 	$(MAKE) lint
 	$(MAKE) test
 	$(MAKE) data-check DATA_CHECK_OUTPUT=artifacts/ci/data-check
 	$(MAKE) kb-check KB_OUTPUT=artifacts/ci/shacl
-	$(MAKE) quality-gate QUALITY_OUTPUT=artifacts/ci/quality-gate
-	$(MAKE) briefing-quality
+	$(MAKE) coursework-verify
+
+ci:
+	$(MAKE) coursework-check
 	$(MAKE) build
+
+release-check:
+	$(MAKE) quality-gate QUALITY_OUTPUT=artifacts/ci/release-gate
+	$(MAKE) revised-briefing-quality
 
 TRACKING_PYTHON ?= .venv-tracking/bin/python
 .PHONY: track-models
@@ -124,8 +134,8 @@ ci-data:
 build:
 	docker build --build-arg MODEL_VERSION=$(VERSION) --label org.opencontainers.image.version=$(VERSION) --label org.opencontainers.image.revision=$(GIT_SHA) $(LABELS) -t "$(IMAGE):$(VERSION)" -t "$(IMAGE):$(VERSION)-$(GIT_SHA)" .
 
-# Publication is called by CI only after make ci succeeds in the same job.
-publish:
+# Publication always rechecks release quality, including when called manually.
+publish: release-check
 	docker push "$(IMAGE):$(VERSION)"
 	docker push "$(IMAGE):$(VERSION)-$(GIT_SHA)"
 

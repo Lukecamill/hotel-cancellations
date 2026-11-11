@@ -232,11 +232,12 @@ The [pattern comparison](docs/diary1-pattern-comparison.md) assesses current nig
 
 The [AI Act research note](docs/diary1-ai-act-classification.md) records a scoped other/non-high-risk assessment for prospective ordinary hotel cancellation/overbooking advice, a separate conditional analysis of current pre-deployment testing, provider/deployer roles and reassessment triggers. It uses official EU sources and the July 2026 amended text; this is not production regulatory clearance. See [ADR 0009](docs/decisions/0009-intended-use-ai-act.md).
 
-## Stage 8: frozen evaluation and strict CI
+## Stage 8: frozen evaluation and strict model gate
 
-Run `make ci` to execute the software tests and the per-hotel gate on the
+Run `make quality-gate` for the strict per-hotel gate on the
 fingerprinted Jan–Aug 2017 holdout. The supplied Resort model **fails** the
-aggregate calibration check, so CI must currently return nonzero. City passes.
+aggregate calibration check, so release approval returns nonzero. Coursework CI
+verifies that this exact failure is reproduced. City passes.
 `make test` runs correctness tests separately. `make quality-gate` regenerates
 Stage 8 metrics, reliability diagrams and the machine-readable report without
 replacing the serving artifacts. ECE uses ten equal-width bins with a fixed
@@ -301,63 +302,50 @@ contract. CI runs this strict gate as well as the frozen model calibration gate;
 a stable failing fixture is not a passing model. No guest message can be sent by
 this component. Model weights/runtime stay in ignored `artifacts/`.
 
-## The pipeline
+## Coursework CI and release approval
 
-Session 5 CI/CD is implemented independently of the earlier project stage numbers.
-Use Python 3.13.13 and create `.venv` first, then run `make install`. Supply the
-attributed CSV locally or run `make ci-data`: it downloads from the original
-Kaggle source and refuses any file whose SHA-256 differs from the frozen lock.
-No dataset or credentials are committed.
+Start with the current [required-task evidence checklist](docs/submission-checklist.md),
+[coursework versus release guide](docs/coursework-and-release.md), and
+[revised briefing explanation](docs/revised-briefing.md).
 
-| Target | Purpose |
+Use Python 3.13.13 and create `.venv` first, then `make install`. Supply the
+attributed CSV or run `make ci-data` to download it and verify its frozen SHA-256.
+
+| Command | Meaning |
 | --- | --- |
-| `make lint` | Ruff rules E4, E7, E9 and F for source and tests |
-| `make test` | Unit, integration and 200-example Hypothesis business-property checks |
-| `make data-check` | Raw schema, leakage and temporal split validation |
-| `make kb-check` | Knowledge graph validation |
-| `make quality-gate` | Frozen per-hotel model quality gate |
-| `make briefing-quality` | Original recorded briefing factuality gate |
-| `make build` | Build the service image with version and commit tags |
-| `make ci` | Run all the above checks, then build, stopping at the first failure |
-| `make version` | Print the release version from `pyproject.toml` |
-| `make up` | Start Compose with that release version |
+| `make coursework-check` | Lint, tests, raw/split validation, SHACL and verified original-model/briefing reproduction |
+| `make ci` | Coursework checks followed by service image build |
+| `make quality-gate` | Original strict per-hotel model gate; Resort still fails |
+| `make revised-briefing-quality` | Recorded V5 delivery contract, including withholding unsafe responses |
+| `make release-check` | Strict model gate followed by V5 quality; expected failures are never accepted here |
+| `make publish` | Requires strict release checks before either image push |
+| `make version` / `make build` / `make up` | Read release version from pyproject.toml; build or start that version |
 
-`make ci` is explicitly sequential even when called with `make -j`.
-The original Resort model and original briefing remain blocked by their gates.
-The separate calibrated challenger and revised briefing checks remain available
-through `make remediation-check`; they do not bypass the original release gates.
-A failed gate is not repaired by lowering thresholds or changing the frozen lock.
-Historical evidence and old submission archives retain their original source hashes.
-Rebuild a new submission archive for this revision rather than relabelling an old one.
+Coursework verification requires the specific original result: City PASS and Resort
+calibration FAIL, with matching metrics/checks and frozen data. Errors or unexpected
+results fail CI. Passing coursework does not approve a release. The research
+calibrator is not substituted for the given learner. Numeric facts in V5 are owned
+by trusted context, while the local model supplies a validated interpretation.
 
-Hypothesis checks that room-release distributions are finite, nonnegative and sum
-to one, that expected released rooms match the block forecasts, that increasing
-walking costs never increases proposed extra rooms, and that room value stays
-nonnegative and does not increase with variable costs. These are hotel business
-properties; a shop-price monotonicity assumption is not imposed on this model.
+GitHub runs `ci` on pushes and pull requests with a fresh Ubuntu environment,
+verified Kaggle data and a disposable PostgreSQL service. Local DB tests skip unless
+`TEST_DATABASE_URL` points at a disposable database; GitHub runs them. LLM fixtures
+are replayed without a live endpoint or quota. Hypothesis tests cover room-release
+distributions, cost/quantity monotonicity and nonnegative room values.
 
-## Continuous integration
+The main branch requires the `ci` check and an up-to-date pull request, including for
+administrators. A separate `release` job runs only after successful CI on a push to
+main. It loads the exact image saved by CI and runs the strict checks before any
+registry push. The current original Resort model blocks that job. Only that job
+has package-write permission. No model aliases, policy approvals or guest messages
+are changed by coursework verification.
 
-`.github/workflows/ci.yml` runs `make ci` on every push and pull request on a fresh
-Ubuntu runner. It installs the pinned environment, copies the placeholder-only
-`env.example`, starts an isolated test PostgreSQL database and downloads/verifies
-the source CSV. Recorded local LLM responses are replayed; no live LLM server or
-cloud key is needed. Local database tests require `TEST_DATABASE_URL` pointing to
-a disposable database. Without it those integration tests skip; GitHub supplies it.
+Image tags are `ghcr.io/lukecamill/hotel-cancellations:<version>` and
+`<version>-<12-character-commit>`. `pyproject.toml` supplies the version, Docker
+build/Compose propagate it, and `/health` reports `service_version` separately from
+the model artifact fingerprint. A successful future release must use a separately
+reviewed suitable candidate; it cannot relabel the original failure. The service
+image still loads its trusted model bundle through a separate read-only mount.
 
-Only a successful push to `main` logs into GHCR with GitHub's temporary token and
-publishes the exact image built by `make ci`, without rebuilding it. The destination
-is `ghcr.io/lukecamill/hotel-cancellations:<version>` plus
-`<version>-<12-character-commit>`. New packages may initially be private. Visibility
-is managed separately from repository visibility and is not automatically changed.
-
-To release, change `[project].version` in `pyproject.toml`, open a pull request and
-pass the required `ci` check. The Makefile reads that version for both image tags,
-OCI labels, Docker's `MODEL_VERSION` and `make up`. `/health` reports
-`service_version` separately from the existing model artifact fingerprint.
-The image contains service code; its trusted model bundle remains a separate
-read-only mount as designed in the registry/serving stages.
-
-The GitHub `main` protection rule should require the check named `ci`, with the
-branch up to date before merging, and include administrators. See
-`docs/session5-ci-cd.md` for verification and any external setup limitations.
+Historical stage reports and old archives keep their original evidence scope and
+source hashes. Regenerate the hand-in archives after choosing the final commit.
