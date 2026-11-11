@@ -68,5 +68,8 @@ The [audit manifest](evidence/coursework-audit/manifest.json) lists the exact
 supplied-source fingerprints, task evidence files and their SHA-256 values at this
 review. The audit inspects existing evidence and runs the revised automated checks;
 it does not rerun every historical sensitivity, load, legal or live-LLM experiment.
+`python scripts/submission_audit.py` verifies those evidence fingerprints and reports
+reference failures, V5 delivery safety and supplementary research results separately.
+It does not substitute the calibrated research challenger for the required model.
 Historical evidence files are preserved. The [CI guide](coursework-and-release.md)
 and [briefing explanation](revised-briefing.md) explain the new behavior.

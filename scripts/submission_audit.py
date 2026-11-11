@@ -1,49 +1,84 @@
-"""Read-only final evidence audit. It never calls a model, database or service."""
+"""Read-only coursework evidence audit; never substitutes a research challenger."""
+
 import argparse
 import hashlib
 import json
 from pathlib import Path
 import subprocess
-ROOT=Path(__file__).resolve().parents[1]
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def audit():
+    manifest_path = ROOT / "docs/evidence/coursework-audit/manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    missing, changed = [], []
+    for task in manifest["tasks"].values():
+        for entry in task["files"]:
+            path = ROOT / entry["path"]
+            if not path.is_file():
+                missing.append(entry["path"])
+            elif hashlib.sha256(path.read_bytes()).hexdigest() != entry["sha256"]:
+                changed.append(entry["path"])
+    reference = json.loads((ROOT / "docs/evidence/stage8/report.json").read_text())
+    original = json.loads((ROOT / "docs/evidence/stage13/report.json").read_text())
+    revised = json.loads((ROOT / "docs/evidence/remediation/briefing-v5/report.json").read_text())
+    clone = json.loads((ROOT / "docs/evidence/stage14/clean-clone-summary.json").read_text())
+    research = json.loads((ROOT / "docs/evidence/remediation/calibration/report.json").read_text())
+    try:
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL
+        ).strip()
+    except (OSError, subprocess.CalledProcessError):
+        commit = None
+    return dict(
+        evidence_present=not missing,
+        evidence_fingerprints_match=not changed,
+        missing_files=sorted(set(missing)),
+        changed_files=sorted(set(changed)),
+        reference_hotel_quality_gates={h: r["gate"] for h, r in reference["hotels"].items()},
+        reference_release_quality=reference["status"],
+        original_briefing_quality=original["model_quality_gate"],
+        original_briefing_exact_with_kb_nights=original["groups"]["with_kb"]["accepted"],
+        revised_briefing_delivery_quality=revised["component_quality_gate"],
+        revised_briefing_ordinary_exact=revised["ordinary_accepted"],
+        revised_briefing_attacks_safe=revised["injection_safe"],
+        revised_briefing_attacks_withheld=revised["injection_withheld"],
+        revised_raw_model_all_cases_quality=revised["quality_gate"],
+        supplemental_calibrated_research_gates={h: v["gate"] for h, v in research["hotels"].items()},
+        research_substituted_for_reference=False,
+        historical_clean_clone=dict(
+            tested_commit=clone["tested_commit"],
+            baseline_reference_checks_passed=clone["baseline_reference_checks_passed"],
+        ),
+        prior_github_database_run=dict(
+            tested_commit="8e8d6c697d1f0aa99a9c0e0541a990df00cede22", passed=246, skipped=0, run_id=43022126664
+        ),
+        current_commit=commit,
+        open_requirements=manifest["open_requirements"],
+        ready_for_unconditional_submission=False,
+        release_approved=False,
+        production_authorized=False,
+        scope="Evidence-file inspection, not fresh execution of every historical experiment or VLE submission",
+    )
+
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--require-ready',action='store_true');args=p.parse_args()
- required=['docs/submission-checklist.md','docs/reproduce-final.md','docs/revenue-manager-recommendation.md',
-  'docs/stage14-final-verification.md','docs/evidence/stage14/clean-clone-summary.json','docs/evidence/stage14/quality-gate/report.json',
-  'docs/evidence/stage13-ubuntu/verification.json','docs/evidence/stage13/report.json',
-  'docs/evidence/stage12-ubuntu/ubuntu-verification.json','docs/model-card.md','docs/llm-access.md']
- missing=[name for name in required if not (ROOT/name).is_file()]
- report=dict(evidence_present=not missing,missing_files=missing,production_authorized=False,
-   limitations=['Final-project rubric/milestone brief not supplied','Policy-wide manager sign-off outstanding',
-    'Final run skips six PostgreSQL tests; prior PostgreSQL checks remain historical',
-    'Later diary requirements/submission not verified','VLE hand-in not performed'])
- if not missing:
-  gate=json.loads((ROOT/'docs/evidence/stage14/quality-gate/report.json').read_text())
-  briefing=json.loads((ROOT/'docs/evidence/stage13/report.json').read_text())
-  clone=json.loads((ROOT/'docs/evidence/stage14/clean-clone-summary.json').read_text())
-  report.update(hotel_quality_gates={h:r['gate'] for h,r in gate['hotels'].items()},
-   briefing_quality_gate=briefing['model_quality_gate'],briefing_exact_nights=briefing['groups']['with_kb']['accepted'],
-   clean_clone_verified=clone['baseline_reference_checks_passed']==20 and clone['tests_passed']==215,
-   tested_commit=clone['tested_commit'])
- remediation=ROOT/'docs/evidence/remediation/verification.json'
- if remediation.exists():
-  current=json.loads(remediation.read_text())
-  report['reference_hotel_quality_gates']=report.get('hotel_quality_gates')
-  report['reference_briefing_quality_gate']=report.get('briefing_quality_gate')
-  corrected=json.loads((ROOT/'docs/evidence/remediation/calibration/report.json').read_text())
-  report['hotel_quality_gates']={h:v['gate'] for h,v in corrected['hotels'].items()}
-  report['briefing_quality_gate']=current['briefing_component_gate']
-  report['briefing_exact_nights']=current['additional_nights_exact']
-  report['current_worktree_tests_passed']=current['tests_passed']
-  report['current_remedy_ubuntu_verification']=current['ubuntu_verification']
-  report['coursework_signoff']=current['coursework_signoff']
-  report['raw_model_numeric_copy_perfection_claimed']=False
-  report['limitations'][1]='Formal coursework sign-off left pending at user request; real hotel sign-off also absent'
- try:
-  report['current_commit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
- except (OSError,subprocess.CalledProcessError):report['current_commit']=None
- report['ready_for_unconditional_submission']=not missing and not report['limitations'] and report.get('briefing_quality_gate')=='PASS' and all(v=='PASS' for v in report.get('hotel_quality_gates',{}).values())
- report['review_file_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in required if (ROOT/name).is_file()}
- print(json.dumps(report,indent=2))
- return 1 if missing or (args.require_ready and not report['ready_for_unconditional_submission']) else 0
-if __name__=='__main__':raise SystemExit(main())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--require-ready", action="store_true")
+    args = parser.parse_args()
+    try:
+        report = audit()
+    except (OSError, ValueError, KeyError) as error:
+        print(json.dumps(dict(status="ERROR", error=str(error), release_approved=False)))
+        return 1
+    print(json.dumps(report, indent=2))
+    return int(
+        not report["evidence_present"]
+        or not report["evidence_fingerprints_match"]
+        or (args.require_ready and not report["ready_for_unconditional_submission"])
+    )
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -99,6 +99,26 @@
       "finding": "Evidenced; scope and limitations in submission-checklist.md",
       "files": [
         {
+          "path": "src/hotel_cancel/coursework.py",
+          "sha256": "4503dd5b493cbd57df632096ce9ecea76bdacea43123fd418f15833cf41d1192"
+        },
+        {
+          "path": "config/coursework-reference.json",
+          "sha256": "2c934cc51e957e87410e589f5880ffe81fa0931ff6c4aa0c6d8e4279b3a4c3ca"
+        },
+        {
+          "path": "tests/test_coursework.py",
+          "sha256": "2637c2ec03063be21decddd30752ccd6719f0723470b5ec5c0c5cc0eb4444352"
+        },
+        {
+          "path": "tests/test_ci_pipeline.py",
+          "sha256": "d16b851e59bd6381d280211ffea75d6f99031439be3f92cbcfe9459174eaf9e8"
+        },
+        {
+          "path": "scripts/submission_audit.py",
+          "sha256": "c6ba6d442df1a299f04dc4aeef4789b2c0f36f3114676bdb06710ccaa786dea8"
+        },
+        {
           "path": "Dockerfile",
           "sha256": "be9647c2648e82fc2cddee05292481bad5cffaa6614c4dd1c87b237436bea30d"
         },
