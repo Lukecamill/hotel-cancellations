@@ -1,0 +1,5 @@
+# Separate registry inference image; the original serving image stays unchanged.
+-r requirements-serving.txt
+mlflow==3.18.0
+python-dotenv==1.2.4
+PyYAML==6.0.3

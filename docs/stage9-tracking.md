@@ -3,6 +3,10 @@
 Implemented 9 November 2026. This document distinguishes local verification
 from a separate Ubuntu VM verification. No serving image is replaced.
 
+## Historical scope
+
+The results below describe the Stage 9 implementation at that time. Session 6 now supersedes its registration behaviour: failed/dirty historical runs may be tracked but receive no new registration. Use [the Session 6 workflow](session6-mlops.md) for new clean-source candidates, shared storage, registry serving and rollback. The original saved evidence has not been rewritten.
+
 ## Local setup and execution
 
 Use a separate environment; leave the reproducible baseline `.venv` untouched:

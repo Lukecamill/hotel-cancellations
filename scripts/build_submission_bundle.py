@@ -18,6 +18,10 @@ def main():
  for folder,pattern in [('src/hotel_cancel','*.py'),('tests','*.py'),('config','*.json'),('prompts','*.txt'),('scripts','*.py')]:
   names.update(str(p.relative_to(ROOT)) for p in (ROOT/folder).glob(pattern) if p.is_file())
  names.add('docs/remediation-review.md');names.add('.gitattributes')
+ names.update(['Dockerfile.registry','compose.registry.yaml','requirements-registry.txt','config/registry.yaml',
+               'docs/session6-mlops.md','docs/model-card-session6.md'])
+ for folder in ['mlflow','docs/evidence/session6-mac','docs/evidence/session6-ubuntu']:
+  names.update(str(p.relative_to(ROOT)) for p in (ROOT/folder).rglob('*') if p.is_file())
  for name in names:
   path=Path(name)
   if path.parts[0] in ['data','models','artifacts','.git','.venv','.venv-tracking'] or path.name=='.env' or path.name.startswith('.env.') or 'id_ed25519' in name:

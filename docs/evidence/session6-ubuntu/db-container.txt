@@ -1,0 +1,75 @@
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2026-11-14 23:44:24.489 UTC [57] LOG:  starting PostgreSQL 18.1 (Debian 18.1-1.pgdg12+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-14 23:44:24.490 UTC [57] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-14 23:44:24.493 UTC [63] LOG:  database system was shut down at 2026-11-14 23:44:24 UTC
+2026-11-14 23:44:24.494 UTC [57] LOG:  database system is ready to accept connections
+ done
+server started
+2026-11-14 23:44:24.633 UTC [78] FATAL:  database "mlflow" does not exist
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/20-mlflow.sql
+2026-11-14 23:44:24.667 UTC [87] FATAL:  database "mlflow" does not exist
+CREATE DATABASE
+
+
+waiting for server to shut down....2026-11-14 23:44:24.679 UTC [57] LOG:  received fast shutdown request
+2026-11-14 23:44:24.680 UTC [57] LOG:  aborting any active transactions
+2026-11-14 23:44:24.681 UTC [57] LOG:  background worker "logical replication launcher" (PID 66) exited with exit code 1
+2026-11-14 23:44:24.681 UTC [61] LOG:  shutting down
+2026-11-14 23:44:24.682 UTC [61] LOG:  checkpoint starting: shutdown immediate
+2026-11-14 23:44:24.790 UTC [61] LOG:  checkpoint complete: wrote 1879 buffers (11.5%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.021 s, sync=0.085 s, total=0.109 s; sync files=601, longest=0.005 s, average=0.001 s; distance=8668 kB, estimate=8668 kB; lsn=0/1FCE6F8, redo lsn=0/1FCE6F8
+2026-11-14 23:44:24.794 UTC [57] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2026-11-14 23:44:24.894 UTC [1] LOG:  starting PostgreSQL 18.1 (Debian 18.1-1.pgdg12+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-14 23:44:24.895 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-14 23:44:24.895 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-14 23:44:24.896 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-14 23:44:24.899 UTC [95] LOG:  database system was shut down at 2026-11-14 23:44:24 UTC
+2026-11-14 23:44:24.906 UTC [1] LOG:  database system is ready to accept connections
+2026-11-14 23:44:33.667 UTC [125] ERROR:  duplicate key value violates unique constraint "hotel_policy_decisions_pkey"
+2026-11-14 23:44:33.667 UTC [125] DETAIL:  Key (review_id)=(6e00fda98fe796501a45311ea958738e43284b5494f2a0cceb3a8dc8b04dbaff) already exists.
+2026-11-14 23:44:33.667 UTC [125] STATEMENT:  INSERT INTO hotel_policy_decisions (review_id,payload) VALUES ($1,$2)
+2026-11-14 23:44:33.681 UTC [130] ERROR:  duplicate key value violates unique constraint "hotel_policy_decisions_pkey"
+2026-11-14 23:44:33.681 UTC [130] DETAIL:  Key (review_id)=(317f33299c396b21da7fc74a708612f99f143b4eeca0f8c21b159048045cec0e) already exists.
+2026-11-14 23:44:33.681 UTC [130] STATEMENT:  INSERT INTO hotel_policy_decisions (review_id,payload) VALUES ($1,$2)
+2026-11-14 23:44:33.711 UTC [137] ERROR:  duplicate key value violates unique constraint "hotel_policy_decisions_pkey"
+2026-11-14 23:44:33.711 UTC [137] DETAIL:  Key (review_id)=(32477206a5fda679aeae5ad797ab37d6f13c921e4eddf07e4785aa3ed32ba6f8) already exists.
+2026-11-14 23:44:33.711 UTC [137] STATEMENT:  INSERT INTO hotel_policy_decisions (review_id,payload) VALUES ($1,$2)
+2026-11-14 23:44:47.448 UTC [118] ERROR:  duplicate key value violates unique constraint "registered_model_pk"
+2026-11-14 23:44:47.448 UTC [118] DETAIL:  Key (workspace, name)=(default, task19-session6-city-booking) already exists.
+2026-11-14 23:44:47.448 UTC [118] STATEMENT:  INSERT INTO registered_models (workspace, name, creation_time, last_updated_time, description) VALUES ($1::VARCHAR, $2::VARCHAR, $3::BIGINT, $4::BIGINT, $5::VARCHAR)
+2026-11-14 23:44:47.690 UTC [118] ERROR:  duplicate key value violates unique constraint "registered_model_pk"
+2026-11-14 23:44:47.690 UTC [118] DETAIL:  Key (workspace, name)=(default, task19-session6-resort-booking) already exists.
+2026-11-14 23:44:47.690 UTC [118] STATEMENT:  INSERT INTO registered_models (workspace, name, creation_time, last_updated_time, description) VALUES ($1::VARCHAR, $2::VARCHAR, $3::BIGINT, $4::BIGINT, $5::VARCHAR)

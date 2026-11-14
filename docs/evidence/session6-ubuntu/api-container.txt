@@ -1,0 +1,11 @@
+Registry model unavailable (RestException); retrying
+Registry model unavailable (RestException); retrying
+Registry model unavailable (RestException); retrying
+Registry model unavailable (RestException); retrying
+/usr/local/lib/python3.13/site-packages/mlflow/pyfunc/utils/data_validation.py:187: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+/usr/local/lib/python3.13/site-packages/mlflow/pyfunc/utils/data_validation.py:187: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+/usr/local/lib/python3.13/site-packages/mlflow/pyfunc/utils/data_validation.py:187: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+{"prediction_id": "45359031669a460183fdac1a55ce81b9", "hotel": "City Hotel", "model_version": "task19-session6-city-booking/1", "horizon": "booking_to_arrival", "probability": 0.07389332092115809, "inputs": {"arrival": "2017-08-15", "lead_time": 30, "market_segment": "Direct", "distribution_channel": "Direct", "adr": 125.0}, "source": "online", "model_lineage": {"model_version": "task19-session6-city-booking/1", "run_id": "fb060a564ef9452b94dd7d7fa16d3c7c", "model_sha256": "6a4a31d9bb2d5b8eaa79747cbb55408142352d96cc6bfdb2a0dbfa3fc7aed3b1", "base_model_sha256": "6a4a31d9bb2d5b8eaa79747cbb55408142352d96cc6bfdb2a0dbfa3fc7aed3b1", "git_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "logged_at_utc": "2026-11-14T23:44:57.115320+00:00"}

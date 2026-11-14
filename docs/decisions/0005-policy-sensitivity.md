@@ -1,6 +1,6 @@
 # ADR 0005 — validation-only policy sensitivity and manager review
 
-Date: 7 November 2026. Status: proposed for revenue-manager sign-off; implementation and evaluation complete.
+Date: 7 November 2026. Status: accepted with changes following a declared AI-simulated revenue-manager review on 15 November 2026; no real operating authorisation.
 
 ## Decision
 
@@ -14,9 +14,18 @@ The [Stage 5 report](../stage5-policy-evaluation.md) and its complete CSV grid r
 
 The resale approximation is transparent and inexpensive but cannot represent replacement demand, prices, capacity, multi-night availability or dependence of resale on cancellation time. The original no-resale case is retained as a comparison. The 4/8/12-week windows expose adaptation versus limited recent data without changing the booking learner or using the frozen test for tuning.
 
-## Required sign-off fields
+## Simulated review and selected operating point
 
-Revenue manager: pending. Date: pending. Hotel: pending.
+Decision: **accepted with changes**. Signed off by: **Revenue manager (simulated with OpenAI Codex), 15 November 2026**. The professor's user-supplied guidance permits this declared coursework simulation. The assistant generated both roles from inspected evidence; this is not an independent human review or a quotation of Luke's answers.
+
+The [review brief](0005-review-brief-2026-11-15.md) and [questions, answers and reasoned decision](0005-simulated-revenue-manager-review-2026-11-15.md) record the handoff. Retain the City fixed mature-window rate and Resort **12-week** re-level candidates for historical research, but select **q=0 additional overbooked rooms for both hotels** as the current operating fallback. Preserve h=7, walking EUR250, variable EUR20 and zero resale as declared comparison assumptions. Do not promote a candidate, change the existing demo or infer that booking-horizon calibration validates the seven-day policy.
+
+Luke is the coursework project owner to whom the recorded decision is handed back. Reconsidering positive quantities requires the evidence below and a new versioned decision. The [digest-bound review packet](../reviews/coursework-policy-review-v2.json) and [simulation sign-off](../reviews/coursework-policy-signoff-v2.json) bind this outcome to the brief, transcript and existing Stage 5 evidence. The separate earlier 8-week reference-policy packet remains historical and unsigned.
+
+## Preconditions for reconsidering positive additional quantities
+
+The simulated reviewer has decided; the following are future operating prerequisites, not missing fields in the coursework simulation:
+
 
 - Confirm walking and variable costs, supported by operating records.
 - Confirm lead time and evidence for a resale rate or retain zero resale conservatively.
@@ -24,4 +33,4 @@ Revenue manager: pending. Date: pending. Hotel: pending.
 - Set maximum acceptable walking probability and volume, plus manual approval thresholds for large blocks.
 - Approve a locked policy candidate and evaluation protocol before a new holdout evaluation or operational pilot.
 
-Until those fields are agreed, retain human control and no-overbooking as the operational fallback. Stage 6 service work can expose candidate decisions for review; it does not constitute deployment approval.
+The accepted-with-changes decision retains human control and no additional overbooking as the selected fallback until those prerequisites are met. Stage 6 service work can expose candidate decisions for review; it does not constitute deployment approval.

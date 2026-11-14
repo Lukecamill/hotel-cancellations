@@ -13,6 +13,7 @@ class HotelBookingModel(mlflow.pyfunc.PythonModel):
         self.hotel = hotel
 
     def load_context(self, context):
+        self.artifact_paths = dict(context.artifacts)
         self.bundle = joblib.load(context.artifacts["booking_bundle"])
 
     def predict(self, context, model_input, params=None):

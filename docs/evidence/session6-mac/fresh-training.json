@@ -1,0 +1,15 @@
+{
+  "training_run": "51593cc6a6fa4e3f9daa23543408cc41",
+  "runs": {
+    "City Hotel": "38d467d2890e475d9a9c73d6d7c3f2f3",
+    "Resort Hotel": "d3df50bc8316407bb9fd812c53056656"
+  },
+  "registrations": {},
+  "source": {
+    "commit": "741a8fc8487779463add198e01505fe7fa2051a4",
+    "dirty": true
+  },
+  "production_authorized": false,
+  "registration_safeguard": "Registration requires a known clean commit; commit the completed changes and train again",
+  "transport": "real loopback HTTP tracking server and proxied artifacts; SQLite backend"
+}

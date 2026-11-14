@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "scope": "ADR 0005 Stage 5 operating-point decision; simulated coursework only",
+  "review_outcome": "accepted_with_changes",
+  "hotel_policies": {
+    "City Hotel": "no additional overbooking (q=0)",
+    "Resort Hotel": "no additional overbooking (q=0)"
+  },
+  "research_candidates": {
+    "City Hotel": "flat rate (Jul \u2013 Sep 2016); mature calibration window",
+    "Resort Hotel": "model + blocks + re-level 12 wk"
+  },
+  "decision_lead_days": 7,
+  "assumed_costs_eur": {
+    "walking": 250,
+    "variable": 20
+  },
+  "resale_fraction": 0,
+  "max_authorized_extra_rooms": 0,
+  "production_authorized": false,
+  "guest_messages_authorized": false,
+  "evidence_sha256": {
+    "docs/decisions/0005-review-brief-2026-11-15.md": "13171e48426a529aa2cf8d18fbe8ce1daddf761d072e5e7b11dccd8a57ea2abe",
+    "docs/decisions/0005-simulated-revenue-manager-review-2026-11-15.md": "55a763a0db3c75e457b4cac5d4bde7f89df902b2b6448b0f28cefa1943c9c4f7",
+    "docs/stage5-policy-evaluation.md": "a8eefda3ac4327e94d97366845bf1a3366fa53fc063f8588249d5911d88be26b",
+    "docs/evidence/stage5/selected-policies.csv": "14c8c367dd527cb3bcb4e8d6237b0f2c5ca55afdfacf287d76653471ae2e413b",
+    "docs/evidence/stage5/calibration.csv": "844665ff1770fb2d94a180b3fd8d145139a8fbdd28b422c725d2e1a50e26bf55",
+    "docs/evidence/stage5/run.json": "c190780d723b1047cf3857315ecb9d9654d6caf68f449337d6760f5245ded4d8"
+  },
+  "supersedes": "Pending policy-wide coursework decision for ADR 0005; does not approve the distinct v1 reference-policy packet"
+}

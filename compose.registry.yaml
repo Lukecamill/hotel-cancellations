@@ -1,0 +1,53 @@
+# Opt-in Session 6 services. Existing local-file API stays on port 8080.
+services:
+  postgres:
+    volumes:
+      - ./mlflow/init.sql:/docker-entrypoint-initdb.d/20-mlflow.sql:ro
+  mlflow:
+    build: ./mlflow
+    image: hotel-mlflow:3.18.0
+    command:
+      - mlflow
+      - server
+      - --host=0.0.0.0
+      - --port=5000
+      - --workers=1
+      - --backend-store-uri=postgresql+psycopg://hotel:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/mlflow
+      - --artifacts-destination=/mlartifacts
+      - --allowed-hosts=localhost:*,127.0.0.1:*,mlflow:*
+    environment:
+      MLFLOW_SERVER_ENABLE_JOB_EXECUTION: "false"
+      MLFLOW_DISABLE_TELEMETRY: "true"
+    ports: ["127.0.0.1:5001:5000"]
+    volumes: ["mlflow-artifacts:/mlartifacts"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+  registry-api:
+    image: hotel-cancel-registry:${APP_VERSION:-dev}
+    build:
+      context: .
+      dockerfile: Dockerfile.registry
+      args:
+        APP_VERSION: ${APP_VERSION:-dev}
+    environment:
+      APP_VERSION: ${APP_VERSION:-dev}
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      MLFLOW_HTTP_REQUEST_MAX_RETRIES: "0"
+      MLFLOW_HTTP_REQUEST_TIMEOUT: "5"
+      MLFLOW_DISABLE_TELEMETRY: "true"
+      DATABASE_URL: postgresql://hotel:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/hotel
+      SERVICE_HOST: 0.0.0.0
+      SERVICE_PORT: "8082"
+    ports: ["127.0.0.1:8082:8082"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mlflow:
+        condition: service_started
+    read_only: true
+    tmpfs: ["/tmp", "/home/hotel/.cache:uid=10001,gid=10001"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+volumes:
+  mlflow-artifacts:

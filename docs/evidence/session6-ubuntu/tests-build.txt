@@ -1,0 +1,54 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 175B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/hotel-cancel:stage9-check
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM docker.io/library/hotel-cancel:stage9-check@sha256:ffabab678b7c123cadcb40f2abaa6b43f2008960e7c28eac3f303f746deb1373
+#4 resolve docker.io/library/hotel-cancel:stage9-check@sha256:ffabab678b7c123cadcb40f2abaa6b43f2008960e7c28eac3f303f746deb1373 done
+#4 DONE 0.0s
+
+#5 [2/2] RUN python -m pip install --no-cache-dir "hypothesis==6.170.15" "ruff==0.17.4" "pytest==9.2.0"
+#5 1.140 Collecting hypothesis==6.170.15
+#5 1.325   Downloading hypothesis-6.170.15-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (5.6 kB)
+#5 1.524 Collecting ruff==0.17.4
+#5 1.562   Downloading ruff-0.17.4-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (20 kB)
+#5 1.579 Requirement already satisfied: pytest==9.2.0 in /usr/local/lib/python3.13/site-packages (9.2.0)
+#5 1.684 Collecting sortedcontainers<3.0.0,>=2.1.0 (from hypothesis==6.170.15)
+#5 1.725   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+#5 1.739 Requirement already satisfied: iniconfig>=2 in /usr/local/lib/python3.13/site-packages (from pytest==9.2.0) (2.3.1)
+#5 1.739 Requirement already satisfied: packaging>=24 in /usr/local/lib/python3.13/site-packages (from pytest==9.2.0) (26.3)
+#5 1.739 Requirement already satisfied: pluggy<2,>=1.6 in /usr/local/lib/python3.13/site-packages (from pytest==9.2.0) (1.7.0)
+#5 1.740 Requirement already satisfied: pygments>=2.15 in /usr/local/lib/python3.13/site-packages (from pytest==9.2.0) (2.21.0)
+#5 1.789 Downloading hypothesis-6.170.15-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (1.1 MB)
+#5 1.971    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 10.5 MB/s  0:00:00
+#5 2.014 Downloading ruff-0.17.4-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (10.1 MB)
+#5 2.689    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.1/10.1 MB 15.0 MB/s  0:00:00
+#5 2.768 Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+#5 2.940 Installing collected packages: sortedcontainers, ruff, hypothesis
+#5 3.137 
+#5 3.141 Successfully installed hypothesis-6.170.15 ruff-0.17.4 sortedcontainers-2.4.0
+#5 3.141 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#5 3.422 
+#5 3.422 [notice] A new release of pip is available: 26.0.1 -> 26.3
+#5 3.422 [notice] To update, run: pip install --upgrade pip
+#5 DONE 3.6s
+
+#6 exporting to image
+#6 exporting layers
+#6 exporting layers 0.5s done
+#6 exporting manifest sha256:506116fee186dde7cf01f1511d8e8c5258f44bf9a89ebfb6f0d9d3147e34ea26
+#6 exporting manifest sha256:506116fee186dde7cf01f1511d8e8c5258f44bf9a89ebfb6f0d9d3147e34ea26 done
+#6 exporting config sha256:885344806ecc89c29c8f3e066e4efaf7a0570ce930c225e72e481d71d7750382 done
+#6 exporting attestation manifest sha256:63798031332df9a9dd8592d671dd8669a1e8380a31d57ebafb59d2398194a44c done
+#6 exporting manifest list sha256:6b2306a5763dcc204a74bcfa9fe081f0c33b60edd310f8d028b96c2a6c1edced done
+#6 naming to docker.io/library/hotel-session6-tests-check:latest done
+#6 unpacking to docker.io/library/hotel-session6-tests-check:latest 0.1s done
+#6 DONE 0.6s

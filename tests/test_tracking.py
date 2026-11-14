@@ -39,10 +39,11 @@ class Registry:
         return self.versions[version]
 
 
-def test_failing_resort_is_reviewable_but_never_bootstrapped_as_champion():
+def test_failing_candidate_cannot_receive_any_new_alias():
     registry = Registry(gate="FAIL")
-    aliases = assign_aliases(registry, "resort", "2", result(expected_observed_ratio=0.68), THRESHOLDS)
-    assert aliases == {"challenger": "2"}
+    with pytest.raises(ValueError, match="Failed candidate"):
+        assign_aliases(registry, "resort", "2", result(expected_observed_ratio=0.68), THRESHOLDS)
+    assert registry.aliases == {}
 
 
 def test_passing_candidate_bootstraps_champion_without_claiming_a_new_learner():
@@ -82,5 +83,5 @@ def test_thresholds_are_inclusive():
 
 def test_existing_failing_champion_requires_explicit_registry_review():
     registry = Registry(gate="FAIL", champion="2")
-    with pytest.raises(ValueError, match="existing champion"):
+    with pytest.raises(ValueError, match="Failed candidate"):
         assign_aliases(registry, "resort", "2", result(expected_observed_ratio=0.68), THRESHOLDS)

@@ -47,10 +47,12 @@ def checked_gate(result, thresholds):
 
 
 def assign_aliases(client, name, candidate, result, thresholds):
-    """Every candidate can be reviewed; only a passing model becomes champion.
+    """Only passing candidates may receive new aliases.
 
     Existing champion is preserved. No automatic seasonal replacement or release.
     """
+    if not checked_gate(result, thresholds):
+        raise ValueError("Failed candidate cannot enter the registry or receive an alias")
     client.set_registered_model_alias(name, "challenger", candidate)
     model = client.get_registered_model(name)
     if checked_gate(result, thresholds) and "champion" not in model.aliases:
@@ -334,6 +336,15 @@ def track(config, *, bundle, lock_path, output, store):
             if error > 1e-12:
                 raise ValueError(f"{hotel}: registered model probability parity failed: {error}")
             mlflow.log_metric("registry_reload.max_probability_error", error)
+            registrable = eligible and state["dirty"] is False and provenance.get("original_training_tree_dirty") is False
+            if not registrable:
+                records[hotel] = dict(
+                    name=name, version=None, run_id=active.info.run_id, gate=tags["quality_gate"],
+                    aliases={}, holdout_bookings_verified=len(frame), maximum_probability_error=error,
+                    registered=False, production_authorized=False,
+                    registration_blocked_reason="Failed quality gate or non-clean original training provenance",
+                )
+                continue
             registered = mlflow.register_model(info.model_uri, name, tags=tags)
             aliases = assign_aliases(
                 client,

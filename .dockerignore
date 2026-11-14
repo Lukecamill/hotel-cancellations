@@ -7,3 +7,10 @@ src/**/__pycache__/
 src/**/*.pyc
 src/**/._*
 src/**/.DS_Store
+
+# Opt-in registry image: settings and frozen evaluation identity, never data/models/secrets.
+!Dockerfile.registry
+!requirements-registry.txt
+!config/
+!config/registry.yaml
+!config/evaluation-lock.json

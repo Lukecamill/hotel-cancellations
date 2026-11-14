@@ -349,3 +349,7 @@ image still loads its trusted model bundle through a separate read-only mount.
 
 Historical stage reports and old archives keep their original evidence scope and
 source hashes. Regenerate the hand-in archives after choosing the final commit.
+
+## Session 6 registry workflow
+
+See [Session 6 setup and rollback](docs/session6-mlops.md). The opt-in registry API runs on port 8082 and leaves the existing demo on 8080. Use `make registry-train` for tracked candidate training and `make registry-register RUN_ID=...` only after committing the source. Failed/dirty runs stay tracked. `hotel-train` now tracks by default; `hotel-train --offline` explicitly reproduces the historical booking baseline. The separate full `make baseline` reference path remains unchanged. A model-card peer review and Ubuntu verification are still required.

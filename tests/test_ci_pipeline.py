@@ -82,7 +82,7 @@ def test_workflow_separates_coursework_from_main_only_release():
     workflow = yaml.load((root / ".github/workflows/ci.yml").read_text(), Loader=yaml.BaseLoader)
     ci, release = workflow["jobs"]["ci"], workflow["jobs"]["release"]
     assert "packages" not in ci["permissions"]
-    assert release["needs"] == "ci"
+    assert release["needs"] == ["ci", "registry-integration"]
     assert release["if"] == "github.event_name == 'push' && github.ref == 'refs/heads/main'"
     commands = "\n".join(step.get("run", "") for step in release["steps"])
     assert 'make publish IMAGE="$IMAGE"' in commands
