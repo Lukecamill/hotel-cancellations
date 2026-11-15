@@ -107,12 +107,20 @@ def make_server(predictor, host="127.0.0.1", port=8080, *, approvals=None, telem
                 except Exception:
                     logger.exception("Review retrieval failed")
                     return self.respond(503, {"error": "Review database unavailable"})
+            if self.path == "/ready":
+                ready = getattr(predictor, "ready", True)
+                detail = predictor.readiness() if hasattr(predictor, "readiness") else {
+                    "ready": True, "model_version": predictor.version,
+                }
+                detail["app_version"] = os.environ.get("APP_VERSION", os.environ.get("MODEL_VERSION", "dev"))
+                return self.respond(200 if ready else 503, detail)
             if self.path != "/health":
                 return self.respond(404, {"error": "not_found"})
             self.respond(
                 200,
                 {
-                    "status": "ready",
+                    "status": "alive",
+                    "ready": getattr(predictor, "ready", True),
                     "model_version": predictor.version,
                     "service_version": os.environ.get("MODEL_VERSION", "dev"),
                     "diagnostic_gate": predictor.manifest["diagnostic_gate"],
@@ -124,6 +132,8 @@ def make_server(predictor, host="127.0.0.1", port=8080, *, approvals=None, telem
                 return self.review_post()
             if self.path != "/predict":
                 return self.respond(404, {"error": "not_found"})
+            if not getattr(predictor, "ready", True):
+                return self.respond(503, {"error": "model_not_ready"})
             if self.headers.get_content_type() != "application/json":
                 return self.respond(415, {"error": "application/json required"})
             if self.headers.get("Transfer-Encoding"):
@@ -141,9 +151,17 @@ def make_server(predictor, host="127.0.0.1", port=8080, *, approvals=None, telem
                 )
                 if not isinstance(request, dict) or set(request) != {"booking"}:
                     raise ValueError("Expected one booking object")
-                prob = float(predictor.predict([request["booking"]])[0])
+                lineage = None
+                if hasattr(predictor, "score"):
+                    probabilities, identities = predictor.score([request["booking"]])
+                    prob, lineage = float(probabilities[0]), identities[0]
+                    model_version = lineage["model_version"]
+                else:
+                    prob = float(predictor.predict([request["booking"]])[0])
+                    model_version = predictor.version
                 self._hotel = request["booking"]["hotel"]
-                prediction_id, persisted = telemetry.prediction(request["booking"], prob, predictor.version)
+                kwargs = {} if lineage is None else {"lineage": lineage}
+                prediction_id, persisted = telemetry.prediction(request["booking"], prob, model_version, **kwargs)
             except (ValueError, TypeError, OverflowError, TimeoutError):
                 return self.respond(422, {"error": "invalid_booking_request"})
             except Exception:
@@ -154,8 +172,9 @@ def make_server(predictor, host="127.0.0.1", port=8080, *, approvals=None, telem
                 {
                     "cancellation_probability": prob,
                     "horizon": "booking_to_arrival",
-                    "model_version": predictor.version,
-                    "service_version": os.environ.get("MODEL_VERSION", "dev"),
+                    "model_version": model_version,
+                    "model_lineage": lineage,
+                    "service_version": os.environ.get("APP_VERSION", os.environ.get("MODEL_VERSION", "dev")),
                     "decision_authorised": False,
                     "prediction_id": prediction_id,
                     "prediction_logged": persisted,

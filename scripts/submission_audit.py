@@ -31,7 +31,13 @@ def audit():
         ).strip()
     except (OSError, subprocess.CalledProcessError):
         commit = None
+    from record_simulation_signoff import verify_saved_review
+    policy_review = verify_saved_review(ROOT)
+    open_requirements = list(manifest["open_requirements"])
+    if policy_review.get("status") == "PASS" and policy_review.get("policy_scope", "").startswith("ADR 0005"):
+        open_requirements = [item for item in open_requirements if not item.startswith("C3 named sign-off")]
     return dict(
+        policy_review=policy_review,
         evidence_present=not missing,
         evidence_fingerprints_match=not changed,
         missing_files=sorted(set(missing)),
@@ -55,7 +61,7 @@ def audit():
             tested_commit="8e8d6c697d1f0aa99a9c0e0541a990df00cede22", passed=246, skipped=0, run_id=43022126664
         ),
         current_commit=commit,
-        open_requirements=manifest["open_requirements"],
+        open_requirements=open_requirements,
         ready_for_unconditional_submission=False,
         release_approved=False,
         production_authorized=False,

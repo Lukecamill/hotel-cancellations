@@ -54,8 +54,9 @@ def test_submission_audit_keeps_reference_failure_and_research_separate():
     import sys
 
     result = subprocess.run([sys.executable, "scripts/submission_audit.py"], cwd=ROOT, capture_output=True, text=True)
-    assert result.returncode == 0, result.stdout + result.stderr
     report = json.loads(result.stdout)
+    # A historical manifest must honestly detect later source changes, not be silently refreshed.
+    assert result.returncode == int(not report["evidence_present"] or not report["evidence_fingerprints_match"]), result.stdout + result.stderr
     assert report["reference_hotel_quality_gates"]["Resort Hotel"] == "FAIL"
     assert report["supplemental_calibrated_research_gates"]["Resort Hotel"] == "PASS"
     assert report["research_substituted_for_reference"] is False

@@ -8,7 +8,7 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  ci:
+  pipeline:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -47,6 +47,14 @@ jobs:
         run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/hotel-cancellations" >> "$GITHUB_ENV"
       - name: Run the complete local pipeline
         run: make ci IMAGE="$IMAGE" SOURCE="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+      - name: Preserve validation and model-gate evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pipeline-evidence
+          path: artifacts/ci/
+          retention-days: 14
+          if-no-files-found: warn
       - name: Save the tested image for the separate release job
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
@@ -62,8 +70,24 @@ jobs:
           path: artifacts/ci/image/
           retention-days: 1
           if-no-files-found: error
+  # main already requires the stable check name "ci". Keep that name as an
+  # aggregate so either pipeline quality or registry integration blocks merging.
+  ci:
+    needs: [pipeline, registry-integration]
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Require both upstream jobs to succeed
+        env:
+          PIPELINE_RESULT: ${{ needs.pipeline.result }}
+          REGISTRY_RESULT: ${{ needs.registry-integration.result }}
+        run: |
+          test "$PIPELINE_RESULT" = success
+          test "$REGISTRY_RESULT" = success
   release:
-    needs: ci
+    needs: [ci, registry-integration]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -101,3 +125,35 @@ jobs:
         run: |
           printf '%s' "$GHCR_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
           make publish IMAGE="$IMAGE"
+
+  registry-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    services:
+      postgres:
+        image: postgres:18.1-bookworm
+        env:
+          POSTGRES_DB: hotel_test
+          POSTGRES_USER: hotel
+          POSTGRES_PASSWORD: ci-only-password
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U hotel -d hotel_test"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      PYTHONPATH: src
+      TEST_DATABASE_URL: postgresql://hotel:ci-only-password@127.0.0.1:5432/hotel_test
+      MLFLOW_DISABLE_TELEMETRY: "true"
+      MPLCONFIGDIR: /tmp/hotel-matplotlib
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version-file: .python-version
+      - run: sudo apt-get update && sudo apt-get install -y libgomp1
+      - run: python -m pip install -r requirements-registry.txt pytest==9.2.0
+      - run: python -m pytest -q tests/test_registry_workflow.py tests/test_registry_integration.py

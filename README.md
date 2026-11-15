@@ -1,5 +1,7 @@
 # Hotel cancellations and overbooking
 
+> Update 15 November 2026: [ADR 0018](docs/decisions/0018-strict-both-hotel-merge-gate.md) supersedes the earlier CI behavior described below. `make ci` now runs the strict both-hotel gate before building and is expected to fail for the original Resort model. `make coursework-check` remains the separate reproduction check. GitHub retains the required `ci` name as an aggregate of `pipeline` and `registry-integration`. Luke chose to keep both hotels in scope; no passing strict gate is claimed.
+
 ARI3217 Task 19: package, reproduce, evaluate and operationalise the supplied hotel cancellation model and overbooking policy.
 
 ## Setup status
@@ -314,7 +316,7 @@ attributed CSV or run `make ci-data` to download it and verify its frozen SHA-25
 | Command | Meaning |
 | --- | --- |
 | `make coursework-check` | Lint, tests, raw/split validation, SHACL and verified original-model/briefing reproduction |
-| `make ci` | Coursework checks followed by service image build |
+| `make ci` | Coursework checks, strict both-hotel gate, then image build; current Resort failure blocks the build |
 | `make quality-gate` | Original strict per-hotel model gate; Resort still fails |
 | `make revised-briefing-quality` | Recorded V5 delivery contract, including withholding unsafe responses |
 | `make release-check` | Strict model gate followed by V5 quality; expected failures are never accepted here |
@@ -349,3 +351,7 @@ image still loads its trusted model bundle through a separate read-only mount.
 
 Historical stage reports and old archives keep their original evidence scope and
 source hashes. Regenerate the hand-in archives after choosing the final commit.
+
+## Session 6 registry workflow
+
+See [Session 6 setup and rollback](docs/session6-mlops.md). The opt-in registry API runs on port 8082 and leaves the existing demo on 8080. Use `make registry-train` for tracked candidate training and `make registry-register RUN_ID=...` only after committing the source. Failed/dirty runs stay tracked. `hotel-train` now tracks by default; `hotel-train --offline` explicitly reproduces the historical booking baseline. The separate full `make baseline` reference path remains unchanged. A model-card peer review and Ubuntu verification are still required.

@@ -59,6 +59,7 @@ coursework-check:
 
 ci:
 	$(MAKE) coursework-check
+	$(MAKE) quality-gate QUALITY_OUTPUT=artifacts/ci/strict-gate
 	$(MAKE) build
 
 release-check:
@@ -141,3 +142,39 @@ publish: release-check
 
 up:
 	MODEL_VERSION=$(VERSION) IMAGE=$(IMAGE) docker compose up -d --build
+
+# Session 6 is opt-in and never restarts the existing demo API.
+REGISTRY_COMPOSE = docker compose -f compose.yaml -f compose.registry.yaml
+.PHONY: registry-db-init registry-up registry-train registry-register registry-check registry-alias registry-rollback registry-test
+registry-db-init:
+	$(REGISTRY_COMPOSE) up -d postgres
+	$(REGISTRY_COMPOSE) exec -T postgres psql -v ON_ERROR_STOP=1 -U hotel -d hotel < mlflow/create-database.sql
+
+registry-up: registry-db-init
+	APP_VERSION=$(VERSION) $(REGISTRY_COMPOSE) up -d --build mlflow registry-api
+
+registry-train:
+	$(TRACKING_PYTHON) -m hotel_cancel.registry_training
+
+registry-register:
+	$(TRACKING_PYTHON) -m hotel_cancel.registry register --run-id "$(RUN_ID)"
+
+registry-check:
+	$(TRACKING_PYTHON) -m hotel_cancel.registry check
+
+registry-alias:
+	$(TRACKING_PYTHON) -m hotel_cancel.registry alias --hotel "$(HOTEL)" --version "$(V)"
+
+registry-rollback: registry-alias
+	$(REGISTRY_COMPOSE) restart registry-api
+
+registry-test:
+	$(TRACKING_PYTHON) -m pytest -q tests/test_registry_workflow.py tests/test_registry_integration.py
+
+.PHONY: registry-release-check registry-verify-ubuntu
+registry-release-check:
+	$(MAKE) registry-check
+	$(MAKE) revised-briefing-quality
+
+registry-verify-ubuntu:
+	python3 scripts/verify_session6_ubuntu.py

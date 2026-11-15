@@ -1,6 +1,10 @@
 {
-  "status": "PENDING_USER_REQUEST",
-  "formal_signoff_recorded": false,
-  "reason": "User asked to leave reviewer name/reason for now; no signed record was created.",
-  "production_authorized": false
+  "status": "SIMULATED_REVIEW_RECORDED",
+  "formal_signoff_recorded": true,
+  "reason": "New user-supplied professor guidance permits an explicitly AI-simulated revenue-manager review; the v2 brief, dialogue, decision and ADR line record that review. The earlier v1 reference-policy packet is not signed.",
+  "production_authorized": false,
+  "review_scope": "ADR 0005 only; q=0 fallback, Stage 5 candidates research only",
+  "review_outcome": "accepted_with_changes",
+  "reviewer": "Revenue manager (simulated with OpenAI Codex)",
+  "review_record": "docs/reviews/coursework-policy-signoff-v2.json"
 }

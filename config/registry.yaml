@@ -1,0 +1,5 @@
+# Local host reaches 5001; the opt-in Compose API uses http://mlflow:5000.
+tracking_uri: http://127.0.0.1:5001
+experiment: task19-session6-training
+audit_experiment: task19-session6-alias-audit
+scope: coursework_booking_prediction_only

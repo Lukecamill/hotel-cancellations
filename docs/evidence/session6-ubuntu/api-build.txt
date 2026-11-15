@@ -1,0 +1,408 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.registry
+#1 transferring dockerfile: 888B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.13.13-slim-bookworm
+#2 DONE 0.7s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 359B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.13.13-slim-bookworm@sha256:355bfa66770995d7e9a0da4b3473b44d0cb451f6b56f5615ad9c39e3c4eca03f
+#4 resolve docker.io/library/python:3.13.13-slim-bookworm@sha256:355bfa66770995d7e9a0da4b3473b44d0cb451f6b56f5615ad9c39e3c4eca03f 0.1s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 884.70kB 0.1s done
+#5 DONE 0.1s
+
+#6 [2/7] RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm -rf /var/lib/apt/lists/*
+#6 0.244 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#6 0.361 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#6 0.403 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#6 0.443 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8689 kB]
+#6 1.229 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
+#6 1.269 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [369 kB]
+#6 1.743 Fetched 9306 kB in 2s (5751 kB/s)
+#6 1.743 Reading package lists...
+#6 1.928 Reading package lists...
+#6 2.112 Building dependency tree...
+#6 2.154 Reading state information...
+#6 2.219 The following NEW packages will be installed:
+#6 2.219   libgomp1
+#6 2.310 0 upgraded, 1 newly installed, 0 to remove and 12 not upgraded.
+#6 2.310 Need to get 104 kB of archives.
+#6 2.310 After this operation, 360 kB of additional disk space will be used.
+#6 2.310 Get:1 http://deb.debian.org/debian bookworm/main arm64 libgomp1 arm64 12.2.0-14+deb12u1 [104 kB]
+#6 2.421 debconf: delaying package configuration, since apt-utils is not installed
+#6 2.431 Fetched 104 kB in 0s (730 kB/s)
+#6 2.441 Selecting previously unselected package libgomp1:arm64.
+#6 2.441 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6633 files and directories currently installed.)
+#6 2.455 Preparing to unpack .../libgomp1_12.2.0-14+deb12u1_arm64.deb ...
+#6 2.457 Unpacking libgomp1:arm64 (12.2.0-14+deb12u1) ...
+#6 2.469 Setting up libgomp1:arm64 (12.2.0-14+deb12u1) ...
+#6 2.472 Processing triggers for libc-bin (2.36-9+deb12u14) ...
+#6 DONE 2.6s
+
+#7 [3/7] WORKDIR /app
+#7 DONE 0.0s
+
+#8 [4/7] COPY requirements-serving.txt requirements-registry.txt ./
+#8 DONE 0.0s
+
+#9 [5/7] RUN pip install --no-cache-dir -r requirements-registry.txt && useradd --create-home --uid 10001 hotel
+#9 0.991 Collecting numpy==2.5.4 (from -r /app/requirements-serving.txt (line 2))
+#9 1.243   Downloading numpy-2.5.4-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (6.6 kB)
+#9 1.355 Collecting pandas==3.1.0 (from -r /app/requirements-serving.txt (line 3))
+#9 1.394   Downloading pandas-3.1.0-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (18 kB)
+#9 1.503 Collecting pyarrow==26.0.1 (from -r /app/requirements-serving.txt (line 5))
+#9 1.544   Downloading pyarrow-26.0.1-cp313-cp313-manylinux_2_28_aarch64.whl.metadata (3.0 kB)
+#9 1.585 Collecting python-dateutil==4.0.0 (from -r /app/requirements-serving.txt (line 6))
+#9 1.694   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#9 1.829 Collecting scipy==1.18.1 (from -r /app/requirements-serving.txt (line 7))
+#9 1.867   Downloading scipy-1.18.1-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (62 kB)
+#9 2.013 Collecting scikit-learn==1.9.1 (from -r /app/requirements-serving.txt (line 8))
+#9 2.052   Downloading scikit_learn-1.9.1-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (9.3 kB)
+#9 2.105 Collecting joblib==1.6.0 (from -r /app/requirements-serving.txt (line 9))
+#9 2.184   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+#9 2.232 Collecting threadpoolctl==3.8.0 (from -r /app/requirements-serving.txt (line 10))
+#9 2.275   Downloading threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+#9 2.341 Collecting lightgbm==4.7.0 (from -r /app/requirements-serving.txt (line 11))
+#9 2.382   Downloading lightgbm-4.7.0-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (18 kB)
+#9 2.447 Collecting psycopg==3.3.8 (from psycopg[binary]==3.3.8->-r /app/requirements-serving.txt (line 12))
+#9 2.490   Downloading psycopg-3.3.8-py3-none-any.whl.metadata (4.4 kB)
+#9 2.548 Collecting cloudpickle==3.1.2 (from -r /app/requirements-serving.txt (line 14))
+#9 2.591   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+#9 2.739 Collecting narwhals==2.28.0 (from -r /app/requirements-serving.txt (line 15))
+#9 2.780   Downloading narwhals-2.28.0-py3-none-any.whl.metadata (15 kB)
+#9 2.834 Collecting tzdata==2026.6 (from -r /app/requirements-serving.txt (line 16))
+#9 2.876   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+#9 2.931 Collecting prometheus-client==0.26.0 (from -r /app/requirements-serving.txt (line 18))
+#9 2.973   Downloading prometheus_client-0.26.0-py3-none-any.whl.metadata (2.1 kB)
+#9 3.047 Collecting mlflow==3.18.0 (from -r requirements-registry.txt (line 3))
+#9 3.089   Downloading mlflow-3.18.0-py3-none-any.whl.metadata (50 kB)
+#9 3.162 Collecting python-dotenv==1.2.4 (from -r requirements-registry.txt (line 4))
+#9 3.266   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+#9 3.351 Collecting PyYAML==6.0.3 (from -r requirements-registry.txt (line 5))
+#9 3.392   Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.4 kB)
+#9 3.466 Collecting mlflow-skinny==3.18.0 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 3.507   Downloading mlflow_skinny-3.18.0-py3-none-any.whl.metadata (51 kB)
+#9 3.568 Collecting mlflow-tracing==3.18.0 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 3.610   Downloading mlflow_tracing-3.18.0-py3-none-any.whl.metadata (19 kB)
+#9 3.677 Collecting Flask-CORS<7 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 3.756   Downloading flask_cors-6.0.5-py3-none-any.whl.metadata (5.4 kB)
+#9 3.814 Collecting Flask<4 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 3.855   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+#9 4.187 Collecting aiohttp<4,>=3.7.0 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 4.277   Downloading aiohttp-3.14.5-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (8.3 kB)
+#9 4.332 Collecting alembic!=1.10.0,<2 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 4.372   Downloading alembic-1.20.1-py3-none-any.whl.metadata (7.3 kB)
+#9 4.513 Collecting cryptography<51,>=43.0.0 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 4.553   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_aarch64.whl.metadata (4.4 kB)
+#9 4.600 Collecting docker<8,>=4.0.0 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 4.637   Downloading docker-7.2.0-py3-none-any.whl.metadata (3.8 kB)
+#9 4.688 Collecting graphene<4 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 4.730   Downloading graphene-3.4.3-py2.py3-none-any.whl.metadata (6.9 kB)
+#9 4.855 Collecting gunicorn<27 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 4.898   Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+#9 4.966 Collecting huey<4,>=2.5.4 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 5.009   Downloading huey-3.5.4-py3-none-any.whl.metadata (5.7 kB)
+#9 5.145 Collecting matplotlib<4 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 5.184   Downloading matplotlib-3.11.2-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (80 kB)
+#9 5.253 Collecting skops<1 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 5.364   Downloading skops-0.16.0-py3-none-any.whl.metadata (4.3 kB)
+#9 5.573 Collecting sqlalchemy<3,>=1.4.0 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 5.611   Downloading sqlalchemy-2.1.8-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (9.7 kB)
+#9 5.666 Collecting anyio!=4.15.0,<5,>=3.6.2 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 5.705   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+#9 5.755 Collecting cachetools<8,>=5.0.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 5.854   Downloading cachetools-7.3.2-py3-none-any.whl.metadata (5.5 kB)
+#9 5.915 Collecting click<9,>=7.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 5.959   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+#9 6.040 Collecting databricks-sdk<1,>=0.20.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 6.081   Downloading databricks_sdk-0.166.0-py3-none-any.whl.metadata (44 kB)
+#9 6.183 Collecting fastapi<1 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 6.224   Downloading fastapi-0.163.0-py3-none-any.whl.metadata (27 kB)
+#9 6.281 Collecting gitpython<4,>=3.1.9 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 6.377   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+#9 6.451 Collecting importlib_metadata!=4.7.0,<11,>=3.7.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 6.492   Downloading importlib_metadata-10.2.0-py3-none-any.whl.metadata (4.6 kB)
+#9 6.558 Collecting opentelemetry-api<3,>=1.9.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 6.601   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+#9 6.664 Collecting opentelemetry-proto<3,>=1.9.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 6.705   Downloading opentelemetry_proto-1.45.2-py3-none-any.whl.metadata (2.3 kB)
+#9 6.767 Collecting opentelemetry-sdk<3,>=1.9.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 6.809   Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl.metadata (1.6 kB)
+#9 6.918 Collecting packaging<27 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 6.959   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#9 7.104 Collecting protobuf<8,>=3.12.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 7.143   Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_aarch64.whl.metadata (595 bytes)
+#9 7.238 Collecting pydantic<3,>=2.0.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 7.278   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+#9 7.339 Collecting python-multipart<1,>=0.0.18 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 7.427   Downloading python_multipart-0.0.33-py3-none-any.whl.metadata (6.3 kB)
+#9 7.487 Collecting requests<3,>=2.17.3 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 7.529   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+#9 7.580 Collecting sqlparse<1,>=0.4.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 7.622   Downloading sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+#9 7.683 Collecting starlette<2 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 7.724   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+#9 7.771 Collecting typing-extensions<5,>=4.0.0 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 7.813   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#9 7.874 Collecting uvicorn<1 (from mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 7.952   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#9 8.101 Collecting psycopg-binary==3.3.8 (from psycopg[binary]==3.3.8->-r /app/requirements-serving.txt (line 12))
+#9 8.139   Downloading psycopg_binary-3.3.8-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (2.7 kB)
+#9 8.186 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4,>=3.7.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 8.225   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+#9 8.268 Collecting aiosignal>=1.4.0 (from aiohttp<4,>=3.7.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 8.310   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+#9 8.362 Collecting attrs>=17.3.0 (from aiohttp<4,>=3.7.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 8.405   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+#9 8.573 Collecting frozenlist>=1.1.1 (from aiohttp<4,>=3.7.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 8.614   Downloading frozenlist-1.8.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (20 kB)
+#9 8.836 Collecting multidict<8.0,>=4.5 (from aiohttp<4,>=3.7.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 8.875   Downloading multidict-7.2.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (6.1 kB)
+#9 8.947 Collecting propcache>=0.2.0 (from aiohttp<4,>=3.7.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 9.032   Downloading propcache-0.5.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (25 kB)
+#9 9.200 Collecting yarl<2.0,>=1.25.1 (from aiohttp<4,>=3.7.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 9.240   Downloading yarl-1.25.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (111 kB)
+#9 9.298 Collecting Mako (from alembic!=1.10.0,<2->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 9.337   Downloading mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+#9 9.385 Collecting idna>=2.8 (from anyio!=4.15.0,<5,>=3.6.2->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 9.427   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#9 9.594 Collecting cffi>=2.0.0 (from cryptography<51,>=43.0.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 9.633   Downloading cffi-2.1.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (2.5 kB)
+#9 9.680 Collecting certifi>=2026.10.19 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 9.722   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#9 9.793 Collecting google-auth~=2.0 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 9.831   Downloading google_auth-2.62.2-py3-none-any.whl.metadata (6.0 kB)
+#9 9.906 Collecting urllib3<3,>=1.26 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 9.946   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+#9 10.05 Collecting typing-inspection>=0.4.2 (from fastapi<1->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.10   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+#9 10.14 Collecting annotated-doc>=0.0.2 (from fastapi<1->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.19   Downloading annotated_doc-0.0.6-py3-none-any.whl.metadata (6.5 kB)
+#9 10.24 Collecting blinker>=1.9.0 (from Flask<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.29   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#9 10.34 Collecting itsdangerous>=2.2.0 (from Flask<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.38   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#9 10.44 Collecting jinja2>=3.1.2 (from Flask<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.48   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#9 10.62 Collecting markupsafe>=2.1.1 (from Flask<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.66   Downloading markupsafe-3.0.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.7 kB)
+#9 10.71 Collecting werkzeug>=3.1.0 (from Flask<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.76   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+#9 10.82 Collecting gitdb<5,>=4.0.1 (from gitpython<4,>=3.1.9->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.86   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+#9 10.91 Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 10.95   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+#9 11.02 Collecting pyasn1-modules>=0.2.1 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 11.10   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+#9 11.17 Collecting graphql-core<3.3,>=3.1 (from graphene<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 11.21   Downloading graphql_core-3.2.14-py3-none-any.whl.metadata (11 kB)
+#9 11.27 Collecting graphql-relay<3.3,>=3.1 (from graphene<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 11.32   Downloading graphql_relay-3.2.0-py3-none-any.whl.metadata (12 kB)
+#9 11.33 INFO: pip is looking at multiple versions of graphene to determine which version is compatible with other requirements. This could take a while.
+#9 11.33 Collecting graphene<4 (from mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 11.37   Downloading graphene-3.4.2-py2.py3-none-any.whl.metadata (6.9 kB)
+#9 11.42   Downloading graphene-3.4.1-py2.py3-none-any.whl.metadata (6.9 kB)
+#9 11.47   Downloading graphene-3.4-py2.py3-none-any.whl.metadata (6.7 kB)
+#9 11.54 Collecting zipp>=3.20 (from importlib_metadata!=4.7.0,<11,>=3.7.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 11.62   Downloading zipp-4.1.2-py3-none-any.whl.metadata (3.6 kB)
+#9 11.67 Collecting lazy-importer>=0.1 (from importlib_metadata!=4.7.0,<11,>=3.7.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 11.71   Downloading lazy_importer-0.1.0-py3-none-any.whl.metadata (7.3 kB)
+#9 11.81 Collecting contourpy>=1.0.1 (from matplotlib<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 11.85   Downloading contourpy-1.4.0-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (3.8 kB)
+#9 11.90 Collecting cycler>=0.10 (from matplotlib<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 11.94   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#9 12.09 Collecting fonttools>=4.28.2 (from matplotlib<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 12.18   Downloading fonttools-4.68.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (139 kB)
+#9 12.27 Collecting kiwisolver>=1.3.1 (from matplotlib<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 12.31   Downloading kiwisolver-1.5.1-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (5.2 kB)
+#9 12.44 Collecting pillow>=9 (from matplotlib<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 12.48   Downloading pillow-13.0.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (9.1 kB)
+#9 12.53 Collecting pyparsing>=3 (from matplotlib<4->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 12.57   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+#9 12.67 Collecting opentelemetry-semantic-conventions==0.66b2 (from opentelemetry-sdk<3,>=1.9.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 12.71   Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl.metadata (2.4 kB)
+#9 12.76 Collecting annotated-types>=0.6.0 (from pydantic<3,>=2.0.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 12.81   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#9 13.21 Collecting pydantic-core==2.50.4 (from pydantic<3,>=2.0.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 13.25   Downloading pydantic_core-2.50.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (6.6 kB)
+#9 13.35 Collecting charset_normalizer<4,>=2 (from requests<3,>=2.17.3->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 13.39   Downloading charset_normalizer-3.5.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (46 kB)
+#9 13.44 Collecting prettytable>=3.9 (from skops<1->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 13.48   Downloading prettytable-3.18.0-py3-none-any.whl.metadata (37 kB)
+#9 13.53 Collecting h11>=0.8 (from uvicorn<1->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 13.57   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#9 13.63 Collecting pycparser (from cffi>=2.0.0->cryptography<51,>=43.0.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 13.72   Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+#9 13.80 Collecting wcwidth>=0.3.5 (from prettytable>=3.9->skops<1->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 13.84   Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (23 kB)
+#9 13.91 Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.18.0->mlflow==3.18.0->-r requirements-registry.txt (line 3))
+#9 13.95   Downloading pyasn1-0.6.5-py3-none-any.whl.metadata (8.4 kB)
+#9 14.01 Downloading numpy-2.5.4-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (15.7 MB)
+#9 15.00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 15.9 MB/s  0:00:00
+#9 15.05 Downloading pandas-3.1.0-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (11.4 MB)
+#9 15.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 16.7 MB/s  0:00:00
+#9 15.82 Downloading pyarrow-26.0.1-cp313-cp313-manylinux_2_28_aarch64.whl (51.8 MB)
+#9 18.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.8/51.8 MB 16.7 MB/s  0:00:03
+#9 19.00 Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+#9 19.05 Downloading scipy-1.18.1-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (34.0 MB)
+#9 21.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.0/34.0 MB 16.1 MB/s  0:00:02
+#9 21.20 Downloading scikit_learn-1.9.1-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (8.8 MB)
+#9 21.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 16.0 MB/s  0:00:00
+#9 21.80 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+#9 21.86 Downloading threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+#9 21.90 Downloading lightgbm-4.7.0-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (3.3 MB)
+#9 22.14    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 13.7 MB/s  0:00:00
+#9 22.19 Downloading psycopg-3.3.8-py3-none-any.whl (216 kB)
+#9 22.24 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+#9 22.29 Downloading narwhals-2.28.0-py3-none-any.whl (490 kB)
+#9 22.35 Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+#9 22.42 Downloading prometheus_client-0.26.0-py3-none-any.whl (64 kB)
+#9 22.46 Downloading mlflow-3.18.0-py3-none-any.whl (12.6 MB)
+#9 23.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 15.2 MB/s  0:00:00
+#9 23.34 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+#9 23.38 Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (767 kB)
+#9 23.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 767.1/767.1 kB 19.3 MB/s  0:00:00
+#9 23.47 Downloading mlflow_skinny-3.18.0-py3-none-any.whl (4.4 MB)
+#9 23.78    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 14.0 MB/s  0:00:00
+#9 23.82 Downloading mlflow_tracing-3.18.0-py3-none-any.whl (2.1 MB)
+#9 23.94    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 17.9 MB/s  0:00:00
+#9 23.99 Downloading psycopg_binary-3.3.8-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.8 MB)
+#9 24.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 16.0 MB/s  0:00:00
+#9 24.46 Downloading aiohttp-3.14.5-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (1.9 MB)
+#9 24.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 18.2 MB/s  0:00:00
+#9 24.61 Downloading alembic-1.20.1-py3-none-any.whl (270 kB)
+#9 24.73 Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+#9 24.78 Downloading cachetools-7.3.2-py3-none-any.whl (19 kB)
+#9 24.82 Downloading click-8.5.1-py3-none-any.whl (126 kB)
+#9 24.87 Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_aarch64.whl (4.7 MB)
+#9 25.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 18.7 MB/s  0:00:00
+#9 25.17 Downloading databricks_sdk-0.166.0-py3-none-any.whl (1.2 MB)
+#9 25.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 19.0 MB/s  0:00:00
+#9 25.35 Downloading docker-7.2.0-py3-none-any.whl (148 kB)
+#9 25.39 Downloading fastapi-0.163.0-py3-none-any.whl (154 kB)
+#9 25.44 Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+#9 25.49 Downloading flask_cors-6.0.5-py3-none-any.whl (16 kB)
+#9 25.53 Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+#9 25.59 Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+#9 25.63 Downloading google_auth-2.62.2-py3-none-any.whl (270 kB)
+#9 25.70 Downloading graphene-3.4-py2.py3-none-any.whl (114 kB)
+#9 25.81 Downloading graphql_core-3.2.14-py3-none-any.whl (279 kB)
+#9 25.87 Downloading graphql_relay-3.2.0-py3-none-any.whl (16 kB)
+#9 25.91 Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
+#9 25.97 Downloading huey-3.5.4-py3-none-any.whl (135 kB)
+#9 26.02 Downloading importlib_metadata-10.2.0-py3-none-any.whl (34 kB)
+#9 26.06 Downloading matplotlib-3.11.2-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (10.7 MB)
+#9 26.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 16.2 MB/s  0:00:00
+#9 26.83 Downloading multidict-7.2.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (506 kB)
+#9 26.90 Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+#9 26.94 Downloading opentelemetry_proto-1.45.2-py3-none-any.whl (72 kB)
+#9 26.99 Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl (141 kB)
+#9 27.03 Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl (206 kB)
+#9 27.09 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#9 27.14 Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_aarch64.whl (344 kB)
+#9 27.20 Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+#9 27.27 Downloading pydantic_core-2.50.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (2.1 MB)
+#9 27.44    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 11.5 MB/s  0:00:00
+#9 27.49 Downloading python_multipart-0.0.33-py3-none-any.whl (32 kB)
+#9 27.53 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+#9 27.58 Downloading charset_normalizer-3.5.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (244 kB)
+#9 27.63 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#9 27.68 Downloading skops-0.16.0-py3-none-any.whl (148 kB)
+#9 27.73 Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+#9 27.77 Downloading sqlalchemy-2.1.8-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (4.6 MB)
+#9 28.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 14.8 MB/s  0:00:00
+#9 28.12 Downloading sqlparse-0.6.1-py3-none-any.whl (51 kB)
+#9 28.17 Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+#9 28.21 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#9 28.26 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+#9 28.31 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#9 28.40 Downloading yarl-1.25.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (115 kB)
+#9 28.45 Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+#9 28.49 Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+#9 28.53 Downloading annotated_doc-0.0.6-py3-none-any.whl (5.3 kB)
+#9 28.58 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#9 28.62 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+#9 28.67 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#9 28.71 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+#9 28.76 Downloading cffi-2.1.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (222 kB)
+#9 28.82 Downloading contourpy-1.4.0-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (356 kB)
+#9 28.92 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#9 28.97 Downloading fonttools-4.68.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (5.4 MB)
+#9 29.27    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 18.3 MB/s  0:00:00
+#9 29.31 Downloading frozenlist-1.8.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (233 kB)
+#9 29.37 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#9 29.45 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#9 29.49 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#9 29.54 Downloading kiwisolver-1.5.1-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (1.3 MB)
+#9 29.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 19.5 MB/s  0:00:00
+#9 29.65 Downloading lazy_importer-0.1.0-py3-none-any.whl (12 kB)
+#9 29.69 Downloading markupsafe-3.0.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (24 kB)
+#9 29.74 Downloading pillow-13.0.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.5 MB)
+#9 30.18    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.5/6.5 MB 14.8 MB/s  0:00:00
+#9 30.23 Downloading prettytable-3.18.0-py3-none-any.whl (37 kB)
+#9 30.27 Downloading propcache-0.5.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (233 kB)
+#9 30.33 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+#9 30.38 Downloading pyasn1-0.6.5-py3-none-any.whl (84 kB)
+#9 30.43 Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+#9 30.54 Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+#9 30.58 Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (789 kB)
+#9 30.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.0/789.0 kB 19.0 MB/s  0:00:00
+#9 30.67 Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+#9 30.73 Downloading zipp-4.1.2-py3-none-any.whl (10 kB)
+#9 30.77 Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+#9 30.82 Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+#9 31.07 Installing collected packages: huey, zipp, wcwidth, urllib3, tzdata, typing-extensions, threadpoolctl, sqlparse, smmap, PyYAML, python-multipart, python-dotenv, pyparsing, pycparser, pyasn1, pyarrow, psycopg-binary, psycopg, protobuf, propcache, prometheus-client, pillow, packaging, numpy, narwhals, multidict, markupsafe, lazy-importer, kiwisolver, itsdangerous, idna, h11, gunicorn, graphql-core, frozenlist, fonttools, cycler, cloudpickle, click, charset_normalizer, certifi, cachetools, blinker, attrs, annotated-types, annotated-doc, aiohappyeyeballs, yarl, werkzeug, uvicorn, typing-inspection, sqlalchemy, scipy, requests, python-dateutil, pydantic-core, pyasn1-modules, prettytable, opentelemetry-proto, opentelemetry-api, Mako, joblib, jinja2, importlib_metadata, graphql-relay, gitdb, contourpy, cffi, anyio, aiosignal, starlette, scikit-learn, pydantic, pandas, opentelemetry-semantic-conventions, matplotlib, lightgbm, graphene, gitpython, Flask, docker, cryptography, alembic, aiohttp, skops, opentelemetry-sdk, google-auth, Flask-CORS, fastapi, databricks-sdk, mlflow-tracing, mlflow-skinny, mlflow
+#9 43.92 
+#9 43.93 Successfully installed Flask-3.1.3 Flask-CORS-6.0.5 Mako-1.4.3 PyYAML-6.0.3 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 alembic-1.20.1 annotated-doc-0.0.6 annotated-types-0.8.0 anyio-4.16.0 attrs-26.1.0 blinker-1.9.0 cachetools-7.3.2 certifi-2026.10.23 cffi-2.1.1 charset_normalizer-3.5.2 click-8.5.1 cloudpickle-3.1.2 contourpy-1.4.0 cryptography-50.0.2 cycler-0.12.1 databricks-sdk-0.166.0 docker-7.2.0 fastapi-0.163.0 fonttools-4.68.0 frozenlist-1.8.0 gitdb-4.0.12 gitpython-3.2.1 google-auth-2.62.2 graphene-3.4 graphql-core-3.2.14 graphql-relay-3.2.0 gunicorn-26.2.0 h11-0.16.0 huey-3.5.4 idna-3.20 importlib_metadata-10.2.0 itsdangerous-2.2.0 jinja2-3.1.6 joblib-1.6.0 kiwisolver-1.5.1 lazy-importer-0.1.0 lightgbm-4.7.0 markupsafe-3.0.4 matplotlib-3.11.2 mlflow-3.18.0 mlflow-skinny-3.18.0 mlflow-tracing-3.18.0 multidict-7.2.1 narwhals-2.28.0 numpy-2.5.4 opentelemetry-api-1.45.2 opentelemetry-proto-1.45.2 opentelemetry-sdk-1.45.2 opentelemetry-semantic-conventions-0.66b2 packaging-26.3 pandas-3.1.0 pillow-13.0.0 prettytable-3.18.0 prometheus-client-0.26.0 propcache-0.5.4 protobuf-7.36.2 psycopg-3.3.8 psycopg-binary-3.3.8 pyarrow-26.0.1 pyasn1-0.6.5 pyasn1-modules-0.4.2 pycparser-3.12 pydantic-2.14.3 pydantic-core-2.50.4 pyparsing-3.3.3 python-dateutil-4.0.0 python-dotenv-1.2.4 python-multipart-0.0.33 requests-2.34.2 scikit-learn-1.9.1 scipy-1.18.1 skops-0.16.0 smmap-5.0.3 sqlalchemy-2.1.8 sqlparse-0.6.1 starlette-1.10.0 threadpoolctl-3.8.0 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 urllib3-2.8.0 uvicorn-0.54.0 wcwidth-0.9.4 werkzeug-3.1.9 yarl-1.25.1 zipp-4.1.2
+#9 43.93 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 44.30 
+#9 44.30 [notice] A new release of pip is available: 26.0.1 -> 26.3
+#9 44.30 [notice] To update, run: pip install --upgrade pip
+#9 DONE 46.2s
+
+#10 [6/7] COPY --chown=hotel:hotel src/ ./src/
+#10 DONE 0.2s
+
+#11 [7/7] COPY --chown=hotel:hotel config/ ./config/
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 14.1s done
+#12 exporting manifest sha256:519bdb32158feb5b23e6fefdf063a4f0907676f65463a863be1a118246fcc7c3 done
+#12 exporting config sha256:907e98058748906af844301f7e94bd8f04fb9c2ec256b24f8c8f2366b104e2bb done
+#12 exporting attestation manifest sha256:3d093ec2405703662527dcc10a7849a0208198c6e8b83ae30ec25f440c8804fa done
+#12 exporting manifest list sha256:94c06d7ad923d05c5bde1fd7c01c7c66044e6e5ea70e91ba530a04beacc92e55 done
+#12 naming to docker.io/library/hotel-session6-api-check:latest done
+#12 unpacking to docker.io/library/hotel-session6-api-check:latest
+#12 unpacking to docker.io/library/hotel-session6-api-check:latest 2.6s done
+#12 DONE 16.8s

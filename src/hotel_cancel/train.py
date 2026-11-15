@@ -110,7 +110,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config")
     parser.add_argument("--project-root")
+    parser.add_argument("--offline", action="store_true", help="Historical baseline reproduction without MLflow")
     args = parser.parse_args()
+    if not args.offline:
+        if args.project_root:
+            parser.error("--project-root applies to offline reproduction only")
+        from hotel_cancel.registry_training import run
+        print(json.dumps(run(config_path=args.config), indent=2))
+        return 0
     config = load_config(args.config, project_root=args.project_root)
     setup_logging(config["log_level"])
     run_baseline(config)

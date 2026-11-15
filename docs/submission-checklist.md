@@ -1,13 +1,15 @@
 # Task 19 submission checklist and evidence audit
 
+> Update 15 November 2026: [ADR 0018](decisions/0018-strict-both-hotel-merge-gate.md) supersedes the earlier CI behavior described below. `make ci` now runs the strict both-hotel gate before building and is expected to fail for the original Resort model. `make coursework-check` remains the separate reproduction check. GitHub retains the required `ci` name as an aggregate of `pipeline` and `registry-integration`. Luke chose to keep both hotels in scope; no passing strict gate is claimed.
+
 Reviewed 11 November 2026 against the supplied Task 19 notebook, LLM access policy
 and Reflective Diary Entry 1 rubric. This replaces the older stage checklist.
 The notebook defines the required project work: C1–C5, E1–E4 and S1. S2 and S3
 are optional. The supplied rubric applies to Diary Entry 1, not a final-project
 marking scheme. No final mark, VLE submission or live operating approval is claimed.
 
-The technical work is substantially evidenced. C3 policy approval and the final
-hand-in/diary checks remain open. The original Resort gate failure is an expected
+The technical work is substantially evidenced. The declared AI-simulated C3 review is now recorded (15 November 2026); the final
+hand-in/diary and Session 6 completion checks remain open. The original Resort gate failure is an expected
 reference result, not a missing model improvement. The separate calibrated research
 challenger cannot replace the unchanged-model evidence for C2/C4/E3.
 
@@ -17,7 +19,7 @@ challenger cannot replace the unchanged-model evidence for C2/C4/E3.
 | --- | --- | --- |
 | C1 Find and guard all six traps | Evidenced | [Data contract](data-contract.md), [Stage 4](stage4-validation.md), [counted checks](evidence/stage4/data-checks.json); feature exclusion, outcome separation, forward duplicate isolation, as-of membership and horizon tests in `tests/test_features.py`, `test_splits.py`, `test_history.py`, `test_policy.py`. Counts cover post-booking/country artefacts; nightly median ADR and horizon calibration are explicitly guarded. Final-state timestamps remain an acknowledged source limitation. |
 | C2 Reproduce the unchanged model | Evidenced with dated reproduction scope | [Baseline report](baseline-reproduction.md), [20-check comparison](evidence/baseline-comparison.json), [clean-clone result](evidence/stage14/clean-clone-summary.json), ADR 0002. Original fresh-clone result is for `3ca26fe`; it passed all 20 comparisons using seed 3217 and declared tolerances. Current coursework verification reruns the original booking learner and verifies the frozen per-hotel results. It is not a new full policy/notebook clean-clone claim. |
-| C3 Own the operating point | Computation evidenced; approval open | [Sensitivity report](stage5-policy-evaluation.md), [run/grid](evidence/stage5/run.json), `selected-policies.csv`, `all-policies.csv`, `calibration.csv`, [ADR 0005](decisions/0005-policy-sensitivity.md). Covers horizons 0–14, walk costs EUR100–500, variable costs 0/20/40, 4/8/12-week candidates and resale 0/25/50%, selecting on validation only. Named manager sign-off is absent. The [simulation review packet](reviews/coursework-policy-review-v1.json) is unsigned and reviews the reference policies; it does not sign ADR 0005's distinct sensitivity candidates. |
+| C3 Own the operating point | Accepted with changes in declared AI simulation | [Sensitivity report](stage5-policy-evaluation.md), [run/grid](evidence/stage5/run.json), `selected-policies.csv`, `all-policies.csv`, `calibration.csv`, [ADR 0005](decisions/0005-policy-sensitivity.md). Covers horizons 0–14, walk costs EUR100–500, variable costs 0/20/40, 4/8/12-week candidates and resale 0/25/50%, selecting on validation only. The [AI-simulated manager transcript](decisions/0005-simulated-revenue-manager-review-2026-11-15.md) challenges the actual Stage 5 candidates and records accepted with changes: q=0 additional rooms for both hotels; positive-quantity candidates remain research only. The v2 review packet and sign-off bind this decision to its brief and evidence. The older 8-week reference packet remains unsigned; it is not the ADR 0005 decision. |
 | C4 Package, container and frozen gate | Implemented; fresh build verified separately in CI | Package/HTTP/batch entry points, Dockerfile, [Stage 6 container and parity](stage6-operational-service.md), [Linux test evidence](evidence/stage6/tests-linux.json), Makefile and workflow. Historical container verification predates the current revision. `make ci` now verifies reproduction and builds the service image; `make release-check` and `make publish` still reject the original failing model. No real PMS deployment is claimed. |
 | C5 Register, document and monitor | Evidenced | [Tracking](stage9-tracking.md), [registry readback](evidence/stage9/verification.json), [Ubuntu registry](evidence/stage9-ubuntu/verification.json), [model card](model-card.md), [monitoring](stage7-monitoring.md), [load results](evidence/stage7/performance.json), replay report and Prometheus rules. City has champion/challenger; Resort has challenger only because its gate fails. Withholding its champion is deliberate. Weekly mature-outcome calibration, input PSI and retraining triggers are documented; live ongoing drift cannot be established from a historical replay. |
 | E1 KB, provenance, validity and ablations | Evidenced | [KB report](stage10-knowledge-base.md), [AUPRC/cold-start ablation](evidence/stage10/ablation/verification.json), competency questions, temporal UK facts, SPARQL and SHACL. [19-case grounding comparison](evidence/stage10/briefing/report.json) is deterministic, not an LLM experiment. Separate recorded local-model with/without-KB comparisons exist in V1 and V5. V5 ordinary numeric exactness is code-owned in both arms; semantic prepaid answers/abstention, not numeric copying, are the meaningful KB comparison. |
@@ -30,11 +32,11 @@ challenger cannot replace the unchanged-model evidence for C2/C4/E3.
 
 - [x] Session 02 package layout, attribution, split/window/horizon in README; data/models/secrets excluded from Git. A historical fresh-clone baseline passes; current GitHub CI independently installs dependencies and verifies raw data.
 - [x] Forward per-hotel evaluation, six trap guards, outcome separation and as-of tests.
-- [ ] Overbooking constants in a signed-off ADR. ADR 0005 and the separate review packet remain unsigned. Resort economics and conservative fallback are argued.
+- [x] Overbooking assumptions and a clear decision in ADR 0005, with declared AI-simulated review, short questions/answers and reasons. Accepted with changes: q=0 fallback; h=7, EUR250 walking/EUR20 variable/zero resale are historical assumptions, not verified operating facts. Real operating authority is not granted.
 - [x] Frozen-holdout gate, registry readback, model card and monitoring plan. Resort release stays blocked.
 - [x] Extended KB, SHACL and AUPRC/cold-start/briefing comparisons.
 - [x] [Revenue-manager recommendation](revenue-manager-recommendation.md) and previously visually checked one-page PDF at `output/pdf/revenue-manager-recommendation.pdf`. That PDF is a dated artifact, not a new rendering of every later code revision.
-- [ ] All required tasks finally closed: C3 sign-off remains open; S1's component/raw-model distinction must be retained in the submitted explanation.
+- [ ] All required tasks finally closed: C3 simulated sign-off is recorded; Session 6 candidate registration, fresh remote checks and model-card peer review remain pending. S1's component/raw-model distinction must be retained in the submitted explanation.
 - [x] Required local open-weight run, pinned tag/digest, versioned prompt/schema/context, raw fixtures and MLflow cost/latency evidence. CI replays without live inference or paid API access.
 - [ ] Diary Entry 1 final cross-check: written 400–600 words, at most eight content slides and five-minute video; consistency, recording and VLE upload not verified. Supplied rubric date: Monday 23 November 2026; 5% of unit mark. Its ARI3218 heading differs from Task 19's ARI3217 label.
 - [ ] Regenerate and inspect final source/runtime archives after selecting the submission commit. Existing Stage 14/remediation archives predate these CI changes. Final VLE packaging requirements/deadline and any later diary requirements are not supplied by the Diary 1 rubric.
@@ -79,3 +81,7 @@ reference failures, V5 delivery safety and supplementary research results separa
 It does not substitute the calibrated research challenger for the required model.
 Historical evidence files are preserved. The [CI guide](coursework-and-release.md)
 and [briefing explanation](revised-briefing.md) explain the new behavior.
+
+## Simulated review update on 15 November 2026
+
+Luke supplied the professor's guidance explicitly allowing an AI assistant to simulate the revenue manager. OpenAI Codex generated the [brief](decisions/0005-review-brief-2026-11-15.md), the challenged assumptions and evidence-based project-side answers, and the [accepted-with-changes decision](decisions/0005-simulated-revenue-manager-review-2026-11-15.md). This is a single-assistant declared role-play, not an independent human review. ADR 0005 records q=0 as the selected fallback and retains the 12-week Resort candidate for research. The historical audit manifest has not been rewritten; the live audit now reports the newer digest-bound decision separately. No hotel operating permission follows.

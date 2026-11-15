@@ -30,6 +30,8 @@ hotel-train = "hotel_cancel.train:main"
 hotel-serve = "hotel_cancel.service:main"
 hotel-batch = "hotel_cancel.batch:main"
 hotel-snapshot = "hotel_cancel.snapshot:main"
+hotel-registry = "hotel_cancel.registry:main"
+hotel-registry-train = "hotel_cancel.registry_training:main"
 
 [project.optional-dependencies]
 serving = ["psycopg[binary]==3.3.8"]

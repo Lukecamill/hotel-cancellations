@@ -125,10 +125,12 @@ class Telemetry:
                     run_id TEXT PRIMARY KEY,payload JSONB NOT NULL,
                     created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP)""")
 
+                c.execute("ALTER TABLE hotel_predictions ADD COLUMN IF NOT EXISTS model_lineage JSONB")
+
     def connect(self):
         return psycopg.connect(self.database_url, connect_timeout=2)
 
-    def prediction(self, booking, probability, version):
+    def prediction(self, booking, probability, version, *, lineage=None):
         hotel = booking["hotel"]
         self.predictions.labels(hotel, version).inc()
         self.lead.labels(hotel).observe(booking["lead_time"])
@@ -166,6 +168,7 @@ class Telemetry:
             probability=probability,
             inputs=inputs,
             source="online",
+            model_lineage=lineage,
             logged_at_utc=datetime.now(timezone.utc).isoformat(),
         )
         # Always emit structured output, even if database persistence is unavailable.
@@ -176,7 +179,7 @@ class Telemetry:
         try:
             with self.connect() as c:
                 c.execute(
-                    "INSERT INTO hotel_predictions (prediction_id,hotel,model_version,horizon,probability,inputs,source) VALUES (%s,%s,%s,%s,%s,%s,%s)",
+                    "INSERT INTO hotel_predictions (prediction_id,hotel,model_version,horizon,probability,inputs,source,model_lineage) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)",
                     (
                         identifier,
                         hotel,
@@ -185,6 +188,7 @@ class Telemetry:
                         probability,
                         Jsonb(inputs),
                         "online",
+                        Jsonb(lineage),
                     ),
                 )
             self.logged.inc()
@@ -230,7 +234,7 @@ class Telemetry:
         return generate_latest(self.registry)
 
     def observe_request(self, path, method, status, hotel, seconds):
-        if path in ("/metrics", "/health"):
+        if path in ("/metrics", "/health", "/ready"):
             return
         if path.startswith("/reviews/"):
             path = "/reviews/decision"

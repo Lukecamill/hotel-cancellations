@@ -1,0 +1,15 @@
+{
+  "reviewer": "Revenue manager (simulated with OpenAI Codex)",
+  "reviewer_role": "coursework simulation reviewer",
+  "reason": "Accepted with changes: retain historical Stage 5 research candidates, choose q=0 for both hotels because capacity, walking tolerance, block identity and robust economic evidence are unverified.",
+  "decision": "approve_simulation",
+  "review_outcome": "accepted_with_changes",
+  "packet_sha256": "09f388238a495fa492be07db5f27f98fc26dc8161a5286660a7edf8d7118c150",
+  "reviewed_on": "2026-11-15",
+  "production_authorized": false,
+  "max_authorized_extra_rooms": 0,
+  "guest_messages_authorized": false,
+  "identity": "AI-generated revenue-manager role-play, not Luke or authenticated hotel authority",
+  "ai_disclosure": "OpenAI Codex generated both simulated reviewer dialogue and evidence-based project-side answers in the current chat",
+  "transcript": "docs/decisions/0005-simulated-revenue-manager-review-2026-11-15.md"
+}
