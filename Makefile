@@ -59,6 +59,7 @@ coursework-check:
 
 ci:
 	$(MAKE) coursework-check
+	$(MAKE) quality-gate QUALITY_OUTPUT=artifacts/ci/strict-gate
 	$(MAKE) build
 
 release-check:

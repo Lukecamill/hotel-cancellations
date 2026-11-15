@@ -1,51 +1,27 @@
-# Coursework verification and release approval
+# Coursework verification and strict merge and release approval
 
-The notebook requires reproducing the given learner unchanged. Its City gate passes
-and its Resort gate fails calibration. Reproducing that result is correct coursework;
-releasing the failing model would violate the quality gate. The two decisions now
-have separate commands and GitHub jobs.
+The notebook requires reproducing the given learner unchanged. City passes its frozen quality gate and Resort fails calibration. Both hotels remain in scope, as Luke confirmed on 15 November 2026. [ADR 0018](decisions/0018-strict-both-hotel-merge-gate.md) restores strict model quality to the required merge check; no expected failure is accepted by `make ci`.
 
-`make coursework-check` runs lint, tests, raw/split validation, SHACL and
-`hotel_cancel.coursework`. The latter trains only the original training split,
-verifies the raw/holdout lock, then compares both hotels' full metrics/checks with
-the original recorded reference (absolute tolerance 1e-12, relative 1e-14). It
-requires City PASS and the specific Resort calibration-ratio FAIL. An exception,
-changed fingerprint/lock, different failure reason, missing hotel, changed metric
-or unexpected overall pass fails coursework verification. It does not accept an
-arbitrary nonzero exit code or use `continue-on-error`.
+## Local commands
 
-The command also verifies V1's original 66-case/58-accepted fixture regression and
-V5's current 96-case delivery contract. Prompt, model, schema or context drift is
-rejected by their replay routines. No live LLM or hosted quota is used.
+`make coursework-check` runs lint, tests, raw/split validation, SHACL and original reference/briefing reproduction. The coursework verifier compares numeric metrics, checks, frozen identity and reference failure reason. It also replays the original 66-case briefing and the V5 delivery contract without live inference. An exception or arbitrary nonzero result cannot count as correct reproduction. Its successful result explicitly says release_approved=false.
 
-`config/coursework-reference.json` records reproduction expectations, separate from
-`config/evaluation-lock.json`. It must not be changed merely to obtain a green run.
-The gate, its thresholds and original evidence are unchanged. Coursework output
-explicitly states `release_approved: false` and `production_authorized: false`.
+`make ci` runs coursework-check, then the strict per-hotel quality gate, then the service image build. Resort's current calibration failure makes this command fail before Docker runs. Output is kept in artifacts/ci/strict-gate; historical gate reports remain unchanged. The workflow uploads current artifacts/ci evidence even when the gate fails.
 
-`make ci` adds the service image build to those checks. This verifies buildability
-of service code; the trusted predictive model remains a separate mounted artifact.
-A built image and a passing coursework check are not approval of that model.
-The GitHub job is still named `ci`, so the required merge check retains its name.
+`make release-check` independently runs the strict quality gate followed by V5 delivery quality. `make publish` requires that target before any image push. The separate calibrated research challenger cannot replace the given-model evidence and is not promoted by this change.
 
-The separate GitHub `release` job runs only after successful CI on a push to main.
-CI saves the exact built image and its checksum as a short-lived workflow artifact.
-The release job verifies and loads that image rather than rebuilding it. It invokes
-`make publish`, whose prerequisite is `make release-check`: the original strict
-quality gate and current V5 component quality. Only then can either Docker push
-execute. Coursework expectations never override release approval. The current
-original Resort model therefore still blocks publishing. This path is configured
-but cannot be exercised as a successful release with the failing reference model.
+## Required GitHub check
 
-Only the release job has package-write permission. There is no automatic champion
-promotion, real manager signature, guest dispatch or PMS integration. C3 sign-off
-remains a distinct outstanding assignment requirement. The separate calibrated
-research challenger remains supplementary; it is not substituted into C2/E3 or
-promoted by this change.
+The GitHub pipeline job runs make ci. A separate registry-integration job exercises disposable PostgreSQL and MLflow integration. The aggregate job retains the check name ci and requires both jobs to succeed. Its always condition makes an upstream failure, cancellation or skip a failed required result rather than silently skipping the merge decision.
 
-Verification writes ignored `artifacts/ci/` files rather than modifying historical
-reports. See [the evidence audit](submission-checklist.md) and [V5 explanation](revised-briefing.md).
+GitHub's main branch details on 15 November report protection enabled, required context ci, enforcement everyone. That existing context now covers both jobs without requiring a protection rename. This read does not establish every administrator-bypass or review setting. No protection is disabled.
 
-Workflow artifact transfer follows the official
-[upload](https://github.com/actions/upload-artifact) and
-[download](https://github.com/actions/download-artifact) actions documentation.
+Release runs only after the required checks succeed on a push to main. It verifies and loads the exact image archived by pipeline rather than rebuilding it, then invokes make publish. Only release has package-write permission. The current failing reference prevents reaching this path.
+
+## Evidence and assessment boundary
+
+Run 43025312530 at bc0d450 is a historical successful coursework reproduction and image build under the earlier policy. It is not a strict model-quality pass. Run 43022126664 is a historical failure at the strict model gate. Keep both descriptions honest in the diary.
+
+The updated both-hotel gate is expected to fail until an eligible, permitted candidate is justified. Entry 2's passing strict CI example therefore remains outstanding. Do not tune against the exposed holdout, move its fingerprint, relax thresholds to conceal failure, or claim a lecturer-approved exception that has not been supplied.
+
+Model/card peer review, policy approval, current live deployment readiness and VLE submission are separate requirements. This CI change does not grant hotel operating authority or automatically move model aliases.

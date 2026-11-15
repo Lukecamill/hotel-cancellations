@@ -14,7 +14,10 @@ from test_serving import runtime as runtime, records as records
 
 
 def test_real_registry_reload_alias_rollback_and_prediction_lineage(tmp_path, runtime, records):
-    mlflow = pytest.importorskip("mlflow")
+    # The repository's mlflow/ SQL directory is also a namespace package.
+    # Require the actual optional runtime before treating MLflow as installed.
+    pytest.importorskip("mlflow.pyfunc")
+    import mlflow
     from hotel_cancel.registry_model import HotelBookingModel
     from mlflow.models import infer_signature
     import pandas as pd

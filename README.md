@@ -1,5 +1,7 @@
 # Hotel cancellations and overbooking
 
+> Update 15 November 2026: [ADR 0018](docs/decisions/0018-strict-both-hotel-merge-gate.md) supersedes the earlier CI behavior described below. `make ci` now runs the strict both-hotel gate before building and is expected to fail for the original Resort model. `make coursework-check` remains the separate reproduction check. GitHub retains the required `ci` name as an aggregate of `pipeline` and `registry-integration`. Luke chose to keep both hotels in scope; no passing strict gate is claimed.
+
 ARI3217 Task 19: package, reproduce, evaluate and operationalise the supplied hotel cancellation model and overbooking policy.
 
 ## Setup status
@@ -314,7 +316,7 @@ attributed CSV or run `make ci-data` to download it and verify its frozen SHA-25
 | Command | Meaning |
 | --- | --- |
 | `make coursework-check` | Lint, tests, raw/split validation, SHACL and verified original-model/briefing reproduction |
-| `make ci` | Coursework checks followed by service image build |
+| `make ci` | Coursework checks, strict both-hotel gate, then image build; current Resort failure blocks the build |
 | `make quality-gate` | Original strict per-hotel model gate; Resort still fails |
 | `make revised-briefing-quality` | Recorded V5 delivery contract, including withholding unsafe responses |
 | `make release-check` | Strict model gate followed by V5 quality; expected failures are never accepted here |

@@ -9,7 +9,7 @@ import sys
 import pytest
 
 
-@pytest.mark.parametrize("failed_module", ["", "hotel_cancel.validate", "hotel_cancel.coursework"])
+@pytest.mark.parametrize("failed_module", ["", "hotel_cancel.validate", "hotel_cancel.coursework", "hotel_cancel.quality_gate"])
 def test_ci_is_ordered_and_stops_before_build_on_failure(tmp_path, failed_module):
     root = Path(__file__).resolve().parents[1]
     shutil.copyfile(root / "Makefile", tmp_path / "Makefile")
@@ -46,6 +46,7 @@ def test_ci_is_ordered_and_stops_before_build_on_failure(tmp_path, failed_module
         "hotel_cancel.validate",
         "hotel_cancel.knowledge",
         "hotel_cancel.coursework",
+        "hotel_cancel.quality_gate",
         "docker:build",
     ]
     if failed_module:
@@ -81,10 +82,37 @@ def test_workflow_separates_coursework_from_main_only_release():
     root = Path(__file__).resolve().parents[1]
     workflow = yaml.load((root / ".github/workflows/ci.yml").read_text(), Loader=yaml.BaseLoader)
     ci, release = workflow["jobs"]["ci"], workflow["jobs"]["release"]
+    assert "packages" not in workflow["jobs"]["pipeline"]["permissions"]
     assert "packages" not in ci["permissions"]
+    assert ci["needs"] == ["pipeline", "registry-integration"]
+    assert ci["if"] == "always()"
+    aggregate = ci["steps"][0]
+    assert aggregate["env"]["PIPELINE_RESULT"] == "${{ needs.pipeline.result }}"
+    assert aggregate["env"]["REGISTRY_RESULT"] == "${{ needs.registry-integration.result }}"
+    assert 'test "$PIPELINE_RESULT" = success' in aggregate["run"]
+    assert 'test "$REGISTRY_RESULT" = success' in aggregate["run"]
     assert release["needs"] == ["ci", "registry-integration"]
     assert release["if"] == "github.event_name == 'push' && github.ref == 'refs/heads/main'"
     commands = "\n".join(step.get("run", "") for step in release["steps"])
     assert 'make publish IMAGE="$IMAGE"' in commands
     assert "docker load" in commands
     assert "docker build" not in commands
+
+
+@pytest.mark.parametrize("pipeline,registry", [
+    ("success", "success"), ("failure", "success"), ("success", "failure"),
+    ("skipped", "success"), ("success", "cancelled"),
+])
+def test_required_ci_rejects_failed_cancelled_or_skipped_dependencies(pipeline, registry):
+    import yaml
+
+    root = Path(__file__).resolve().parents[1]
+    workflow = yaml.load((root / ".github/workflows/ci.yml").read_text(), Loader=yaml.BaseLoader)
+    command = workflow["jobs"]["ci"]["steps"][0]["run"]
+    result = subprocess.run(
+        ["bash", "-e", "-c", command],
+        env={**os.environ, "PIPELINE_RESULT": pipeline, "REGISTRY_RESULT": registry},
+        capture_output=True,
+        text=True,
+    )
+    assert (result.returncode == 0) == (pipeline == registry == "success")
