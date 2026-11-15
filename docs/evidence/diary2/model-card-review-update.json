@@ -1,0 +1,16 @@
+{
+  "revision_date": "2026-11-15",
+  "reviewer_attribution": "Jake Desira, as supplied by Luke",
+  "review_date_confirmed": false,
+  "reciprocal_exchange_confirmed": false,
+  "name": "task19-session6-city-booking",
+  "version": "2",
+  "run_id": "a849c16fdb4e432fb172b8ca2f3301dc",
+  "card_path": "docs/model-cards/task19-session6-city-booking-v2.md",
+  "card_sha256": "dc692c29f9d9d690523efcae43561acbc6fcbf9e384ca4d589cd5ab71b51b3e7",
+  "registered_description_readback": "PASS",
+  "aliases_unchanged": true,
+  "metrics_and_models_changed": false,
+  "documentation_revision_committed": false,
+  "exports_refreshed": false
+}

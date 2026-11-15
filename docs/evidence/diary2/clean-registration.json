@@ -1,0 +1,101 @@
+{
+  "source": {
+    "commit": "c9e3bfaf6b3d073dd9930ba60761ef932af1ab80",
+    "dirty": false
+  },
+  "training_runs": [
+    {
+      "training_run": "bedb232782bf49eb9ad6ff5fcd157b19",
+      "runs": {
+        "City Hotel": "9675a39b84034394b2dbcac1faa8bc00",
+        "Resort Hotel": "cec6c73b57c549b8ad849dbd029fc7de"
+      },
+      "registrations": {},
+      "source": {
+        "commit": "c9e3bfaf6b3d073dd9930ba60761ef932af1ab80",
+        "dirty": false
+      },
+      "production_authorized": false
+    },
+    {
+      "training_run": "ed286163604f4fc3ad4be2a410d9fa6b",
+      "runs": {
+        "City Hotel": "a849c16fdb4e432fb172b8ca2f3301dc",
+        "Resort Hotel": "c4647da5ac3f4541a3ea99555715e07d"
+      },
+      "registrations": {},
+      "source": {
+        "commit": "c9e3bfaf6b3d073dd9930ba60761ef932af1ab80",
+        "dirty": false
+      },
+      "production_authorized": false
+    },
+    {
+      "training_run": "07d233717090410dbf7380ac8eb76ead",
+      "runs": {
+        "City Hotel": "8c0f6d82afa84dc09abecfa7ed335e47",
+        "Resort Hotel": "a3c67daf77d0431c8432bc83fe75536a"
+      },
+      "registrations": {},
+      "source": {
+        "commit": "c9e3bfaf6b3d073dd9930ba60761ef932af1ab80",
+        "dirty": false
+      },
+      "production_authorized": false
+    }
+  ],
+  "registered_city_versions": [
+    {
+      "name": "task19-session6-city-booking",
+      "version": "1",
+      "run_id": "9675a39b84034394b2dbcac1faa8bc00",
+      "champion_set": false
+    },
+    {
+      "name": "task19-session6-city-booking",
+      "version": "2",
+      "run_id": "a849c16fdb4e432fb172b8ca2f3301dc",
+      "champion_set": false
+    }
+  ],
+  "rollback": [
+    {
+      "name": "task19-session6-city-booking",
+      "alias": "champion",
+      "previous": null,
+      "version": "2",
+      "actor": "lukecamilleri",
+      "at_utc": "2026-11-14T23:58:38.197565+00:00",
+      "production_authorized": false,
+      "probability": 0.2610630118151845,
+      "run_id": "a849c16fdb4e432fb172b8ca2f3301dc"
+    },
+    {
+      "name": "task19-session6-city-booking",
+      "alias": "champion",
+      "previous": 2,
+      "version": "1",
+      "actor": "lukecamilleri",
+      "at_utc": "2026-11-14T23:58:38.228516+00:00",
+      "production_authorized": false,
+      "probability": 0.2610630118151845,
+      "run_id": "9675a39b84034394b2dbcac1faa8bc00"
+    },
+    {
+      "name": "task19-session6-city-booking",
+      "alias": "champion",
+      "previous": 1,
+      "version": "2",
+      "actor": "lukecamilleri",
+      "at_utc": "2026-11-14T23:58:38.258098+00:00",
+      "production_authorized": false,
+      "probability": 0.2610630118151845,
+      "run_id": "a849c16fdb4e432fb172b8ca2f3301dc"
+    }
+  ],
+  "rollback_mlflow_run": "932502d0320248d2abe62ebc9b7323cf",
+  "synthetic_fixtures": false,
+  "resort_promoted": false,
+  "peer_review": "pending actual other student",
+  "production_authorized": false
+}

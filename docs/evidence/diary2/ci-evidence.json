@@ -1,0 +1,19 @@
+{
+  "verified_on": "2026-11-15",
+  "source": "Live GitHub connector job status and failing-job log inspection",
+  "failing": {
+    "run_id": 43022126664,
+    "job_id": 130527635694,
+    "conclusion": "failure",
+    "reason": "Quality gate: FAIL; Resort calibration ratio; Makefile quality-gate Error 1, ci Error 2",
+    "url": "https://github.com/Lukecamill/hotel-cancellations/actions/runs/43022126664"
+  },
+  "passing": {
+    "run_id": 43025312530,
+    "job_id": 130538440742,
+    "conclusion": "success",
+    "meaning": "Coursework verification preserves the expected original reference gate failure; not a strict model release pass",
+    "url": "https://github.com/Lukecamill/hotel-cancellations/actions/runs/43025312530"
+  },
+  "strict_passing_gate_ci": "not demonstrated"
+}

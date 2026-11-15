@@ -1,0 +1,11 @@
+{
+  "seed": 3217,
+  "random_test_fraction": 0.3,
+  "bootstrap": 1000,
+  "bootstrap_unit": "arrival date within each hotel; percentile 95% intervals",
+  "forward_holdout": "2017-01-01 inclusive to 2017-09-01 exclusive",
+  "training": "2015-07-01 to 2016-07-01 exclusive",
+  "gate": "retain existing ratio band [.85,1.15], AUPRC floors City .70/Resort .55 and ECE .10; no tuning",
+  "model": "unchanged supplied fixed LightGBM; random diagnostic isolated, never registered or deployed",
+  "purpose": "Previously exposed historical regression evidence, not a new pristine test"
+}

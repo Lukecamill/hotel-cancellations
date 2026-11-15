@@ -1,0 +1,113 @@
+{
+  "reviewed_on": "2026-11-15",
+  "user_decision": "Both hotels; keep CI blocked until an eligible model is justified",
+  "parent_commit": "c9e3bfaf6b3d073dd9930ba60761ef932af1ab80",
+  "tested_commit": "79e9ddaa53a2455073ecb3b599e783fb9490bfa1",
+  "pull_request": "https://github.com/Lukecamill/hotel-cancellations/pull/2",
+  "merged": false,
+  "draft": true,
+  "mergeable_state": "blocked",
+  "main_required_checks": {
+    "enforcement_level": "everyone",
+    "contexts": [
+      "ci"
+    ],
+    "checks": [
+      {
+        "context": "ci",
+        "app_id": null
+      }
+    ]
+  },
+  "main_updated": false,
+  "remote_pr_run": {
+    "id": 43712971999,
+    "url": "https://github.com/Lukecamill/hotel-cancellations/actions/runs/43712971999",
+    "jobs": [
+      {
+        "name": "pipeline",
+        "conclusion": "failure",
+        "job_id": 132808362842
+      },
+      {
+        "name": "registry-integration",
+        "conclusion": "success",
+        "job_id": 132808362996
+      },
+      {
+        "name": "ci",
+        "conclusion": "failure",
+        "job_id": 132808925070
+      },
+      {
+        "name": "release",
+        "conclusion": "skipped",
+        "job_id": 132808944782
+      }
+    ]
+  },
+  "remote_push_run": {
+    "id": 43712963948,
+    "url": "https://github.com/Lukecamill/hotel-cancellations/actions/runs/43712963948",
+    "jobs": [
+      {
+        "name": "registry-integration",
+        "conclusion": "success",
+        "job_id": 132808338121
+      },
+      {
+        "name": "pipeline",
+        "conclusion": "failure",
+        "job_id": 132808338242
+      },
+      {
+        "name": "ci",
+        "conclusion": "failure",
+        "job_id": 132808851030
+      },
+      {
+        "name": "release",
+        "conclusion": "skipped",
+        "job_id": 132808875572
+      }
+    ]
+  },
+  "remote_pipeline_tests": {
+    "passed": 283,
+    "skipped": 1,
+    "skip": "Optional MLflow integration absent from base environment; real MLflow integration runs in separate job",
+    "postgres_tests": "Included with real disposable PostgreSQL"
+  },
+  "remote_registry_tests": {
+    "passed": 16,
+    "skipped": 0
+  },
+  "local_tests": {
+    "passed": 277,
+    "skipped": 7
+  },
+  "gate": {
+    "city": "PASS",
+    "resort": "FAIL",
+    "resort_expected_observed_ratio": 0.6817233437376264,
+    "accepted_band": [
+      0.85,
+      1.15
+    ],
+    "image_build_executed": false,
+    "published": false
+  },
+  "artifacts": [
+    {
+      "id": 14160738360,
+      "name": "pipeline-evidence",
+      "size_in_bytes": 182038
+    }
+  ],
+  "limits": [
+    "No passing strict both-hotel CI example; model-quality blocker deliberately retained",
+    "Implementation is on draft PR, not merged into main",
+    "Local HEAD remains c9e3bfa with selected changes mirrored to remote CI commit; uncommitted diary/card changes excluded",
+    "No changes to model, holdout, thresholds, aliases or production authorisation"
+  ]
+}

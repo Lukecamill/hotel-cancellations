@@ -1,0 +1,375 @@
+{
+  "plan": {
+    "seed": 3217,
+    "random_test_fraction": 0.3,
+    "bootstrap": 1000,
+    "bootstrap_unit": "arrival date within each hotel; percentile 95% intervals",
+    "forward_holdout": "2017-01-01 inclusive to 2017-09-01 exclusive",
+    "training": "2015-07-01 to 2016-07-01 exclusive",
+    "gate": "retain existing ratio band [.85,1.15], AUPRC floors City .70/Resort .55 and ECE .10; no tuning",
+    "model": "unchanged supplied fixed LightGBM; random diagnostic isolated, never registered or deployed",
+    "purpose": "Previously exposed historical regression evidence, not a new pristine test"
+  },
+  "identity": {
+    "raw_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+    "holdout_dates_sha256": "3d24585f210c02317cd47cbe235e448486ffa69a0f96ae21f74608a7e5fdb659",
+    "feature_columns": [
+      "hotel",
+      "lead_time",
+      "arrival_month",
+      "arrival_dow",
+      "booked_dow",
+      "weekend_nights",
+      "week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "deposit_type",
+      "customer_type",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "agent",
+      "has_company",
+      "adr"
+    ],
+    "split_counts": {
+      "train": 49157,
+      "valid": 29546,
+      "test": 40687
+    },
+    "per_hotel_test_counts": {
+      "City Hotel": 27508,
+      "Resort Hotel": 13179
+    },
+    "boundaries": {
+      "window_start": "2015-07-01",
+      "train_end": "2016-07-01",
+      "calib_end": "2016-10-01",
+      "valid_end": "2017-01-01",
+      "test_end": "2017-09-01",
+      "window_end": "2017-09-01"
+    },
+    "seed": 3217
+  },
+  "runs": {
+    "random": "4ce11065ed9d4dc3aac3054150498ef9",
+    "forward": "d0baccc80c604310922bd706d6f9f87b",
+    "monitoring_and_intervals": "574ffcbae4774ceda7d4e677216e5d20"
+  },
+  "source": {
+    "commit": "c9e3bfaf6b3d073dd9930ba60761ef932af1ab80",
+    "dirty": true
+  },
+  "split_results": [
+    {
+      "split": "random",
+      "hotel": "City Hotel",
+      "n": 23737,
+      "cancellations": 9870,
+      "auprc": 0.8788723715276184,
+      "expected_observed_ratio": 1.0012710448351512,
+      "ece": 0.011612745700988447,
+      "brier": 0.12684981521913982,
+      "gate": "PASS",
+      "accuracy": 0.8040190420019379,
+      "majority_accuracy": 0.5841934532586258,
+      "baseline_auprc": 0.41580654674137424,
+      "baseline_expected_observed_ratio": 1.005021066864763,
+      "baseline_brier": 0.24291582130580205,
+      "duplicate_shared_signatures": 4626,
+      "run_id": "4ce11065ed9d4dc3aac3054150498ef9"
+    },
+    {
+      "split": "random",
+      "hotel": "Resort Hotel",
+      "n": 12080,
+      "cancellations": 3397,
+      "auprc": 0.7482138946620815,
+      "expected_observed_ratio": 0.9970370446848735,
+      "ece": 0.01602222912376535,
+      "brier": 0.12774180898030252,
+      "gate": "PASS",
+      "accuracy": 0.8107615894039735,
+      "majority_accuracy": 0.7187913907284769,
+      "baseline_auprc": 0.2812086092715232,
+      "baseline_expected_observed_ratio": 0.9817980503757784,
+      "baseline_brier": 0.2021565268454003,
+      "duplicate_shared_signatures": 4626,
+      "run_id": "4ce11065ed9d4dc3aac3054150498ef9"
+    },
+    {
+      "split": "forward",
+      "hotel": "City Hotel",
+      "n": 27508,
+      "cancellations": 11691,
+      "auprc": 0.785721886317962,
+      "expected_observed_ratio": 0.9112810321058089,
+      "ece": 0.04227523749271264,
+      "brier": 0.17239734512884491,
+      "gate": "PASS",
+      "accuracy": 0.7214264941108042,
+      "majority_accuracy": 0.5749963646939072,
+      "baseline_auprc": 0.42500363530609275,
+      "baseline_expected_observed_ratio": 0.9802907642780527,
+      "baseline_brier": 0.24444571098185702,
+      "duplicate_shared_signatures": 0,
+      "run_id": "d0baccc80c604310922bd706d6f9f87b"
+    },
+    {
+      "split": "forward",
+      "hotel": "Resort Hotel",
+      "n": 13179,
+      "cancellations": 4054,
+      "auprc": 0.627907608840626,
+      "expected_observed_ratio": 0.6817233437376264,
+      "ece": 0.0989614606930023,
+      "brier": 0.17757610639149055,
+      "gate": "FAIL",
+      "accuracy": 0.7350330070566811,
+      "majority_accuracy": 0.6923894073905456,
+      "baseline_auprc": 0.30761059260945445,
+      "baseline_expected_observed_ratio": 0.8176290265064832,
+      "baseline_brier": 0.21613344101501722,
+      "duplicate_shared_signatures": 0,
+      "run_id": "d0baccc80c604310922bd706d6f9f87b"
+    }
+  ],
+  "intervals": [
+    {
+      "hotel": "City Hotel",
+      "metric": "auprc",
+      "lower": 0.7522629450229895,
+      "upper": 0.8132836465592841,
+      "clusters": 243,
+      "replicates": 1000
+    },
+    {
+      "hotel": "City Hotel",
+      "metric": "expected_observed_ratio",
+      "lower": 0.8925267701285072,
+      "upper": 0.9310582092543768,
+      "clusters": 243,
+      "replicates": 1000
+    },
+    {
+      "hotel": "City Hotel",
+      "metric": "brier",
+      "lower": 0.16528862733065056,
+      "upper": 0.1800443714181303,
+      "clusters": 243,
+      "replicates": 1000
+    },
+    {
+      "hotel": "City Hotel",
+      "metric": "prevalence_baseline_auprc",
+      "lower": 0.4050583146494356,
+      "upper": 0.44479802850979416,
+      "clusters": 243,
+      "replicates": 1000
+    },
+    {
+      "hotel": "Resort Hotel",
+      "metric": "auprc",
+      "lower": 0.5842750007247361,
+      "upper": 0.6645668611820871,
+      "clusters": 243,
+      "replicates": 1000
+    },
+    {
+      "hotel": "Resort Hotel",
+      "metric": "expected_observed_ratio",
+      "lower": 0.6444692635275087,
+      "upper": 0.7188786240818796,
+      "clusters": 243,
+      "replicates": 1000
+    },
+    {
+      "hotel": "Resort Hotel",
+      "metric": "brier",
+      "lower": 0.16736730615543233,
+      "upper": 0.18790238531731493,
+      "clusters": 243,
+      "replicates": 1000
+    },
+    {
+      "hotel": "Resort Hotel",
+      "metric": "prevalence_baseline_auprc",
+      "lower": 0.28961275284775717,
+      "upper": 0.324862937915031,
+      "clusters": 243,
+      "replicates": 1000
+    }
+  ],
+  "monthly": [
+    {
+      "hotel": "City Hotel",
+      "month": "2017-01",
+      "n": 2372,
+      "observed": 1044,
+      "auprc": 0.857334360615137,
+      "expected_observed_ratio": 0.8563201441948879,
+      "lead_time_psi": 0.3137440883584199,
+      "market_segment_psi": 0.43312535503716787
+    },
+    {
+      "hotel": "City Hotel",
+      "month": "2017-02",
+      "n": 2594,
+      "observed": 971,
+      "auprc": 0.7649144118400927,
+      "expected_observed_ratio": 0.9236464407607473,
+      "lead_time_psi": 0.30787032913029727,
+      "market_segment_psi": 0.3484895356771521
+    },
+    {
+      "hotel": "City Hotel",
+      "month": "2017-03",
+      "n": 3412,
+      "observed": 1278,
+      "auprc": 0.7977790058681635,
+      "expected_observed_ratio": 1.0464871119888812,
+      "lead_time_psi": 0.14139146163456795,
+      "market_segment_psi": 0.20724990595681256
+    },
+    {
+      "hotel": "City Hotel",
+      "month": "2017-04",
+      "n": 3919,
+      "observed": 1926,
+      "auprc": 0.8391223207579895,
+      "expected_observed_ratio": 0.9487826911094311,
+      "lead_time_psi": 0.35244882200433003,
+      "market_segment_psi": 0.20370322706246058
+    },
+    {
+      "hotel": "City Hotel",
+      "month": "2017-05",
+      "n": 4556,
+      "observed": 2217,
+      "auprc": 0.835229176306431,
+      "expected_observed_ratio": 0.9241807075335716,
+      "lead_time_psi": 0.27419880436480815,
+      "market_segment_psi": 0.20833489139638237
+    },
+    {
+      "hotel": "City Hotel",
+      "month": "2017-06",
+      "n": 3971,
+      "observed": 1808,
+      "auprc": 0.8371610264851191,
+      "expected_observed_ratio": 0.9665264895807665,
+      "lead_time_psi": 0.4238153284299572,
+      "market_segment_psi": 0.1716164256517057
+    },
+    {
+      "hotel": "City Hotel",
+      "month": "2017-07",
+      "n": 3559,
+      "observed": 1324,
+      "auprc": 0.6156532978341247,
+      "expected_observed_ratio": 0.8370023223344805,
+      "lead_time_psi": 0.49002778643403966,
+      "market_segment_psi": 0.527925614271052
+    },
+    {
+      "hotel": "City Hotel",
+      "month": "2017-08",
+      "n": 3125,
+      "observed": 1123,
+      "auprc": 0.5512730052311745,
+      "expected_observed_ratio": 0.7066625406032979,
+      "lead_time_psi": 0.43366383733129915,
+      "market_segment_psi": 0.6121846755670337
+    },
+    {
+      "hotel": "Resort Hotel",
+      "month": "2017-01",
+      "n": 1309,
+      "observed": 206,
+      "auprc": 0.5062551876351253,
+      "expected_observed_ratio": 0.810859270306412,
+      "lead_time_psi": 0.5767620453778339,
+      "market_segment_psi": 0.2088337610263978
+    },
+    {
+      "hotel": "Resort Hotel",
+      "month": "2017-02",
+      "n": 1583,
+      "observed": 388,
+      "auprc": 0.6229805209109053,
+      "expected_observed_ratio": 0.765222680991118,
+      "lead_time_psi": 0.30775264006150777,
+      "market_segment_psi": 0.183301346365149
+    },
+    {
+      "hotel": "Resort Hotel",
+      "month": "2017-03",
+      "n": 1558,
+      "observed": 394,
+      "auprc": 0.6563509077647154,
+      "expected_observed_ratio": 0.9811306244017455,
+      "lead_time_psi": 0.042152811706016285,
+      "market_segment_psi": 0.20961307535184273
+    },
+    {
+      "hotel": "Resort Hotel",
+      "month": "2017-04",
+      "n": 1742,
+      "observed": 537,
+      "auprc": 0.670537717589637,
+      "expected_observed_ratio": 0.7235395739291608,
+      "lead_time_psi": 0.08155461735806194,
+      "market_segment_psi": 0.1458602529353132
+    },
+    {
+      "hotel": "Resort Hotel",
+      "month": "2017-05",
+      "n": 1757,
+      "observed": 545,
+      "auprc": 0.7029535282108581,
+      "expected_observed_ratio": 0.7310498845400903,
+      "lead_time_psi": 0.24555899081010363,
+      "market_segment_psi": 0.0690757275876939
+    },
+    {
+      "hotel": "Resort Hotel",
+      "month": "2017-06",
+      "n": 1676,
+      "observed": 631,
+      "auprc": 0.6616519663103962,
+      "expected_observed_ratio": 0.6698460473318997,
+      "lead_time_psi": 0.5086480882924471,
+      "market_segment_psi": 0.26763702079896223
+    },
+    {
+      "hotel": "Resort Hotel",
+      "month": "2017-07",
+      "n": 1754,
+      "observed": 660,
+      "auprc": 0.5580235486210885,
+      "expected_observed_ratio": 0.5348846841199606,
+      "lead_time_psi": 0.39820686101402913,
+      "market_segment_psi": 0.923174908921309
+    },
+    {
+      "hotel": "Resort Hotel",
+      "month": "2017-08",
+      "n": 1800,
+      "observed": 693,
+      "auprc": 0.6018218373133192,
+      "expected_observed_ratio": 0.5058266579083168,
+      "lead_time_psi": 0.2824783525130953,
+      "market_segment_psi": 1.5814191305210594
+    }
+  ],
+  "bootstrap_limitation": "Arrival-date clusters preserve within-date dependence, not serial dependence between dates; intervals are conditional historical uncertainty, not future guarantees.",
+  "random_limitation": "Random test is diagnostic and has a different time mix/sample size. It includes future-era rows in training, so it is never a release candidate.",
+  "data_changed": false,
+  "reference_model_or_thresholds_changed": false
+}

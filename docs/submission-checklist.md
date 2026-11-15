@@ -1,5 +1,7 @@
 # Task 19 submission checklist and evidence audit
 
+> Update 15 November 2026: [ADR 0018](decisions/0018-strict-both-hotel-merge-gate.md) supersedes the earlier CI behavior described below. `make ci` now runs the strict both-hotel gate before building and is expected to fail for the original Resort model. `make coursework-check` remains the separate reproduction check. GitHub retains the required `ci` name as an aggregate of `pipeline` and `registry-integration`. Luke chose to keep both hotels in scope; no passing strict gate is claimed.
+
 Reviewed 11 November 2026 against the supplied Task 19 notebook, LLM access policy
 and Reflective Diary Entry 1 rubric. This replaces the older stage checklist.
 The notebook defines the required project work: C1–C5, E1–E4 and S1. S2 and S3

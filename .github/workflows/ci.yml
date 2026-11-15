@@ -8,7 +8,7 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  ci:
+  pipeline:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -47,6 +47,14 @@ jobs:
         run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/hotel-cancellations" >> "$GITHUB_ENV"
       - name: Run the complete local pipeline
         run: make ci IMAGE="$IMAGE" SOURCE="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+      - name: Preserve validation and model-gate evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pipeline-evidence
+          path: artifacts/ci/
+          retention-days: 14
+          if-no-files-found: warn
       - name: Save the tested image for the separate release job
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
@@ -62,6 +70,22 @@ jobs:
           path: artifacts/ci/image/
           retention-days: 1
           if-no-files-found: error
+  # main already requires the stable check name "ci". Keep that name as an
+  # aggregate so either pipeline quality or registry integration blocks merging.
+  ci:
+    needs: [pipeline, registry-integration]
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Require both upstream jobs to succeed
+        env:
+          PIPELINE_RESULT: ${{ needs.pipeline.result }}
+          REGISTRY_RESULT: ${{ needs.registry-integration.result }}
+        run: |
+          test "$PIPELINE_RESULT" = success
+          test "$REGISTRY_RESULT" = success
   release:
     needs: [ci, registry-integration]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'

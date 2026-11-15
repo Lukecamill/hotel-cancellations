@@ -1,0 +1,30 @@
+{
+  "main_reflection_words": 500,
+  "video_spoken_words": 599,
+  "content_slides": 8,
+  "total_slides": 10,
+  "narrative_status": "Draft for Luke to review and personalise; no student peer review invented",
+  "open_items": [
+    "Other-student model-card review and ensuing revision",
+    "Passing strict model-gate CI example",
+    "Commit new diary source/evidence and record/review own-voice video"
+  ],
+  "source_commit": "c9e3bfaf6b3d073dd9930ba60761ef932af1ab80",
+  "model_and_thresholds_changed": false,
+  "production_authorized": false,
+  "output_sha256": {
+    "diary-entry-2-journal.pdf": "3eeda18c013e422b4490ffcec0b834d5ce1b285517d23145552c71c1118d92db",
+    "diary-entry-2-slides.pdf": "0c8a8c33b4687e42a9eff3e0f248af0d4a55bc3553b9dd4e97c563079fbdb61f",
+    "diary-entry-2-slides.pptx": "7656f7f0ea0a919d45cb15a4b725ca57c863cc45942bc9bb6531fd78e3e5d2d0",
+    "diary-entry-2-video-script.pdf": "5469b96293f985d3c64e0b8182954fa669e80d35b3130746c2f1b280f1e8b59f",
+    "diary2-written-entry.md": "1219bd69273eb3ae6460c0ed84a489aa64e60f61bf0915ba3ccc1382dbe5b10c",
+    "diary2-video-script.md": "3cc6a3c4412a82aba55c643b0d79c0422ee3e72aad2ef8d0538001e9ce75debb",
+    "README.md": "db24a156735d92eb5a3dbe9b651dcec2ff7539bc2edf3d0bc942ca1c80b5e3b1"
+  },
+  "pdf_layout_visually_reviewed": true,
+  "slides_visually_reviewed": 10,
+  "native_tables": 3,
+  "native_charts": 4,
+  "embedded_chart_workbooks": 4,
+  "remote_model_source_commit_verified": true
+}
