@@ -1,5 +1,8 @@
 # Session 6 tracking and registry workflow
 
+> Current status, 18 November 2026: see [current-submission-status.md](current-submission-status.md). Older results below retain their historical revision. Strict `make ci` gates both hotels before building; Resort blocks it. Actual City registration/rollback and simulated q=0 policy review are recorded. Only reciprocal peer review remains unconfirmed; review date/version are not required.
+
+
 Implemented 15 November 2026 from the supplied Session 6 notes. This is a separate coursework booking-prediction workflow. It preserves the original serving bundle, saved policies, historical failed runs and diary assets. Its registered names start task19-session6- to avoid rewriting the earlier research registry.
 
 ## What changed

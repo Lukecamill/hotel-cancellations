@@ -1,5 +1,8 @@
 # ADR 0017 Entry 2 honest gate and monitoring
 
+> Current status, 18 November 2026: see [current-submission-status.md](../current-submission-status.md). Older results below retain their historical revision. Strict `make ci` gates both hotels before building; Resort blocks it. Actual City registration/rollback and simulated q=0 policy review are recorded. Only reciprocal peer review remains unconfirmed; review date/version are not required.
+
+
 Recorded 15 November 2026. Status: retain the existing gate and the original Resort failure; peer review and a passing strict model-gate CI example remain open.
 
 The diary uses the unchanged prescribed learner. Choose expected/observed cancellation ratio as the primary calibration guard, retaining the existing 0.85-1.15 band, AUPRC floors City 0.70 / Resort 0.55 and ECE ceiling 0.10 from evaluation-lock.json. This review does not alter the lock, choose a new threshold from test performance, or use the separately improved calibrator to make the prescribed model pass.
@@ -10,6 +13,6 @@ New conditional arrival-date cluster intervals (1,000 replicates, 243 dates) put
 
 Monthly retrospective replay supports monitoring both lead time/market segment PSI and the mature cancellation ratio. City June/August lead-time PSI is 0.423815/0.433664 while ratios are 0.966526/0.706663. Resort April lead-time PSI is only 0.081555 while its ratio is 0.723540. Lead-time drift alone is insufficient; market-segment drift is also available. Retain PSI >0.10 investigation and >0.25 action review as provisional engineering levels, with two consecutive mature monthly ratio breaches prompting retraining review. Require at least 30 bookings and 20 observed cancellations, inspect label maturity and source changes, and never promote automatically. These eight historical cohorts cannot validate a guaranteed alert precision or retraining benefit.
 
-The coursework owner, Luke, controls coursework alias decisions; a real deployment needs authenticated owner/pipeline control. Three fresh prescribed training runs from clean commit c9e3bfaf6b3d073dd9930ba60761ef932af1ab80 support real City versions 1 and 2 and an actual alias/load rollback 2, 1, 2. Their example predictions are identical, so this demonstrates version recovery, not a new performance improvement. The attached card's other-student review and ensuing change are still pending.
+The coursework owner, Luke, controls coursework alias decisions; a real deployment needs authenticated owner/pipeline control. Three fresh prescribed training runs from clean commit c9e3bfaf6b3d073dd9930ba60761ef932af1ab80 support real City versions 1 and 2 and an actual alias/load rollback 2, 1, 2. Their example predictions are identical, so this demonstrates version recovery, not a new performance improvement. Supplied incoming peer feedback and the card changes are recorded; reciprocal review remains unconfirmed.
 
 Evidence: [diary investigation](../evidence/diary2/investigation.json), [clean training and rollback](../evidence/diary2/clean-registration.json), [written entry](../diary2-written-entry.md), and [preparation checklist](../diary2-preparation-and-open-items.md). OpenAI Codex assisted analysis and drafting; Luke must review the reasoning before using the reflective entry.

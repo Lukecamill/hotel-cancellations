@@ -1,0 +1,119 @@
+{
+  "started_utc": "2026-11-18T16:38:05.211293+00:00",
+  "completed_utc": "2026-11-18T16:39:12.423674+00:00",
+  "scope": "Local loopback HTTP versus direct daily batch, same raw records and fixed artifact; DB/network/PMS excluded",
+  "git_commit": "d0bae8c89f736caa9f818fabac80e786ec9bd896",
+  "working_tree_dirty": false,
+  "measurement_script_sha256": "657e6c70ba1e951eaa3ae09a40cd3259e4d8da2f4cb5a4c2c9212f08c280fb71",
+  "hardware": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm64",
+    "python": "3.13.13"
+  },
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1"
+  },
+  "fit": {
+    "wall_seconds": 0.5209278329857625,
+    "cpu_seconds": 0.5150680000000001
+  },
+  "booking_pipeline_wall_seconds": 1.6964595830067992,
+  "split_counts": {
+    "train": 49157,
+    "valid": 29546,
+    "test": 40687
+  },
+  "holdout_sha256": "ac37475750f8f24abb767a78f7775b905a6ce0dce90d364402074181a9db017b",
+  "metrics": {
+    "City Hotel": {
+      "auprc": 0.785721886317962,
+      "expected_observed_ratio": 0.9112810321058089
+    },
+    "Resort Hotel": {
+      "auprc": 0.627907608840626,
+      "expected_observed_ratio": 0.6817233437376264
+    }
+  },
+  "workload": {
+    "definition": "All observed rows entered on selected reconstructed 2016 booking date; both hotels; no sampling",
+    "reference_days": 366,
+    "mean_daily_entries": 159.95355191256832,
+    "p95_daily_entries": 324.5,
+    "max_daily_entries": 818,
+    "selected_booked_date": "2016-01-06",
+    "records": 325,
+    "offered_requests_per_second": 5,
+    "workers": 8,
+    "warmup_requests": 10,
+    "records_sha256": "42459dee5edc64d4223d59f1e92a3f2e4ee1a97a7f79f151be9a21bb3f10dcfa"
+  },
+  "online": {
+    "wall_seconds": 64.81882141700771,
+    "cpu_seconds": 4.977580000000001,
+    "measured_requests": 325,
+    "p50_seconds": 0.019781124996370636,
+    "p95_seconds": 0.022480150003684685,
+    "p99_seconds": 0.023872849999461317,
+    "all_requests_succeeded": true,
+    "database_persistence_enabled": false
+  },
+  "batch": {
+    "runs": [
+      {
+        "wall_seconds": 0.028029916997184046,
+        "cpu_seconds": 0.028016999999999292
+      },
+      {
+        "wall_seconds": 0.015325458996812813,
+        "cpu_seconds": 0.01532599999999995
+      },
+      {
+        "wall_seconds": 0.013460874994052574,
+        "cpu_seconds": 0.01346100000000039
+      },
+      {
+        "wall_seconds": 0.012654582998948172,
+        "cpu_seconds": 0.012654999999999639
+      },
+      {
+        "wall_seconds": 0.011868790999869816,
+        "cpu_seconds": 0.011868999999999907
+      }
+    ],
+    "median_wall_seconds": 0.013460874994052574,
+    "median_cpu_seconds": 0.01346100000000039,
+    "median_records_per_second": 24144.047110131767,
+    "includes_artifact_loading": true
+  },
+  "parity_max_absolute_difference": 0.0,
+  "reference_metric_comparison": "PASS",
+  "serving_artifacts_unchanged": true,
+  "serving_sha256": {
+    "manifest.json": "474dca36349a240367b6b298ded49bb030ba17aac8e0d03fcfcc61ff897b5fc8",
+    "booking_model.joblib": "b921b8c3f829e4364f84ea857e8018bf996e58165b44064288b94ff62f46eff5",
+    "policy_state.joblib": "65a1dba097dff892375a34e46efd964bbf4c97f3024d2384a85819500f3ee13a"
+  },
+  "cost_scenarios": {
+    "status": "Estimates using measured duration; prices/billing rules assumed, not an electricity meter or invoice",
+    "assumed_eur_per_allocated_hour": 0.1,
+    "assumed_batch_minimum_billing_seconds": 60,
+    "dedicated_online_24h_eur_per_day": 2.4,
+    "on_demand_batch_eur_per_day": 0.0016666666666666668,
+    "shared_already_running_host_incremental_invoice_saving_eur_per_day": 0,
+    "online_measured_cpu_hours_per_workload": 0.0013826611111111113,
+    "batch_measured_cpu_hours_per_workload": 3.7391666666667747e-06
+  },
+  "limitations": [
+    "Single local run, not the historical Ubuntu load experiment",
+    "Batch repeated five times with warm OS cache; each repetition loads artifacts",
+    "No PostgreSQL persistence or live PMS/channel integration in this benchmark",
+    "Booking entry dates are reconstructed final-snapshot dates, not an event log",
+    "5 requests/s is a deliberately compressed burst, not observed interarrival timing",
+    "Elapsed batch time excludes up-to-one-day scheduling wait",
+    "Staffing, electricity, hardware amortisation and hosting invoices are unmeasured",
+    "Both-hotel reference quality gate remains blocked by Resort; no promotion"
+  ]
+}

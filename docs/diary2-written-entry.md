@@ -2,7 +2,7 @@
 
 Luke Camilleri | ARI3217 | Task 19 | 15 November 2026
 
-**Draft for student review.** Main reflection: 500 words, excluding citations, tables, figures and references. Peer feedback and card revisions are recorded. Reciprocal exchange details and a passing strict model-gate CI example remain open.
+**Draft for student review.** Main reflection: 498 words, excluding citations, tables, figures and references. Peer feedback and card revisions are recorded. Reciprocal card review and a passing strict model-gate CI example remain open.
 
 For Entry 2, I investigated whether my evaluation and release controls told the same story. I retained the supplied LightGBM learner and the frozen January-August 2017 holdout. I compared a stratified random split with the prescribed forward split, then examined calibration and input drift. I kept this diagnostic random experiment out of deployment. [E1]
 
@@ -18,16 +18,16 @@ Monitoring exposed another limitation. City lead-time PSI was 0.424 in June and 
 
 Three runs supported City rollback from version 2 to 1 and back. Identical predictions confirmed reproducibility. Only the coursework owner may move its alias. [E4]
 
-Feedback attributed to Jake Desira identified managers as the least well served readers. I added a City version 2 summary with results and permitted use, plus monitoring responsibilities and failed-rollback fallbacks. This taught me that evidence must be accessible to its reader. The review date and reciprocal exchange remain unconfirmed. Codex assisted implementation, analysis and drafting. I remain responsible for the interpretation. [E5]
+Feedback attributed to Jake Desira identified managers as the least well served readers. I added a City version 2 summary with results and permitted use, plus monitoring responsibilities and failed-rollback fallbacks. This taught me that evidence must be accessible to its reader. The reciprocal card review remains unconfirmed. Codex assisted implementation, analysis and drafting. I remain responsible for the interpretation. [E5]
 
 ## Table 1 Split comparison
 
-| Hotel | Split | Test n | AUPRC | Ratio | Accuracy |
-|---|---|---:|---:|---:|---:|
-| City Hotel | random | 23,737 | 0.878872 | 1.001271 | 0.804019 |
-| Resort Hotel | random | 12,080 | 0.748214 | 0.997037 | 0.810762 |
-| City Hotel | forward | 27,508 | 0.785722 | 0.911281 | 0.721426 |
-| Resort Hotel | forward | 13,179 | 0.627908 | 0.681723 | 0.735033 |
+| Hotel | Split | Test n | AUPRC | Ratio | Accuracy | MLflow run |
+|---|---|---:|---:|---:|---:|---|
+| City Hotel | random | 23,737 | 0.878872 | 1.001271 | 0.804019 | 4ce11065ed9d4dc3aac3054150498ef9 |
+| Resort Hotel | random | 12,080 | 0.748214 | 0.997037 | 0.810762 | 4ce11065ed9d4dc3aac3054150498ef9 |
+| City Hotel | forward | 27,508 | 0.785722 | 0.911281 | 0.721426 | d0baccc80c604310922bd706d6f9f87b |
+| Resort Hotel | forward | 13,179 | 0.627908 | 0.681723 | 0.735033 | d0baccc80c604310922bd706d6f9f87b |
 
 ## Table 2 Forward bootstrap evidence
 
@@ -41,6 +41,15 @@ Feedback attributed to Jake Desira identified managers as the least well served 
 | Resort Hotel | expected_observed_ratio | 0.644469-0.718879 |
 | Resort Hotel | brier | 0.167367-0.187902 |
 | Resort Hotel | prevalence_baseline_auprc | 0.289613-0.324863 |
+
+## Primary gate comparison
+
+The expected/observed ratio is the primary calibration guard. The baseline is a constant training cancellation-rate predictor, scored on the same holdout. Both models also need to pass the AUPRC floors and ECE ceiling; a ratio-only check is insufficient.
+
+| Hotel | Model ratio | 95% bootstrap interval | Constant-rate baseline ratio | Accepted band |
+| --- | --- | --- | --- | --- |
+| City Hotel | 0.911 | 0.893-0.931 | 0.980 | 0.85-1.15 |
+| Resort Hotel | 0.682 | 0.644-0.719 | 0.818 | 0.85-1.15 |
 
 ## Figures
 
@@ -56,7 +65,7 @@ Figure captions: final recorded outcomes grouped by 2017 arrival month; retrospe
 |---|---|
 | E1 Random and forward investigation | Random run 4ce11065ed9d4dc3aac3054150498ef9; Forward run d0baccc80c604310922bd706d6f9f87b |
 | E2 Intervals and monthly replay | Run 574ffcbae4774ceda7d4e677216e5d20; 1,000 arrival-date clusters; conditional historical intervals |
-| E3 Failing and passing CI | Failure 43022126664; coursework pass 43025312530; Passing strict model-gate CI: NOT YET DEMONSTRATED |
+| E3 Failing and passing CI | Failure [43022126664](https://github.com/Lukecamill/hotel-cancellations/actions/runs/43022126664); coursework reproduction pass [43025312530](https://github.com/Lukecamill/hotel-cancellations/actions/runs/43025312530); Passing strict model-gate CI: NOT YET DEMONSTRATED |
 | E5 Peer feedback and revisions | docs/reviews/session6-model-card-peer-review.md; docs/model-cards/task19-session6-city-booking-v2.md; docs/evidence/diary2/model-card-review-update.json. |
 | E4 Clean training and City rollback | Commit c9e3bfaf6b3d073dd9930ba60761ef932af1ab80; Rollback run 932502d0320248d2abe62ebc9b7323cf |
 | Frozen window | Arrivals from 2017-01-01 inclusive to 2017-09-01 exclusive. |
@@ -66,10 +75,10 @@ Figure captions: final recorded outcomes grouped by 2017 arrival month; retrospe
 | Baseline | A constant training cancellation-rate predictor. AUPRC equals each test cohort's cancellation prevalence. Majority prediction uses the training majority class. |
 | Bootstrap | 1,000 percentile replicates; 243 arrival dates resampled within each hotel; retain all rows from sampled dates. Does not preserve dependence across dates or establish future coverage. |
 | Monitoring | Final recorded outcomes, not event-time reconstruction. Monthly cohorts are not live alert timestamps. Provisional review triggers; do not optimise threshold values against these eight months. |
-| Reproducibility | Model source c9e3bfaf6b3d073dd9930ba60761ef932af1ab80. New analysis script is archived in its MLflow runs and still needs committing with the diary. See investigation.json for working-tree state. |
+| Reproducibility | Model source c9e3bfaf6b3d073dd9930ba60761ef932af1ab80. Analysis script is archived in its MLflow runs and tracked at d0bae8c; later corrections need their own reviewed commit. See investigation.json for working-tree state. |
 | Registered model | models:/task19-session6-city-booking/2 in artifacts/diary2/mlflow.db. Version card attached. Local UI can inspect it after starting the documented tracking server. |
 | Scope of clean training | Three repeated prescribed baseline training pipelines. They also record a separate Resort calibration extension, excluded from the given-model gate comparison in this entry. No improved Resort champion is used to turn its reference gate green. |
-| Peer review | Feedback supplied by Luke on 15 November 2026 and attributed to Jake Desira. Manager identified as least well served reader. City version 2 card revised with a standalone summary, responsibilities, monitoring rules and rollback fallbacks. Actual review date, exact reviewed version and reciprocal exchange remain unconfirmed. See docs/reviews/session6-model-card-peer-review.md. |
+| Peer review | Feedback supplied by Luke on 15 November 2026 and attributed to Jake Desira. Manager identified as least well served reader. City version 2 card revised with a standalone summary, responsibilities, monitoring rules and rollback fallbacks. Actual reciprocal card review remains unconfirmed. See docs/reviews/session6-model-card-peer-review.md. |
 | AI use | OpenAI Codex assisted code, analysis, plots and drafting. Luke must confirm that the reflection represents his own reasoning. |
 
 ### Links

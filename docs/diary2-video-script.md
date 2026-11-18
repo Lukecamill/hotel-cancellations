@@ -2,7 +2,7 @@
 
 Luke Camilleri | Own-voice recording | Target 4:45-4:55, maximum 5:00
 
-Draft for rehearsal: 609 spoken words. Timings are targets, not a measured recording. Read only the spoken paragraphs. Show the slides in order; do not read full run IDs. Rehearse at roughly 130-140 words per minute and stop by 5:00. The slides and script introduce no investigation beyond the journal evidence. Review all first-person statements before recording. Peer feedback and card revisions are recorded. Reciprocal exchange details and a strict passing-gate CI example remain pending.
+Draft for rehearsal: 607 spoken words. Timings are targets, not a measured recording. Read only the spoken paragraphs. Show the slides in order; do not read full run IDs. Rehearse at roughly 130-140 words per minute and stop by 5:00. The slides and script introduce no investigation beyond the journal evidence. Review all first-person statements before recording. Peer feedback and card revisions are recorded. Reciprocal card review and a strict passing-gate CI example remain pending.
 
 ## Slide 1 | 0:00-0:15 | The honest gate and registered model
 
@@ -38,7 +38,7 @@ My proposed policy investigates PSI above point one and requests action review a
 
 ## Slide 9 | 4:15-4:45 | Lessons and remaining evidence
 
-My main lesson is that reproducibility, useful ranking and safe economic decisions require different evidence. Random splitting can flatter performance, calibration can fail despite acceptable ranking, and input drift may not track the model's errors. Before submission, the review date and reciprocal exchange need confirmation, and strict passing-gate evidence remains outstanding. Codex helped with implementation, analysis and drafting. I am responsible for checking the claims and explaining the reasoning in my own voice.
+My main lesson is that reproducibility, useful ranking and safe economic decisions require different evidence. Random splitting can flatter performance, calibration can fail despite acceptable ranking, and input drift may not track the model's errors. Before submission, the reciprocal card review need confirmation, and strict passing-gate evidence remains outstanding. Codex helped with implementation, analysis and drafting. I am responsible for checking the claims and explaining the reasoning in my own voice.
 
 ## Slide 10 | 4:45-4:55 | Evidence register
 

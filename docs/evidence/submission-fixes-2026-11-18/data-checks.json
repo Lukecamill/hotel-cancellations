@@ -1,0 +1,287 @@
+{
+  "status": "passed",
+  "base_commit": "d0bae8c89f736caa9f818fabac80e786ec9bd896",
+  "working_tree_dirty": true,
+  "dataset_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+  "source_sha256": {
+    "src/hotel_cancel/__init__.py": "f6c4fa215f6a58cd6084213580e42b1f98d5d7f69f976d6e77499dbeba70feb4",
+    "src/hotel_cancel/approvals.py": "1721a9296f19f544ec7c7898b1391fdd79a3062ad1631089982cafe8f11f5cd8",
+    "src/hotel_cancel/audit.py": "d6013b8bb192053b143ea0c72f26f2566e8155d1b7fa438e44a28fa424328346",
+    "src/hotel_cancel/baseline.py": "5a51027269cd36118768771b3eb1e9dcf587ca0b40f62585cfdb633f0984456f",
+    "src/hotel_cancel/batch.py": "9eeebbb9541a9c701c466d9cfcbe9a164c627b22d959f09e4096d3514de9cc74",
+    "src/hotel_cancel/blocks.py": "1b4e1618ef91139e3dc5c82e62ce87c412d0adc270dafdb4452c13a7b14582c6",
+    "src/hotel_cancel/briefing.py": "248d2ca1e4b1b60f1f3a86e27692d61312cb6879f24d4a5978def2c1a9d4d7e6",
+    "src/hotel_cancel/briefing_revision.py": "15c1d5b0c600e84535e761e1a331ed940ac3a0afcb69ff92177ee719b95f82c1",
+    "src/hotel_cancel/calibrated_registry_model.py": "2729065ab5d44b3b10d293d7de4777f0af1f1c462761040a4fc6d2fe38b78e61",
+    "src/hotel_cancel/calibration_challenger.py": "564617d69f806272b7b9554eec5ea07e1007267426795acff3b30a8a464268a6",
+    "src/hotel_cancel/config.py": "4e51326996fceb647135b32b6547e5e6e520c24f821b6ad5e581f29e5cffa3a5",
+    "src/hotel_cancel/contracts.py": "3871a2d8fcbfd70d8e5bd9e1b15a7585268413369e0453315226959ebebdfd85",
+    "src/hotel_cancel/coursework.py": "4503dd5b493cbd57df632096ce9ecea76bdacea43123fd418f15833cf41d1192",
+    "src/hotel_cancel/csv_parity.py": "7c89f960248c5b2c977a186575eaa21c333e087dc739145a1ad67019a8ee17d5",
+    "src/hotel_cancel/data.py": "d9dab3b161d2b263d7406b0ef5b90ffa7dd03e404286dda181e2e842b989a747",
+    "src/hotel_cancel/evaluate.py": "0907577f920a6d1e2caffce6f79700622587e5cd33cf108394fbd06a43a8922a",
+    "src/hotel_cancel/features.py": "e90525f48ebe6877cbaeb63236812ebdb29bd9724124d98de5946001a282b573",
+    "src/hotel_cancel/history.py": "4bf7894d671862f202dc50cb8a83e571a42eb0577a4a26c73dc1bed134dc1151",
+    "src/hotel_cancel/kb_ablation.py": "ba8c260114b8fb8df8716bb0aabba81db390818a14f6f70f4175f512606ff8a5",
+    "src/hotel_cancel/kb_briefing_eval.py": "7b45ed69c275c4d0b1ec2c817f8d4f46920b77f2605b5ef198b69298855196e1",
+    "src/hotel_cancel/knowledge.py": "84aff9b26120a84d8753bf40144b5374449e4b71d2bbedda3982186bbaf569e1",
+    "src/hotel_cancel/logging_setup.py": "0652ca14fca219b86114a33268d3d0599b062713a2261f0464d9ee6b666aaa03",
+    "src/hotel_cancel/model.py": "af8f7b2ec3eb4014f0ed0a18bba61dd249395048c27cd8e7c81f99e95447d52f",
+    "src/hotel_cancel/monitor_replay.py": "7cd617362d9e0697bcc8e08f64d83cf103545e28a01c4c31c69867f87f19f67a",
+    "src/hotel_cancel/monitoring.py": "bd7409e710db67ba2bfb5310e19fc934a99c6c85dcee6496caf5c0a37935b24c",
+    "src/hotel_cancel/policy.py": "964c750962d2ace143aa0df3fc52a16a9cd0b1300d8347fcf874ae9cce1e78fd",
+    "src/hotel_cancel/quality_gate.py": "a466449be6a9777505a2e93612bc54a4df3233cfc46a0e6f5228e466244f1c4d",
+    "src/hotel_cancel/registry.py": "95e3169ecd9fbd1177b9c5992c3d299745c08231796c20a55f2a83ff3d761d99",
+    "src/hotel_cancel/registry_model.py": "66407eb1fcf0025ae2c54ffd2f680d907561944982d1513ef1b99a6af25ccad5",
+    "src/hotel_cancel/registry_serving.py": "65ff8e26973bca122d1e9c18b842720530cb20bc2f8bc55e27d21bcb1bef0845",
+    "src/hotel_cancel/registry_training.py": "4d1620a351c0de65587316b658b1f99475374b4a65ff00d1feac8d7d557879f1",
+    "src/hotel_cancel/sensitivity.py": "8a15f24e1b43972c27e1090345c2b29fbd7ca444eb025ac54819b11e05aaefba",
+    "src/hotel_cancel/service.py": "9d5ca06c6c869a55d1a7c5bf39805afe3ccb12108dcadc63c06e5ec904a89df9",
+    "src/hotel_cancel/serving.py": "7a5a66d04ea2e14c341b89f4e1ca6fff95e046082fbe27f4a9f83b1ccafe6e29",
+    "src/hotel_cancel/snapshot.py": "d8f82aef2ddf73164fb1d5ba296c85ac71013460c94b015e754c5f49b2f2770b",
+    "src/hotel_cancel/stay_audit.py": "9ef2b5f634a4eafbc12ca4d1e96872e2253af20bbad927e28df8992d8665847b",
+    "src/hotel_cancel/tracking.py": "a5b12750f9f026988ab1206ec6fd1e9f55cd2cd4395c1fc9273e3d8dd3a63160",
+    "src/hotel_cancel/train.py": "bb918ac70335a99bcd3ff081b19655e1582c388d5779bf914ee10e33efa79626",
+    "src/hotel_cancel/validate.py": "fd6d577028e11ae86d6fc456a32e4cd1285b71404a8f82547bd6ae7c0452793c",
+    "src/hotel_cancel/walking.py": "ef77eb65df91fa5a6eed6dd8b76d02e76fafc5cf9fefd4b8da2cac624459edb6",
+    "tests/conftest.py": "91f0180ab22bc036766077ec89c65fae40a55f24d17a8b53188ff7ba021a27fe",
+    "tests/test_approvals.py": "ffef20decaaf136016090f7e90b925b14deab5b991052d0ca9015ac2139f96a7",
+    "tests/test_audit.py": "6c186a213c894f9c6e1d3b6166d49e20aafaeff08d5c0b62d7337257ace43d3a",
+    "tests/test_blocks.py": "e500f88a82f20054ea526081669db3dc4ebe96304fb692404250e90b3de88916",
+    "tests/test_briefing.py": "40e31eeb86dd6edc77fd7a7906320b8b522979b20c0ae301d55297ddf404c36c",
+    "tests/test_briefing_revision.py": "34fa5444844d0184ce0c03838edf87d7474098c930e6deb1cd3397f35b799660",
+    "tests/test_ci_pipeline.py": "26ee25638e9b27e0aed2d431e35dd4043fa8244d09e839a0730fe5c3e7b91160",
+    "tests/test_config.py": "0439b6b9260131816146d053001fcf0c25ee7017f1d24ff01175dd307a898dfc",
+    "tests/test_contracts.py": "979f87d5c93f52db0fa3911befce2d5b186b40442d49981be6a9303e3f5fdb66",
+    "tests/test_coursework.py": "c877670ddc105e7f11214e65f37ec71267e405ad2f3c2eab5f1f7709071ac147",
+    "tests/test_csv_parity.py": "22a467c23cefd98fbc6fce19242edea94cc68fff42b105e6cf8cc6921cca08cd",
+    "tests/test_data.py": "f40346c4e052ec642db0b57417994409b6a5d7931116a813ed94dda8f4f8701e",
+    "tests/test_features.py": "86eb61dcb99ebebe077d53646a36cc46b188a08b2a4b61bf9d5de39139c6d46c",
+    "tests/test_history.py": "d552107a48ea4276ab215f0aefdfce7e7228808b5de37cc397eb87a328d8cbb2",
+    "tests/test_knowledge.py": "65484c227437292d0c1fe46d3762bd55c185766995780fa330fbdfacff498cf1",
+    "tests/test_monitoring.py": "b3df34da46dff4b736397a1fa2d14e727ab6e1f28e03abf0b60bdfedf7d55ea0",
+    "tests/test_policy.py": "d6f7e0d4ae28662369f32b7a8e025ac82a8d7a4469e0c9670110877c7878e6a0",
+    "tests/test_policy_signoff.py": "5b4e593ddc365b2a1858c304a4dc1fc61ebd97a5b74b208c7bae3288cb6be1c9",
+    "tests/test_postgres.py": "3de9225d92cbf9532e17a7f6f6cb4912a8df9ebd5ec987e8a8891ad6083cb65b",
+    "tests/test_properties.py": "d1d7ab2bf2d62d846f2545766f824881f866d41fb17765a6f11ad95d87585faf",
+    "tests/test_quality_gate.py": "e927ad00954723c69571a1ff1f8fcf7b762af5d22775af88d1059cd5ce026f75",
+    "tests/test_registry_integration.py": "a3ed49111c6b787ccfed38944a569002e4514bc96a50476b94c79f0841d0fb44",
+    "tests/test_registry_workflow.py": "5d34c06c8e0af4602587880c450fbe8cf096740f2f6ec1b26cf611c67e1a977c",
+    "tests/test_remediation.py": "e1c0330a6ee16028f84dc381fc5277565984897a9cecb6e80f0d7dd4377fa6c9",
+    "tests/test_sensitivity.py": "76333ded40bc0f37e9a32e67eeda2a266040110a8dc72ba5152726208973eaab",
+    "tests/test_serving.py": "4870c14b460ce36bd8c89bb19fd30dc8bd5d2decd26e0eebd065dc1c1f4494c9",
+    "tests/test_splits.py": "c415520ec62bd04eeb8d986fe8bc58d362bf0d8d92d319d65a388a627efd867a",
+    "tests/test_stay_audit.py": "e86b8e337c25b72723e9719b1254f0f3336599eac641ba971dd45bd4b891e0dd",
+    "tests/test_tracking.py": "18a8af8d002aaa207a5dcee9f6241cdf3778fa4eefeff8c802d6960ad85e6573",
+    "tests/test_walking.py": "21bb81b8ffccd51127cb52547256a1d97d8c78f1a816f71ec6da2f4c63d9408d"
+  },
+  "contract": {
+    "contract_version": "hotel-bookings-raw-v1",
+    "rows": 119390,
+    "errors": [],
+    "anomalies": {
+      "negative_adr": 1,
+      "zero_adr": 1959,
+      "adr_above_1000": 1,
+      "zero_guests": 180,
+      "zero_nights": 715,
+      "duplicate_extra_rows": 31994,
+      "missing_children": 4,
+      "missing_country": 488,
+      "non_alpha3_country": 1279,
+      "undefined_segment": 2,
+      "undefined_channel": 5
+    }
+  },
+  "counts": {
+    "rows": 119390,
+    "columns": 32,
+    "outcome_status_label_matches": 119390,
+    "no_shows": 1207,
+    "exact_duplicate_extra_rows": 31994,
+    "offline_cancelled": 8311,
+    "offline_cancelled_prt": 8121,
+    "offline_arrived": 15908,
+    "offline_arrived_prt": 3864,
+    "city_non_refund": 12868,
+    "city_non_refund_cancelled": 12844,
+    "adr_negative": 1,
+    "adr_zero": 1959,
+    "adr_max": 5400.0,
+    "country_blank": 488,
+    "country_CN": 1279,
+    "country_CHN": 999,
+    "no_guests": 180,
+    "no_nights": 715,
+    "random_split_shared_signatures": 4743,
+    "forward_train_test_shared_signatures": 0,
+    "forward_train_valid_vs_test_shared_signatures": 0,
+    "post_booking_positive_rows": {
+      "room_changed": 14917,
+      "booking_changes": 18076,
+      "required_car_parking_spaces": 7416,
+      "total_of_special_requests": 49072,
+      "days_in_waiting_list": 3698
+    },
+    "parking_positive_cancelled": 0
+  },
+  "asof_horizons": {
+    "0": {
+      "City Hotel": {
+        "live": 44590,
+        "late": 1198
+      },
+      "Resort Hotel": {
+        "live": 26318,
+        "late": 459
+      }
+    },
+    "1": {
+      "City Hotel": {
+        "live": 43182,
+        "late": 1422
+      },
+      "Resort Hotel": {
+        "live": 24896,
+        "late": 544
+      }
+    },
+    "2": {
+      "City Hotel": {
+        "live": 42385,
+        "late": 1628
+      },
+      "Resort Hotel": {
+        "live": 24111,
+        "late": 612
+      }
+    },
+    "3": {
+      "City Hotel": {
+        "live": 41915,
+        "late": 2061
+      },
+      "Resort Hotel": {
+        "live": 23483,
+        "late": 715
+      }
+    },
+    "4": {
+      "City Hotel": {
+        "live": 41339,
+        "late": 2405
+      },
+      "Resort Hotel": {
+        "live": 22925,
+        "late": 776
+      }
+    },
+    "5": {
+      "City Hotel": {
+        "live": 40827,
+        "late": 2704
+      },
+      "Resort Hotel": {
+        "live": 22475,
+        "late": 874
+      }
+    },
+    "6": {
+      "City Hotel": {
+        "live": 40465,
+        "late": 3085
+      },
+      "Resort Hotel": {
+        "live": 22028,
+        "late": 927
+      }
+    },
+    "7": {
+      "City Hotel": {
+        "live": 40206,
+        "late": 3467
+      },
+      "Resort Hotel": {
+        "live": 21555,
+        "late": 972
+      }
+    },
+    "8": {
+      "City Hotel": {
+        "live": 39876,
+        "late": 3723
+      },
+      "Resort Hotel": {
+        "live": 21243,
+        "late": 989
+      }
+    },
+    "9": {
+      "City Hotel": {
+        "live": 39605,
+        "late": 3921
+      },
+      "Resort Hotel": {
+        "live": 20984,
+        "late": 1034
+      }
+    },
+    "10": {
+      "City Hotel": {
+        "live": 39373,
+        "late": 4109
+      },
+      "Resort Hotel": {
+        "live": 20748,
+        "late": 1132
+      }
+    },
+    "11": {
+      "City Hotel": {
+        "live": 39077,
+        "late": 4314
+      },
+      "Resort Hotel": {
+        "live": 20582,
+        "late": 1299
+      }
+    },
+    "12": {
+      "City Hotel": {
+        "live": 38645,
+        "late": 4412
+      },
+      "Resort Hotel": {
+        "live": 20419,
+        "late": 1407
+      }
+    },
+    "13": {
+      "City Hotel": {
+        "live": 38352,
+        "late": 4543
+      },
+      "Resort Hotel": {
+        "live": 20305,
+        "late": 1522
+      }
+    },
+    "14": {
+      "City Hotel": {
+        "live": 38023,
+        "late": 4715
+      },
+      "Resort Hotel": {
+        "live": 20153,
+        "late": 1619
+      }
+    }
+  },
+  "checks": {
+    "raw_contract": true,
+    "forward_splits_and_duplicate_isolation": true,
+    "outcome_separation": true,
+    "forbidden_input_mutation_preserves_features": true,
+    "asof_membership_invariants_0_to_14_days": true
+  }
+}

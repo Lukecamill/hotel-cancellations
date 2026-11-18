@@ -1,0 +1,47 @@
+{
+  "reviewed_on": "2026-11-18",
+  "base_commit": "d0bae8c89f736caa9f818fabac80e786ec9bd896",
+  "uncommitted_overlay": true,
+  "tests": {
+    "passed": 277,
+    "skipped": 7,
+    "scope": "existing local suite; unavailable database/optional integrations skipped"
+  },
+  "lint": "PASS",
+  "data_contract": "PASS",
+  "shacl": {
+    "conforms": true,
+    "triples": 3801
+  },
+  "coursework_reproduction": "PASS",
+  "strict_reference_quality": "FAIL (Resort calibration preserved)",
+  "local_model_called": false,
+  "model_thresholds_changed": false,
+  "serving_artifacts_changed": false,
+  "registry_aliases_changed": false,
+  "diary1_words": 525,
+  "diary2_words": 498,
+  "entry2_existing_video_seconds": 229.39733333333334,
+  "video_content_verified": false,
+  "remaining": [
+    "Passing strict-gate CI example needs permitted resolution or lecturer interpretation",
+    "Reciprocal other-student card review unconfirmed",
+    "Review first-person draft and refresh recording if necessary",
+    "Commit corrected source/evidence before final clean-checkout claim",
+    "VLE upload and later/final briefs outside this task are unverified"
+  ],
+  "rendered_exports_checked": true,
+  "pptx_structural_validation": "PASS",
+  "original_entry2_chart_and_workbook_parts_preserved": true,
+  "final_export_sha256": {
+    "diary-entry-1-video-script.pdf": "0230e70da7820acd64ddceb931bc52d361e815577d3043da84bbd42388231e67",
+    "diary-entry-1-slides.pdf": "014292f2cf4fbd27c149e5f608550b8d5e44aa56cfe46aac26dc40011d25ce69",
+    "diary-entry-1-journal.pdf": "9ed98099b370bbb9e8e141eaa7434b00e65adfcd0b89acaf261d00275dae2c92",
+    "diary-entry-2-journal.pdf": "943c56a8755ce2bda84f40603392e9837daf5a369b3770036805f91220fb3205",
+    "diary-entry-2-slides.pptx": "a79dda4117ab9e7ec4939eed8aaeecb9686378cb881cb809e47c00c331ff83e7",
+    "diary-entry-1-slides.pptx": "a4f44f1177c0cf166ab57241e8c363df635f61f99049daeff1bc6684d1cdd983",
+    "diary-entry-2-video-script.pdf": "c6d5ef68b730ebd6e5c98531ca40ac44de19c979a23df2743794755e17fa7b60",
+    "revenue-manager-recommendation.pdf": "7f408858f73b3a38cd55c4a7fd9c658bab5a59673e8ba05854f4dd3502990d1b",
+    "diary-entry-2-slides.pdf": "3ec63b3bf92b68231aa7ce4f8443905c35c5018f6440088813b4f444e5dfdb11"
+  }
+}

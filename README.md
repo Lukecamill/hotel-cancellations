@@ -1,5 +1,8 @@
 # Hotel cancellations and overbooking
 
+> Current status, 18 November 2026: see [docs/current-submission-status.md](docs/current-submission-status.md). Older results below retain their historical revision. Strict `make ci` gates both hotels before building; Resort blocks it. Actual City registration/rollback and simulated q=0 policy review are recorded. Only reciprocal peer review remains unconfirmed; review date/version are not required.
+
+
 > Update 15 November 2026: [ADR 0018](docs/decisions/0018-strict-both-hotel-merge-gate.md) supersedes the earlier CI behavior described below. `make ci` now runs the strict both-hotel gate before building and is expected to fail for the original Resort model. `make coursework-check` remains the separate reproduction check. GitHub retains the required `ci` name as an aggregate of `pipeline` and `registry-integration`. Luke chose to keep both hotels in scope; no passing strict gate is claimed.
 
 ARI3217 Task 19: package, reproduce, evaluate and operationalise the supplied hotel cancellation model and overbooking policy.

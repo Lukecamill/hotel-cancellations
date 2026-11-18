@@ -1,6 +1,6 @@
 # Session 6 model card review and response
 
-Feedback supplied by Luke on 15 November 2026 and attributed by Luke to Jake Desira. The actual review date, exact version Jake inspected and reciprocal exchange of cards are not yet confirmed. Luke described the review as applying to his latest version today; the current City version 2 card is the target of this response. This records supplied feedback without independently verifying the reviewer or claiming completion of the reciprocal exchange.
+Feedback supplied by Luke on 15 November 2026 and attributed by Luke to Jake Desira. The supplied feedback is recorded below. A review date and exact inspected version are not required by the brief. Luke's reciprocal review of the other student's card remains unconfirmed. Luke described the review as applying to his latest version today; the current City version 2 card is the target of this response. This records supplied feedback without independently verifying the reviewer or claiming completion of the reciprocal exchange.
 
 ## Supplied review text
 
@@ -28,8 +28,8 @@ The strict CI concern remains unresolved. This documentation revision changes ne
 
 - Model: models:/task19-session6-city-booking/2 in the local diary2 registry.
 - Metrics source: artifacts/diary2/mlartifacts/a849c16fdb4e432fb172b8ca2f3301dc/artifacts/eligibility.json.
-- Training source: c9e3bfaf6b3d073dd9930ba60761ef932af1ab80. This card revision is a later uncommitted documentation change.
-- Registry description update/readback: docs/evidence/diary2/model-card-review-update.json, once successfully executed.
-- Confirm Jake's actual review date and reciprocal review of his card before claiming the required exchange is complete.
-- Journal, slide and video-script drafts, speaker notes and exported PDFs/PPTX now incorporate the supplied feedback and card revisions. They retain the unconfirmed review date, reviewed-version and reciprocal-exchange limitations.
+- Training source: c9e3bfaf6b3d073dd9930ba60761ef932af1ab80. The current card and analysis are tracked in checkout d0bae8c; historical generation records retain their original working-tree status.
+- Registry description update/readback: docs/evidence/diary2/model-card-review-update.json records description readback PASS.
+- Confirm Luke's review of Jake's card before claiming the reciprocal exchange is complete. The brief does not require the review date or inspected version.
+- Journal, slide and video-script drafts, speaker notes and exported PDFs/PPTX now incorporate the supplied feedback and card revisions. They retain the outstanding reciprocal-review requirement.
 - Codex applied the supplied feedback and drafted this response record; Luke should verify the changes and attribution.

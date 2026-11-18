@@ -1,9 +1,12 @@
 # Reproduce the final technical submission
 
+> Current status, 18 November 2026: see [current-submission-status.md](current-submission-status.md). Older results below retain their historical revision. Strict `make ci` gates both hotels before building; Resort blocks it. Actual City registration/rollback and simulated q=0 policy review are recorded. Only reciprocal peer review remains unconfirmed; review date/version are not required.
+
+
 Current CI and submission status: see [the updated audit](submission-checklist.md) and
 [coursework/release separation](coursework-and-release.md). The stage results and
 old command outcomes below are historical; `make quality-gate` remains strict,
-while current `make ci` verifies expected reproduction before building.
+while current `make ci` verifies reproduction, then requires strict both-hotel quality before building.
 
 Use a clean checkout/source extraction on Python 3.13.13 with the OS OpenMP runtime
 (macOS libomp; Linux container uses its documented runtime). See README for pinned
@@ -33,8 +36,7 @@ make ci
 ```
 
 `make baseline` should succeed; the reference comparison must report all 20 checks
-passed. `make ci` intentionally exits nonzero for Resort calibration and recorded
-briefing factuality. Tests and SHACL should pass; replay should reproduce 58 accepted
+passed. `make ci` intentionally exits nonzero at Resort calibration before the image build. Coursework checks include recorded briefing replay; original replay should reproduce 58 accepted
 of 66 with eight withheld. Passing reproduction is not passing quality. No live
 LLM or hosted quota is used by CI. Six PostgreSQL tests skip unless an explicit
 **dedicated test database** is provided; do not point them at the demonstration DB.
@@ -82,7 +84,7 @@ validated assembled facts. `briefing_revision record` uses the original pinned
 local Qwen model and V5 prompt, retaining raw interpretations and composed outputs.
 
 `make coursework-release-check` additionally requires formal simulation sign-off.
-It remains blocked because the user chose to leave reviewer details for now.
+The newer ADR 0005 simulation review is recorded; do not confuse it with the older unsigned reference packet. Check the current review target and packet identity before claiming approval.
 No command here authorises real hotel operation. The dedicated Ubuntu verifier
 is `scripts/verify_remediation_ubuntu.py`; it writes independent evidence, fits
 only the prespecified calibration window, and never calls the LLM.
